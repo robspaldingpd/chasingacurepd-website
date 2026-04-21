@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+  <rect width="200" height="80" fill="none" stroke="#B8BAC4" stroke-dasharray="4 4"></rect>
+  <text x="100" y="36" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#6B6F7D" letter-spacing="1.2">PARTNER LOGO</text>
+  <text x="100" y="54" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#B8BAC4">Michael J. Fox Foundation / Team Fox</text>
+</svg>
