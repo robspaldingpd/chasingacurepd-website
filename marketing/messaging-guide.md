@@ -33,11 +33,56 @@ A world where a Parkinson's diagnosis is no longer a sentence without an ending.
 *We fund the science behind breakthroughs.*
 
 ### Founding story
-On Christmas morning 2017, co-founder Wendy Chase faced a truth no daughter wants to face: she could not save her mother Sue. Sue had extraordinary doctors, a deeply trusted care team, and every treatment Wendy and Rob knew how to pursue — and between them, over four decades in pharma, biotech, and health tech. It still was not enough. Unable to think of a gift that might bring her mother hope, Wendy made a different kind of decision: to raise money to help other families. Chasing a Cure Parkinson's Foundation was founded four months later, in April 2018. Sue passed away in December 2018. The foundation is Wendy's promise to her mother — and to every family still waiting.
+
+**The Christmas That Changed Everything**
+
+My mom's name was Sue Chase.
+
+If you asked her friends about her, every single one of them would tell you the same thing — that when Sue looked at you, when Sue listened to you, you felt like you were her only and very best friend in the world. That was her gift. She made people feel seen.
+
+And on Christmas morning 2017, she was dying.
+
+I knew it before anyone said it out loud. Because of my background and my experience, I understood what the treatment options were, and I had watched her try every single one. There was nothing left. The team had done everything they could. No more appointments that mattered. No more medications that would turn the tide. Only a miracle could save her now, and I already knew the miracle wasn't coming.
+
+But my mom never knew that. Or if she did, she never let it stop her. She fought with a kind of grit I will admire for the rest of my life. She had strength I still cannot fathom. She never gave up hope — not once, not until the very end.
+
+Christmas morning is supposed to feel like joy. Like gratitude. Like the celebration of a Savior born into the world. That Christmas morning felt like none of those things. It felt out of place. It felt like the air had been let out of the room.
+
+I sat with her and I had nothing to give her. No gift in the world could bring her joy anymore, because hope — the kind the doctors can offer — was done. And in that silence, in that hollow, unbearable silence, God winked at me.
+
+Words came out of my mouth before I knew I was going to say them.
+
+*Mom — what if we started raising money? What if we tried to find a cure for Parkinson's?*
+
+And my mom lit up.
+
+I watched her heart grow right there in front of me. She looked at me and she said, *Let's do that. Let's make sure no other family has to go through this.*
+
+That was the beginning.
+
+In April of 2018, we started the Chasing a Cure Parkinson's Foundation — a name that blends my family's name, Chase, with my husband Rob's family name, Spalding. Because Parkinson's took from both sides. Because this fight was never just mine. My mom helped shape the vision. She was there at the beginning.
+
+She did not get to see the rest.
+
+Just after the next Christmas, Parkinson's took her from us. On her last conscious night, before hospice began and before she went home to heaven, she made me promise her something. She asked me to never stop. Never stop until a cure is found.
+
+Awareness is important. But awareness is not what families are begging for at 3 a.m. in a hospital room. Awareness is not what I was holding in my hands that Christmas morning when I knew my mother was leaving me. A cure is what families deserve.
+
+So I am keeping my promise to Sue Chase.
+
+And I am asking you to help me keep it.
+
+Every dollar raised is a dollar closer to the morning when a daughter sits next to her mother on Christmas and does not have to count the time she has left. Every dollar is a promise kept — not just to my mom, but to every mother, every father, every grandparent, every person whose family is living inside this fight right now.
+
+My mom fought with everything she had. Her miracle didn't come.
+
+Let's be somebody else's.
+
+*— Wendy Chase*
+*Daughter of Sue*
+*Chasing a Cure Parkinson's Foundation*
 
 Wendy and her husband Rob Spalding bring over 4 combined decades of leadership across pharma, biotech, and health tech. Both came to Indiana through careers at Eli Lilly. They know the science, they know the system, and they know what it costs families when a cure is delayed. Wendy's godfather Homer and Rob's aunt Melva are each living with Parkinson's today.
-
-*"We understand the fear, the grief, and the quiet weight families carry while they wait for better answers."*
 
 ---
 
