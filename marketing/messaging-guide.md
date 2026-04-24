@@ -24,10 +24,10 @@ This document is the single source of truth for all communications — website c
 ## 2. Mission, Vision, and Core Purpose
 
 ### Mission statement
-To fund the science behind Parkinson's disease breakthroughs and honor the promise to every family waiting for a cure.
+To fund the science that ends Parkinson's disease — and keep the promise we made to every family still waiting.
 
 ### Vision
-A world where Parkinson's disease has a cure — and no family has to carry the fear and grief that comes with the diagnosis.
+A world where a Parkinson's diagnosis is no longer a sentence without an ending.
 
 ### Core purpose (short form)
 *We fund the science behind breakthroughs.*
@@ -69,7 +69,7 @@ They work because they are true, specific, and emotionally coherent. Do not para
 | Campaign / fundraising | *Fuel the science. Fund the hope.* |
 | Donation / giving | *Volunteer-run. Research-first.* |
 | Urgency / awareness | *10 million people. Zero cures. Not yet.* |
-| 100% volunteer | *100% volunteer-run. No salaries. No paid staff.* |
+| Volunteer model | *No salaries. No paid staff. Just the science.* |
 
 ---
 
@@ -97,8 +97,8 @@ These phrases are not defensible at the penny level — payment processing fees 
 ### Approved replacement lines
 Drop-in phrases, ranked from shortest to longest:
 
+- *No salaries. No paid staff. Just the science.*
 - *Volunteer-run. Research-first.*
-- *No salaries. No paid staff.*
 - *The founders don't draw a dime.*
 - *We keep operations as lean as a foundation legally can.*
 - *Your gift flows from Chasing a Cure directly to MJFF and Team Fox.*
@@ -112,7 +112,7 @@ Use these facts in any order, in any channel. They establish urgency without man
 
 - **10 million** people worldwide are living with Parkinson's disease
 - **1 million** people in the United States have Parkinson's
-- **90,000** new diagnoses in the U.S. every year — that is one person every six minutes
+- **90,000** new diagnoses in the U.S. every year — one person every six minutes
 - **0** cures exist today
 - **$185 million+** raised by The Michael J. Fox Foundation / Team Fox since 2006
 - **April 2018** — the year Chasing a Cure was founded
@@ -124,8 +124,8 @@ Use these facts in any order, in any channel. They establish urgency without man
 ### Voice pillars
 - **Human first.** We lead with people, not statistics. The numbers serve the story; they do not replace it.
 - **Honest and direct.** We do not soften the reality of Parkinson's. We do not over-promise. We say what is true.
-- **Grounded in science.** We are not a feel-good charity — we fund rigorous research through a world-class partner. We earn donor trust with specificity.
-- **Urgent but hopeful.** There is no cure yet. But the science is moving, and we are helping move it. Both things are true at once.
+- **Grounded in science.** We are not a feel-good charity — we fund rigorous research through a world-class partner. We earn donor trust with specificity, not sentiment.
+- **Urgent but hopeful.** There is no cure yet. But the science is moving, and funding it now actually changes when we get there. Both things are true at once.
 - **Personal.** Wendy and Rob are the face of this foundation. We write in first person from their voice when appropriate. We use real names: Sue. Wendy's godfather. Rob's aunt.
 
 ### Tone by channel
@@ -133,7 +133,7 @@ Use these facts in any order, in any channel. They establish urgency without man
 |---|---|
 | Website (homepage) | Warm, urgent, clear — immediate emotional connection + credibility |
 | Email to donors | Conversational, personal, specific — write like Wendy is typing it |
-| Social media | Punchy, human, visual — shorter sentences, one idea per post |
+| Social media | Punchy, human, one idea — no throat-clearing, no hashtag soup |
 | Sponsorship deck | Professional, data-driven, partnership-minded |
 | Major donor letter | Deeply personal, direct ask, no filler |
 | Press / media | Factual, newsworthy, human story + data hook |
@@ -141,50 +141,50 @@ Use these facts in any order, in any channel. They establish urgency without man
 
 ### Words to use
 - *Fund*, *fuel*, *advance*, *move*, *breakthrough*, *promise*, *science*, *research*, *cure*, *family*, *hope*
-- *100% volunteer*, *directly to research*, *no salaries*, *volunteer-run*
-- *Sue*, *Wendy*, *Rob* (use the founders' first names — it is a personal organization)
+- *Volunteer-run*, *directly to research*, *no salaries*, *research-first*
+- *Sue*, *Wendy*, *Rob* — use first names; this is a personal organization
 
 ### Words to avoid
-- *Fight* (overused in disease-charity copy — we fund, we advance, we accelerate)
-- *Suffer* (use *live with* or *navigate*)
-- *Victim* (always use *person with Parkinson's* or name them)
-- *Awareness* as an end goal (we fund research — awareness is a means, not the mission)
-- *Give back* (too generic — we are specific about where money goes)
-- *No overhead*, *zero overhead*, *every penny*, *100% to research* (see Section 6)
+- *Fight* — we fund and advance, we don't fight
+- *Suffer* — use *live with* or *navigate*
+- *Victim* — always use *person with Parkinson's* or their name
+- *Awareness* as a goal — funding is the goal; awareness is a step toward it
+- *Give back*, *make a difference*, *change lives* — generic; name what the money does instead
+- *No overhead*, *zero overhead*, *every penny*, *100% to research* — see Section 6
 
 ---
 
 ## 9. Core Message Blocks (Copy-Ready)
 
 ### A. Organization description (short — 1 paragraph)
-Chasing a Cure Parkinson's Foundation is a 501(c)(3) nonprofit founded in 2018 by Wendy Chase and Rob Spalding in Fishers, Indiana. 100% volunteer-run, the foundation funds Parkinson's disease research through its partnership with The Michael J. Fox Foundation and Team Fox. No one draws a salary — we keep operating costs to the bare minimum so your gift flows directly to the science. The foundation was built from a personal promise: to honor Wendy's mother Sue, and to help every other family waiting for the cure they deserve.
+Chasing a Cure Parkinson's Foundation is a 501(c)(3) nonprofit founded in 2018 by Wendy Chase and Rob Spalding in Fishers, Indiana. 100% volunteer-run — no paid staff, no salaries — the foundation funds Parkinson's disease research through its partnership with The Michael J. Fox Foundation and Team Fox. We keep operating costs to the bare minimum so your gift reaches the science. The foundation began as a promise Wendy made to her mother Sue. It is the promise we make to every family that is still waiting.
 
 ### B. Organization description (medium — for about pages and grant proposals)
-Chasing a Cure Parkinson's Foundation was founded in April 2018, after co-founder Wendy Chase faced a truth no daughter wants to face: she could not save her mother Sue despite extraordinary care, and decided to redirect that grief into action. The Fishers, Indiana-based 501(c)(3) brings together nearly 60 combined years of pharma, biotech, and health tech expertise — Wendy and co-founder Rob Spalding both built careers at Eli Lilly before founding this mission together.
+Chasing a Cure Parkinson's Foundation was founded in April 2018, after co-founder Wendy Chase faced a truth no daughter wants to face: she could not save her mother Sue, and decided to turn that grief into something that could help other families. The Fishers, Indiana-based 501(c)(3) brings together nearly 60 combined years of pharma, biotech, and health tech expertise — Wendy and co-founder Rob Spalding both built careers at Eli Lilly before founding this mission together.
 
-Today, the foundation funds high-impact Parkinson's research through The Michael J. Fox Foundation and its Team Fox program, which has raised more than $185 million for Parkinson's research since 2006. Operating entirely on volunteer power with no paid staff, Chasing a Cure keeps operating costs to the bare minimum so donations flow directly to the science. With 10 million people worldwide living with Parkinson's and zero cures available, the foundation's purpose is as urgent as it is personal: Wendy's godfather and Rob's aunt are both living with Parkinson's today.
+The foundation funds high-impact Parkinson's research through The Michael J. Fox Foundation and its Team Fox program, which has raised more than $185 million for Parkinson's research since 2006. With no paid staff and no salaries, Chasing a Cure keeps operating costs to the bare minimum so donations reach the science. The urgency is personal: Wendy's godfather and Rob's aunt are both living with Parkinson's today. Ten million people worldwide are waiting for a cure that does not yet exist. The science is moving. We fund the science.
 
 ### C. Founder bio — Wendy Chase
-Wendy Chase is the co-founder and driving force of Chasing a Cure Parkinson's Foundation. Her mother, Sue Chase, died from Parkinson's disease in December 2018 — the same year Wendy founded the organization in her honor. A veteran of the pharmaceutical and biotech industries with decades of leadership experience, Wendy built Chasing a Cure to channel her professional expertise and personal heartbreak into something lasting: funding the science that will one day make Parkinson's curable. She is based in Fishers, Indiana, with her husband and co-founder Rob Spalding.
+Wendy Chase is the co-founder of Chasing a Cure Parkinson's Foundation. Her mother, Sue Chase, died from Parkinson's disease in December 2018 — the same year Wendy founded the organization in her honor. A veteran of the pharmaceutical and biotech industries with decades of leadership experience, Wendy built Chasing a Cure to channel her expertise and her heartbreak into a single purpose: funding the science that ends Parkinson's disease. She is based in Fishers, Indiana, with her husband and co-founder Rob Spalding.
 
 ### D. Founder bio — Rob Spalding
-Rob Spalding is co-founder of Chasing a Cure Parkinson's Foundation. With a career spanning pharma, biotech, and health technology, Rob brings deep industry knowledge to the foundation's mission. His aunt lives with Parkinson's disease — making this work personal as well as professional. He and Wendy, who married in 2017, bring nearly 60 combined years of life sciences leadership to a foundation they built entirely on volunteer effort and a conviction that the science is close enough to fund urgently.
+Rob Spalding is co-founder of Chasing a Cure Parkinson's Foundation. With a career spanning pharma, biotech, and health technology, Rob brings deep industry knowledge to the foundation's mission — and a personal stake that makes it urgent. His aunt lives with Parkinson's disease today. He and Wendy, who married in 2017, bring nearly 60 combined years of life sciences leadership to a foundation they built entirely on volunteer effort and a conviction that the science is close enough to fund now.
 
 ### E. The giving promise (for donation pages, email, and social)
-We are 100% volunteer-run. No one draws a salary — not Wendy, not Rob, not a single board member. We keep our operating costs to the bare minimum a foundation legally requires: event expenses, processing fees, and the tools we need to function. Your gift flows from Chasing a Cure directly to The Michael J. Fox Foundation and Team Fox. That is the pathway, and that is the promise we make to every donor.
+No one at Chasing a Cure draws a salary — not Wendy, not Rob, not a single board member. We keep operating costs to the bare minimum a foundation legally requires: event expenses, processing fees, and the tools we need to function. Your gift flows from Chasing a Cure directly to The Michael J. Fox Foundation and Team Fox — the most rigorous Parkinson's research engine in the world. That is the pathway. That has always been the pathway.
 
 ### F. The three-step flow (replaces "100%" stat tiles)
-Wherever we previously used a "100%" number, use the flow instead. It is more trust-building because it names the pathway and the costs, rather than hiding them behind a round number.
+Use this wherever a number used to appear. It is more trust-building because it names the pathway and the costs, rather than hiding them behind a claim we cannot prove to the penny.
 
 **1. Your gift** — You donate to Chasing a Cure PD.
 **2. Chasing a Cure** — We cover only what's required to operate: event costs, processing fees, basic tools. No salaries.
 **3. Research** — The remainder flows directly to The Michael J. Fox Foundation and Team Fox, funding Parkinson's science.
 
 ### G. The urgency block (for campaigns, appeals, and event collateral)
-Ten million people around the world are living with Parkinson's disease right now. One million of them are in the United States. Ninety thousand more will be diagnosed this year alone — one every six minutes. And today, there is still no cure. Not yet. The science is moving. We fund the science. Your support is what moves it forward.
+Ten million people around the world are living with Parkinson's disease right now. One million of them are in the United States. Ninety thousand more will be diagnosed this year — one every six minutes. And today, there is still no cure. Not yet. The science is moving. Whether the breakthrough arrives in five years or fifteen depends, in part, on whether it gets funded. That is what your gift does.
 
 ### H. The partnership block (for credibility and donor confidence)
-Chasing a Cure Parkinson's Foundation channels donations through The Michael J. Fox Foundation and its Team Fox program — the world's leading Parkinson's research funder, with more than $185 million raised since 2006. When you support us, you are supporting one of the most rigorous, transparent, and effective research organizations in the world, through a local volunteer-run foundation with no paid staff.
+Chasing a Cure channels donations through The Michael J. Fox Foundation and its Team Fox program — the world's leading Parkinson's research funder, with more than $185 million raised since 2006. This is not a small local foundation hoping for the best. This is a local foundation with a direct line to the most rigorous, transparent Parkinson's research organization in the world — and no paid staff between your gift and the science.
 
 ---
 
@@ -195,36 +195,36 @@ Chasing a Cure Parkinson's Foundation channels donations through The Michael J. 
 **Lead with:** The emotional truth. Sue's story. The promise. What it means to wait for a cure while someone you love is living with this disease.
 
 **Sample opening (letter or email):**
-> If someone you love has Parkinson's, you know what it is to wait. To watch and hope and keep moving forward because stopping isn't an option. That is exactly why we built Chasing a Cure — because Wendy's mother Sue deserved better answers, and so does every family sitting where we once sat.
+> If someone you love has Parkinson's, you already know. You know what it is to watch and hope and keep going because stopping is not an option. That is exactly why we built Chasing a Cure — because Wendy's mother Sue deserved better answers, and so does every family sitting where we once sat.
 
-**Call to action:** *Make a gift today. Your donation goes directly to the science behind the next breakthrough.*
+**Call to action:** *Your gift goes directly to the science behind the next breakthrough. Give today.*
 
 ---
 
 ### B. Individual donors (not personally affected — motivated by community, philanthropy, science)
 
-**Lead with:** The scale of the problem + the specificity of the solution. Numbers + the volunteer-run model.
+**Lead with:** The scale of the problem and the specificity of the solution. Numbers first, then the pathway.
 
 **Sample opening:**
-> One in every hundred people over 60 will develop Parkinson's disease. There is currently no cure. Chasing a Cure Parkinson's Foundation funds the science that changes that — directly to research through The Michael J. Fox Foundation, with no paid staff and no salaries taken from your gift.
+> One in every hundred people over 60 will develop Parkinson's disease. There is currently no cure. Chasing a Cure Parkinson's Foundation funds the science that changes that — through The Michael J. Fox Foundation, with no paid staff and no salaries between your gift and the research.
 
-**Call to action:** *Join a community of donors who believe the science is close enough to fund now.*
+**Call to action:** *The cure is close enough to fund now. Be part of that.*
 
 ---
 
 ### C. Corporate sponsors
 
-**Lead with:** Mission alignment + community visibility + concrete partnership benefits.
+**Lead with:** Shared mission, specific community, and a partnership that means something.
 
 **Sample opening:**
-> Chasing a Cure Parkinson's Foundation connects businesses like yours with a mission that resonates across the Indianapolis community and far beyond. As a sponsor, you align your brand with credible, transparent, research-first fundraising — and with a cause that touches the lives of your employees, customers, and neighbors.
+> Ten million people are living with Parkinson's disease. Some of them work for you. Some of them are your customers. Chasing a Cure Parkinson's Foundation gives your business a direct line to the most credible Parkinson's research organization in the world — and a local, founder-led story that your community will recognize and respect.
 
 **Key proof points:**
-- 10 million people globally live with Parkinson's — your employees and customers are among them
-- Volunteer-run, no paid staff — donors and sponsors know their investment reaches the science
-- Local, personal, founder-led — not a national bureaucracy
-- Specific, dateable events with defined audiences and media opportunities
-- Partnership with The Michael J. Fox Foundation — one of the most recognized names in disease philanthropy
+- 10 million people globally live with Parkinson's — it is in your building, not just in a statistic
+- Volunteer-run, no paid staff — sponsors and donors know their investment reaches the science
+- Local, personal, founder-led — not a national bureaucracy with a fundraising department
+- Specific, dateable events with defined audiences and earned media potential
+- Partnership with The Michael J. Fox Foundation — one of the most trusted names in disease research
 
 **Call to action:** *Contact Wendy at wendy@chasingacurePD.org to discuss a sponsorship package.*
 
@@ -232,65 +232,65 @@ Chasing a Cure Parkinson's Foundation channels donations through The Michael J. 
 
 ### D. Major donors ($1,000+)
 
-**Lead with:** Personal connection, specific impact, and recognition that they are part of something small and meaningful — not just writing a check to a large institution.
+**Lead with:** Specificity, direct impact, and the trust that comes from a small, founder-led organization that can tell you exactly where your gift went.
 
 **Sample opening:**
-> You have the ability to make a real difference in the pace of Parkinson's research. Not a symbolic difference — a real one. A gift at this level funds research that would otherwise wait. And because we are 100% volunteer-run with no paid staff, your gift flows directly to the science through MJFF and Team Fox.
+> A gift at this level does not disappear into an institution. It funds research that would otherwise wait. Chasing a Cure is small enough that Wendy and Rob know every major donor personally — and specific enough that we can tell you, by name, what your gift is funding through MJFF and Team Fox.
 
-**Frame the ask:** Tie to a specific, nameable research milestone when possible (work with MJFF/Team Fox to identify one).
+**Frame the ask:** Tie to a specific, nameable research milestone. Work with MJFF/Team Fox to identify one before the ask.
 
 ---
 
 ### E. Event attendees (Concert for a Cure)
 
-**Lead with:** An invitation to be part of something — a celebration with purpose. The experience first, the mission second, but the mission always present.
+**Lead with:** The invitation. The experience. Then the mission — present but not heavy.
 
 **Sample language:**
-> Join us at Concert for a Cure — an evening at the lake, with live music, great company, and a single shared purpose: funding the science that will end Parkinson's disease. Every ticket, every paddle raised, every raffle ticket brings us closer to the breakthrough families like ours have been waiting for.
+> Concert for a Cure is an evening at the lake — live music, good company, and one shared purpose. Every ticket, every paddle raised, every raffle ticket goes to the science behind the next Parkinson's breakthrough. Come because it is a great night. Stay because it matters.
 
 ---
 
 ### F. Press and media
 
-**Lead with:** Local angle + personal story + national urgency.
+**Lead with:** Local angle + personal story + national urgency. The hook is that two pharma veterans from Eli Lilly built a zero-overhead research foundation out of personal grief — and it works.
 
 **Pitchable angles:**
-- Local founders with pharma careers turn personal loss into research funding
-- 100% volunteer-run nonprofit: no salaries, founder-led, research-first
-- Concert for a Cure: Fishers, Indiana lake home becomes a Parkinson's research fundraiser
-- Partnership with Indy Boat Co: what community-powered science looks like
-- The Michael J. Fox Foundation / Team Fox: how local giving connects to world-class research
+- Two Eli Lilly veterans turn personal loss into a research-first nonprofit with no paid staff
+- Concert for a Cure: how a lake home in Fishers, Indiana is funding Parkinson's breakthroughs
+- The Indy Boat Co partnership: what it looks like when a local business funds science
+- Team Fox / MJFF: how a small Indiana foundation connects local donors to world-class research
+- The 990 is public: what radical transparency looks like in a founder-led nonprofit
 
 **Boilerplate (press release closing):**
-> About Chasing a Cure Parkinson's Foundation: Chasing a Cure is a 501(c)(3) nonprofit organization based in Fishers, Indiana, dedicated to funding Parkinson's disease research. Founded in April 2018 by Wendy Chase and Rob Spalding, the foundation is 100% volunteer-run with no paid staff, ensuring donations flow directly to research through its partnership with The Michael J. Fox Foundation and Team Fox. For more information, visit chasingacurepd.org or contact wendy@chasingacurePD.org.
+> About Chasing a Cure Parkinson's Foundation: Chasing a Cure is a 501(c)(3) nonprofit based in Fishers, Indiana, founded in April 2018 by Wendy Chase and Rob Spalding. 100% volunteer-run with no paid staff, the foundation funds Parkinson's disease research directly through The Michael J. Fox Foundation and Team Fox. For more information, visit chasingacurepd.org or contact wendy@chasingacurePD.org.
 
 ---
 
 ## 11. Social Media
 
 ### Content pillars (rotate through all five)
-1. **Mission / urgency** — the numbers, the lack of a cure, why this matters now
-2. **The story** — Sue's story, Wendy and Rob's founding story, personal connection to Parkinson's
-3. **Science / research** — what Team Fox and MJFF are funding, research milestones, the volunteer-run model
-4. **Community** — donors, sponsors, event highlights, volunteer spotlights
-5. **Events / action** — Concert for a Cure, raffle, donation drives, countdowns
+1. **Mission / urgency** — the numbers, the lack of a cure, why this moment matters
+2. **The story** — Sue's story, Wendy and Rob's founding story, personal stakes
+3. **Science / research** — what Team Fox and MJFF are funding, why it is close
+4. **Community** — donors, sponsors, event highlights, volunteer recognition
+5. **Events / action** — Concert for a Cure, raffle, countdowns, donation drives
 
 ### Sample social posts
 
 **Mission/urgency:**
-> 90,000 new Parkinson's diagnoses in the U.S. this year. One every six minutes. Zero cures. The science is moving. We fund the science. #ChasingACure #ParkinsonsResearch
+> One new Parkinson's diagnosis every six minutes. Ninety thousand this year. Zero cures. The science is moving. We fund the science. #ChasingACure #ParkinsonsResearch
 
 **The story:**
-> On Christmas morning 2017, Wendy faced a truth no daughter wants to face: she could not save her mother Sue. She made a different kind of decision that morning. Chasing a Cure Parkinson's Foundation is what grew out of it. Built from love. Backed by science. Focused on the cure. #BuiltFromLove
+> On Christmas morning 2017, Wendy faced a truth no daughter wants to face. She made a decision that morning. Chasing a Cure is what came from it. Built from love. Backed by science. Focused on the cure. #BuiltFromLove
 
 **The giving promise:**
-> 100% volunteer-run. No salaries. No paid staff. Your gift flows directly to Parkinson's research through The Michael J. Fox Foundation and Team Fox. That's the Chasing a Cure promise. chasingacurepd.org #FuelTheScience
+> No salaries. No paid staff. Your gift flows directly to Parkinson's research through The Michael J. Fox Foundation and Team Fox. That is the pathway. That has always been the pathway. chasingacurepd.org #FuelTheScience
 
 **Research partnership:**
-> Every dollar we raise goes directly to @MichaelJFoxOrg and Team Fox — the world's leading Parkinson's research funder. $185 million raised since 2006. We are proud to be part of that momentum. #TeamFox
+> We fund Parkinson's research through @MichaelJFoxOrg and Team Fox — $185 million raised for the science since 2006. Your gift is part of that. #TeamFox #ParkinsonsResearch
 
 **Event:**
-> Concert for a Cure — July 18, 2026. Live music. Lake views. And one shared goal: funding the science that ends Parkinson's. Tickets open soon. #ConcertForACure #ChasingACure
+> Concert for a Cure. July 18, 2026. Geist, Fishers, Indiana. Live music, a $25,000 boat raffle, and one purpose: funding the science that ends Parkinson's. Tickets open soon. #ConcertForACure
 
 ---
 
@@ -300,8 +300,8 @@ Chasing a Cure Parkinson's Foundation channels donations through The Michael J. 
 |---|---|
 | Launch / announcement | The science is close enough to fund now |
 | Launch / personal | Wendy's promise — and why it matters this summer |
-| Urgency | 90,000 new diagnoses this year. Zero cures. |
-| Giving promise | Your gift: directly to research. Here's how. |
+| Urgency | One diagnosis every six minutes. Zero cures. |
+| Giving promise | No salaries. No staff. Here's where your gift goes. |
 | Event invite | You're invited: Concert for a Cure, July 18 |
 | Event invite (personal) | Wendy and Rob want you at the lake |
 | Raffle | Win a $25,000 boat. Fund a Parkinson's breakthrough. |
@@ -316,24 +316,24 @@ Chasing a Cure Parkinson's Foundation channels donations through The Michael J. 
 
 ### Homepage hero
 **Headline:** Built from love. Backed by science. Focused on the cure.
-**Subhead:** Chasing a Cure Parkinson's Foundation funds the research that will end Parkinson's disease — volunteer-run, research-first, directly to science through MJFF and Team Fox.
+**Subhead:** Chasing a Cure Parkinson's Foundation funds Parkinson's disease research through The Michael J. Fox Foundation — volunteer-run, no paid staff, your gift goes directly to the science.
 **CTA button:** Donate now
 
 ### Homepage mission section
 **Headline:** We fund the science behind breakthroughs.
-**Body:** Ten million people around the world are living with Parkinson's disease. One million in the United States. Ninety thousand new diagnoses every year. And today, there is still no cure. Chasing a Cure Parkinson's Foundation was built to change that — by funding high-impact research through The Michael J. Fox Foundation, with no paid staff and no salaries taken from your gift.
+**Body:** Ten million people around the world are living with Parkinson's disease. One million in the United States. Ninety thousand new diagnoses this year. And today, there is still no cure. Not yet. Chasing a Cure was built to change that — funding high-impact research through The Michael J. Fox Foundation, with no salaries and no paid staff between your gift and the science.
 
 ### Homepage story section
-**Headline:** A promise kept.
-**Body:** On Christmas morning 2017, our co-founder Wendy faced a truth no daughter wants to face: she could not save her mother Sue — despite extraordinary doctors, every treatment available, and years of fighting for every option. Unable to think of a gift that might bring her mother hope, she made a different kind of decision. Chasing a Cure Parkinson's Foundation was founded four months later. Sue passed away in December 2018. This foundation is her legacy — and the promise we make to every family still waiting.
+**Headline:** A promise, kept.
+**Body:** On Christmas morning 2017, our co-founder Wendy faced a truth no daughter wants to face: she could not save her mother Sue — despite extraordinary doctors, every treatment available, and decades of industry expertise brought to bear. Unable to think of a gift that might bring her mother hope, she made a different kind of decision. Chasing a Cure Parkinson's Foundation was founded four months later. Sue passed away in December 2018. This foundation is her legacy — and the promise we make to every family still waiting.
 
 ### Donation page headline
-**Option 1:** Your gift flows directly to the research.
-**Option 2:** Your gift funds the science behind the next breakthrough.
-**Option 3:** Volunteer-run. Research-first. That's the promise.
+**Option 1:** Your gift goes directly to the research.
+**Option 2:** Fund the science behind the next breakthrough.
+**Option 3:** No salaries. No paid staff. Just the science.
 
 ### About page headline
-Built from a promise. Powered by volunteers. Focused on a cure.
+Built from a promise. Powered by volunteers. Focused on the cure.
 
 ---
 
@@ -341,13 +341,13 @@ Built from a promise. Powered by volunteers. Focused on a cure.
 
 | Amount | Impact frame |
 |---|---|
-| $25 | Joins thousands of supporters moving the science forward |
+| $25 | Puts your name behind Parkinson's research through MJFF and Team Fox |
 | $50 | Funds a day of research through Team Fox |
-| $100 | A meaningful gift flowing directly to MJFF research |
-| $250 | A serious investment in the science behind a breakthrough |
-| $500 | Part of a community of donors driving Parkinson's research |
-| $1,000+ | Major gift — consider a personal ask from Wendy or Rob |
-| Monthly / recurring | *The most powerful way to fund ongoing science — your monthly gift compounds.* |
+| $100 | A direct investment in the science — reaches MJFF with nothing taken off for salaries |
+| $250 | The kind of gift that funds the work researchers are waiting to do |
+| $500 | A Research Champion gift — Wendy and Rob will know your name |
+| $1,000+ | Major gift — deserves a personal conversation with Wendy or Rob |
+| Monthly / recurring | *The most powerful way to fund the science — a monthly gift means research doesn't stop between events.* |
 
 ---
 
@@ -357,11 +357,11 @@ Use these whenever a donor or sponsor asks "how do I know this is legitimate?"
 
 - **501(c)(3) status** — EIN 82-5107944, registered April 2018
 - **100% volunteer-run** — Wendy, Rob, and every team member donate their time; no one draws a salary
-- **Team Fox / MJFF partnership** — funds flow through one of the world's most credible, transparent research organizations
+- **MJFF / Team Fox partnership** — funds flow through one of the most credible, transparent, and effective research organizations in the world
 - **$185 million+** raised by Team Fox since 2006 — Chasing a Cure is part of that record
-- **Founders' backgrounds** — nearly 60 combined years in pharma, biotech, and health tech; Eli Lilly alumni; they know how research funding works and why it matters
-- **Personal stakes** — Wendy's mother, Wendy's godfather, Rob's aunt — this is not abstract philanthropy
-- **990 is public** — we are transparent about operating costs; ask us anything
+- **Founders' industry backgrounds** — nearly 60 combined years in pharma, biotech, and health tech; Eli Lilly alumni; they understand how research funding works and why timing matters
+- **Personal stakes** — Wendy's mother, Wendy's godfather, Rob's aunt — this is not abstract for the people running it
+- **990 is public** — operating costs are transparent; any donor can ask and we will show them
 
 ---
 
