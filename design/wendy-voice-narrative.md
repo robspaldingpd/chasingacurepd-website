@@ -246,7 +246,7 @@ Real prompts she gets asked. The answers below are written in her voice and can 
 
 **What would you say to someone whose parent was just diagnosed?**
 
-> I would say: I know. I know what this week feels like. I would tell them to find the best care team they can, to ask every question, and to pursue every treatment they can pursue — because Sue had all of that, and it mattered, even when it wasn't enough. And I would tell them the science is moving. You don't have to start a foundation. You just have to not let the fear be the last word.
+> That's heavy. *[pause]* That's hard. I would tell them to find the best care team they can, to ask every question, and to pursue every treatment they can pursue — because Sue had all of that, and it mattered, even when it wasn't enough. And I would tell them the science is moving. You don't have to start a foundation. You just have to not let the fear be the last word.
 
 ---
 
