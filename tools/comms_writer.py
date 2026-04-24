@@ -253,9 +253,8 @@ CONTENT_TYPES = {
 
 def load_sources():
     paths = {
-        "messaging_guide": REPO_ROOT / "messaging-guide.md",
-        "messaging_guide_v2": REPO_ROOT / "design" / "messaging-guide-v2.md",
-        "campaign_brief": REPO_ROOT / "campaign-brief-q-fundraising.md",
+        "messaging_guide": REPO_ROOT / "marketing" / "messaging-guide.md",
+        "campaign_brief": REPO_ROOT / "marketing" / "campaign-brief-q-fundraising.md",
         "voice_narrative": REPO_ROOT / "design" / "wendy-voice-narrative.html",
     }
     docs = {}
@@ -290,17 +289,12 @@ DOCUMENT 1 — MESSAGING GUIDE (canonical source)
 {docs.get('messaging_guide', '')}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-DOCUMENT 2 — MESSAGING GUIDE v2 (100% language corrections)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-{docs.get('messaging_guide_v2', '')}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-DOCUMENT 3 — CAMPAIGN BRIEF: SUMMER 2026
+DOCUMENT 2 — CAMPAIGN BRIEF: SUMMER 2026
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {docs.get('campaign_brief', '')}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-DOCUMENT 4 — WENDY'S VOICE: NARRATIVE & TONE OF VOICE
+DOCUMENT 3 — WENDY'S VOICE: NARRATIVE & TONE OF VOICE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {voice_text}
 
