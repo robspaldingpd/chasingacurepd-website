@@ -35,7 +35,7 @@ A world where a Parkinson's diagnosis is no longer a sentence without an ending.
 ### Founding story
 On Christmas morning 2017, co-founder Wendy Chase faced a truth no daughter wants to face: she could not save her mother Sue. Sue had extraordinary doctors, a deeply trusted care team, and every treatment Wendy and Rob knew how to pursue — and between them, nearly sixty years in pharma, biotech, and health tech. It still was not enough. Unable to think of a gift that might bring her mother hope, Wendy made a different kind of decision: to raise money to help other families. Chasing a Cure Parkinson's Foundation was founded four months later, in April 2018. Sue passed away in December 2018. The foundation is Wendy's promise to her mother — and to every family still waiting.
 
-Wendy and her husband Rob Spalding bring nearly 60 combined years of leadership across pharma, biotech, and health tech. Both came to Indiana through careers at Eli Lilly. They know the science, they know the system, and they know what it costs families when a cure is delayed. Wendy's godfather and Rob's aunt are each living with Parkinson's today.
+Wendy and her husband Rob Spalding bring nearly 60 combined years of leadership across pharma, biotech, and health tech. Both came to Indiana through careers at Eli Lilly. They know the science, they know the system, and they know what it costs families when a cure is delayed. Wendy's godfather Homer and Rob's aunt Melva are each living with Parkinson's today.
 
 *"We understand the fear, the grief, and the quiet weight families carry while they wait for better answers."*
 
@@ -126,7 +126,7 @@ Use these facts in any order, in any channel. They establish urgency without man
 - **Honest and direct.** We do not soften the reality of Parkinson's. We do not over-promise. We say what is true.
 - **Grounded in science.** We are not a feel-good charity — we fund rigorous research through a world-class partner. We earn donor trust with specificity, not sentiment.
 - **Urgent but hopeful.** There is no cure yet. But the science is moving, and funding it now actually changes when we get there. Both things are true at once.
-- **Personal.** Wendy and Rob are the face of this foundation. We write in first person from their voice when appropriate. We use real names: Sue. Wendy's godfather. Rob's aunt.
+- **Personal.** Wendy and Rob are the face of this foundation. We write in first person from their voice when appropriate. We use real names: Sue. Homer. Melva.
 
 ### Tone by channel
 | Channel | Tone |
@@ -162,13 +162,13 @@ Chasing a Cure Parkinson's Foundation is a 501(c)(3) nonprofit founded in 2018 b
 ### B. Organization description (medium — for about pages and grant proposals)
 Chasing a Cure Parkinson's Foundation was founded in April 2018, after co-founder Wendy Chase faced a truth no daughter wants to face: she could not save her mother Sue, and decided to turn that grief into something that could help other families. The Fishers, Indiana-based 501(c)(3) brings together nearly 60 combined years of pharma, biotech, and health tech expertise — Wendy and co-founder Rob Spalding both built careers at Eli Lilly before founding this mission together.
 
-The foundation funds high-impact Parkinson's research through The Michael J. Fox Foundation and its Team Fox program, which has raised more than $185 million for Parkinson's research since 2006. With no paid staff and no salaries, Chasing a Cure keeps operating costs to the bare minimum so donations reach the science. The urgency is personal: Wendy's godfather and Rob's aunt are both living with Parkinson's today. Ten million people worldwide are waiting for a cure that does not yet exist. The science is moving. We fund the science.
+The foundation funds high-impact Parkinson's research through The Michael J. Fox Foundation and its Team Fox program, which has raised more than $185 million for Parkinson's research since 2006. With no paid staff and no salaries, Chasing a Cure keeps operating costs to the bare minimum so donations reach the science. The urgency is personal: Wendy's godfather Homer and Rob's aunt Melva are both living with Parkinson's today. Ten million people worldwide are waiting for a cure that does not yet exist. The science is moving. We fund the science.
 
 ### C. Founder bio — Wendy Chase
 Wendy Chase is the co-founder of Chasing a Cure Parkinson's Foundation. Her mother, Sue Chase, died from Parkinson's disease in December 2018 — the same year Wendy founded the organization in her honor. A veteran of the pharmaceutical and biotech industries with decades of leadership experience, Wendy built Chasing a Cure to channel her expertise and her heartbreak into a single purpose: funding the science that ends Parkinson's disease. She is based in Fishers, Indiana, with her husband and co-founder Rob Spalding.
 
 ### D. Founder bio — Rob Spalding
-Rob Spalding is co-founder of Chasing a Cure Parkinson's Foundation. With a career spanning pharma, biotech, and health technology, Rob brings deep industry knowledge to the foundation's mission — and a personal stake that makes it urgent. His aunt lives with Parkinson's disease today. He and Wendy, who married in 2017, bring nearly 60 combined years of life sciences leadership to a foundation they built entirely on volunteer effort and a conviction that the science is close enough to fund now.
+Rob Spalding is co-founder of Chasing a Cure Parkinson's Foundation. With a career spanning pharma, biotech, and health technology, Rob brings deep industry knowledge to the foundation's mission — and a personal stake that makes it urgent. His aunt Melva lives with Parkinson's disease today. He and Wendy, who married in 2017, bring nearly 60 combined years of life sciences leadership to a foundation they built entirely on volunteer effort and a conviction that the science is close enough to fund now.
 
 ### E. The giving promise (for donation pages, email, and social)
 No one at Chasing a Cure draws a salary — not Wendy, not Rob, not a single board member. We keep operating costs to the bare minimum a foundation legally requires: event expenses, processing fees, and the tools we need to function. Your gift flows from Chasing a Cure directly to The Michael J. Fox Foundation and Team Fox — the most rigorous Parkinson's research engine in the world. That is the pathway. That has always been the pathway.
@@ -360,7 +360,7 @@ Use these whenever a donor or sponsor asks "how do I know this is legitimate?"
 - **MJFF / Team Fox partnership** — funds flow through one of the most credible, transparent, and effective research organizations in the world
 - **$185 million+** raised by Team Fox since 2006 — Chasing a Cure is part of that record
 - **Founders' industry backgrounds** — nearly 60 combined years in pharma, biotech, and health tech; Eli Lilly alumni; they understand how research funding works and why timing matters
-- **Personal stakes** — Wendy's mother, Wendy's godfather, Rob's aunt — this is not abstract for the people running it
+- **Personal stakes** — Wendy's mother Sue, Wendy's godfather Homer, Rob's aunt Melva — this is not abstract for the people running it
 - **990 is public** — operating costs are transparent; any donor can ask and we will show them
 
 ---
