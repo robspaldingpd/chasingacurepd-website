@@ -28,25 +28,53 @@ Read this out loud before you write anything in Wendy's voice. It's the full arc
 
 ---
 
-On Christmas morning, 2017, I sat at the breakfast table and faced a truth no daughter wants to face: I could not save my mom.
+My mom's name was Sue Chase.
 
-Sue had extraordinary doctors. A deeply trusted care team. Every treatment Rob and I knew how to pursue — and between us, nearly sixty years in pharma, biotech, and health tech, we knew how to pursue a lot. We prayed, and we never stopped praying. We fought for every possible option. It still was not enough.
+If you asked her friends about her, every single one of them would tell you the same thing — that when Sue looked at you, when Sue listened to you, you felt like you were her only and very best friend in the world. That was her gift. She made people feel seen.
 
-It was a different kind of Christmas. I could not think of a single gift that might bring my mother hope. So I made a different kind of decision: we would raise money to help other families. That's what I could give her.
+And on Christmas morning 2017, she was dying.
 
-Four months later, in April 2018, we founded *Chasing a Cure Parkinson's Foundation.* Sue was still alive. We told her what we were doing. She died that December. What began as heartbreak became a promise — to keep going, for every other family facing the same fear, the same pain, the same uncertainty we had faced.
+I knew it before anyone said it out loud. Because of my background and my experience, I understood what the treatment options were, and I had watched her try every single one. There was nothing left. The team had done everything they could. No more appointments that mattered. No more medications that would turn the tide. Only a miracle could save her now, and I already knew the miracle wasn't coming.
 
-So here is what this foundation is. No one here takes a salary — not Rob, not me, not a single board member. We keep operations as lean as a foundation legally can: the costs to run events, process your donation, and keep the lights on. Everything beyond that flows directly to The Michael J. Fox Foundation and Team Fox, which is the most rigorous, most respected Parkinson's research engine in the world. Parkinson's has touched both of our families. My godfather. Rob's aunt. This is not abstract to us, and we don't talk about it like it is.
+But my mom never knew that. Or if she did, she never let it stop her. She fought with a kind of grit I will admire for the rest of my life. She had strength I still cannot fathom. She never gave up hope — not once, not until the very end.
+
+Christmas morning is supposed to feel like joy. Like gratitude. Like the celebration of a Savior born into the world. That Christmas morning felt like none of those things. It felt out of place. It felt like the air had been let out of the room.
+
+I sat with her and I had nothing to give her. No gift in the world could bring her joy anymore, because hope — the kind the doctors can offer — was done. And in that silence, in that hollow, unbearable silence, God winked at me.
+
+Words came out of my mouth before I knew I was going to say them.
+
+*Mom — what if we started raising money? What if we tried to find a cure for Parkinson's?*
+
+And my mom lit up.
+
+I watched her heart grow right there in front of me. She looked at me and she said, *Let's do that. Let's make sure no other family has to go through this.*
+
+That was the beginning.
+
+In April of 2018, we started the Chasing a Cure Parkinson's Foundation — a name that blends my family's name, Chase, with my husband Rob's family name, Spalding. Because Parkinson's took from both sides. Because this fight was never just mine. My mom helped shape the vision. She was there at the beginning.
+
+She did not get to see the rest.
+
+Just after the next Christmas, Parkinson's took her from us. On her last conscious night, before hospice began and before she went home to heaven, she made me promise her something. She asked me to never stop. Never stop until a cure is found.
+
+Awareness is important. But awareness is not what families are begging for at 3 a.m. in a hospital room. Awareness is not what I was holding in my hands that Christmas morning when I knew my mother was leaving me. A cure is what families deserve.
+
+So here is what this foundation is. No one here takes a salary — not Rob, not me, not a single board member. We keep operations as lean as a foundation legally can: the costs to run events, process your donation, and keep the lights on. Everything beyond that flows directly to The Michael J. Fox Foundation and Team Fox, which is the most rigorous, most respected Parkinson's research engine in the world. Parkinson's has touched both of our families. My godfather Homer. Rob's aunt Melva. This is not abstract to us, and we don't talk about it like it is.
 
 I don't want your pity. I want your partnership. Ten million people are living with this disease right now. One million of them are in this country. Ninety thousand more will be diagnosed this year — one every six minutes — and not one of them has a cure to go home to.
 
-But the science is moving. That is the part I want you to hear. The science *is moving*, and it is close enough that funding it now, funding it today, funding it this year, actually changes when we get there. That's not a marketing line. That's what twenty-plus years in this industry have taught me.
+But the science is moving. That is the part I want you to hear. The science *is moving*, and it is close enough that funding it now, funding it today, funding it this year, actually changes when we get there. That's not a marketing line. That's what my career has taught me.
 
-So here is what I'm asking. Give if you can. Come to the concert. Buy a raffle ticket. Send this to one person. Whatever you do, do it because you believe — like I do — that the cure is close enough to fund now.
+So I am keeping my promise to Sue Chase. And I am asking you to help me keep it.
 
-Science fuels hope. We fund the science behind breakthroughs. That's the whole thing.
+Every dollar raised is a dollar closer to the morning when a daughter sits next to her mother on Christmas and does not have to count the time she has left. Every dollar is a promise kept — not just to my mom, but to every mother, every father, every grandparent, every person whose family is living inside this fight right now.
 
-*Wendy*
+My mom fought with everything she had. Her miracle didn't come.
+
+Let's be somebody else's.
+
+*— Wendy*
 
 Wendy Chase · Co-founder
 
@@ -128,10 +156,15 @@ These are Wendy's. They are not drafts. Don't paraphrase them, don't modernize t
 
 | Line | Context |
 |------|---------|
-| On Christmas morning 2017, I faced a truth no daughter wants to face. I could not save my mom. | Origin — the turning point |
-| Sue had extraordinary doctors and every treatment we knew how to pursue. It still was not enough. | Origin — the limit |
-| I could not think of a gift that might bring my mother hope. So I made a different kind of decision. | Origin — the pivot |
-| This foundation is a promise I made, for every family facing what we faced. | Origin — the promise |
+| My mom's name was Sue Chase. | Origin — who she was |
+| When Sue looked at you, when Sue listened to you, you felt like you were her only and very best friend in the world. | Origin — her gift |
+| Only a miracle could save her now, and I already knew the miracle wasn't coming. | Origin — the limit |
+| She never gave up hope — not once, not until the very end. | Origin — her strength |
+| And in that silence, in that hollow, unbearable silence, God winked at me. | Origin — the turning point |
+| Mom — what if we started raising money? What if we tried to find a cure for Parkinson's? | Origin — the pivot |
+| Let's do that. Let's make sure no other family has to go through this. | Origin — Sue's answer |
+| She asked me to never stop. Never stop until a cure is found. | Origin — the deathbed promise |
+| My mom fought with everything she had. Her miracle didn't come. Let's be somebody else's. | The ask — closing line |
 
 **The lines about the work**
 
@@ -195,13 +228,13 @@ Real prompts she gets asked. The answers below are written in her voice and can 
 
 **Why did you start the foundation?**
 
-> Because I sat at the breakfast table on Christmas morning, 2017, and I faced a truth no daughter wants to face: I could not save my mom. Sue had extraordinary doctors, every treatment Rob and I knew how to pursue, and between us we've spent our whole careers in this industry. It still was not enough. I could not think of a gift that might bring her hope — so I made a different kind of decision. We would raise money to help other families. *Chasing a Cure* is what grew out of that morning.
+> Because on Christmas morning 2017, I sat with my mom and I had nothing to give her. I understood the treatment options — I'd watched her try every single one. There was nothing left. And in the silence of that morning, words came out of my mouth before I knew I was going to say them: *Mom — what if we started raising money? What if we tried to find a cure for Parkinson's?* And she lit up. She said, *Let's do that. Let's make sure no other family has to go through this.* On her last conscious night, she made me promise to never stop. *Chasing a Cure* is that promise.
 
 ---
 
 **What makes you different from other Parkinson's charities?**
 
-> Three things. No one here draws a salary — not Rob, not me, not a single board member — so our costs are the bare minimum a foundation can legally run on. We route the funds through The Michael J. Fox Foundation, so the research is world-class. And we're founder-led by two people with sixty years of pharma experience between them. You're not donating into a bureaucracy. You're handing a dollar to someone who knows exactly where it's going.
+> Three things. No one here draws a salary — not Rob, not me, not a single board member — so our costs are the bare minimum a foundation can legally run on. We route the funds through The Michael J. Fox Foundation, so the research is world-class. And we're founder-led by two people with over four decades of pharma experience between them. You're not donating into a bureaucracy. You're handing a dollar to someone who knows exactly where it's going.
 
 ---
 
