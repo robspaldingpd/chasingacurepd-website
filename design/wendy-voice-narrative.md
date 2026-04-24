@@ -246,7 +246,7 @@ Real prompts she gets asked. The answers below are written in her voice and can 
 
 **What would you say to someone whose parent was just diagnosed?**
 
-> That's heavy. *[pause]* That's hard. I would tell them to find the best care team they can, to ask every question, and to pursue every treatment they can pursue — because Sue had all of that, and it mattered, even when it wasn't enough. And I would tell them the science is moving. You don't have to start a foundation. You just have to not let the fear be the last word.
+> That's heavy. *[pause]* That's hard. I would encourage them to find the best care team they can — one they trust, one who communicates, one who will answer the phone. I would encourage them to ask every question, even the ones they're afraid to ask, because knowing is always better than not knowing. And I would encourage them to stay in it. Not because it's easy. Not because the outcome is guaranteed. But because the science is genuinely moving — there are therapies in trials right now that didn't exist when my mom was diagnosed — and because the people who stay in it, who keep pursuing, who don't let the diagnosis be the last word, give themselves and the people they love the best possible chance. I won't tell you it ends the way you want it to. I can't promise that. What I can tell you is that hope is not naive here. The science earns it.
 
 ---
 
