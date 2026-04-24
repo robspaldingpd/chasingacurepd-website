@@ -176,7 +176,7 @@ No one at Chasing a Cure draws a salary — not Wendy, not Rob, not a single boa
 ### F. The three-step flow (replaces "100%" stat tiles)
 Use this wherever a number used to appear. It is more trust-building because it names the pathway and the costs, rather than hiding them behind a claim we cannot prove to the penny.
 
-**1. Your gift** — You donate to Chasing a Cure PD.
+**1. Your gift** — You donate to Chasing a Cure Foundation.
 **2. Chasing a Cure** — We cover only what's required to operate: event costs, processing fees, basic tools. No salaries.
 **3. Research** — The remainder flows directly to The Michael J. Fox Foundation and Team Fox, funding Parkinson's science.
 
