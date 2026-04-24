@@ -165,7 +165,7 @@ Chasing a Cure Parkinson's Foundation was founded in April 2018, after co-founde
 The foundation funds high-impact Parkinson's research through The Michael J. Fox Foundation and its Team Fox program, which has raised more than $185 million for Parkinson's research since 2006. With no paid staff and no salaries, Chasing a Cure keeps operating costs to the bare minimum so donations reach the science. The urgency is personal: Wendy's godfather Homer and Rob's aunt Melva are both living with Parkinson's today. Ten million people worldwide are waiting for a cure that does not yet exist. The science is moving. We fund the science.
 
 ### C. Founder bio — Wendy Chase
-Wendy Chase is the co-founder of Chasing a Cure Parkinson's Foundation. Her mother, Sue Chase, died from Parkinson's disease in December 2018 — the same year Wendy founded the organization in her honor. A veteran of the pharmaceutical and biotech industries with decades of leadership experience, Wendy built Chasing a Cure to channel her expertise and her heartbreak into a single purpose: funding the science that ends Parkinson's disease. She is based in Fishers, Indiana, with her husband and co-founder Rob Spalding.
+Wendy Chase is the co-founder of Chasing a Cure Parkinson's Foundation. Her mother, Sue Chase, died from Parkinson's disease in December 2018 — the same year Wendy founded the organization in her honor. A senior leader in the pharmaceutical and biotech industries with decades of experience, Wendy built Chasing a Cure to channel her expertise and her heartbreak into a single purpose: funding the science that ends Parkinson's disease. She is based in Fishers, Indiana, with her husband and co-founder Rob Spalding.
 
 ### D. Founder bio — Rob Spalding
 Rob Spalding is co-founder of Chasing a Cure Parkinson's Foundation. With a career spanning pharma, biotech, and health technology, Rob brings deep industry knowledge to the foundation's mission — and a personal stake that makes it urgent. His aunt Melva lives with Parkinson's disease today. He and Wendy, who married in 2017, bring nearly 60 combined years of life sciences leadership to a foundation they built entirely on volunteer effort and a conviction that the science is close enough to fund now.
@@ -252,10 +252,10 @@ Chasing a Cure channels donations through The Michael J. Fox Foundation and its 
 
 ### F. Press and media
 
-**Lead with:** Local angle + personal story + national urgency. The hook is that two pharma veterans from Eli Lilly built a zero-overhead research foundation out of personal grief — and it works.
+**Lead with:** Local angle + personal story + national urgency. The hook is that two senior pharma leaders from Eli Lilly built a zero-overhead research foundation out of personal grief — and it works.
 
 **Pitchable angles:**
-- Two Eli Lilly veterans turn personal loss into a research-first nonprofit with no paid staff
+- Two senior Eli Lilly leaders turn personal loss into a research-first nonprofit with no paid staff
 - Concert for a Cure: how a lake home in Fishers, Indiana is funding Parkinson's breakthroughs
 - The Indy Boat Co partnership: what it looks like when a local business funds science
 - Team Fox / MJFF: how a small Indiana foundation connects local donors to world-class research
