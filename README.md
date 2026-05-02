@@ -12,14 +12,18 @@ Open [http://localhost:3000](http://localhost:3000) to view the site locally.
 
 ## Repo structure
 
+**Website**
 - `app/` — Next.js pages (homepage, concert, about, science, donate)
 - `components/` — Shared components (Nav, Footer, DonationWidget, etc.)
 - `public/` — Images and assets
-- `design/` — Design system and brand guidelines
-- `drafts/` — Messaging guides and copy
-- `marketing/` — Marketing materials
-- `planning/` — Planning documents
-- `automation/` — Apps Script and automation tools
+
+**Foundation**
+- `foundation/design/` — Design system and brand guidelines
+- `foundation/drafts/` — Messaging guides and copy
+- `foundation/marketing/` — Marketing materials
+- `foundation/planning/` — Planning documents
+- `foundation/automation/` — Apps Script and automation tools
+- `foundation/tools/` — Python utilities
 
 ## Deploy
 
