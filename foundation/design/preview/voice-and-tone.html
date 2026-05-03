@@ -1,0 +1,337 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Voice & tone</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 56px 40px 80px; background: var(--ccpd-pink-50); font-family: var(--font-sans); color: var(--ccpd-ink-900); }
+  .wrap { max-width: 980px; margin: 0 auto; }
+
+  .page-h { margin-bottom: 56px; max-width: 720px; }
+  .page-h .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ccpd-orange-600); margin: 0 0 14px; }
+  .page-h h1 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 48px; line-height: 1.1; letter-spacing: -0.015em; margin: 0 0 18px; color: var(--ccpd-ink-900); }
+  .page-h h1 em { color: var(--ccpd-orange-600); }
+  .page-h p { font-size: 17px; line-height: 1.6; color: var(--ccpd-ink-700); margin: 0; }
+
+  section { margin-bottom: 56px; }
+  .sec-h { display: flex; align-items: baseline; gap: 16px; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--ccpd-gray-100); }
+  .sec-h h2 { font-family: var(--font-display); font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ccpd-ink-900); margin: 0; }
+  .sec-h .num { font-family: var(--font-serif); font-style: italic; font-size: 20px; color: var(--ccpd-orange-500); }
+  .sec-d { font-family: var(--font-serif); font-style: italic; font-size: 16px; line-height: 1.55; color: var(--ccpd-gray-700); margin: 0 0 28px; max-width: 64ch; }
+
+  /* Voice attributes */
+  .pillars { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .pillar { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 12px; padding: 28px 28px 24px; }
+  .pillar h3 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 24px; letter-spacing: -0.005em; margin: 0 0 6px; color: var(--ccpd-ink-900); }
+  .pillar h3 em { color: var(--ccpd-orange-600); }
+  .pillar > p { font-size: 14px; line-height: 1.65; color: var(--ccpd-ink-700); margin: 0 0 18px; }
+  .pillar dl { display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; margin: 0; padding-top: 16px; border-top: 1px solid var(--ccpd-gray-100); }
+  .pillar dt { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ccpd-gray-500); padding-top: 2px; }
+  .pillar dd { margin: 0; font-size: 13px; line-height: 1.55; color: var(--ccpd-ink-800); }
+  .pillar dd em { font-style: italic; color: var(--ccpd-gray-700); }
+
+  /* Tone spectrum */
+  .spectrum { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 12px; padding: 32px; }
+  .spec-row { display: grid; grid-template-columns: 1fr 240px 1fr; gap: 20px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--ccpd-gray-100); }
+  .spec-row:last-child { border-bottom: 0; padding-bottom: 0; }
+  .spec-row > span { font-size: 13px; color: var(--ccpd-gray-500); }
+  .spec-row > span.l { text-align: right; }
+  .spec-bar { position: relative; height: 6px; background: var(--ccpd-gray-50); border-radius: 999px; }
+  .spec-dot { position: absolute; top: -5px; width: 16px; height: 16px; border-radius: 999px; background: var(--ccpd-orange-500); box-shadow: 0 0 0 4px rgba(249,128,8,0.15); transform: translateX(-50%); }
+  .spec-row strong { color: var(--ccpd-ink-900); font-weight: 600; }
+
+  /* Side-by-side write/don't-write */
+  .pairs { display: flex; flex-direction: column; gap: 14px; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .ex { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 10px; padding: 22px 24px; position: relative; }
+  .ex .tag { display: inline-flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; margin-bottom: 12px; }
+  .ex.do .tag { background: #d1fae5; color: #047857; }
+  .ex.dont .tag { background: #fee2e2; color: #b91c1c; }
+  .ex .ctx { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ccpd-gray-500); margin-bottom: 12px; }
+  .ex p { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 17px; line-height: 1.5; color: var(--ccpd-ink-900); margin: 0 0 12px; }
+  .ex.do p { color: var(--ccpd-ink-900); }
+  .ex.dont p { color: var(--ccpd-gray-500); text-decoration: line-through; text-decoration-color: rgba(220,38,38,0.4); }
+  .ex .why { font-size: 13px; line-height: 1.6; color: var(--ccpd-ink-700); padding-top: 10px; border-top: 1px solid var(--ccpd-gray-100); }
+  .ex .why strong { color: var(--ccpd-ink-900); font-weight: 600; }
+
+  /* Surface examples */
+  .surfaces { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .surface { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 12px; padding: 24px 26px; }
+  .surface .eb { font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ccpd-orange-600); margin-bottom: 14px; }
+  .surface h4 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 22px; line-height: 1.2; margin: 0 0 8px; color: var(--ccpd-ink-900); letter-spacing: -0.005em; }
+  .surface h4 em { color: var(--ccpd-orange-600); }
+  .surface .body { font-size: 14px; line-height: 1.65; color: var(--ccpd-ink-800); margin: 10px 0 14px; }
+  .surface .body p { margin: 0 0 8px; }
+  .surface .body p:last-child { margin: 0; }
+  .surface .body em { font-style: italic; color: var(--ccpd-gray-700); }
+  .surface .meta { display: flex; gap: 12px; font-size: 12px; color: var(--ccpd-gray-500); padding-top: 12px; border-top: 1px solid var(--ccpd-gray-100); }
+  .surface .meta strong { color: var(--ccpd-ink-900); font-weight: 600; }
+
+  /* Word lists */
+  .words { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .wlist { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 12px; padding: 24px 26px; }
+  .wlist h4 { font-family: var(--font-display); font-weight: 600; font-size: 13px; letter-spacing: 0.04em; margin: 0 0 14px; padding-bottom: 12px; border-bottom: 1px solid var(--ccpd-gray-100); }
+  .wlist.use h4 { color: #047857; }
+  .wlist.avoid h4 { color: #b91c1c; }
+  .wlist ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .wlist li { display: grid; grid-template-columns: 130px 1fr; gap: 14px; align-items: baseline; font-size: 14px; }
+  .wlist li code { font-family: var(--font-display); font-weight: 600; font-size: 14px; color: var(--ccpd-ink-900); background: transparent; padding: 0; }
+  .wlist.avoid li code { color: var(--ccpd-gray-500); text-decoration: line-through; }
+  .wlist li span { font-size: 13px; color: var(--ccpd-gray-700); line-height: 1.5; font-family: var(--font-serif); font-style: italic; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-h">
+    <p class="eyebrow">Brand · Voice & tone</p>
+    <h1>Direct, science-forward, and <em>built from love.</em></h1>
+    <p>Most nonprofit copy reaches for emotion and oversells. We do the opposite — we tell the truth about the science, name what the money does, and let the reader decide. Warmth comes from candor, not adjectives.</p>
+  </header>
+
+  <!-- ── 1. VOICE PILLARS ─────────────────────────────── -->
+  <section>
+    <div class="sec-h"><span class="num">01</span><h2>Voice — what we sound like, always</h2></div>
+    <p class="sec-d">Voice doesn't change. Tone shifts with context. These four attributes describe the voice — every piece of copy, from a tweet to a tax letter, should sound like all four at once.</p>
+    <div class="pillars">
+
+      <div class="pillar">
+        <h3><em>Direct</em>, not breathless.</h3>
+        <p>Plain sentences. Active verbs. The reader's time matters. We don't bury the ask, the impact, or the math.</p>
+        <dl>
+          <dt>We are</dt><dd>Plain-spoken. One idea per sentence.</dd>
+          <dt>Not</dt><dd><em>Urgent. Capital-letter-y. Padded with adjectives.</em></dd>
+        </dl>
+      </div>
+
+      <div class="pillar">
+        <h3><em>Science-forward</em>, not preachy.</h3>
+        <p>The work is real research at MJFF. We name it, point to it, and trust the reader to follow. We don't lecture or moralize.</p>
+        <dl>
+          <dt>We are</dt><dd>Specific. Cite trials, papers, dollar figures.</dd>
+          <dt>Not</dt><dd><em>"Together we will make a difference." Vague hope.</em></dd>
+        </dl>
+      </div>
+
+      <div class="pillar">
+        <h3><em>Personal</em>, not corporate.</h3>
+        <p>The foundation came from a family. The voice is a person — usually Wendy — talking to another person, not a brand to a market.</p>
+        <dl>
+          <dt>We are</dt><dd>"I" and "we." First names. Lake-house casual.</dd>
+          <dt>Not</dt><dd><em>"Our organization is committed to…"</em></dd>
+        </dl>
+      </div>
+
+      <div class="pillar">
+        <h3><em>Hopeful</em>, not desperate.</h3>
+        <p>The science is closer than people realize. We say so. We don't manufacture crisis or guilt to move dollars — that voice doesn't belong to us.</p>
+        <dl>
+          <dt>We are</dt><dd>Confident. The work is moving. Join in.</dd>
+          <dt>Not</dt><dd><em>"Time is running out." "We can't do this without you."</em></dd>
+        </dl>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── 2. TONE SPECTRUM ─────────────────────────────── -->
+  <section>
+    <div class="sec-h"><span class="num">02</span><h2>Tone — what shifts</h2></div>
+    <p class="sec-d">Tone moves with the moment. The dot shows where most of our copy lands, but the same voice should be recognizable at either end.</p>
+    <div class="spectrum">
+      <div class="spec-row">
+        <span class="l"><strong>Casual</strong> · social, donor texts</span>
+        <div class="spec-bar"><div class="spec-dot" style="left: 38%"></div></div>
+        <span><strong>Formal</strong> · sponsor decks, tax letters</span>
+      </div>
+      <div class="spec-row">
+        <span class="l"><strong>Personal</strong> · founder letters</span>
+        <div class="spec-bar"><div class="spec-dot" style="left: 30%"></div></div>
+        <span><strong>Institutional</strong> · grant applications</span>
+      </div>
+      <div class="spec-row">
+        <span class="l"><strong>Plain</strong> · receipts, FAQ</span>
+        <div class="spec-bar"><div class="spec-dot" style="left: 50%"></div></div>
+        <span><strong>Lyrical</strong> · hero copy, in-memory</span>
+      </div>
+      <div class="spec-row">
+        <span class="l"><strong>Quiet</strong> · gratitude, closers</span>
+        <div class="spec-bar"><div class="spec-dot" style="left: 55%"></div></div>
+        <span><strong>Confident</strong> · the science, the asks</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 3. WRITE / DON'T WRITE ───────────────────────── -->
+  <section>
+    <div class="sec-h"><span class="num">03</span><h2>Write this, not that</h2></div>
+    <p class="sec-d">Six concrete pairs. Read the bad version aloud — that's what most charity copy sounds like. The good version is what we sound like.</p>
+
+    <div class="pairs">
+
+      <div class="pair">
+        <div class="ex do">
+          <span class="tag">✓ Write this</span>
+          <span class="ctx">Donation page hero</span>
+          <p>"100% of your gift reaches MJFF research. No salaries, no overhead — we cover those ourselves."</p>
+          <p class="why"><strong>Why:</strong> A clean fact, said plainly. Trust comes from specificity.</p>
+        </div>
+        <div class="ex dont">
+          <span class="tag">✕ Not this</span>
+          <span class="ctx">Generic charity copy</span>
+          <p>"Your generous support empowers us to make a meaningful impact in the fight against this devastating disease."</p>
+          <p class="why"><strong>Why not:</strong> No specifics. Five adjectives. Sounds like every other ask.</p>
+        </div>
+      </div>
+
+      <div class="pair">
+        <div class="ex do">
+          <span class="tag">✓ Write this</span>
+          <span class="ctx">Email subject</span>
+          <p>"What your $250 funded last quarter."</p>
+          <p class="why"><strong>Why:</strong> Concrete, owed to the donor, no exclamation point.</p>
+        </div>
+        <div class="ex dont">
+          <span class="tag">✕ Not this</span>
+          <span class="ctx">Email subject</span>
+          <p>"You won't believe the difference YOU made!! 💜"</p>
+          <p class="why"><strong>Why not:</strong> Begs for the click. Caps and emoji do not equal warmth.</p>
+        </div>
+      </div>
+
+      <div class="pair">
+        <div class="ex do">
+          <span class="tag">✓ Write this</span>
+          <span class="ctx">About page intro</span>
+          <p>"Wendy lost her dad to Parkinson's. So she started a concert. Eight years and $487,000 later, it's still going."</p>
+          <p class="why"><strong>Why:</strong> Story, then number. The math earns the feeling.</p>
+        </div>
+        <div class="ex dont">
+          <span class="tag">✕ Not this</span>
+          <span class="ctx">About page intro</span>
+          <p>"Our journey began with a passion to fight Parkinson's, and it has grown into something truly special."</p>
+          <p class="why"><strong>Why not:</strong> "Journey," "passion," "truly special" — the holy trinity of nonprofit slop.</p>
+        </div>
+      </div>
+
+      <div class="pair">
+        <div class="ex do">
+          <span class="tag">✓ Write this</span>
+          <span class="ctx">Concert page CTA</span>
+          <p>"Tickets are $150. The boat raffle is $100 for one entry, $250 for three. Doors at 5."</p>
+          <p class="why"><strong>Why:</strong> Pricing first. The reader is here to commit, not to be inspired.</p>
+        </div>
+        <div class="ex dont">
+          <span class="tag">✕ Not this</span>
+          <span class="ctx">Concert page CTA</span>
+          <p>"Join us for an unforgettable evening of music, community, and hope as we come together for a cause that matters."</p>
+          <p class="why"><strong>Why not:</strong> Says nothing actionable. Reader still doesn't know the price.</p>
+        </div>
+      </div>
+
+      <div class="pair">
+        <div class="ex do">
+          <span class="tag">✓ Write this</span>
+          <span class="ctx">In-memory dedication</span>
+          <p>"For Sue Chase. 1947–2021. The reason."</p>
+          <p class="why"><strong>Why:</strong> Reverent. Three lines. Doesn't try to write a eulogy.</p>
+        </div>
+        <div class="ex dont">
+          <span class="tag">✕ Not this</span>
+          <span class="ctx">In-memory dedication</span>
+          <p>"In loving memory of those who have battled this terrible disease and inspired us all to keep fighting."</p>
+          <p class="why"><strong>Why not:</strong> No name. "Battled," "terrible disease" — clichés the family wouldn't use.</p>
+        </div>
+      </div>
+
+      <div class="pair">
+        <div class="ex do">
+          <span class="tag">✓ Write this</span>
+          <span class="ctx">Social — concert recap</span>
+          <p>"312 of you. $67,200 to MJFF. Same lake, same song, one year closer."</p>
+          <p class="why"><strong>Why:</strong> Numbers do the work. The last clause is the only flourish, and it's earned.</p>
+        </div>
+        <div class="ex dont">
+          <span class="tag">✕ Not this</span>
+          <span class="ctx">Social — concert recap</span>
+          <p>"WOW! What a night! 🎶✨ So grateful for our amazing community! Together, we're changing lives! 💪"</p>
+          <p class="why"><strong>Why not:</strong> Five exclamations, no facts. Could be any nonprofit, any night.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── 4. SURFACES ────────────────────────────────────── -->
+  <section>
+    <div class="sec-h"><span class="num">04</span><h2>Voice on each surface</h2></div>
+    <p class="sec-d">Same voice, different rhythm. Headlines lean lyrical; receipts lean clean; receipts also keep one warm sentence so they don't read like a bank email.</p>
+    <div class="surfaces">
+
+      <div class="surface">
+        <p class="eb">Hero headline</p>
+        <h4>Closer than people <em>realize.</em></h4>
+        <div class="body"><p>Italic serif, one short clause, one orange word. Don't explain it underneath — let it carry weight.</p></div>
+        <div class="meta"><span><strong>Length:</strong> 3–6 words</span><span><strong>Avoid:</strong> Two clauses</span></div>
+      </div>
+
+      <div class="surface">
+        <p class="eb">Donation receipt</p>
+        <h4>Thank you, Maria.</h4>
+        <div class="body"><p>Your gift is on its way to the science. Every dollar reaches MJFF — no salaries, no skim.</p><p><em>Then:</em> the receipt details, plain and clean.</p></div>
+        <div class="meta"><span><strong>Length:</strong> 2 short paragraphs</span><span><strong>Voice:</strong> Personal + plain</span></div>
+      </div>
+
+      <div class="surface">
+        <p class="eb">Founder letter</p>
+        <h4>"We started this because Parkinson's took someone we love."</h4>
+        <div class="body"><p>First-person, full sentences, the way Wendy actually talks. Italic serif when quoted; sans when in body.</p></div>
+        <div class="meta"><span><strong>Length:</strong> 3–5 paragraphs</span><span><strong>Voice:</strong> Personal + confident</span></div>
+      </div>
+
+      <div class="surface">
+        <p class="eb">Social — call to action</p>
+        <h4>$25 = half a day of research.</h4>
+        <div class="body"><p>Concrete impact, equal sign, period. Pair with one photo. Don't add hashtags about hope.</p></div>
+        <div class="meta"><span><strong>Length:</strong> Under 10 words</span><span><strong>Voice:</strong> Direct</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── 5. WORDS ─────────────────────────────────────── -->
+  <section>
+    <div class="sec-h"><span class="num">05</span><h2>Words we use & avoid</h2></div>
+    <p class="sec-d">Vocabulary signals voice faster than sentence structure. Use the left column. Avoid the right.</p>
+    <div class="words">
+      <div class="wlist use">
+        <h4>USE</h4>
+        <ul>
+          <li><code>the science</code><span>Specific, ownable. Beats "research" alone.</span></li>
+          <li><code>biomarker</code><span>The actual work MJFF is doing.</span></li>
+          <li><code>fund / funded</code><span>Active, financial, specific.</span></li>
+          <li><code>reaches MJFF</code><span>Names the partner. Builds trust.</span></li>
+          <li><code>built from love</code><span>Tagline. Use sparingly.</span></li>
+          <li><code>closer</code><span>Hopeful without hype.</span></li>
+          <li><code>concert</code><span>Always lowercase, never "the Concert event."</span></li>
+        </ul>
+      </div>
+      <div class="wlist avoid">
+        <h4>AVOID</h4>
+        <ul>
+          <li><code>journey</code><span>Has no meaning left. Replace with what actually happened.</span></li>
+          <li><code>fight / battle</code><span>Don't militarize a chronic illness.</span></li>
+          <li><code>warriors</code><span>Patients are not soldiers.</span></li>
+          <li><code>devastating</code><span>Tells the reader how to feel.</span></li>
+          <li><code>impact</code><span>If you must, say what changed.</span></li>
+          <li><code>amazing / incredible</code><span>Empty intensifiers.</span></li>
+          <li><code>community</code><span>Acceptable rarely. "People who showed up" is better.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form patterns</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 56px 40px 80px; background: var(--ccpd-pink-50); font-family: var(--font-sans); color: var(--ccpd-ink-900); }
+  .wrap { max-width: 1200px; margin: 0 auto; }
+
+  .page-h { margin-bottom: 56px; max-width: 720px; }
+  .page-h .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ccpd-orange-600); margin: 0 0 14px; }
+  .page-h h1 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 48px; line-height: 1.1; letter-spacing: -0.015em; margin: 0 0 18px; }
+  .page-h h1 em { color: var(--ccpd-orange-600); }
+  .page-h p { font-size: 17px; line-height: 1.6; color: var(--ccpd-ink-700); margin: 0; }
+
+  section { margin-bottom: 64px; }
+  .sec-h { display: flex; align-items: baseline; gap: 16px; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--ccpd-gray-100); }
+  .sec-h .num { font-family: var(--font-serif); font-style: italic; font-size: 22px; color: var(--ccpd-orange-500); }
+  .sec-h h2 { font-family: var(--font-display); font-weight: 600; font-size: 16px; letter-spacing: -0.005em; margin: 0; }
+  .sec-d { font-family: var(--font-serif); font-style: italic; font-size: 16px; line-height: 1.55; color: var(--ccpd-gray-700); margin: 0 0 28px; max-width: 64ch; }
+
+  /* ── Field anatomy ──────────────────────────── */
+  .anatomy { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .field-card { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 12px; padding: 24px 26px; }
+  .field-card .lab { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ccpd-gray-500); margin-bottom: 14px; }
+  .field-card .demo { padding: 14px 0; }
+
+  /* ── Inputs (shared) ────────────────────────── */
+  .label { display: block; font-size: 13px; font-weight: 600; color: var(--ccpd-ink-900); margin-bottom: 6px; }
+  .label .req { color: var(--ccpd-orange-600); margin-left: 2px; }
+  .help { font-size: 12px; color: var(--ccpd-gray-500); margin-top: 6px; line-height: 1.5; }
+  .input, .textarea, .select { width: 100%; padding: 12px 14px; border: 1px solid var(--ccpd-gray-200); border-radius: 8px; font-family: inherit; font-size: 15px; color: var(--ccpd-ink-900); background: #fff; outline: none; transition: border-color 120ms, box-shadow 120ms; box-sizing: border-box; }
+  .input::placeholder { color: var(--ccpd-gray-400); }
+  .input:focus, .textarea:focus, .select:focus { border-color: var(--ccpd-orange-500); box-shadow: 0 0 0 3px rgba(249,128,8,0.15); }
+  .input.error, .textarea.error { border-color: #dc2626; box-shadow: 0 0 0 3px rgba(220,38,38,0.12); }
+  .input.error:focus { box-shadow: 0 0 0 3px rgba(220,38,38,0.18); }
+  .input.ok { border-color: #10b981; }
+  .input:disabled { background: var(--ccpd-gray-50); color: var(--ccpd-gray-500); cursor: not-allowed; }
+  .textarea { resize: vertical; min-height: 96px; font-family: inherit; line-height: 1.5; }
+
+  .err-msg { display: flex; align-items: center; gap: 6px; margin-top: 8px; font-size: 13px; color: #dc2626; font-weight: 500; }
+  .err-msg svg { flex-shrink: 0; }
+  .ok-msg { display: flex; align-items: center; gap: 6px; margin-top: 8px; font-size: 13px; color: #047857; font-weight: 500; }
+
+  /* Currency input */
+  .currency { position: relative; }
+  .currency .sym { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--ccpd-gray-400); pointer-events: none; }
+  .currency .input { padding-left: 30px; }
+  .currency.has-value .sym { color: var(--ccpd-ink-900); }
+
+  /* Select */
+  .sel-wrap { position: relative; }
+  .sel-wrap::after { content: ''; position: absolute; right: 16px; top: 50%; width: 8px; height: 8px; border-right: 2px solid var(--ccpd-gray-500); border-bottom: 2px solid var(--ccpd-gray-500); transform: translateY(-70%) rotate(45deg); pointer-events: none; }
+  .select { appearance: none; padding-right: 36px; background-image: none; }
+
+  /* Checkbox & radio */
+  .check { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; padding: 4px 0; }
+  .check input { appearance: none; width: 18px; height: 18px; border: 1.5px solid var(--ccpd-gray-300); border-radius: 4px; flex-shrink: 0; cursor: pointer; transition: all 120ms; margin-top: 1px; position: relative; }
+  .check input:checked { background: var(--ccpd-orange-500); border-color: var(--ccpd-orange-500); }
+  .check input:checked::after { content: ''; position: absolute; left: 5px; top: 1px; width: 5px; height: 10px; border-right: 2px solid #fff; border-bottom: 2px solid #fff; transform: rotate(45deg); }
+  .check input.radio { border-radius: 999px; }
+  .check input.radio:checked::after { all: unset; content: ''; position: absolute; left: 4px; top: 4px; width: 8px; height: 8px; border-radius: 999px; background: #fff; }
+  .check span { font-size: 14px; line-height: 1.5; color: var(--ccpd-ink-900); }
+  .check span small { display: block; color: var(--ccpd-gray-500); font-size: 12px; margin-top: 2px; }
+
+  /* Toggle */
+  .toggle { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+  .toggle input { display: none; }
+  .toggle .track { width: 36px; height: 20px; background: var(--ccpd-gray-200); border-radius: 999px; position: relative; transition: background 120ms; }
+  .toggle .track::after { content: ''; position: absolute; left: 2px; top: 2px; width: 16px; height: 16px; background: #fff; border-radius: 999px; transition: left 120ms; box-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+  .toggle input:checked + .track { background: var(--ccpd-orange-500); }
+  .toggle input:checked + .track::after { left: 18px; }
+
+  /* ── Buttons ───────────────────────────────── */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 24px; border-radius: 8px; font-family: inherit; font-weight: 700; font-size: 15px; cursor: pointer; border: 0; transition: all 150ms var(--ease); text-decoration: none; }
+  .btn-primary { background: var(--ccpd-orange-500); color: #fff; }
+  .btn-primary:hover { background: var(--ccpd-orange-600); }
+  .btn-primary:disabled { background: var(--ccpd-gray-200); color: var(--ccpd-gray-500); cursor: not-allowed; }
+  .btn-block { width: 100%; padding: 16px 24px; font-size: 16px; }
+  .btn-loading { color: transparent; position: relative; pointer-events: none; }
+  .btn-loading::after { content: ''; position: absolute; left: 50%; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border: 2.5px solid rgba(255,255,255,0.3); border-top-color: #fff; border-radius: 999px; animation: spin 0.7s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── Layout for full forms ────────────────── */
+  .forms { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+  .form-card { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 14px; padding: 32px; }
+  .form-card.wide { grid-column: 1 / -1; max-width: 540px; margin: 0 auto; padding: 36px 36px 32px; }
+  .form-card h3 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 26px; letter-spacing: -0.01em; margin: 0 0 4px; color: var(--ccpd-ink-900); }
+  .form-card h3 em { color: var(--ccpd-orange-600); }
+  .form-card .lede { font-size: 14px; color: var(--ccpd-gray-700); margin: 0 0 24px; line-height: 1.55; }
+
+  /* Donation amount tiles */
+  .amt-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+  .amt-grid button { padding: 14px 8px; border: 1px solid var(--ccpd-gray-200); border-radius: 8px; background: #fff; font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--ccpd-ink-800); cursor: pointer; transition: all 120ms; }
+  .amt-grid button:hover { border-color: var(--ccpd-orange-300); }
+  .amt-grid button.on { border: 2px solid var(--ccpd-orange-500); background: var(--ccpd-orange-100); color: var(--ccpd-orange-600); padding: 13px 7px; }
+
+  .freq-tabs { display: flex; background: var(--ccpd-gray-50); border-radius: 8px; padding: 4px; margin-bottom: 22px; }
+  .freq-tabs button { flex: 1; padding: 10px 0; border: 0; background: transparent; border-radius: 6px; font-family: inherit; font-weight: 600; font-size: 13px; color: var(--ccpd-gray-500); cursor: pointer; transition: all 150ms; }
+  .freq-tabs button.on { background: #fff; color: var(--ccpd-ink-900); box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+
+  .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .row-3 { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 12px; }
+
+  fieldset { border: 0; padding: 0; margin: 0 0 18px; }
+  fieldset .legend { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ccpd-gray-500); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--ccpd-gray-100); }
+
+  .form-meta { font-size: 12px; color: var(--ccpd-gray-500); display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 16px; line-height: 1.5; text-align: center; }
+
+  /* Success state */
+  .success { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 14px; padding: 48px 36px 36px; text-align: center; }
+  .success .check-mark { width: 72px; height: 72px; border-radius: 999px; background: var(--ccpd-orange-100); display: grid; place-items: center; margin: 0 auto 22px; }
+  .success .check-mark::after { content: ''; width: 28px; height: 14px; border-left: 3px solid var(--ccpd-orange-600); border-bottom: 3px solid var(--ccpd-orange-600); transform: rotate(-45deg) translate(2px, -2px); }
+  .success h3 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 32px; letter-spacing: -0.01em; margin: 0 0 12px; }
+  .success h3 em { color: var(--ccpd-orange-600); }
+  .success p { font-size: 15px; line-height: 1.6; color: var(--ccpd-gray-700); margin: 0 0 18px; }
+  .success .amount-line { padding: 18px 24px; background: var(--ccpd-pink-50); border-radius: 8px; margin: 22px 0; font-family: var(--font-serif); font-style: italic; font-size: 22px; color: var(--ccpd-ink-900); }
+  .success .amount-line strong { color: var(--ccpd-orange-600); font-weight: 400; }
+  .success .meta-row { display: flex; gap: 14px; justify-content: center; margin-top: 22px; font-size: 13px; }
+  .success .meta-row a { color: var(--ccpd-orange-600); font-weight: 600; text-decoration: none; }
+
+  /* Inline newsletter signup */
+  .inline-form { display: flex; gap: 10px; align-items: stretch; max-width: 500px; }
+  .inline-form .input { flex: 1; }
+  .inline-form .btn { flex-shrink: 0; padding: 12px 20px; font-size: 14px; }
+
+  /* Banners (in a form) */
+  .banner { padding: 14px 18px; border-radius: 10px; font-size: 14px; line-height: 1.55; display: flex; align-items: flex-start; gap: 12px; margin-bottom: 20px; }
+  .banner-error { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+  .banner-error svg { color: #dc2626; flex-shrink: 0; margin-top: 2px; }
+  .banner strong { display: block; margin-bottom: 2px; font-weight: 600; }
+
+  /* Step indicator */
+  .steps { display: flex; align-items: center; gap: 8px; margin-bottom: 28px; padding-bottom: 22px; border-bottom: 1px solid var(--ccpd-gray-100); }
+  .step { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ccpd-gray-500); }
+  .step .dot { width: 24px; height: 24px; border-radius: 999px; background: var(--ccpd-gray-100); color: var(--ccpd-gray-500); display: grid; place-items: center; font-size: 12px; font-weight: 700; font-family: var(--font-display); }
+  .step.done .dot { background: var(--ccpd-orange-500); color: #fff; }
+  .step.done span { color: var(--ccpd-ink-900); font-weight: 600; }
+  .step.now .dot { background: var(--ccpd-ink-900); color: #fff; }
+  .step.now span { color: var(--ccpd-ink-900); font-weight: 600; }
+  .step .line { flex: 1; height: 1px; background: var(--ccpd-gray-100); min-width: 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-h">
+    <p class="eyebrow">Components · Forms</p>
+    <h1>Forms that <em>convert</em> without performing.</h1>
+    <p>Donation, RSVP and contact forms — assembled. Field anatomy on top, complete patterns below. Every state shown: rest, focus, error, success, loading.</p>
+  </header>
+
+  <!-- ── 1. FIELD STATES ────────────────────── -->
+  <section>
+    <div class="sec-h"><span class="num">01</span><h2>Field states</h2></div>
+    <p class="sec-d">All inputs use the same border, radius, padding and focus ring. Error and success colors are the only thing that swap — never re-shape the field.</p>
+    <div class="anatomy">
+
+      <div class="field-card">
+        <p class="lab">Text · Rest</p>
+        <div class="demo"><label class="label">Email address<span class="req">*</span></label><input class="input" type="email" placeholder="you@example.com"></div>
+        <p class="lab" style="margin-top: 22px;">Text · Focus</p>
+        <div class="demo"><label class="label">Email address<span class="req">*</span></label><input class="input" type="email" value="maria@" autofocus></div>
+      </div>
+
+      <div class="field-card">
+        <p class="lab">Text · Error</p>
+        <div class="demo"><label class="label">Email address<span class="req">*</span></label><input class="input error" type="email" value="maria@"><div class="err-msg"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg>Please include a valid domain (.com, .org…)</div></div>
+        <p class="lab" style="margin-top: 22px;">Text · Disabled</p>
+        <div class="demo"><label class="label">Confirmation</label><input class="input" type="text" value="CCPD-2026-04-28-9F2B" disabled></div>
+      </div>
+
+      <div class="field-card">
+        <p class="lab">Currency</p>
+        <div class="demo"><label class="label">Custom amount</label><div class="currency has-value"><span class="sym">$</span><input class="input" type="text" value="250"></div><p class="help">Minimum gift is $5. Use whole dollars.</p></div>
+      </div>
+
+      <div class="field-card">
+        <p class="lab">Textarea</p>
+        <div class="demo"><label class="label">Message <span class="help" style="display: inline; margin: 0; font-weight: 400;">(optional)</span></label><textarea class="textarea" placeholder="Tell us why you're giving, or who you're honoring."></textarea></div>
+      </div>
+
+      <div class="field-card">
+        <p class="lab">Select</p>
+        <div class="demo"><label class="label">How did you hear about us?</label><div class="sel-wrap"><select class="select"><option>Concert for a Cure</option><option>Friend or family</option><option>MJFF event</option><option>Social media</option><option>Other</option></select></div></div>
+      </div>
+
+      <div class="field-card">
+        <p class="lab">Checkbox & radio</p>
+        <div class="demo">
+          <label class="check"><input type="checkbox" checked><span>Make this gift in honor of someone<small>We'll send a card on your behalf.</small></span></label>
+          <label class="check" style="margin-top: 10px;"><input type="radio" name="x" class="radio" checked><span>Charge my card monthly</span></label>
+          <label class="check" style="margin-top: 4px;"><input type="radio" name="x" class="radio"><span>One-time gift</span></label>
+        </div>
+      </div>
+
+      <div class="field-card">
+        <p class="lab">Toggle</p>
+        <div class="demo">
+          <label class="toggle"><input type="checkbox" checked><span class="track"></span><span style="font-size: 14px;">Cover the 2.9% processing fee so 100% reaches MJFF</span></label>
+        </div>
+      </div>
+
+      <div class="field-card">
+        <p class="lab">Submit · States</p>
+        <div class="demo" style="display: flex; flex-direction: column; gap: 10px;">
+          <button class="btn btn-primary btn-block">Donate $250 →</button>
+          <button class="btn btn-primary btn-block btn-loading">Processing</button>
+          <button class="btn btn-primary btn-block" disabled>Donate (enter amount first)</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── 2. DONATION FORM (full) ─────────────── -->
+  <section>
+    <div class="sec-h"><span class="num">02</span><h2>Donation form — full</h2></div>
+    <p class="sec-d">The complete pattern: frequency, preset amounts, custom, donor info, optional in-honor, fee toggle, payment. One column, ~520px. Side surfaces (impact, trust line) sit outside the form card.</p>
+    <div class="forms">
+      <div class="form-card wide">
+        <h3>Make your <em>gift.</em></h3>
+        <p class="lede">100% reaches The Michael J. Fox Foundation for Parkinson's Research.</p>
+
+        <fieldset>
+          <p class="legend">Frequency</p>
+          <div class="freq-tabs"><button class="on">Give once</button><button>Give monthly</button></div>
+        </fieldset>
+
+        <fieldset>
+          <p class="legend">Amount</p>
+          <div class="amt-grid">
+            <button>$25</button><button>$50</button><button>$100</button>
+            <button class="on">$250</button><button>$500</button><button>$1,000</button>
+          </div>
+          <label class="label" style="margin-top: 8px;">Or another amount</label>
+          <div class="currency"><span class="sym">$</span><input class="input" type="text" placeholder="0"></div>
+        </fieldset>
+
+        <fieldset>
+          <p class="legend">Your information</p>
+          <div class="row-2" style="margin-bottom: 12px;">
+            <div><label class="label">First name<span class="req">*</span></label><input class="input" type="text" value="Maria"></div>
+            <div><label class="label">Last name<span class="req">*</span></label><input class="input" type="text" value="Alvarez"></div>
+          </div>
+          <label class="label">Email<span class="req">*</span></label><input class="input ok" type="email" value="maria@example.com" style="margin-bottom: 12px;">
+          <label class="check"><input type="checkbox"><span>Make this gift in honor of someone</span></label>
+        </fieldset>
+
+        <fieldset style="margin-bottom: 8px;">
+          <label class="toggle"><input type="checkbox" checked><span class="track"></span><span style="font-size: 14px;">Add 2.9% to cover processing — your full $250 reaches MJFF</span></label>
+        </fieldset>
+
+        <button class="btn btn-primary btn-block">Donate $257.25 →</button>
+        <p class="form-meta">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Secure · 501(c)(3) · Tax-deductible · No salaries
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 3. RSVP FORM ──────────────────────── -->
+  <section>
+    <div class="sec-h"><span class="num">03</span><h2>RSVP form — concert</h2></div>
+    <p class="sec-d">Two-column layout. Step indicator at top — RSVP is multi-step (info → tickets → payment). This shows step 1 with banner-level error.</p>
+    <div class="forms">
+
+      <div class="form-card">
+        <div class="steps">
+          <div class="step now"><span class="dot">1</span><span>Your info</span></div>
+          <span class="line"></span>
+          <div class="step"><span class="dot">2</span><span>Tickets</span></div>
+          <span class="line"></span>
+          <div class="step"><span class="dot">3</span><span>Payment</span></div>
+        </div>
+
+        <h3>RSVP for <em>Concert for a Cure</em></h3>
+        <p class="lede">Saturday, July 18 · Geist Reservoir, Fishers IN</p>
+
+        <div class="row-2" style="margin-bottom: 14px;">
+          <div><label class="label">First name<span class="req">*</span></label><input class="input" type="text"></div>
+          <div><label class="label">Last name<span class="req">*</span></label><input class="input" type="text"></div>
+        </div>
+        <label class="label">Email<span class="req">*</span></label><input class="input" type="email" style="margin-bottom: 14px;">
+        <label class="label">Mobile (for event-day updates)</label><input class="input" type="tel" placeholder="(317) 555-0142" style="margin-bottom: 14px;">
+
+        <label class="label">Dietary preferences</label>
+        <div class="sel-wrap" style="margin-bottom: 14px;"><select class="select"><option>None</option><option>Vegetarian</option><option>Vegan</option><option>Gluten-free</option><option>Other (please note below)</option></select></div>
+
+        <button class="btn btn-primary btn-block">Continue to tickets →</button>
+      </div>
+
+      <!-- Same form, with banner-level error state -->
+      <div class="form-card">
+        <div class="steps">
+          <div class="step now"><span class="dot">1</span><span>Your info</span></div>
+          <span class="line"></span>
+          <div class="step"><span class="dot">2</span><span>Tickets</span></div>
+          <span class="line"></span>
+          <div class="step"><span class="dot">3</span><span>Payment</span></div>
+        </div>
+
+        <h3>RSVP for <em>Concert for a Cure</em></h3>
+        <p class="lede">Saturday, July 18 · Geist Reservoir, Fishers IN</p>
+
+        <div class="banner banner-error">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg>
+          <div><strong>Two fields need attention</strong>Please correct the highlighted entries below.</div>
+        </div>
+
+        <div class="row-2" style="margin-bottom: 14px;">
+          <div><label class="label">First name<span class="req">*</span></label><input class="input" type="text" value="Maria"></div>
+          <div>
+            <label class="label">Last name<span class="req">*</span></label>
+            <input class="input error" type="text">
+            <div class="err-msg"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg>Required field</div>
+          </div>
+        </div>
+
+        <label class="label">Email<span class="req">*</span></label>
+        <input class="input error" type="email" value="maria@" style="margin-bottom: 0;">
+        <div class="err-msg" style="margin-bottom: 14px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg>Please include a valid domain</div>
+
+        <label class="label">Mobile (for event-day updates)</label>
+        <input class="input" type="tel" placeholder="(317) 555-0142" style="margin-bottom: 14px;">
+
+        <button class="btn btn-primary btn-block" disabled>Continue to tickets →</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── 4. CONTACT FORM ───────────────────── -->
+  <section>
+    <div class="sec-h"><span class="num">04</span><h2>Contact form</h2></div>
+    <p class="sec-d">A simple direct-line. Reason picker steers the message to the right inbox. Wendy reads contact submissions personally — copy reflects that.</p>
+    <div class="forms">
+      <div class="form-card">
+        <h3>Get in <em>touch.</em></h3>
+        <p class="lede">Wendy reads every message. Replies usually within two business days.</p>
+        <label class="label">Your name<span class="req">*</span></label><input class="input" type="text" style="margin-bottom: 14px;">
+        <label class="label">Email<span class="req">*</span></label><input class="input" type="email" style="margin-bottom: 14px;">
+        <label class="label">What's this about?<span class="req">*</span></label>
+        <div class="sel-wrap" style="margin-bottom: 14px;"><select class="select"><option>Sponsoring the concert</option><option>Donating an auction item</option><option>A donation question or receipt</option><option>Press / media</option><option>Something else</option></select></div>
+        <label class="label">Message<span class="req">*</span></label><textarea class="textarea" style="margin-bottom: 18px; min-height: 120px;"></textarea>
+        <button class="btn btn-primary btn-block">Send message →</button>
+      </div>
+
+      <!-- Inline newsletter signup, narrower variant -->
+      <div class="form-card">
+        <h3>The <em>science update.</em></h3>
+        <p class="lede">Quarterly. No asks below the line — just the science. Unsubscribe in one click.</p>
+        <label class="label" style="margin-bottom: 8px;">Email</label>
+        <div class="inline-form">
+          <input class="input" type="email" placeholder="you@example.com">
+          <button class="btn btn-primary">Subscribe</button>
+        </div>
+        <p class="help" style="margin-top: 10px;">By subscribing you agree to our short, no-trick privacy policy.</p>
+
+        <div style="height: 24px;"></div>
+        <p class="lab" style="font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ccpd-gray-500); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--ccpd-gray-100);">Variant · success</p>
+
+        <label class="label" style="margin-bottom: 8px;">Email</label>
+        <div class="inline-form" style="opacity: 0.7;">
+          <input class="input ok" type="email" value="maria@example.com" disabled>
+          <button class="btn btn-primary" disabled>Subscribed</button>
+        </div>
+        <div class="ok-msg"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>You're in. First issue lands next quarter.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 5. SUCCESS STATE ─────────────────── -->
+  <section>
+    <div class="sec-h"><span class="num">05</span><h2>Success state — donation</h2></div>
+    <p class="sec-d">Replaces the form on submit. One sentence of thanks, the amount confirmed, two practical next-steps. Doesn't gush; the receipt email handles longer warmth.</p>
+    <div class="forms">
+      <div class="success" style="grid-column: 1 / -1; max-width: 540px; margin: 0 auto;">
+        <div class="check-mark" aria-hidden="true"></div>
+        <h3>Thank you, <em>Maria.</em></h3>
+        <p>Your gift is on its way to the science. A receipt is in your inbox.</p>
+        <div class="amount-line"><strong>$257.25</strong> · One-time</div>
+        <p style="font-size: 14px;">If you'd like to follow what your gift is funding, our quarterly update has no asks — just the science.</p>
+        <div class="meta-row">
+          <a href="#">Subscribe to the science update →</a>
+          <span style="color: var(--ccpd-gray-300);">·</span>
+          <a href="#">Share a reason</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

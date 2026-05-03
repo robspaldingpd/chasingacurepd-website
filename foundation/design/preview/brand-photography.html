@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Photography</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 32px; background: var(--ccpd-pink-50); font-family: var(--font-sans); }
+  .header { max-width: 1200px; margin: 0 auto 28px; }
+  .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ccpd-gray-500); margin: 0 0 8px; }
+  h1 { font-family: var(--font-display); font-weight: 600; font-size: 24px; letter-spacing: -0.02em; margin: 0 0 12px; color: var(--ccpd-ink-900); }
+  .sub { font-size: 14px; line-height: 1.6; color: var(--ccpd-ink-700); max-width: 56ch; margin: 0; }
+
+  .group { max-width: 1200px; margin: 0 auto 32px; }
+  .group h2 { font-family: var(--font-sans); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ccpd-gray-500); margin: 0 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--ccpd-gray-200); }
+
+  .grid { display: grid; gap: 16px; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+  .card { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 8px; overflow: hidden; }
+  .card .frame { aspect-ratio: 4/3; background: var(--ccpd-gray-100); overflow: hidden; }
+  .card.portrait .frame { aspect-ratio: 1/1; }
+  .card .frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .meta { padding: 10px 12px; }
+  .name { font-family: var(--font-display); font-weight: 600; font-size: 13px; color: var(--ccpd-ink-900); margin: 0 0 2px; letter-spacing: -0.005em; }
+  .path { font-family: var(--font-mono, ui-monospace, monospace); font-size: 10.5px; color: var(--ccpd-gray-500); }
+  .tag { display: inline-block; font-size: 9.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ccpd-orange-700); background: var(--ccpd-orange-100); padding: 2px 6px; border-radius: 3px; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <p class="eyebrow">Photography</p>
+  <h1>Library</h1>
+  <p class="sub">Real photos from the family, the venue, and the work. Use these — never AI-generated stand-ins. When unavailable, prefer the pink/orange placeholder gradient over a stock photo.</p>
+</div>
+
+<div class="group">
+  <h2>Founders & family</h2>
+  <div class="grid grid-4">
+    <div class="card portrait">
+      <div class="frame"><img src="../assets/photos/wendy-portrait.png" alt="Wendy portrait"></div>
+      <div class="meta"><div class="tag">Hero portrait</div><div class="name">Wendy</div><div class="path">photos/wendy-portrait.png</div></div>
+    </div>
+    <div class="card portrait">
+      <div class="frame"><img src="../assets/photos/sue-chase-clean.jpg" alt="Sue Chase"></div>
+      <div class="meta"><div class="tag">Founder · history</div><div class="name">Sue Chase</div><div class="path">photos/sue-chase-clean.jpg</div></div>
+    </div>
+    <div class="card">
+      <div class="frame"><img src="../assets/photos/wendy-rob-candid.jpg" alt="Wendy and Rob candid"></div>
+      <div class="meta"><div class="tag">Candid</div><div class="name">Wendy & Rob</div><div class="path">photos/wendy-rob-candid.jpg</div></div>
+    </div>
+    <div class="card">
+      <div class="frame"><img src="../assets/photos/wendy-rob-mjff-event-2.jpg" alt="MJFF event"></div>
+      <div class="meta"><div class="tag">Partnership</div><div class="name">MJFF event</div><div class="path">photos/wendy-rob-mjff-event-2.jpg</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="group">
+  <h2>Concert &amp; venue</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <div class="frame"><img src="../assets/photos/concert-group-2024.jpg" alt="Concert group 2024"></div>
+      <div class="meta"><div class="tag">Community</div><div class="name">Concert 2024 · group</div><div class="path">photos/concert-group-2024.jpg</div></div>
+    </div>
+    <div class="card">
+      <div class="frame"><img src="../assets/photos/concert-crowd.avif" alt="Concert crowd"></div>
+      <div class="meta"><div class="tag">Crowd</div><div class="name">Concert crowd</div><div class="path">photos/concert-crowd.avif</div></div>
+    </div>
+    <div class="card">
+      <div class="frame"><img src="../assets/photos/raffle-boat.png" alt="Raffle boat"></div>
+      <div class="meta"><div class="tag">Raffle prize</div><div class="name">Boat</div><div class="path">photos/raffle-boat.png</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="group">
+  <h2>Geist Reservoir · setting</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <div class="frame"><img src="../assets/photos/geist-golden-hour-balloon.jpg" alt="Geist golden hour with balloon"></div>
+      <div class="meta"><div class="tag">Hero · landscape</div><div class="name">Golden hour, balloon</div><div class="path">photos/geist-golden-hour-balloon.jpg</div></div>
+    </div>
+    <div class="card">
+      <div class="frame"><img src="../assets/photos/geist-sunset-dramatic.jpg" alt="Geist sunset"></div>
+      <div class="meta"><div class="tag">Mood</div><div class="name">Sunset, dramatic</div><div class="path">photos/geist-sunset-dramatic.jpg</div></div>
+    </div>
+    <div class="card">
+      <div class="frame" style="background:var(--ccpd-pink-100); display:flex; align-items:center; justify-content:center; padding:20px;">
+        <img src="../assets/ibc-logo-h.png" alt="IBC logo" style="object-fit:contain;">
+      </div>
+      <div class="meta"><div class="tag">Partner mark</div><div class="name">IBC (sponsor)</div><div class="path">ibc-logo-h.png</div></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

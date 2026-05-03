@@ -1,0 +1,69 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css"><style>
+body{margin:0;padding:18px;background:var(--bg);font-family:var(--font-sans)}
+h3{font-family:var(--font-sans);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--fg-muted);font-weight:700;margin:0 0 10px}
+.section{margin-bottom:18px}
+.row{display:grid;grid-template-columns:repeat(9,1fr);gap:6px}
+.sw{border-radius:6px;overflow:hidden;border:1px solid rgba(0,0,0,.06);background:#fff}
+.chip{height:56px;position:relative}
+.anchor{box-shadow:0 0 0 2px var(--ccpd-ink-900), 0 0 0 4px #fff}
+.anchor::after{content:'★';position:absolute;top:4px;right:5px;color:#fff;font-size:10px;text-shadow:0 1px 2px rgba(0,0,0,.5)}
+.meta{padding:5px 7px;font-size:10px;display:flex;justify-content:space-between;align-items:baseline;gap:4px}
+.name{font-weight:600;color:var(--fg);font-size:10px}
+.hex{color:var(--fg-muted);font-family:var(--font-mono);font-size:9px}
+.logo-ref{display:flex;align-items:center;gap:14px;padding:10px 14px;background:#fff;border:1px solid var(--border);border-radius:8px;margin-bottom:14px}
+.logo-ref img{height:54px;width:auto}
+.logo-ref .note{font-size:11px;color:var(--fg-muted);line-height:1.4}
+.logo-ref strong{color:var(--fg);font-weight:600}
+</style></head><body>
+<div class="logo-ref">
+  <img src="../assets/logo.png" alt="Chasing a Cure logo">
+  <div class="note">
+    Anchors sampled from the official logo:&nbsp;
+    <strong style="color:#F98008">#F98008</strong> monarch orange,&nbsp;
+    <strong style="color:#B3807F">#E8C0C0</strong> blush pink,&nbsp;
+    <strong>#000000</strong> ink. ★ marks the logo pixel in each scale.
+  </div>
+</div>
+<div class="section">
+  <h3>Monarch Orange — action &amp; accent</h3>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:#FFEFDC"></div><div class="meta"><span class="name">100</span><span class="hex">FFEFDC</span></div></div>
+    <div class="sw"><div class="chip" style="background:#FEDAAE"></div><div class="meta"><span class="name">200</span><span class="hex">FEDAAE</span></div></div>
+    <div class="sw"><div class="chip" style="background:#FDBB75"></div><div class="meta"><span class="name">300</span><span class="hex">FDBB75</span></div></div>
+    <div class="sw"><div class="chip" style="background:#FB9A38"></div><div class="meta"><span class="name">400</span><span class="hex">FB9A38</span></div></div>
+    <div class="sw"><div class="chip anchor" style="background:#F98008"></div><div class="meta"><span class="name">500</span><span class="hex">F98008</span></div></div>
+    <div class="sw"><div class="chip" style="background:#E87300"></div><div class="meta"><span class="name">600</span><span class="hex">E87300</span></div></div>
+    <div class="sw"><div class="chip" style="background:#D66C00"></div><div class="meta"><span class="name">700</span><span class="hex">D66C00</span></div></div>
+    <div class="sw"><div class="chip" style="background:#B45800"></div><div class="meta"><span class="name">800</span><span class="hex">B45800</span></div></div>
+    <div class="sw"><div class="chip" style="background:#7A3D00"></div><div class="meta"><span class="name">900</span><span class="hex">7A3D00</span></div></div>
+  </div>
+</div>
+<div class="section">
+  <h3>Blush Pink — brand warmth &amp; surfaces</h3>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:#FDF7F7"></div><div class="meta"><span class="name">50</span><span class="hex">FDF7F7</span></div></div>
+    <div class="sw"><div class="chip" style="background:#FBF0F0"></div><div class="meta"><span class="name">100</span><span class="hex">FBF0F0</span></div></div>
+    <div class="sw"><div class="chip" style="background:#F7E3E3"></div><div class="meta"><span class="name">200</span><span class="hex">F7E3E3</span></div></div>
+    <div class="sw"><div class="chip" style="background:#F2D6D6"></div><div class="meta"><span class="name">300</span><span class="hex">F2D6D6</span></div></div>
+    <div class="sw"><div class="chip" style="background:#EECBCB"></div><div class="meta"><span class="name">400</span><span class="hex">EECBCB</span></div></div>
+    <div class="sw"><div class="chip anchor" style="background:#E8C0C0"></div><div class="meta"><span class="name">500</span><span class="hex">E8C0C0</span></div></div>
+    <div class="sw"><div class="chip" style="background:#DBAFAF"></div><div class="meta"><span class="name">600</span><span class="hex">DBAFAF</span></div></div>
+    <div class="sw"><div class="chip" style="background:#C89B9B"></div><div class="meta"><span class="name">700</span><span class="hex">C89B9B</span></div></div>
+    <div class="sw"><div class="chip" style="background:#7A4F4F"></div><div class="meta"><span class="name">900</span><span class="hex">7A4F4F</span></div></div>
+  </div>
+</div>
+<div class="section">
+  <h3>Ink — voice &amp; type</h3>
+  <div class="row" style="grid-template-columns:repeat(9,1fr)">
+    <div class="sw"><div class="chip anchor" style="background:#000000"></div><div class="meta"><span class="name" style="color:#fff;background:#000;padding:1px 3px;border-radius:2px">900</span><span class="hex">000000</span></div></div>
+    <div class="sw"><div class="chip" style="background:#1A1A1A"></div><div class="meta"><span class="name">800</span><span class="hex">1A1A1A</span></div></div>
+    <div class="sw"><div class="chip" style="background:#2B2B2B"></div><div class="meta"><span class="name">700</span><span class="hex">2B2B2B</span></div></div>
+    <div class="sw"><div class="chip" style="background:#FBF8F2"></div><div class="meta"><span class="name">Cream 50</span><span class="hex">FBF8F2</span></div></div>
+    <div class="sw"><div class="chip" style="background:#F6F1E6"></div><div class="meta"><span class="name">Cream 100</span><span class="hex">F6F1E6</span></div></div>
+    <div class="sw"><div class="chip" style="background:#FFFFFF;box-shadow:inset 0 0 0 1px var(--border)"></div><div class="meta"><span class="name">White</span><span class="hex">FFFFFF</span></div></div>
+    <div class="sw"><div class="chip" style="background:#EDEDF0"></div><div class="meta"><span class="name">Gray 100</span><span class="hex">EDEDF0</span></div></div>
+    <div class="sw"><div class="chip" style="background:#DCDDE3"></div><div class="meta"><span class="name">Gray 200</span><span class="hex">DCDDE3</span></div></div>
+    <div class="sw"><div class="chip" style="background:#6B6F7D"></div><div class="meta"><span class="name">Gray 500</span><span class="hex">6B6F7D</span></div></div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Build a page — annotated example</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--ccpd-gray-50); font-family: var(--font-sans); color: var(--ccpd-ink-900); }
+
+  /* Two-pane shell — annotations left, page right */
+  .shell { display: grid; grid-template-columns: 320px 1fr; min-height: 100vh; }
+
+  /* Annotations rail */
+  .rail { position: sticky; top: 0; align-self: start; height: 100vh; overflow-y: auto; padding: 36px 28px; background: #fff; border-right: 1px solid var(--ccpd-gray-100); }
+  .rail .eb { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ccpd-orange-600); margin: 0 0 12px; }
+  .rail h1 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 26px; line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 12px; color: var(--ccpd-ink-900); }
+  .rail h1 em { color: var(--ccpd-orange-600); }
+  .rail > p { font-size: 13px; line-height: 1.6; color: var(--ccpd-ink-700); margin: 0 0 24px; }
+  .toc { display: flex; flex-direction: column; gap: 4px; padding-top: 20px; border-top: 1px solid var(--ccpd-gray-100); }
+  .toc a { display: flex; gap: 12px; padding: 9px 10px; border-radius: 6px; text-decoration: none; color: var(--ccpd-ink-800); font-size: 13px; line-height: 1.4; transition: background 120ms; }
+  .toc a:hover { background: var(--ccpd-pink-50); }
+  .toc .n { font-family: var(--font-serif); font-style: italic; color: var(--ccpd-orange-500); font-size: 14px; min-width: 22px; }
+  .toc .nm { color: var(--ccpd-ink-900); font-weight: 500; flex: 1; }
+  .toc .pat { display: block; font-size: 11px; color: var(--ccpd-gray-500); font-weight: 400; margin-top: 2px; }
+  .rail .legend { margin-top: 28px; padding: 14px 16px; background: var(--ccpd-pink-50); border-radius: 8px; font-size: 12px; line-height: 1.55; color: var(--ccpd-ink-700); }
+  .rail .legend strong { display: flex; align-items: center; gap: 8px; color: var(--ccpd-ink-900); margin-bottom: 6px; }
+  .rail .legend .dot { width: 16px; height: 16px; border-radius: 999px; background: var(--ccpd-orange-500); display: grid; place-items: center; color: #fff; font-size: 10px; font-weight: 700; font-family: var(--font-display); }
+
+  /* Page canvas (right column) */
+  .page { background: #fff; }
+
+  /* Annotation chips that float over each section */
+  .anno { position: relative; }
+  .anno-tag { position: absolute; top: 14px; left: 14px; z-index: 5; display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 6px; background: rgba(255,255,255,0.95); border: 1px solid var(--ccpd-gray-100); border-radius: 999px; font-size: 11px; font-weight: 600; color: var(--ccpd-ink-900); backdrop-filter: blur(8px); box-shadow: 0 2px 6px rgba(20,33,61,0.06); }
+  .anno-tag .num { width: 20px; height: 20px; border-radius: 999px; background: var(--ccpd-orange-500); color: #fff; display: grid; place-items: center; font-size: 10px; font-weight: 700; font-family: var(--font-display); }
+  .anno-tag .pat { color: var(--ccpd-gray-500); font-weight: 400; margin-left: 4px; }
+  .anno.dark .anno-tag { background: rgba(0,0,0,0.5); border-color: rgba(255,255,255,0.2); color: #fff; }
+  .anno.dark .anno-tag .pat { color: rgba(255,255,255,0.55); }
+
+  /* ── Buttons ─────────── */
+  .btn { display: inline-flex; align-items: center; gap: 7px; padding: 13px 22px; border-radius: 999px; font-weight: 700; font-size: 14px; text-decoration: none; transition: all 150ms var(--ease); }
+  .btn-primary { background: var(--ccpd-orange-500); color: #fff; }
+  .btn-primary:hover { background: var(--ccpd-orange-600); }
+  .btn-secondary { background: transparent; color: var(--ccpd-ink-900); border: 1px solid var(--ccpd-gray-200); }
+  .btn-on-dark { background: var(--ccpd-orange-500); color: #fff; }
+  .btn-ghost-on-dark { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.25); }
+
+  /* ── Nav ─────────── */
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 48px; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--ccpd-gray-100); position: sticky; top: 0; z-index: 10; }
+  .nav .brand { display: flex; align-items: center; gap: 10px; }
+  .nav .brand img { width: 36px; height: 36px; border-radius: 999px; }
+  .nav .brand span { font-family: var(--font-serif); font-style: italic; font-size: 16px; color: var(--ccpd-ink-900); }
+  .nav .links { display: flex; gap: 28px; }
+  .nav .links a { font-size: 14px; color: var(--ccpd-ink-800); text-decoration: none; font-weight: 500; }
+  .nav .links a.active { color: var(--ccpd-orange-600); }
+  .nav .donate { padding: 10px 18px; background: var(--ccpd-orange-500); color: #fff; border-radius: 999px; font-weight: 700; font-size: 13px; text-decoration: none; }
+
+  /* ── Section 1: Campaign hero ─────────── */
+  .s1 { padding: 80px 48px 72px; background: radial-gradient(ellipse at 70% 20%, rgba(249, 128, 8, 0.18) 0%, transparent 55%), radial-gradient(ellipse at 20% 80%, rgba(232, 192, 192, 0.20) 0%, transparent 55%), linear-gradient(180deg, #1a1010 0%, #000 100%); color: #fff; }
+  .s1 .grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: center; max-width: 1200px; margin: 0 auto; }
+  .s1 .eb { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ccpd-orange-300); margin-bottom: 14px; }
+  .s1 h1 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 56px; line-height: 1.1; margin: 0 0 18px; color: #fff; letter-spacing: -0.015em; }
+  .s1 h1 em { color: var(--ccpd-orange-400); }
+  .s1 .lede { font-size: 17px; line-height: 1.55; color: rgba(255,255,255,0.75); margin: 0 0 28px; max-width: 50ch; }
+  .s1 .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .s1 .stat-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10); border-radius: 14px; padding: 26px; }
+  .s1 .stat-card .eb-card { font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ccpd-orange-300); margin-bottom: 12px; }
+  .s1 .stat-card .big { font-family: var(--font-serif); font-style: italic; font-size: 52px; line-height: 1; color: var(--ccpd-orange-300); margin-bottom: 6px; letter-spacing: -0.02em; }
+  .s1 .stat-card .small { font-size: 14px; color: rgba(255,255,255,0.7); margin: 0 0 16px; }
+  .s1 .stat-card .bar { height: 8px; background: rgba(255,255,255,0.08); border-radius: 999px; overflow: hidden; margin-bottom: 8px; }
+  .s1 .stat-card .bar div { width: 67%; height: 100%; background: var(--ccpd-orange-500); border-radius: 999px; }
+  .s1 .stat-card .row { display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.55); }
+
+  /* ── Section 2: Stat band ─────────── */
+  .s2 { padding: 56px 48px; background: var(--ccpd-ink-900); color: var(--ccpd-cream-50); border-top: 1px solid rgba(255,255,255,0.05); }
+  .s2 .grid { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 1200px; margin: 0 auto; }
+  .s2 .col { padding: 0 28px; border-left: 1px solid rgba(255,255,255,0.08); }
+  .s2 .col:first-child { padding-left: 0; border-left: 0; }
+  .s2 .eb { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ccpd-orange-300); margin-bottom: 14px; }
+  .s2 .big { font-family: var(--font-serif); font-style: italic; font-size: 56px; line-height: 1; color: #fff; margin-bottom: 10px; letter-spacing: -0.02em; }
+  .s2 .big em { color: var(--ccpd-orange-400); }
+  .s2 .label { font-size: 14px; line-height: 1.55; color: rgba(255,255,255,0.7); margin: 0; max-width: 30ch; }
+
+  /* ── Section 3: Story ─────────── */
+  .s3 { padding: 88px 48px; background: #fff; }
+  .s3 .grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; max-width: 1200px; margin: 0 auto; align-items: start; }
+  .s3 .label-col .eb { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ccpd-orange-600); margin-bottom: 14px; }
+  .s3 .label-col h2 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 38px; line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 16px; color: var(--ccpd-ink-900); }
+  .s3 .label-col h2 em { color: var(--ccpd-orange-600); }
+  .s3 .label-col .sub { font-family: var(--font-serif); font-style: italic; font-size: 16px; color: var(--ccpd-ink-700); margin: 0; }
+  .s3 .body p { font-size: 16px; line-height: 1.75; color: var(--ccpd-ink-800); margin: 0 0 16px; }
+  .s3 .body p:first-child::first-letter { font-family: var(--font-serif); font-style: italic; font-size: 60px; line-height: 0.8; float: left; padding: 8px 12px 0 0; color: var(--ccpd-orange-600); }
+  .s3 .body p:last-child { margin-bottom: 0; }
+
+  /* ── Section 4: Cards ─────────── */
+  .s4 { padding: 80px 48px; background: var(--ccpd-pink-50); }
+  .s4 .head { display: flex; justify-content: space-between; align-items: end; max-width: 1200px; margin: 0 auto 32px; gap: 24px; flex-wrap: wrap; }
+  .s4 .head h2 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 32px; margin: 0; max-width: 18ch; letter-spacing: -0.01em; }
+  .s4 .head h2 em { color: var(--ccpd-orange-600); }
+  .s4 .head a { font-size: 13px; font-weight: 600; color: var(--ccpd-ink-900); text-decoration: none; border-bottom: 1px solid var(--ccpd-orange-500); padding-bottom: 2px; }
+  .s4 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 1200px; margin: 0 auto; }
+  .s4 .card { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 14px; padding: 26px; display: flex; flex-direction: column; gap: 10px; }
+  .s4 .card .num { font-family: var(--font-serif); font-style: italic; font-size: 28px; color: var(--ccpd-orange-500); line-height: 1; }
+  .s4 .card h3 { font-family: var(--font-display); font-weight: 600; font-size: 17px; margin: 0; }
+  .s4 .card p { font-size: 14px; line-height: 1.65; color: var(--ccpd-ink-700); margin: 0; }
+  .s4 .card a { font-size: 13px; font-weight: 600; color: var(--ccpd-orange-600); text-decoration: none; margin-top: auto; padding-top: 8px; }
+
+  /* ── Section 5: Pull quote ─────────── */
+  .s5 { padding: 80px 48px; background: #fff; text-align: center; border-top: 1px solid var(--ccpd-gray-100); }
+  .s5 .mark { font-family: var(--font-serif); font-style: italic; font-size: 64px; line-height: 0.6; color: var(--ccpd-orange-400); margin-bottom: 18px; display: block; }
+  .s5 blockquote { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 32px; line-height: 1.3; margin: 0 auto 24px; max-width: 22ch; letter-spacing: -0.01em; }
+  .s5 blockquote em { color: var(--ccpd-orange-600); }
+  .s5 .attr { font-size: 13px; font-weight: 600; }
+  .s5 .attr span { display: block; font-weight: 400; color: var(--ccpd-gray-500); margin-top: 2px; font-style: normal; font-family: var(--font-sans); }
+
+  /* ── Section 6: Closing CTA ─────────── */
+  .s6 { padding: 88px 48px; background: var(--ccpd-pink-500); text-align: center; }
+  .s6 .eb { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ccpd-orange-700); margin: 0 0 16px; }
+  .s6 h2 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 52px; line-height: 1.1; margin: 0 auto 28px; max-width: 22ch; letter-spacing: -0.015em; text-wrap: balance; }
+  .s6 h2 em { color: var(--ccpd-orange-700); }
+  .s6 p { font-size: 16px; line-height: 1.55; color: var(--ccpd-ink-800); max-width: 48ch; margin: 0 auto 28px; }
+  .s6 .ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  /* ── Section 7: Footer ─────────── */
+  .s7 { background: var(--ccpd-ink-800); color: rgba(255,255,255,0.6); padding: 56px 48px 24px; }
+  .s7 .grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; max-width: 1200px; margin: 0 auto 36px; }
+  .s7 .h { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 14px; }
+  .s7 .brand img { width: 56px; height: 56px; border-radius: 999px; margin-bottom: 14px; display: block; }
+  .s7 .brand p { font-family: var(--font-serif); font-style: italic; font-size: 15px; line-height: 1.5; color: rgba(255,255,255,0.75); margin: 0; max-width: 220px; }
+  .s7 .col a { display: block; color: rgba(255,255,255,0.6); font-size: 14px; text-decoration: none; padding: 4px 0; }
+  .s7 .bar { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 20px; max-width: 1200px; margin: 0 auto; font-size: 12px; color: rgba(255,255,255,0.3); }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <aside class="rail">
+    <p class="eb">Build a page</p>
+    <h1>One landing page, <em>annotated.</em></h1>
+    <p>Eight blocks, each from a documented pattern. Read it as a recipe — same ingredients, different orders, same brand.</p>
+    <div class="legend">
+      <strong><span class="dot">N</span>What the chips mean</strong>
+      Each block carries its pattern number from <em>Layout & section patterns</em>. Click below to jump.
+    </div>
+    <nav class="toc">
+      <a href="#sec-1"><span class="n">01</span><span class="nm">Nav<span class="pat">Component · sticky</span></span></a>
+      <a href="#sec-2"><span class="n">02</span><span class="nm">Campaign hero<span class="pat">Pattern 01</span></span></a>
+      <a href="#sec-3"><span class="n">03</span><span class="nm">Stat band<span class="pat">Pattern 05</span></span></a>
+      <a href="#sec-4"><span class="n">04</span><span class="nm">Story section<span class="pat">Pattern 06</span></span></a>
+      <a href="#sec-5"><span class="n">05</span><span class="nm">Three-up cards<span class="pat">Pattern 07</span></span></a>
+      <a href="#sec-6"><span class="n">06</span><span class="nm">Pull quote<span class="pat">Pattern 10</span></span></a>
+      <a href="#sec-7"><span class="n">07</span><span class="nm">Closing CTA<span class="pat">Pattern 08</span></span></a>
+      <a href="#sec-8"><span class="n">08</span><span class="nm">Footer<span class="pat">Component</span></span></a>
+    </nav>
+  </aside>
+
+  <main class="page">
+
+    <div id="sec-1" class="anno">
+      <span class="anno-tag"><span class="num">1</span>Nav<span class="pat">component</span></span>
+      <nav class="nav">
+        <div class="brand"><img src="../assets/logo.png" alt=""><span>Chasing a Cure</span></div>
+        <div class="links"><a class="active" href="#">Concert</a><a href="#">The Science</a><a href="#">About</a><a href="#">Ways to Give</a></div>
+        <a class="donate" href="#">Donate</a>
+      </nav>
+    </div>
+
+    <section id="sec-2" class="anno dark">
+      <span class="anno-tag"><span class="num">2</span>Campaign hero<span class="pat">pattern 01</span></span>
+      <div class="s1">
+        <div class="grid">
+          <div>
+            <p class="eb">Concert for a Cure 2026</p>
+            <h1>The lake, the music, the <em>science.</em></h1>
+            <p class="lede">Saturday, July 18 at Geist Reservoir. Eighth year. 100% to MJFF research — no salaries, no skim.</p>
+            <div class="ctas">
+              <a class="btn btn-on-dark" href="#">Get tickets · $150 →</a>
+              <a class="btn btn-ghost-on-dark" href="#">See last year</a>
+            </div>
+          </div>
+          <div class="stat-card">
+            <p class="eb-card">2026 Goal · live</p>
+            <div class="big">$67,200</div>
+            <p class="small">raised by 312 supporters</p>
+            <div class="bar"><div></div></div>
+            <div class="row"><span>67% of $100k goal</span><span>22 days left</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-3" class="anno dark">
+      <span class="anno-tag"><span class="num">3</span>Stat band<span class="pat">pattern 05</span></span>
+      <div class="s2">
+        <div class="grid">
+          <div class="col"><p class="eb">Since 2018</p><div class="big"><em>$487k</em></div><p class="label">raised across seven Concert for a Cure events.</p></div>
+          <div class="col"><p class="eb">Of every dollar</p><div class="big"><em>100%</em></div><p class="label">reaches MJFF research — no salaries, no overhead.</p></div>
+          <div class="col"><p class="eb">By 2050</p><div class="big">90M<em>+</em></div><p class="label">people projected to live with Parkinson's globally.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-4" class="anno">
+      <span class="anno-tag"><span class="num">4</span>Story section<span class="pat">pattern 06</span></span>
+      <div class="s3">
+        <div class="grid">
+          <div class="label-col">
+            <p class="eb">The story</p>
+            <h2>It started at the <em>lake.</em></h2>
+            <p class="sub">A backyard concert in 2018. Twenty friends. One reason.</p>
+          </div>
+          <div class="body">
+            <p>Wendy lost her dad, Roger, to Parkinson's in 2014. Three years later she and Rob threw a concert at their Geist Reservoir home — twenty friends, a borrowed sound system, and a jar for donations. They raised $4,200 and sent every dollar to The Michael J. Fox Foundation.</p>
+            <p>They did it again the next year. And the next. By 2024, Concert for a Cure had grown to three hundred people and a six-figure check, but the rules hadn't changed: no salaries, no overhead, every dollar to the science. The lake is still where it happens. The reason is still the same.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-5" class="anno">
+      <span class="anno-tag"><span class="num">5</span>Three-up cards<span class="pat">pattern 07</span></span>
+      <div class="s4">
+        <div class="head"><h2>Three ways to <em>fund the science.</em></h2><a href="#">All giving options →</a></div>
+        <div class="grid">
+          <div class="card"><span class="num">01</span><h3>Give once</h3><p>A single gift, no recurring charge. Best for tax-year deductions or honoring a loved one.</p><a href="#">Donate →</a></div>
+          <div class="card"><span class="num">02</span><h3>Give monthly</h3><p>Sustained funding lets MJFF plan multi-year trials. Cancel anytime.</p><a href="#">Set up monthly →</a></div>
+          <div class="card"><span class="num">03</span><h3>Give legacy</h3><p>Include the foundation in your estate plan. We can connect you with our advisor.</p><a href="#">Talk to us →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-6" class="anno">
+      <span class="anno-tag"><span class="num">6</span>Pull quote<span class="pat">pattern 10</span></span>
+      <div class="s5">
+        <span class="mark">"</span>
+        <blockquote>The science is <em>closer</em> than people realize.</blockquote>
+        <p class="attr">Dr. Brian Fiske<span>Senior VP, Research Programs · MJFF</span></p>
+      </div>
+    </section>
+
+    <section id="sec-7" class="anno">
+      <span class="anno-tag"><span class="num">7</span>Closing CTA<span class="pat">pattern 08</span></span>
+      <div class="s6">
+        <p class="eb">Science fuels hope</p>
+        <h2>The most direct thing you can do is <em>give.</em></h2>
+        <p>100% reaches MJFF. No salaries, no overhead, no skim.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#">Donate now →</a>
+          <a class="btn btn-secondary" href="#">Other ways to help</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-8" class="anno dark">
+      <span class="anno-tag"><span class="num">8</span>Footer<span class="pat">component</span></span>
+      <footer class="s7">
+        <div class="grid">
+          <div class="brand">
+            <img src="../assets/logo.png" alt="">
+            <p>Built from love. Backed by science. Focused on the cure.</p>
+          </div>
+          <div class="col"><div class="h">Foundation</div><a>About</a><a>The Science</a><a>Concert for a Cure</a><a>Ways to Give</a></div>
+          <div class="col"><div class="h">Contact</div><a>wendy@chasingacurepd.org</a><a>Fishers, IN</a></div>
+          <div class="col"><div class="h">Follow</div><a>LinkedIn</a><a>Facebook</a><a>Instagram</a></div>
+        </div>
+        <div class="bar">© 2026 Chasing a Cure Parkinson's Foundation · 501(c)(3) · EIN 82-5107944</div>
+      </footer>
+    </section>
+
+  </main>
+
+</div>
+</body>
+</html>

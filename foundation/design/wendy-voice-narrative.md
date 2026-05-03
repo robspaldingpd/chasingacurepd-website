@@ -28,9 +28,7 @@ Read this out loud before you write anything in Wendy's voice. It's the full arc
 
 ---
 
-My mom's name was Sue Chase.
-
-If you asked her friends about her, every single one of them would tell you the same thing — that when Sue looked at you, when Sue listened to you, you felt like you were her only and very best friend in the world. That was her gift. She made people feel seen.
+If you asked her friends about my mom — Sue Chase — every single one of them would tell you the same thing: when Sue looked at you, when Sue listened to you, you felt like you were her only and very best friend in the world. That was her gift. She made people feel seen.
 
 And on Christmas morning 2017, she was dying.
 
@@ -62,7 +60,7 @@ Awareness is important. But awareness is not what families are begging for at 3 
 
 So here is what this foundation is. No one here takes a salary — not Rob, not me, not a single board member. We keep operations as lean as a foundation legally can: the costs to run events, process your donation, and keep the lights on. Everything beyond that flows directly to The Michael J. Fox Foundation and Team Fox, which is the most rigorous, most respected Parkinson's research engine in the world. Parkinson's has touched both of our families. My godfather Homer. Rob's aunt Melva. This is not abstract to us, and we don't talk about it like it is.
 
-I don't want your pity. I want your partnership. Ten million people are living with this disease right now. One million of them are in this country. Ninety thousand more will be diagnosed this year — one every six minutes — and not one of them has a cure to go home to.
+I am asking for your partnership. Ten million people are living with this disease right now. One million of them are in this country. Ninety thousand more will be diagnosed this year — one every six minutes — and not one of them has a cure to go home to.
 
 But the science is moving. That is the part I want you to hear. The science *is moving*, and it is close enough that funding it now, funding it today, funding it this year, actually changes when we get there. That's not a marketing line. That's what my career has taught me.
 
@@ -90,9 +88,9 @@ If you're writing as Wendy, or quoting her, or writing about the foundation in a
 
 Wendy does not talk about Parkinson's in abstractions. She knows the biology. She knows the funding pipeline. She knows what a Phase II trial costs and why Team Fox is the right partner. That expertise gives her standing. But she never leads with it — she leads with Sue, with her godfather, with Rob's aunt. The science is the evidence. The family is the reason.
 
-**She is direct. She does not perform grief.**
+**She is direct. She carries grief with grace.**
 
-Wendy will tell you her mother died. She will not dwell on it. She will not ask you to feel bad. She will tell you what she did next, and what she's asking you to do now. The grief is in the room — she doesn't have to decorate it.
+Wendy will tell you her mother died. She says it plainly, without ceremony — not to make you feel guilty, but because the truth of it explains everything that came after. She will tell you what she did next, and what she's asking you to do now. The grief is present in everything she's built; she doesn't need to perform it or hide it.
 
 **She is warm without being soft.**
 
@@ -106,7 +104,7 @@ A partner gets told what happened to their money. Wendy follows up — not with 
 
 Hope, for Wendy, is not a mood. It's a decision. She chooses it because the alternative — despair, cynicism, performance — doesn't fund any science. When she says *the science is moving*, she means it literally, and she expects you to take her seriously.
 
-> "I don't want your pity. I want your partnership."
+> "Every dollar is a promise kept — not just to my mom, but to every family still waiting."
 
 ---
 
@@ -156,7 +154,7 @@ These are Wendy's. They are not drafts. Don't paraphrase them, don't modernize t
 
 | Line | Context |
 |------|---------|
-| My mom's name was Sue Chase. | Origin — who she was |
+| If you asked her friends about my mom — Sue Chase — every single one of them would tell you the same thing. | Origin — how she opens |
 | When Sue looked at you, when Sue listened to you, you felt like you were her only and very best friend in the world. | Origin — her gift |
 | Only a miracle could save her now, and I already knew the miracle wasn't coming. | Origin — the limit |
 | She never gave up hope — not once, not until the very end. | Origin — her strength |
@@ -181,7 +179,7 @@ These are Wendy's. They are not drafts. Don't paraphrase them, don't modernize t
 
 | Line | Context |
 |------|---------|
-| I don't want your pity. I want your partnership. | The reframe |
+| I am keeping my promise to Sue Chase. And I am asking you to help me keep it. | The invitation |
 | Give if you can. Come if you can. Send this to one person either way. | The three-tier ask |
 | Your gift is the science. That's not a metaphor. | The 1:1 line |
 

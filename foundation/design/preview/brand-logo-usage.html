@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Logo usage</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 32px; background: var(--ccpd-pink-50); font-family: var(--font-sans); color: var(--ccpd-ink-900); }
+  .wrap { max-width: 1200px; margin: 0 auto; }
+
+  .head { margin-bottom: 32px; }
+  .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ccpd-gray-500); margin: 0 0 8px; }
+  h1 { font-family: var(--font-display); font-weight: 600; font-size: 28px; letter-spacing: -0.02em; margin: 0 0 12px; }
+  .lede { max-width: 64ch; font-size: 14px; line-height: 1.6; color: var(--ccpd-ink-700); margin: 0; }
+
+  section { margin-bottom: 28px; padding: 24px; background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 12px; }
+  section h2 { font-family: var(--font-display); font-weight: 600; font-size: 16px; letter-spacing: -0.01em; margin: 0 0 4px; }
+  section .sub { font-size: 13px; color: var(--ccpd-gray-500); margin: 0 0 16px; }
+
+  /* Anatomy */
+  .anatomy { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+  .anatomy .figure { background: var(--ccpd-pink-50); border: 1px solid var(--ccpd-gray-200); border-radius: 12px; padding: 40px; display: flex; align-items: center; justify-content: center; min-height: 260px; position: relative; }
+  .anatomy .figure img { width: 200px; height: 200px; }
+  .anatomy ul { margin: 0; padding-left: 20px; line-height: 1.8; font-size: 14px; color: var(--ccpd-ink-800); }
+  .anatomy li strong { color: var(--ccpd-orange-700); }
+
+  /* Sizes */
+  .sizes { display: flex; align-items: flex-end; gap: 28px; flex-wrap: wrap; padding: 24px; background: var(--ccpd-pink-50); border-radius: 12px; }
+  .size { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .size img { display: block; }
+  .size span { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 11px; color: var(--ccpd-gray-500); }
+
+  /* Clearspace */
+  .clearspace { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
+  .clearspace .demo { background: var(--ccpd-pink-50); border: 1px solid var(--ccpd-gray-200); border-radius: 12px; padding: 16px; display: flex; align-items: center; justify-content: center; min-height: 260px; position: relative; }
+  .clearspace .frame { position: relative; padding: 32px; }
+  .clearspace .frame::before { content:''; position: absolute; inset: 0; border: 1.5px dashed var(--ccpd-orange-500); border-radius: 999px; opacity: 0.7; }
+  .clearspace .frame img { width: 120px; height: 120px; display: block; }
+  .clearspace .X { position: absolute; top: 12px; left: 12px; font-family: var(--font-display); font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ccpd-orange-700); }
+  .clearspace p { font-size: 13px; line-height: 1.6; color: var(--ccpd-ink-700); margin: 0 0 8px; }
+  .clearspace ul { margin: 0; padding-left: 18px; line-height: 1.7; font-size: 13.5px; color: var(--ccpd-ink-800); }
+
+  /* Do/Don't grid */
+  .dd { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .dd .card { border: 1px solid var(--ccpd-gray-200); border-radius: 10px; overflow: hidden; background: #fff; display: flex; flex-direction: column; }
+  .dd .frame { aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; position: relative; padding: 16px; overflow: hidden; }
+  .dd .frame img { max-width: 75%; max-height: 75%; }
+  .dd .badge { position: absolute; top: 10px; left: 10px; padding: 3px 8px; border-radius: 999px; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+  .badge.do { background: #1F6A45; color: #fff; }
+  .badge.dont { background: #B0312F; color: #fff; }
+  .meta { padding: 12px; border-top: 1px solid var(--ccpd-gray-100); }
+  .meta strong { display: block; font-family: var(--font-display); font-weight: 600; font-size: 13px; color: var(--ccpd-ink-900); margin-bottom: 4px; }
+  .meta span { font-size: 12px; color: var(--ccpd-gray-500); line-height: 1.4; }
+
+  /* Don't states  */
+  .bg-pink50 { background: var(--ccpd-pink-50); }
+  .bg-ink { background: var(--ccpd-ink-900); }
+  .bg-orange { background: var(--ccpd-orange-500); }
+  .bg-photo { background-image: url('../assets/photos/concert-group-2024.jpg'); background-size: cover; background-position: center; }
+  .bg-busy { background-image: url('../assets/photos/wendy-rob-mjff-event-2.jpg'); background-size: cover; background-position: center; }
+
+  .stretch img { transform: scaleX(1.45); }
+  .rotate img { transform: rotate(-18deg); }
+  .recolor { filter: hue-rotate(160deg) saturate(1.4); }
+  .dropshadow img { filter: drop-shadow(4px 6px 0 rgba(249,128,8,0.6)); }
+  .gradient { background: linear-gradient(135deg, #00d4ff, #7c3aed); }
+  .crop { overflow: hidden; }
+  .crop img { transform: scale(1.6) translate(20%, 20%); }
+
+  .footnote { font-size: 12px; color: var(--ccpd-gray-500); margin-top: 16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="head">
+  <p class="eyebrow">Brand · Logo usage</p>
+  <h1>Using the mark</h1>
+  <p class="lede">The Chasing a Cure mark is a black "C" cradling a monarch butterfly inside a blush circle. It's hand‑drawn and asymmetric on purpose — keep it that way. The rules below are short. Read them anyway.</p>
+</div>
+
+<section>
+  <h2>Anatomy</h2>
+  <p class="sub">Three parts, one mark. Don't separate them outside of the cases listed under "marks" in the asset library.</p>
+  <div class="anatomy">
+    <div class="figure"><img src="../assets/logo.png" alt="Chasing a Cure logo"></div>
+    <ul>
+      <li><strong>The C</strong> — black, hand‑drawn, slightly open on the right. It's the wordmark anchor.</li>
+      <li><strong>The butterfly</strong> — orange monarch, layered over the C. The motion symbol; metamorphosis, lift, hope.</li>
+      <li><strong>The blush circle</strong> — the field. <code>#E8C0C0</code>, exactly. Hold space and warmth.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Minimum sizes</h2>
+  <p class="sub">The mark needs room to breathe. Below 32px the butterfly disappears — use the simplified butterfly badge instead.</p>
+  <div class="sizes">
+    <div class="size"><img src="../assets/logo.png" width="24" height="24" alt=""><span>24px · ✗ too small</span></div>
+    <div class="size"><img src="../assets/logo.png" width="32" height="32" alt=""><span>32px · favicon min</span></div>
+    <div class="size"><img src="../assets/logo.png" width="44" height="44" alt=""><span>44px · nav</span></div>
+    <div class="size"><img src="../assets/logo.png" width="80" height="80" alt=""><span>80px · footer</span></div>
+    <div class="size"><img src="../assets/logo.png" width="160" height="160" alt=""><span>160px · hero</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Clear space</h2>
+  <p class="sub">Reserve a margin equal to <code>¼ the mark's diameter</code> on every side. Nothing should enter that ring — not type, not photo edges, not other logos.</p>
+  <div class="clearspace">
+    <div class="demo">
+      <div class="frame">
+        <img src="../assets/logo.png" alt="Logo with clearspace">
+        <span class="X">¼ × diameter</span>
+      </div>
+    </div>
+    <div>
+      <p>The orange dashed ring shows the no‑go zone. When placing the mark next to text or other content, use this ring as the closest the neighbor can sit.</p>
+      <ul>
+        <li>Standard ratio of clearspace = <code>0.25 × logo width</code></li>
+        <li>For nav/header use, ring may shrink to 0.15× when space is tight</li>
+        <li>Never crop the blush circle — the mark always sits as a whole disc</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Do</h2>
+  <p class="sub">All four are correct.</p>
+  <div class="dd">
+    <div class="card"><div class="frame bg-pink50"><span class="badge do">Do</span><img src="../assets/logo.png" alt=""></div><div class="meta"><strong>On pink-50</strong><span>Page default. The blush ring blends with the page warmth.</span></div></div>
+    <div class="card"><div class="frame" style="background:#fff"><span class="badge do">Do</span><img src="../assets/logo.png" alt=""></div><div class="meta"><strong>On white</strong><span>Card backgrounds. Highest contrast for the mark itself.</span></div></div>
+    <div class="card"><div class="frame bg-ink"><span class="badge do">Do</span><img src="../assets/logo.png" alt=""></div><div class="meta"><strong>On ink-900</strong><span>Footer, dark hero. Blush circle pops without losing the C.</span></div></div>
+    <div class="card"><div class="frame bg-photo"><span class="badge do">Do</span><img src="../assets/logo.png" alt="" style="filter: drop-shadow(0 4px 12px rgba(0,0,0,0.45))"></div><div class="meta"><strong>On photography</strong><span>OK over photos when there's a calm/dark area. Add a soft drop‑shadow for legibility.</span></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Don't</h2>
+  <p class="sub">All eight are wrong. Each breaks the brand in a different way.</p>
+  <div class="dd">
+    <div class="card"><div class="frame stretch" style="background:var(--ccpd-pink-50)"><span class="badge dont">Don't</span><img src="../assets/logo.png" alt=""></div><div class="meta"><strong>Stretch</strong><span>The mark is square. Always preserve aspect ratio.</span></div></div>
+    <div class="card"><div class="frame rotate" style="background:var(--ccpd-pink-50)"><span class="badge dont">Don't</span><img src="../assets/logo.png" alt=""></div><div class="meta"><strong>Rotate or tilt</strong><span>The C and butterfly read upright. Don't reframe.</span></div></div>
+    <div class="card"><div class="frame recolor" style="background:var(--ccpd-pink-50)"><span class="badge dont">Don't</span><img src="../assets/logo.png" alt=""></div><div class="meta"><strong>Recolor</strong><span>Three colors only — black, monarch orange, blush pink. No exceptions.</span></div></div>
+    <div class="card"><div class="frame dropshadow" style="background:var(--ccpd-pink-50)"><span class="badge dont">Don't</span><img src="../assets/logo.png" alt=""></div><div class="meta"><strong>Add effects</strong><span>No outer glows, hard shadows, embosses. The mark is flat.</span></div></div>
+    <div class="card"><div class="frame gradient"><span class="badge dont">Don't</span><img src="../assets/logo.png" alt=""></div><div class="meta"><strong>Decorative gradients</strong><span>The blush field is the background. Don't put it on neon, gradient, or unrelated brand colors.</span></div></div>
+    <div class="card"><div class="frame bg-orange"><span class="badge dont">Don't</span><img src="../assets/logo.png" alt=""></div><div class="meta"><strong>On orange</strong><span>The butterfly disappears. Reserve orange for CTAs, not as a logo background.</span></div></div>
+    <div class="card"><div class="frame bg-busy"><span class="badge dont">Don't</span><img src="../assets/logo.png" alt=""></div><div class="meta"><strong>On busy photos</strong><span>If the photo is high‑detail, switch to a card or use the white wordmark only.</span></div></div>
+    <div class="card"><div class="frame crop" style="background:var(--ccpd-pink-50)"><span class="badge dont">Don't</span><img src="../assets/logo.png" alt=""></div><div class="meta"><strong>Crop the circle</strong><span>The blush disc is part of the mark. Always show it whole.</span></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>When to use which file</h2>
+  <p class="sub">All marks live in <code>assets/</code>.</p>
+  <table style="border-collapse: collapse; width: 100%; font-size: 13px;">
+    <thead>
+      <tr style="text-align:left;color:var(--ccpd-gray-500);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;">
+        <th style="padding:10px 12px;border-bottom:1px solid var(--ccpd-gray-200);">File</th>
+        <th style="padding:10px 12px;border-bottom:1px solid var(--ccpd-gray-200);">Use for</th>
+        <th style="padding:10px 12px;border-bottom:1px solid var(--ccpd-gray-200);">Background</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:10px 12px;border-bottom:1px solid var(--ccpd-gray-100);font-family:ui-monospace,monospace;">logo.png</td><td style="padding:10px 12px;border-bottom:1px solid var(--ccpd-gray-100);">Primary mark — nav, footer, marketing</td><td style="padding:10px 12px;border-bottom:1px solid var(--ccpd-gray-100);">Any approved color</td></tr>
+      <tr><td style="padding:10px 12px;border-bottom:1px solid var(--ccpd-gray-100);font-family:ui-monospace,monospace;">butterfly-only.png</td><td style="padding:10px 12px;border-bottom:1px solid var(--ccpd-gray-100);">Decorative motif — section breaks, social</td><td style="padding:10px 12px;border-bottom:1px solid var(--ccpd-gray-100);">Light backgrounds</td></tr>
+      <tr><td style="padding:10px 12px;border-bottom:1px solid var(--ccpd-gray-100);font-family:ui-monospace,monospace;">butterfly-mark.svg</td><td style="padding:10px 12px;border-bottom:1px solid var(--ccpd-gray-100);">Inline icon — small UI affordances, favicon source</td><td style="padding:10px 12px;border-bottom:1px solid var(--ccpd-gray-100);">Any</td></tr>
+      <tr><td style="padding:10px 12px;border-bottom:1px solid var(--ccpd-gray-100);font-family:ui-monospace,monospace;">butterfly-badge.png</td><td style="padding:10px 12px;border-bottom:1px solid var(--ccpd-gray-100);">Email avatars, social profiles, ≤ 32px contexts</td><td style="padding:10px 12px;border-bottom:1px solid var(--ccpd-gray-100);">Light</td></tr>
+      <tr><td style="padding:10px 12px;font-family:ui-monospace,monospace;">butterfly-badge-dark.png</td><td style="padding:10px 12px;">Same, but for dark UI</td><td style="padding:10px 12px;">Ink-900 / dark imagery</td></tr>
+    </tbody>
+  </table>
+</section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Layout & section patterns</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 56px 40px 80px; background: var(--ccpd-pink-50); font-family: var(--font-sans); color: var(--ccpd-ink-900); }
+  .wrap { max-width: 1200px; margin: 0 auto; }
+
+  .page-h { margin-bottom: 56px; max-width: 720px; }
+  .page-h .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ccpd-orange-600); margin: 0 0 14px; }
+  .page-h h1 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 48px; line-height: 1.1; letter-spacing: -0.015em; margin: 0 0 18px; color: var(--ccpd-ink-900); }
+  .page-h h1 em { color: var(--ccpd-orange-600); }
+  .page-h p { font-size: 17px; line-height: 1.6; color: var(--ccpd-ink-700); margin: 0; }
+
+  /* Pattern shell */
+  .pat { margin-bottom: 64px; }
+  .pat-h { display: flex; flex-wrap: wrap; align-items: baseline; gap: 16px; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--ccpd-gray-100); }
+  .pat-h .num { font-family: var(--font-serif); font-style: italic; font-size: 22px; color: var(--ccpd-orange-500); }
+  .pat-h h2 { font-family: var(--font-display); font-weight: 600; font-size: 18px; letter-spacing: -0.005em; margin: 0; color: var(--ccpd-ink-900); }
+  .pat-h .meta { margin-left: auto; font-size: 12px; color: var(--ccpd-gray-500); display: flex; gap: 14px; }
+  .pat-h .meta strong { color: var(--ccpd-ink-900); font-weight: 600; }
+  .pat .desc { font-family: var(--font-serif); font-style: italic; font-size: 16px; line-height: 1.55; color: var(--ccpd-gray-700); margin: 0 0 20px; max-width: 64ch; }
+  .pat .canvas { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 14px; overflow: hidden; }
+  .pat .anatomy { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 14px; font-size: 12px; color: var(--ccpd-ink-700); }
+  .pat .anatomy span { padding: 8px 12px; background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 8px; }
+  .pat .anatomy span strong { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ccpd-orange-600); margin-bottom: 4px; }
+
+  /* ── shared mock styles ──────────────────────────────── */
+  .eb { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+  .h1-display { font-family: var(--font-serif); font-style: italic; font-weight: 400; line-height: 1.1; letter-spacing: -0.015em; margin: 0; }
+  .btn { display: inline-flex; align-items: center; gap: 7px; padding: 13px 22px; border-radius: 999px; font-weight: 700; font-size: 14px; text-decoration: none; }
+  .btn-primary { background: var(--ccpd-orange-500); color: #fff; }
+  .btn-secondary { background: transparent; color: var(--ccpd-ink-900); border: 1px solid var(--ccpd-gray-200); }
+  .btn-on-dark { background: var(--ccpd-orange-500); color: #fff; }
+  .btn-ghost-on-dark { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.25); }
+
+  /* ── 1. CAMPAIGN HERO ────────────────────────────────── */
+  .h-campaign { padding: 80px 64px 72px; background: radial-gradient(ellipse at 70% 20%, rgba(249, 128, 8, 0.18) 0%, transparent 55%), radial-gradient(ellipse at 20% 80%, rgba(232, 192, 192, 0.20) 0%, transparent 55%), linear-gradient(180deg, #1a1010 0%, #000 100%); color: #fff; position: relative; }
+  .h-campaign .grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; align-items: center; }
+  .h-campaign .eb { color: var(--ccpd-orange-300); margin-bottom: 16px; }
+  .h-campaign h1 { font-size: 60px; color: #fff; margin-bottom: 22px; }
+  .h-campaign h1 em { color: var(--ccpd-orange-400); }
+  .h-campaign .lede { font-size: 18px; line-height: 1.55; color: rgba(255,255,255,0.75); margin: 0 0 32px; max-width: 50ch; }
+  .h-campaign .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+  .h-campaign .stat-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10); border-radius: 14px; padding: 28px; backdrop-filter: blur(12px); }
+  .h-campaign .stat-card .eb-card { font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ccpd-orange-300); margin-bottom: 14px; }
+  .h-campaign .stat-card .big { font-family: var(--font-serif); font-style: italic; font-size: 56px; line-height: 1; color: var(--ccpd-orange-300); letter-spacing: -0.02em; margin-bottom: 6px; }
+  .h-campaign .stat-card .small { font-size: 14px; color: rgba(255,255,255,0.7); margin: 0 0 18px; }
+  .h-campaign .stat-card .bar { height: 8px; background: rgba(255,255,255,0.08); border-radius: 999px; overflow: hidden; margin-bottom: 8px; }
+  .h-campaign .stat-card .bar div { width: 67%; height: 100%; background: var(--ccpd-orange-500); border-radius: 999px; }
+  .h-campaign .stat-card .row { display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.55); }
+
+  /* ── 2. EDITORIAL HERO (centered, big serif) ─────────── */
+  .h-editorial { padding: 100px 64px 88px; background: var(--ccpd-pink-50); text-align: center; border-bottom: 1px solid var(--ccpd-gray-100); }
+  .h-editorial .eb { color: var(--ccpd-orange-600); margin-bottom: 22px; }
+  .h-editorial h1 { font-size: 68px; max-width: 18ch; margin: 0 auto 24px; letter-spacing: -0.02em; }
+  .h-editorial h1 em { color: var(--ccpd-orange-600); }
+  .h-editorial p { font-family: var(--font-serif); font-style: italic; font-size: 19px; line-height: 1.55; color: var(--ccpd-ink-700); max-width: 56ch; margin: 0 auto 32px; }
+  .h-editorial .ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  /* ── 3. PHOTO HERO ───────────────────────────────────── */
+  .h-photo { position: relative; aspect-ratio: 16/7; background-image: url('../assets/photos/geist-sunset-dramatic.jpg'); background-size: cover; background-position: center; }
+  .h-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.65) 100%); }
+  .h-photo .copy { position: absolute; left: 64px; right: 64px; bottom: 64px; color: #fff; max-width: 720px; }
+  .h-photo .eb { color: var(--ccpd-orange-300); margin-bottom: 14px; }
+  .h-photo h1 { font-size: 56px; color: #fff; margin-bottom: 18px; }
+  .h-photo h1 em { color: var(--ccpd-orange-300); }
+  .h-photo p { font-size: 16px; color: rgba(255,255,255,0.85); margin: 0 0 24px; max-width: 48ch; line-height: 1.55; }
+  .h-photo .ctas { display: flex; gap: 10px; }
+
+  /* ── 4. SPLIT HERO (story + photo) ───────────────────── */
+  .h-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 460px; }
+  .h-split .text { padding: 72px 56px; align-self: center; }
+  .h-split .text .eb { color: var(--ccpd-orange-600); margin-bottom: 14px; }
+  .h-split .text h1 { font-size: 52px; margin-bottom: 18px; max-width: 14ch; }
+  .h-split .text h1 em { color: var(--ccpd-orange-600); }
+  .h-split .text p { font-size: 16px; line-height: 1.7; color: var(--ccpd-ink-700); margin: 0 0 24px; max-width: 42ch; }
+  .h-split .text p.attr { font-family: var(--font-serif); font-style: italic; color: var(--ccpd-gray-500); font-size: 14px; }
+  .h-split .photo { background-image: url('../assets/photos/wendy-rob-candid.jpg'); background-size: cover; background-position: center; }
+
+  /* ── 5. STAT BAND (between sections) ─────────────────── */
+  .s-stat-band { padding: 64px; background: var(--ccpd-ink-900); color: var(--ccpd-cream-50); }
+  .s-stat-band .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+  .s-stat-band .col { padding: 0 32px; border-left: 1px solid rgba(255,255,255,0.08); }
+  .s-stat-band .col:first-child { padding-left: 0; border-left: 0; }
+  .s-stat-band .eb { color: var(--ccpd-orange-300); margin-bottom: 16px; }
+  .s-stat-band .big { font-family: var(--font-serif); font-style: italic; font-size: 64px; line-height: 1; color: #fff; margin-bottom: 12px; letter-spacing: -0.02em; }
+  .s-stat-band .big em { color: var(--ccpd-orange-400); }
+  .s-stat-band .label { font-size: 14px; line-height: 1.55; color: rgba(255,255,255,0.7); margin: 0; max-width: 28ch; }
+
+  /* ── 6. STORY SECTION ─────────────────────────────────── */
+  .s-story { padding: 88px 64px; background: #fff; }
+  .s-story .grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 72px; align-items: start; }
+  .s-story .label-col .eb { color: var(--ccpd-orange-600); margin-bottom: 14px; }
+  .s-story .label-col h2 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 40px; line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 18px; color: var(--ccpd-ink-900); }
+  .s-story .label-col h2 em { color: var(--ccpd-orange-600); }
+  .s-story .label-col .lede { font-family: var(--font-serif); font-style: italic; font-size: 17px; line-height: 1.55; color: var(--ccpd-ink-700); margin: 0; }
+  .s-story .body p { font-size: 16px; line-height: 1.75; color: var(--ccpd-ink-800); margin: 0 0 16px; }
+  .s-story .body p:first-child::first-letter { font-family: var(--font-serif); font-style: italic; font-size: 64px; line-height: 0.8; float: left; padding: 8px 12px 0 0; color: var(--ccpd-orange-600); font-weight: 400; }
+  .s-story .body p:last-child { margin-bottom: 0; }
+
+  /* ── 7. THREE-UP CARD GRID ────────────────────────────── */
+  .s-cards { padding: 88px 64px; background: var(--ccpd-pink-50); }
+  .s-cards .head { display: flex; justify-content: space-between; align-items: end; margin-bottom: 36px; gap: 24px; flex-wrap: wrap; }
+  .s-cards .head h2 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 36px; margin: 0; letter-spacing: -0.01em; max-width: 16ch; }
+  .s-cards .head h2 em { color: var(--ccpd-orange-600); }
+  .s-cards .head a { font-size: 13px; font-weight: 600; color: var(--ccpd-ink-900); text-decoration: none; border-bottom: 1px solid var(--ccpd-orange-500); padding-bottom: 2px; }
+  .s-cards .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .s-cards .card { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px; }
+  .s-cards .card .num { font-family: var(--font-serif); font-style: italic; font-size: 32px; color: var(--ccpd-orange-500); line-height: 1; }
+  .s-cards .card h3 { font-family: var(--font-display); font-weight: 600; font-size: 18px; margin: 0; color: var(--ccpd-ink-900); }
+  .s-cards .card p { font-size: 14px; line-height: 1.65; color: var(--ccpd-ink-700); margin: 0; }
+  .s-cards .card a { font-size: 13px; font-weight: 600; color: var(--ccpd-orange-600); text-decoration: none; margin-top: auto; padding-top: 10px; }
+
+  /* ── 8. CLOSING CTA ───────────────────────────────────── */
+  .s-cta { padding: 96px 64px; background: var(--ccpd-pink-500); text-align: center; }
+  .s-cta .eb { color: var(--ccpd-orange-700); margin-bottom: 18px; }
+  .s-cta h2 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 56px; line-height: 1.1; margin: 0 auto 20px; max-width: 18ch; letter-spacing: -0.015em; }
+  .s-cta h2 em { color: var(--ccpd-orange-700); }
+  .s-cta p { font-size: 17px; line-height: 1.55; color: var(--ccpd-ink-800); max-width: 48ch; margin: 0 auto 32px; }
+  .s-cta .ctas { display: flex; gap: 12px; justify-content: center; }
+
+  /* ── 9. PARTNER STRIP ────────────────────────────────── */
+  .s-partner { padding: 56px 64px; background: #fff; border-top: 1px solid var(--ccpd-gray-100); border-bottom: 1px solid var(--ccpd-gray-100); }
+  .s-partner .eb { color: var(--ccpd-gray-500); text-align: center; margin-bottom: 28px; }
+  .s-partner .row { display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 32px; }
+  .s-partner .logo { font-family: var(--font-serif); font-style: italic; font-size: 22px; color: var(--ccpd-gray-500); letter-spacing: -0.01em; }
+  .s-partner .logo strong { color: var(--ccpd-ink-700); font-weight: 400; }
+
+  /* ── 10. PULL-QUOTE ───────────────────────────────────── */
+  .s-quote { padding: 96px 64px; background: var(--ccpd-pink-50); text-align: center; }
+  .s-quote .mark { font-family: var(--font-serif); font-style: italic; font-size: 72px; line-height: 0.6; color: var(--ccpd-orange-400); margin-bottom: 20px; display: block; }
+  .s-quote blockquote { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 36px; line-height: 1.3; letter-spacing: -0.01em; margin: 0 auto 28px; max-width: 22ch; color: var(--ccpd-ink-900); }
+  .s-quote blockquote em { color: var(--ccpd-orange-600); }
+  .s-quote .attr { font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: var(--ccpd-ink-900); }
+  .s-quote .attr span { display: block; font-weight: 400; color: var(--ccpd-gray-500); margin-top: 2px; font-family: var(--font-sans); font-style: normal; letter-spacing: 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-h">
+    <p class="eyebrow">Foundations · Layout</p>
+    <h1>Sections that <em>compose.</em></h1>
+    <p>Pages aren't designed from scratch — they're assembled from these patterns. Each one names what it's for, what it's made of, and where it goes. Mix in any order; the system is the rhythm between them.</p>
+  </header>
+
+  <!-- 01 — CAMPAIGN HERO -->
+  <article class="pat">
+    <div class="pat-h"><span class="num">01</span><h2>Campaign hero</h2><div class="meta"><span><strong>Use on:</strong> Concert, campaigns</span><span><strong>Pairs with:</strong> Stat band</span></div></div>
+    <p class="desc">Dark background, headline left, live-progress card right. The default hero when there's an active campaign with a goal — gives the reader the ask and the math at the same time.</p>
+    <div class="canvas">
+      <div class="h-campaign">
+        <div class="grid">
+          <div>
+            <p class="eb">Concert for a Cure 2026</p>
+            <h1 class="h1-display">The lake, the music, the <em>science.</em></h1>
+            <p class="lede">Saturday, July 18 at Geist Reservoir. Eighth year. 100% to MJFF research — no salaries, no skim.</p>
+            <div class="ctas">
+              <a class="btn btn-on-dark" href="#">Get tickets · $150 →</a>
+              <a class="btn btn-ghost-on-dark" href="#">See last year</a>
+            </div>
+          </div>
+          <div class="stat-card">
+            <p class="eb-card">2026 Goal · live</p>
+            <div class="big">$67,200</div>
+            <p class="small">raised by 312 supporters</p>
+            <div class="bar"><div></div></div>
+            <div class="row"><span>67% of $100k goal</span><span>22 days left</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="anatomy"><span><strong>Structure</strong>2-col, dark, asymmetric</span><span><strong>Headline</strong>Italic serif, 60px, 1 orange word</span><span><strong>CTAs</strong>Primary + ghost</span><span><strong>Stat card</strong>Live amount + bar</span></div>
+  </article>
+
+  <!-- 02 — EDITORIAL HERO -->
+  <article class="pat">
+    <div class="pat-h"><span class="num">02</span><h2>Editorial hero</h2><div class="meta"><span><strong>Use on:</strong> About, Story</span><span><strong>Pairs with:</strong> Story, quote</span></div></div>
+    <p class="desc">Centered serif, generous air, no imagery. For pages that lead with a sentence — the about page, in-memory dedications, the science overview. Restraint is the point.</p>
+    <div class="canvas">
+      <div class="h-editorial">
+        <p class="eb">The Foundation</p>
+        <h1 class="h1-display">Built from love. Backed by science. Focused on the <em>cure.</em></h1>
+        <p>Volunteer-run since 2018. 100% of every dollar reaches The Michael J. Fox Foundation for Parkinson's Research.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#">Read our story →</a>
+          <a class="btn btn-secondary" href="#">The science</a>
+        </div>
+      </div>
+    </div>
+    <div class="anatomy"><span><strong>Structure</strong>Centered, single column</span><span><strong>Headline</strong>Italic serif, 68px, max 18ch</span><span><strong>Lede</strong>Italic serif, not sans</span><span><strong>Background</strong>Pink-50, no photo</span></div>
+  </article>
+
+  <!-- 03 — PHOTO HERO -->
+  <article class="pat">
+    <div class="pat-h"><span class="num">03</span><h2>Photo hero</h2><div class="meta"><span><strong>Use on:</strong> Recap, event recaps</span><span><strong>Pairs with:</strong> Stat band, gallery</span></div></div>
+    <p class="desc">Full-bleed photo with bottom-aligned copy. Use only when the photo is doing real emotional work — golden-hour Geist, a packed concert. Type sits in the bottom-left, gradient darkens beneath.</p>
+    <div class="canvas">
+      <div class="h-photo">
+        <div class="copy">
+          <p class="eb">Concert for a Cure · 2024 Recap</p>
+          <h1 class="h1-display">312 of you. <em>$67,200</em> to MJFF.</h1>
+          <p>Same lake, same song, one year closer. The numbers below are what your night funded.</p>
+          <div class="ctas">
+            <a class="btn btn-on-dark" href="#">See the recap →</a>
+            <a class="btn btn-ghost-on-dark" href="#">2026 details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="anatomy"><span><strong>Structure</strong>16:7 full-bleed photo</span><span><strong>Gradient</strong>0→65% black, bottom</span><span><strong>Copy</strong>Bottom-left, max 720px</span><span><strong>Eyebrow</strong>Orange-300 on dark</span></div>
+  </article>
+
+  <!-- 04 — SPLIT HERO -->
+  <article class="pat">
+    <div class="pat-h"><span class="num">04</span><h2>Split hero</h2><div class="meta"><span><strong>Use on:</strong> Founder letters, About</span><span><strong>Pairs with:</strong> Story</span></div></div>
+    <p class="desc">50/50 text + photo. For first-person stories where a face matters. Photo always candid — not a step-and-repeat. Text aligned vertically center.</p>
+    <div class="canvas">
+      <div class="h-split">
+        <div class="text">
+          <p class="eb">From the founders</p>
+          <h1 class="h1-display">We started this because <em>Parkinson's took someone we love.</em></h1>
+          <p>Eight years and $487,000 later, we're still going. Not because it's easy — because the science is closer than people realize.</p>
+          <p class="attr">— Wendy & Rob Spalding, Co-founders</p>
+        </div>
+        <div class="photo"></div>
+      </div>
+    </div>
+    <div class="anatomy"><span><strong>Structure</strong>50/50, text left</span><span><strong>Photo</strong>Candid, full-bleed</span><span><strong>Headline</strong>52px, 14ch max</span><span><strong>Attribution</strong>Italic serif, gray</span></div>
+  </article>
+
+  <!-- 05 — STAT BAND -->
+  <article class="pat">
+    <div class="pat-h"><span class="num">05</span><h2>Stat band</h2><div class="meta"><span><strong>Use on:</strong> Between sections</span><span><strong>Pairs with:</strong> Hero, story</span></div></div>
+    <p class="desc">Three numbers on ink, italic serif at scale. Use once per page — twice dilutes. The job is to anchor a claim before the next section asks for trust.</p>
+    <div class="canvas">
+      <div class="s-stat-band">
+        <div class="grid">
+          <div class="col">
+            <p class="eb">Since 2018</p>
+            <div class="big"><em>$487k</em></div>
+            <p class="label">raised across seven Concert for a Cure events</p>
+          </div>
+          <div class="col">
+            <p class="eb">Of every dollar</p>
+            <div class="big"><em>100%</em></div>
+            <p class="label">reaches MJFF research — no salaries, no overhead</p>
+          </div>
+          <div class="col">
+            <p class="eb">By 2050</p>
+            <div class="big">90M<em>+</em></div>
+            <p class="label">people projected to live with Parkinson's globally</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="anatomy"><span><strong>Structure</strong>3 columns, ink-900</span><span><strong>Number</strong>Italic serif, 64px</span><span><strong>Divider</strong>Subtle vertical lines</span><span><strong>Frequency</strong>Once per page</span></div>
+  </article>
+
+  <!-- 06 — STORY SECTION -->
+  <article class="pat">
+    <div class="pat-h"><span class="num">06</span><h2>Story section</h2><div class="meta"><span><strong>Use on:</strong> About, Story</span><span><strong>Pairs with:</strong> Quote, photo hero</span></div></div>
+    <p class="desc">Two columns: a sticky label on the left, body copy on the right. Drop cap in italic serif orange opens the body. For longform — the founder's story, the science explainer.</p>
+    <div class="canvas">
+      <div class="s-story">
+        <div class="grid">
+          <div class="label-col">
+            <p class="eb">The story</p>
+            <h2>It started at the <em>lake.</em></h2>
+            <p class="lede">A backyard concert in 2018. Twenty friends. One reason.</p>
+          </div>
+          <div class="body">
+            <p>Wendy lost her dad, Roger, to Parkinson's in 2014. Three years later she and Rob threw a concert at their Geist Reservoir home — twenty friends, a borrowed sound system, and a jar for donations. They raised $4,200 and sent every dollar to The Michael J. Fox Foundation.</p>
+            <p>They did it again the next year. And the next. By 2024, Concert for a Cure had grown to three hundred people and a six-figure check, but the rules hadn't changed: no salaries, no overhead, every dollar to the science. The lake is still where it happens. The reason is still the same.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="anatomy"><span><strong>Structure</strong>40/60 columns</span><span><strong>Drop cap</strong>Italic serif, orange</span><span><strong>Label</strong>Eyebrow + serif H2</span><span><strong>Body</strong>16px, 1.75 line</span></div>
+  </article>
+
+  <!-- 07 — CARD GRID -->
+  <article class="pat">
+    <div class="pat-h"><span class="num">07</span><h2>Three-up card grid</h2><div class="meta"><span><strong>Use on:</strong> Ways to Give, Science</span><span><strong>Pairs with:</strong> Hero, CTA</span></div></div>
+    <p class="desc">Three parallel options, each numbered with italic serif. For pages that present a choice — give once vs. monthly vs. legacy; trial 1 vs. 2 vs. 3. Always three, never four.</p>
+    <div class="canvas">
+      <div class="s-cards">
+        <div class="head">
+          <h2>Three ways to <em>fund the science.</em></h2>
+          <a href="#">All giving options →</a>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <span class="num">01</span>
+            <h3>Give once</h3>
+            <p>A single gift, no recurring charge. Best for tax-year deductions or honoring a loved one.</p>
+            <a href="#">Donate →</a>
+          </div>
+          <div class="card">
+            <span class="num">02</span>
+            <h3>Give monthly</h3>
+            <p>Sustained funding lets MJFF plan multi-year trials. Cancel anytime.</p>
+            <a href="#">Set up monthly →</a>
+          </div>
+          <div class="card">
+            <span class="num">03</span>
+            <h3>Give legacy</h3>
+            <p>Include the foundation in your estate plan. We can connect you with our advisor.</p>
+            <a href="#">Talk to us →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="anatomy"><span><strong>Structure</strong>3 columns, equal</span><span><strong>Number</strong>Italic serif, 32px, orange</span><span><strong>Head</strong>H2 + secondary link</span><span><strong>Background</strong>Pink-50</span></div>
+  </article>
+
+  <!-- 08 — CLOSING CTA -->
+  <article class="pat">
+    <div class="pat-h"><span class="num">08</span><h2>Closing CTA</h2><div class="meta"><span><strong>Use on:</strong> Bottom of page</span><span><strong>Pairs with:</strong> Anything before it</span></div></div>
+    <p class="desc">The page's last act. Pink-500 background — warmest color in the system, used only here. One headline, one paragraph, two buttons. Never more.</p>
+    <div class="canvas">
+      <div class="s-cta">
+        <p class="eb">Science fuels hope</p>
+        <h2 class="h1-display">If this matters to you, the most direct thing you can do is <em>give.</em></h2>
+        <p>100% reaches The Michael J. Fox Foundation. No salaries, no overhead, no skim.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#">Donate now →</a>
+          <a class="btn btn-secondary" href="#">Other ways to help</a>
+        </div>
+      </div>
+    </div>
+    <div class="anatomy"><span><strong>Structure</strong>Centered, generous</span><span><strong>Headline</strong>56px, max 18ch</span><span><strong>Background</strong>Pink-500 (rare)</span><span><strong>CTAs</strong>Two, never more</span></div>
+  </article>
+
+  <!-- 09 — PARTNER STRIP -->
+  <article class="pat">
+    <div class="pat-h"><span class="num">09</span><h2>Partner strip</h2><div class="meta"><span><strong>Use on:</strong> After hero, before footer</span><span><strong>Pairs with:</strong> Hero, CTA</span></div></div>
+    <p class="desc">Quiet acknowledgment of who the work happens with. Subdued type, no boxes, italic serif lockups. For sponsors and the MJFF partnership.</p>
+    <div class="canvas">
+      <div class="s-partner">
+        <p class="eb">In partnership with</p>
+        <div class="row">
+          <span class="logo"><strong>The Michael J. Fox Foundation</strong></span>
+          <span class="logo">Indianapolis Boat Club</span>
+          <span class="logo">Geist Rotary</span>
+          <span class="logo">Spalding Family</span>
+        </div>
+      </div>
+    </div>
+    <div class="anatomy"><span><strong>Structure</strong>Single horizontal row</span><span><strong>Logos</strong>Italic serif lockups</span><span><strong>Eyebrow</strong>Centered, gray</span><span><strong>Frequency</strong>Once per page</span></div>
+  </article>
+
+  <!-- 10 — PULL QUOTE -->
+  <article class="pat">
+    <div class="pat-h"><span class="num">10</span><h2>Pull quote</h2><div class="meta"><span><strong>Use on:</strong> Story, About</span><span><strong>Pairs with:</strong> Story section</span></div></div>
+    <p class="desc">A single line, set big. Use a real quote from a real person — Wendy, a donor, an MJFF scientist. Never invent one. Always attributed with name and role.</p>
+    <div class="canvas">
+      <div class="s-quote">
+        <span class="mark">"</span>
+        <blockquote>The science is <em>closer</em> than people realize.</blockquote>
+        <p class="attr">Dr. Brian Fiske<span>Senior VP, Research Programs · MJFF</span></p>
+      </div>
+    </div>
+    <div class="anatomy"><span><strong>Structure</strong>Centered, generous</span><span><strong>Quote</strong>Italic serif, 36px, 22ch</span><span><strong>Mark</strong>Decorative, orange</span><span><strong>Attribution</strong>Name + role</span></div>
+  </article>
+
+</div>
+</body>
+</html>

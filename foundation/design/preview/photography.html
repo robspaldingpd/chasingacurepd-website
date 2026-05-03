@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Photography & art direction</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 56px 40px 80px; background: var(--ccpd-pink-50); font-family: var(--font-sans); color: var(--ccpd-ink-900); }
+  .wrap { max-width: 1180px; margin: 0 auto; }
+
+  /* Page header */
+  .page-h { margin-bottom: 56px; max-width: 720px; }
+  .page-h .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ccpd-orange-600); margin: 0 0 14px; }
+  .page-h h1 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 48px; line-height: 1.1; letter-spacing: -0.015em; margin: 0 0 18px; color: var(--ccpd-ink-900); }
+  .page-h h1 em { color: var(--ccpd-orange-600); }
+  .page-h p { font-size: 17px; line-height: 1.6; color: var(--ccpd-ink-700); margin: 0; }
+
+  /* Section header */
+  section { margin-bottom: 56px; }
+  .sec-h { display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--ccpd-gray-100); }
+  .sec-h h2 { font-family: var(--font-display); font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ccpd-ink-900); margin: 0; }
+  .sec-h .num { font-family: var(--font-serif); font-style: italic; font-size: 20px; color: var(--ccpd-orange-500); }
+  .sec-d { font-family: var(--font-serif); font-style: italic; font-size: 16px; line-height: 1.55; color: var(--ccpd-gray-700); margin: 0 0 24px; max-width: 64ch; }
+
+  /* Photo categories grid */
+  .cats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .card { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 14px; overflow: hidden; }
+  .card .img { aspect-ratio: 4/3; background-size: cover; background-position: center; background-color: var(--ccpd-gray-100); }
+  .card .body { padding: 22px 24px 24px; }
+  .card .tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ccpd-orange-600); background: var(--ccpd-orange-100); padding: 4px 10px; border-radius: 999px; margin-bottom: 12px; }
+  .card h3 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 22px; line-height: 1.25; margin: 0 0 8px; color: var(--ccpd-ink-900); }
+  .card p { font-size: 14px; line-height: 1.65; color: var(--ccpd-ink-700); margin: 0 0 14px; }
+  .card .meta { display: flex; gap: 16px; font-size: 12px; color: var(--ccpd-gray-500); padding-top: 12px; border-top: 1px solid var(--ccpd-gray-100); }
+  .card .meta strong { color: var(--ccpd-ink-900); font-weight: 600; }
+
+  /* Hero crops — show the same photo cropped 3 ways */
+  .crops { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 16px; align-items: stretch; }
+  .crop { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+  .crop .preview { background-size: cover; background-position: center; flex: 1; min-height: 180px; }
+  .crop .lab { padding: 14px 16px; border-top: 1px solid var(--ccpd-gray-100); }
+  .crop .lab strong { display: block; font-size: 13px; color: var(--ccpd-ink-900); margin-bottom: 2px; font-weight: 600; }
+  .crop .lab span { font-size: 12px; color: var(--ccpd-gray-500); }
+  .crop.wide .preview { aspect-ratio: 16/9; }
+  .crop.sq .preview { aspect-ratio: 1/1; }
+  .crop.por .preview { aspect-ratio: 4/5; }
+
+  /* Treatment row — true vs warm vs duotone */
+  .treats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .treat { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 12px; overflow: hidden; }
+  .treat .preview { aspect-ratio: 4/3; background-size: cover; background-position: center; }
+  .treat .body { padding: 16px 18px 18px; }
+  .treat h4 { font-family: var(--font-display); font-weight: 600; font-size: 13px; margin: 0 0 6px; color: var(--ccpd-ink-900); }
+  .treat p { font-size: 13px; line-height: 1.6; color: var(--ccpd-ink-700); margin: 0; }
+  .treat .filter-warm { filter: saturate(1.1) contrast(1.05); }
+  .treat .filter-duo { filter: grayscale(1) contrast(1.1); position: relative; }
+  .treat .duo-wrap { position: relative; aspect-ratio: 4/3; overflow: hidden; }
+  .treat .duo-wrap::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(214,108,0,0.55), rgba(26,26,26,0.55)); mix-blend-mode: color; }
+  .treat .duo-wrap .preview { filter: grayscale(1) contrast(1.05); aspect-ratio: 4/3; }
+
+  /* Text overlay demo */
+  .overlay-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .overlay { position: relative; aspect-ratio: 16/9; background-size: cover; background-position: center; border-radius: 12px; overflow: hidden; }
+  .overlay::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.65) 100%); }
+  .overlay .copy { position: absolute; left: 28px; right: 28px; bottom: 24px; color: #fff; }
+  .overlay .copy .eb { font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ccpd-orange-300); margin-bottom: 8px; display: block; }
+  .overlay .copy h4 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 28px; line-height: 1.15; margin: 0; color: #fff; letter-spacing: -0.01em; }
+  .overlay .copy h4 em { color: var(--ccpd-orange-300); }
+  .overlay .label { position: absolute; top: 14px; left: 14px; font-size: 11px; font-weight: 600; padding: 4px 10px; background: rgba(0,0,0,0.6); color: #fff; border-radius: 999px; backdrop-filter: blur(8px); }
+
+  /* Do/don't */
+  .rules { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .rule { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 12px; overflow: hidden; }
+  .rule .preview { aspect-ratio: 16/9; position: relative; background-size: cover; background-position: center; }
+  .rule.do .preview::after, .rule.dont .preview::after { content: ''; position: absolute; top: 12px; left: 12px; width: 28px; height: 28px; border-radius: 999px; display: grid; place-items: center; font-size: 16px; font-weight: 700; }
+  .rule.do .preview::after { content: '✓'; background: #10b981; color: #fff; }
+  .rule.dont .preview::after { content: '✕'; background: #dc2626; color: #fff; }
+  .rule .body { padding: 16px 20px 20px; }
+  .rule h4 { font-family: var(--font-display); font-weight: 600; font-size: 14px; margin: 0 0 6px; color: var(--ccpd-ink-900); }
+  .rule p { font-size: 13px; line-height: 1.6; color: var(--ccpd-ink-700); margin: 0; }
+
+  /* Final principles list */
+  .princ { background: var(--ccpd-ink-900); color: var(--ccpd-cream-50); border-radius: 16px; padding: 40px; }
+  .princ h2 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 28px; margin: 0 0 20px; color: #fff; letter-spacing: -0.01em; }
+  .princ ol { margin: 0; padding-left: 0; list-style: none; counter-reset: pi; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px 32px; }
+  .princ li { counter-increment: pi; padding-left: 36px; position: relative; line-height: 1.6; font-size: 15px; color: rgba(251,248,242,0.85); }
+  .princ li::before { content: counter(pi, decimal-leading-zero); position: absolute; left: 0; top: 0; font-family: var(--font-serif); font-style: italic; font-size: 18px; color: var(--ccpd-orange-300); }
+  .princ li strong { display: block; color: #fff; font-weight: 600; margin-bottom: 4px; font-family: var(--font-display); font-size: 14px; letter-spacing: 0.02em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="page-h">
+    <p class="eyebrow">Brand · Photography</p>
+    <h1>Real people, real moments — <em>warm but never staged.</em></h1>
+    <p>Photography is where the foundation's voice becomes a face. Pictures should feel like you stumbled into a moment, not a marketing shoot. Light, candor and connection over polish.</p>
+  </header>
+
+  <!-- ── 1. CATEGORIES ─────────────────────────────────── -->
+  <section>
+    <div class="sec-h"><span class="num">01</span><h2>Photo categories</h2></div>
+    <p class="sec-d">Five archetypes do most of the work. Knowing which one a moment is helps with cropping, captioning and where it lives on the page.</p>
+    <div class="cats">
+
+      <div class="card">
+        <div class="img" style="background-image: url('../assets/photos/concert-group-2024.jpg')"></div>
+        <div class="body">
+          <span class="tag">Community</span>
+          <h3>The room, full of people who showed up.</h3>
+          <p>Wide-angle group photos at events. Use to convey scale and warmth. Crop loose — the chaos of a real group is the point.</p>
+          <div class="meta"><span><strong>Best at:</strong> 16:9 hero</span><span><strong>Used on:</strong> Concert page, recap email</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img" style="background-image: url('../assets/photos/wendy-rob-candid.jpg')"></div>
+        <div class="body">
+          <span class="tag">Founders</span>
+          <h3>Wendy & Rob, the people behind it.</h3>
+          <p>Candid two-shots of the founders. Eye contact, warm light, never on a step-and-repeat. Use sparingly — when copy needs a face.</p>
+          <div class="meta"><span><strong>Best at:</strong> 1:1 or 4:5</span><span><strong>Used on:</strong> About, founder letters</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img" style="background-image: url('../assets/photos/geist-sunset-dramatic.jpg')"></div>
+        <div class="body">
+          <span class="tag">Place</span>
+          <h3>Geist Reservoir at golden hour.</h3>
+          <p>The lake is part of the brand. Wide horizons, water + sky, never with people in frame. Use for atmospheric breaks and section openers.</p>
+          <div class="meta"><span><strong>Best at:</strong> 16:9, full bleed</span><span><strong>Used on:</strong> Hero, between sections</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img" style="background-image: url('../assets/photos/sue-chase-clean.jpg')"></div>
+        <div class="body">
+          <span class="tag">In memory</span>
+          <h3>The people we're chasing the cure for.</h3>
+          <p>Reference photographs of loved ones — Sue Chase and the families behind the foundation. Treat with reverence. Always with a name and a date.</p>
+          <div class="meta"><span><strong>Best at:</strong> 4:5 portrait</span><span><strong>Used on:</strong> Story, dedication panels</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img" style="background-image: url('../assets/photos/wendy-rob-mjff-event-2.jpg')"></div>
+        <div class="body">
+          <span class="tag">Partner</span>
+          <h3>With MJFF, the science partner.</h3>
+          <p>Photos at MJFF events show legitimacy and connection. These can be a bit more posed — they're proof, not a moment. Always credit the event.</p>
+          <div class="meta"><span><strong>Best at:</strong> 4:5 or 1:1</span><span><strong>Used on:</strong> Science page, partner blocks</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img" style="background-image: url('../assets/photos/raffle-boat.png')"></div>
+        <div class="body">
+          <span class="tag">Object</span>
+          <h3>The raffle boat, the auction items.</h3>
+          <p>Product-style photography for tangible items: raffle boats, auction packages. Clean backgrounds, isolated subject. Less art, more honesty.</p>
+          <div class="meta"><span><strong>Best at:</strong> 16:9 wide</span><span><strong>Used on:</strong> Concert raffle, sponsors</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── 2. CROPPING ───────────────────────────────────── -->
+  <section>
+    <div class="sec-h"><span class="num">02</span><h2>Cropping</h2></div>
+    <p class="sec-d">Same photo, three crops. The hero crop should breathe; the square is for cards; the portrait is for sidebars and stacked email layouts.</p>
+    <div class="crops">
+      <div class="crop wide">
+        <div class="preview" style="background-image: url('../assets/photos/geist-golden-hour-balloon.jpg')"></div>
+        <div class="lab"><strong>16:9 — Hero</strong><span>Headlines sit on bottom-left. Sky on top, water on bottom.</span></div>
+      </div>
+      <div class="crop sq">
+        <div class="preview" style="background-image: url('../assets/photos/geist-golden-hour-balloon.jpg'); background-position: 50% 60%;"></div>
+        <div class="lab"><strong>1:1 — Card</strong><span>Tighter on the subject. Use in grids, social, donor walls.</span></div>
+      </div>
+      <div class="crop por">
+        <div class="preview" style="background-image: url('../assets/photos/geist-golden-hour-balloon.jpg'); background-position: 30% 50%;"></div>
+        <div class="lab"><strong>4:5 — Portrait</strong><span>Email sidebars, mobile hero, IG feed.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 3. TREATMENTS ─────────────────────────────────── -->
+  <section>
+    <div class="sec-h"><span class="num">03</span><h2>Treatments</h2></div>
+    <p class="sec-d">Default to <em>true color</em>. Reserve the warm grade for hero moments where mood matters. Duotone only for archival, in-memory or section-divider use — never for live event coverage.</p>
+    <div class="treats">
+      <div class="treat">
+        <div class="preview" style="background-image: url('../assets/photos/concert-group-2024.jpg')"></div>
+        <div class="body"><h4>True color · default</h4><p>How real people remember the moment. Use 90% of the time.</p></div>
+      </div>
+      <div class="treat">
+        <div class="preview filter-warm" style="background-image: url('../assets/photos/concert-group-2024.jpg')"></div>
+        <div class="body"><h4>Warm grade · feature</h4><p>+10% saturation, +5% contrast. For hero photos and recap covers only.</p></div>
+      </div>
+      <div class="treat">
+        <div class="duo-wrap"><div class="preview" style="background-image: url('../assets/photos/concert-group-2024.jpg')"></div></div>
+        <div class="body"><h4>Duotone · archival</h4><p>Orange × ink-900 over grayscale. Used for dedications, in-memory, history.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 4. TYPE OVER PHOTO ────────────────────────────── -->
+  <section>
+    <div class="sec-h"><span class="num">04</span><h2>Type over photo</h2></div>
+    <p class="sec-d">Always darken the bottom of a hero with a 0→65% black gradient. Headline lives in the bottom-left; eyebrow in orange-300; never set type on a busy mid-frame area.</p>
+    <div class="overlay-row">
+      <div class="overlay" style="background-image: url('../assets/photos/geist-sunset-dramatic.jpg')">
+        <span class="label">Hero · 16:9</span>
+        <div class="copy"><span class="eb">Concert for a Cure 2026</span><h4>The lake, the music, the <em>science.</em></h4></div>
+      </div>
+      <div class="overlay" style="background-image: url('../assets/photos/concert-group-2024.jpg')">
+        <span class="label">Recap · 16:9</span>
+        <div class="copy"><span class="eb">Together, July 2024</span><h4>312 of you. <em>$67,200</em> to MJFF.</h4></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 5. DO / DON'T ─────────────────────────────────── -->
+  <section>
+    <div class="sec-h"><span class="num">05</span><h2>Do & don't</h2></div>
+    <p class="sec-d">A few hard rules. The first three matter most.</p>
+    <div class="rules">
+      <div class="rule do">
+        <div class="preview" style="background-image: url('../assets/photos/wendy-rob-candid.jpg')"></div>
+        <div class="body"><h4>Do — candid eye contact, soft light</h4><p>Founders feel like people you'd talk to. Imperfect framing is fine.</p></div>
+      </div>
+      <div class="rule dont">
+        <div class="preview" style="background-image: url('../assets/photos/wendy-rob-mjff-event-2.jpg')"></div>
+        <div class="body"><h4>Don't — step-and-repeat as primary hero</h4><p>Acceptable for partner/proof blocks. Never the front-page emotional anchor.</p></div>
+      </div>
+      <div class="rule do">
+        <div class="preview" style="background-image: url('../assets/photos/geist-sunset-dramatic.jpg')"></div>
+        <div class="body"><h4>Do — let the lake breathe</h4><p>Wide horizons, sky weight, no people in frame for atmospheric breaks.</p></div>
+      </div>
+      <div class="rule dont">
+        <div class="preview" style="background-image: url('../assets/photos/wendy-portrait.png')"></div>
+        <div class="body"><h4>Don't — corporate headshots as story art</h4><p>Headshots are for board pages. Don't open a story or campaign with one.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 6. PRINCIPLES ─────────────────────────────────── -->
+  <div class="princ">
+    <h2>The eight principles, on one screen.</h2>
+    <ol>
+      <li><strong>Real over staged</strong>Candid beats posed. We are not a corporate brand.</li>
+      <li><strong>Warm light, true color</strong>Golden hour and natural daylight. No heavy filters.</li>
+      <li><strong>Faces, not crowds-from-above</strong>Eye level. People should feel approachable.</li>
+      <li><strong>Place is part of the story</strong>The lake, the boats, the Indiana sky — they belong.</li>
+      <li><strong>Reverence for memory photos</strong>Always named, always dated, never cropped tight.</li>
+      <li><strong>Darken before you set type</strong>0→65% gradient bottom. Never type on busy mid-frame.</li>
+      <li><strong>Crop with intent</strong>16:9 to breathe, 1:1 to focus, 4:5 to elevate.</li>
+      <li><strong>One photo per moment</strong>Pick the best frame. Galleries dilute. Resist the carousel.</li>
+    </ol>
+  </div>
+
+</div>
+</body>
+</html>

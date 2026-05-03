@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css"><style>
+body{margin:0;padding:32px;background:var(--bg);font-family:var(--font-sans)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.stat{padding:24px 20px;border-right:1px solid var(--border)}
+.stat:last-child{border-right:none}
+.n{font-family:var(--font-sans);font-size:64px;line-height:0.95;letter-spacing:-0.04em;color:var(--ccpd-ink-900);font-weight:500;font-variant-numeric:tabular-nums;display:flex;align-items:baseline;gap:2px}
+.n .unit{font-size:36px;font-weight:400;color:var(--ccpd-orange-500);letter-spacing:-0.02em}
+.stat.zero .n{color:var(--ccpd-orange-500)}
+.l{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--fg-muted);margin-top:14px;font-weight:600}
+.rule{width:28px;height:2px;background:var(--ccpd-ink-900);margin-top:14px}
+.stat.zero .rule{background:var(--ccpd-orange-500)}
+</style></head><body>
+<div class="grid">
+  <div class="stat"><div class="n">10<span class="unit">M</span></div><div class="rule"></div><div class="l">Worldwide</div></div>
+  <div class="stat"><div class="n">1<span class="unit">M</span></div><div class="rule"></div><div class="l">United States</div></div>
+  <div class="stat"><div class="n">90<span class="unit">K</span></div><div class="rule"></div><div class="l">New diagnoses / yr</div></div>
+  <div class="stat zero"><div class="n">0</div><div class="rule"></div><div class="l">Cures — today</div></div>
+</div>
+</body></html>

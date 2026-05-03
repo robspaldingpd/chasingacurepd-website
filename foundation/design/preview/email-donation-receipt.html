@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Email · Donation receipt</title>
+<style>
+  /* Email-safe styles — no external fonts (Outlook strips them).
+     Falls back to system serif/sans, but visually models Poppins/Instrument Serif.
+     If you control the recipient (web view), import the Google Fonts. */
+  body { margin: 0; padding: 32px 16px; background: #FDF7F7; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1A1A1A; }
+  .frame { max-width: 600px; margin: 0 auto; background: #FFFFFF; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 2px rgba(20,33,61,0.06), 0 8px 24px rgba(20,33,61,0.06); }
+
+  /* Header */
+  .header { padding: 32px 32px 28px; border-bottom: 1px solid #EDEDF0; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand img { width: 44px; height: 44px; display: block; border-radius: 999px; }
+  .brand-text { line-height: 1; }
+  .brand-name { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: 400; font-size: 17px; color: #000; letter-spacing: -0.005em; display: block; margin-bottom: 4px; }
+  .brand-sub { font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #E87300; }
+
+  /* Hero */
+  .hero { padding: 36px 32px 28px; }
+  .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #6B6F7D; margin: 0 0 12px; }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 30px; line-height: 1.2; letter-spacing: -0.01em; color: #000; margin: 0 0 16px; }
+  h1 em { color: #D66C00; }
+  .lede { font-size: 15px; line-height: 1.65; color: #1A1A1A; margin: 0; }
+
+  /* Receipt block */
+  .receipt { margin: 24px 32px; padding: 24px 24px 8px; background: #FDF7F7; border-radius: 12px; border: 1px solid #F2D6D6; }
+  .receipt-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid #F2D6D6; font-size: 14px; color: #2B2B2B; }
+  .receipt-row:last-of-type { border-bottom: 0; padding-bottom: 16px; }
+  .receipt-row strong { color: #000; font-weight: 600; }
+  .amount { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 32px; color: #000; letter-spacing: -0.01em; line-height: 1; }
+  .receipt-row.total { padding: 16px 0 8px; }
+
+  /* Impact callout */
+  .impact { margin: 0 32px 28px; padding: 22px 24px; background: #000; border-radius: 12px; color: rgba(255,255,255,0.9); }
+  .impact-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #FB9A38; margin: 0 0 10px; }
+  .impact-line { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: 400; font-size: 19px; line-height: 1.4; margin: 0; color: #FBF8F2; }
+  .impact-line strong { font-style: normal; font-weight: 700; color: #FB9A38; }
+
+  /* Body text */
+  .body { padding: 8px 32px 28px; }
+  .body p { font-size: 15px; line-height: 1.7; color: #2B2B2B; margin: 0 0 16px; }
+  .body p:last-child { margin: 0; }
+  .body a { color: #D66C00; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+
+  /* Signature */
+  .sig { padding: 0 32px 32px; }
+  .sig p { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 16px; color: #2B2B2B; line-height: 1.55; margin: 0 0 4px; }
+  .sig .who { font-family: -apple-system, sans-serif; font-style: normal; font-size: 13px; font-weight: 600; color: #000; letter-spacing: 0.02em; margin-top: 12px; }
+  .sig .role { font-family: -apple-system, sans-serif; font-style: normal; font-size: 12px; color: #6B6F7D; }
+
+  /* CTA */
+  .cta-wrap { padding: 0 32px 36px; text-align: left; }
+  .cta { display: inline-block; padding: 14px 26px; background: #F98008; color: #000 !important; font-weight: 700; font-size: 15px; text-decoration: none; border-radius: 999px; letter-spacing: -0.01em; }
+
+  /* Tax line */
+  .tax { padding: 24px 32px; background: #FBF0F0; font-size: 12px; line-height: 1.6; color: #6B6F7D; border-top: 1px solid #F2D6D6; }
+  .tax strong { color: #2B2B2B; }
+
+  /* Footer */
+  .footer { padding: 28px 32px 24px; background: #1A1A1A; color: rgba(255,255,255,0.55); font-size: 12px; line-height: 1.6; text-align: center; }
+  .footer a { color: rgba(255,255,255,0.85); text-decoration: none; }
+  .footer .small { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 14px; }
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+  <div class="header">
+    <div class="brand">
+      <img src="../assets/logo.png" alt="">
+      <div class="brand-text">
+        <span class="brand-name">Chasing a Cure</span>
+        <span class="brand-sub">Parkinson's Foundation</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <p class="eyebrow">Donation receipt · Apr 28, 2026</p>
+    <h1>Thank you, <em>Maria</em>.</h1>
+    <p class="lede">Your gift is on its way to the science. Every dollar reaches The Michael J. Fox Foundation — no salaries, no overhead, no skim.</p>
+  </div>
+
+  <div class="receipt">
+    <div class="receipt-row total">
+      <strong>Your gift</strong>
+      <span class="amount">$250.00</span>
+    </div>
+    <div class="receipt-row"><span>Date</span><span>April 28, 2026</span></div>
+    <div class="receipt-row"><span>Payment method</span><span>Visa ending 4242</span></div>
+    <div class="receipt-row"><span>Frequency</span><span>One-time</span></div>
+    <div class="receipt-row"><span>Confirmation</span><span style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px;">CCPD-2026-04-28-9F2B</span></div>
+  </div>
+
+  <div class="impact">
+    <p class="impact-eyebrow">Where it goes</p>
+    <p class="impact-line">$250 funds <strong>five days</strong> of Parkinson's research at MJFF — the kind of focused work that builds toward a breakthrough.</p>
+  </div>
+
+  <div class="body">
+    <p>This isn't a marketing email. It's a receipt and a thank you.</p>
+    <p>If you'd like to follow what your gift is funding, we send a quarterly update with no asks — just the science. <a href="#">Subscribe to the science update →</a></p>
+  </div>
+
+  <div class="sig">
+    <p>"We started this because Parkinson's took someone we love. We keep going because the science is closer than people realize. Thank you for being in it with us."</p>
+    <div class="who">— Wendy Spalding</div>
+    <div class="role">Co-founder, Chasing a Cure PD</div>
+  </div>
+
+  <div class="cta-wrap">
+    <a href="#" class="cta">Read about the science →</a>
+  </div>
+
+  <div class="tax">
+    <strong>For your records:</strong> Chasing a Cure Parkinson's Foundation is a 501(c)(3) nonprofit (EIN 82-5107944). No goods or services were provided in exchange for this gift. Save this email for tax purposes.
+  </div>
+
+  <div class="footer">
+    <div>
+      <a href="#">chasingacurepd.org</a> · <a href="#">Update preferences</a> · <a href="#">Unsubscribe</a>
+    </div>
+    <div class="small">
+      11650 Olio Road, Suite 1000-149, Fishers, IN 46037<br>
+      © 2026 Chasing a Cure Parkinson's Foundation
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

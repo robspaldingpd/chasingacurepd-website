@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Impact patterns</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 40px 32px 64px; background: var(--ccpd-pink-50); font-family: var(--font-sans); color: var(--ccpd-ink-900); }
+  .wrap { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px; }
+  .group h2 { font-family: var(--font-display); font-weight: 600; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ccpd-gray-500); margin: 0 0 6px; }
+  .group .desc { font-family: var(--font-serif); font-style: italic; font-size: 15px; color: var(--ccpd-gray-700); margin: 0 0 20px; max-width: 60ch; line-height: 1.55; }
+  h3 { font-family: var(--font-display); font-weight: 500; font-size: 14px; color: var(--ccpd-ink-900); margin: 0 0 10px; }
+
+  /* ── 1. STAT TILE — for landing pages, decks ─────────── */
+  .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .stat-tile { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 12px; padding: 28px 24px; }
+  .stat-tile .n { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 56px; line-height: 1; letter-spacing: -0.02em; color: var(--ccpd-orange-600); margin: 0 0 12px; }
+  .stat-tile .l { font-size: 14px; line-height: 1.55; color: var(--ccpd-ink-800); margin: 0; }
+  .stat-tile.dark { background: var(--ccpd-ink-900); border-color: transparent; }
+  .stat-tile.dark .n { color: var(--ccpd-orange-300); }
+  .stat-tile.dark .l { color: rgba(251,248,242,0.78); }
+
+  /* ── 2. TIERED GIVING LADDER ─────────────────────────── */
+  .tiers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .tier { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 12px; padding: 22px 20px; position: relative; display: flex; flex-direction: column; gap: 8px; transition: all 150ms var(--ease); }
+  .tier.featured { border: 2px solid var(--ccpd-orange-500); padding: 21px 19px; }
+  .tier .badge { position: absolute; top: -10px; left: 20px; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; background: var(--ccpd-orange-500); color: #fff; padding: 4px 10px; border-radius: 999px; }
+  .tier .amt { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 36px; line-height: 1; color: var(--ccpd-ink-900); letter-spacing: -0.01em; }
+  .tier .title { font-family: var(--font-display); font-weight: 600; font-size: 13px; color: var(--ccpd-ink-900); }
+  .tier .impact { font-size: 13px; line-height: 1.55; color: var(--ccpd-gray-700); }
+
+  /* ── 3. THERMOMETER / GOAL PROGRESS ──────────────────── */
+  .therm { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 12px; padding: 28px; }
+  .therm-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px; gap: 16px; flex-wrap: wrap; }
+  .therm-raised { font-family: var(--font-serif); font-style: italic; font-size: 38px; line-height: 1; color: var(--ccpd-ink-900); letter-spacing: -0.01em; }
+  .therm-raised em { color: var(--ccpd-orange-600); font-style: italic; }
+  .therm-goal { font-size: 13px; color: var(--ccpd-gray-500); text-align: right; }
+  .therm-goal strong { display: block; color: var(--ccpd-ink-900); font-size: 16px; font-weight: 600; margin-top: 2px; }
+  .therm-bar { position: relative; height: 14px; background: var(--ccpd-gray-50); border-radius: 999px; overflow: hidden; }
+  .therm-fill { position: absolute; inset: 0 auto 0 0; width: 68%; background: linear-gradient(90deg, var(--ccpd-orange-500), var(--ccpd-orange-400)); border-radius: 999px; }
+  .therm-meta { display: flex; justify-content: space-between; margin-top: 12px; font-size: 12px; color: var(--ccpd-gray-500); }
+  .therm-meta strong { color: var(--ccpd-ink-900); font-weight: 600; }
+
+  /* ── 4. DONOR ROLL / SOCIAL PROOF ────────────────────── */
+  .roll { background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 12px; padding: 24px 28px; }
+  .roll-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 14px; }
+  .roll-head h4 { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 22px; margin: 0; color: var(--ccpd-ink-900); }
+  .roll-head span { font-size: 12px; color: var(--ccpd-gray-500); }
+  .roll-list { display: flex; flex-wrap: wrap; gap: 6px 14px; line-height: 1.7; font-size: 14px; color: var(--ccpd-ink-800); }
+  .roll-list .name { display: inline-flex; align-items: center; gap: 6px; }
+  .roll-list .dot { width: 4px; height: 4px; background: var(--ccpd-gray-200); border-radius: 999px; }
+
+  /* ── 5. RECENT DONATIONS TICKER ──────────────────────── */
+  .ticker { background: var(--ccpd-ink-900); color: var(--ccpd-cream-50); border-radius: 12px; padding: 22px 24px; }
+  .ticker .who { color: var(--ccpd-cream-50); }
+  .ticker-head { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+  .ticker-pulse { width: 8px; height: 8px; background: var(--ccpd-orange-500); border-radius: 999px; box-shadow: 0 0 0 0 rgba(249,128,8,0.7); animation: pulse 1.6s infinite; }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(249,128,8,0.6);} 70% { box-shadow: 0 0 0 8px rgba(249,128,8,0);} 100% { box-shadow: 0 0 0 0 rgba(249,128,8,0);} }
+  .ticker-head span { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ccpd-orange-300); }
+  .ticker-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 14px; }
+  .ticker-row:last-child { border-bottom: 0; }
+  .ticker-row .who { font-weight: 500; }
+  .ticker-row .when { color: rgba(251,248,242,0.45); font-size: 12px; }
+  .ticker-row .amt { font-family: var(--font-serif); font-style: italic; color: var(--ccpd-orange-300); font-size: 16px; }
+
+  /* ── 6. INLINE ATTRIBUTION CHIP ──────────────────────── */
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 999px; font-size: 13px; color: var(--ccpd-ink-800); }
+  .chip strong { color: var(--ccpd-orange-600); font-weight: 700; }
+  .chip svg { color: var(--ccpd-orange-500); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="group">
+    <h2>Stat tile</h2>
+    <p class="desc">Lead with the number. Italic serif at scale, label tucked underneath. Use the dark variant inside ink-900 sections.</p>
+    <div class="stats-grid">
+      <div class="stat-tile"><p class="n">100%</p><p class="l">of every dollar reaches MJFF research — no salaries, no overhead.</p></div>
+      <div class="stat-tile"><p class="n">$487k</p><p class="l">raised since 2018 across seven Concert for a Cure events.</p></div>
+      <div class="stat-tile dark"><p class="n">90M+</p><p class="l">people projected to live with Parkinson's by 2050. The science can't wait.</p></div>
+    </div>
+  </div>
+
+  <div class="group">
+    <h2>Tiered giving ladder</h2>
+    <p class="desc">Four amounts, each with a name and a tangible impact. Featured tier ($250) gets the orange border + badge.</p>
+    <div class="tiers">
+      <div class="tier"><div class="amt">$50</div><div class="title">Supporter</div><div class="impact">Funds one day of Parkinson's research at MJFF.</div></div>
+      <div class="tier"><div class="amt">$100</div><div class="title">Advocate</div><div class="impact">Two days of focused work toward a breakthrough.</div></div>
+      <div class="tier featured"><span class="badge">Most chosen</span><div class="amt">$250</div><div class="title">Champion</div><div class="impact">A full work-week of research. Meaningful, not symbolic.</div></div>
+      <div class="tier"><div class="amt">$1,000</div><div class="title">Catalyst</div><div class="impact">A month of biomarker work. Recognized in the annual brief.</div></div>
+    </div>
+  </div>
+
+  <div class="group">
+    <h2>Goal thermometer</h2>
+    <p class="desc">For event pages and campaign homes. Large amount in italic serif, slim bar with a soft warm gradient — never neon.</p>
+    <div class="therm">
+      <div class="therm-head">
+        <div class="therm-raised">$67,200 <em>raised</em></div>
+        <div class="therm-goal">Concert for a Cure 2026 goal<strong>$100,000</strong></div>
+      </div>
+      <div class="therm-bar"><div class="therm-fill"></div></div>
+      <div class="therm-meta"><span>68% of goal · <strong>312 donors</strong></span><span>22 days remaining</span></div>
+    </div>
+  </div>
+
+  <div class="group">
+    <h2>Donor roll</h2>
+    <p class="desc">Quiet acknowledgment, comma-separated. No avatars, no ranking — names sit equal. For annual reports and event pages.</p>
+    <div class="roll">
+      <div class="roll-head"><h4>With gratitude to our 2026 donors</h4><span>312 supporters</span></div>
+      <div class="roll-list">
+        <span class="name">Maria &amp; Tom Alvarez</span><span class="dot"></span>
+        <span class="name">Beth Carlton</span><span class="dot"></span>
+        <span class="name">The Chen Family</span><span class="dot"></span>
+        <span class="name">Anonymous</span><span class="dot"></span>
+        <span class="name">David &amp; Linda Eaton</span><span class="dot"></span>
+        <span class="name">Frank Goldman</span><span class="dot"></span>
+        <span class="name">Geist Rotary Club</span><span class="dot"></span>
+        <span class="name">Jenna Hill</span><span class="dot"></span>
+        <span class="name">Indianapolis Boat Club</span><span class="dot"></span>
+        <span class="name">Marcus Jones</span><span class="dot"></span>
+        <span class="name">The Patel Family</span><span class="dot"></span>
+        <span class="name">Sarah Quinn</span><span class="dot"></span>
+        <span class="name">Anonymous</span><span class="dot"></span>
+        <span class="name">Robert Spalding III</span><span class="dot"></span>
+        <span class="name">Michelle &amp; Kyle Tran</span><span class="dot"></span>
+        <span class="name">Wendy Underwood</span><span class="dot"></span>
+        <span class="name">Diane &amp; Gerald Vance</span>
+        <span style="color: var(--ccpd-gray-500); font-style: italic; font-family: var(--font-serif);">…and 295 more</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="group">
+    <h2>Live ticker</h2>
+    <p class="desc">A small dose of social proof on event days. Pulsing orange dot signals live, italic serif amount on the right.</p>
+    <div class="ticker">
+      <div class="ticker-head"><span class="ticker-pulse"></span><span>Recent gifts</span></div>
+      <div class="ticker-row"><span><span class="who">Anonymous</span> · <span class="when">just now</span></span><span class="amt">$500</span></div>
+      <div class="ticker-row"><span><span class="who">The Chen Family</span> · <span class="when">2 min ago</span></span><span class="amt">$250</span></div>
+      <div class="ticker-row"><span><span class="who">Beth C.</span> · <span class="when">8 min ago</span></span><span class="amt">$100</span></div>
+      <div class="ticker-row"><span><span class="who">Marcus J.</span> · <span class="when">14 min ago</span></span><span class="amt">$50</span></div>
+    </div>
+  </div>
+
+  <div class="group">
+    <h2>Inline attribution</h2>
+    <p class="desc">For narrative copy where impact needs to be stated without breaking flow. Pill, soft border, orange figure inside.</p>
+    <div class="chips">
+      <span class="chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 21s-7-4.5-7-11a4 4 0 017-2.5A4 4 0 0119 10c0 6.5-7 11-7 11z"/></svg><strong>$25</strong> · half a day of research</span>
+      <span class="chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 21s-7-4.5-7-11a4 4 0 017-2.5A4 4 0 0119 10c0 6.5-7 11-7 11z"/></svg><strong>$100</strong> · two full days at MJFF</span>
+      <span class="chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 21s-7-4.5-7-11a4 4 0 017-2.5A4 4 0 0119 10c0 6.5-7 11-7 11z"/></svg><strong>$1,000</strong> · a month of biomarker work</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

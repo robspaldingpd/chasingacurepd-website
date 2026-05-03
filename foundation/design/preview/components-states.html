@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Component states</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 32px; background: var(--ccpd-pink-50); font-family: var(--font-sans); color: var(--ccpd-ink-900); }
+  .wrap { max-width: 1200px; margin: 0 auto; }
+
+  .head { margin-bottom: 32px; }
+  .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ccpd-gray-500); margin: 0 0 8px; }
+  h1 { font-family: var(--font-display); font-weight: 600; font-size: 28px; letter-spacing: -0.02em; margin: 0 0 12px; }
+  .lede { max-width: 64ch; font-size: 14px; line-height: 1.6; color: var(--ccpd-ink-700); margin: 0; }
+
+  section { margin-bottom: 28px; padding: 24px; background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 12px; }
+  section h2 { font-family: var(--font-display); font-weight: 600; font-size: 16px; letter-spacing: -0.01em; margin: 0 0 4px; }
+  section .sub { font-size: 13px; color: var(--ccpd-gray-500); margin: 0 0 20px; max-width: 60ch; }
+
+  .row { display: grid; grid-template-columns: 100px 1fr; gap: 16px; align-items: center; padding: 16px 0; border-top: 1px solid var(--ccpd-gray-100); }
+  .row:first-of-type { border-top: 0; padding-top: 0; }
+  .state-label { font-family: var(--font-sans); font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ccpd-gray-500); }
+  .state-cell { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+
+  /* ---------------- BUTTONS ---------------- */
+  .btn-base { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; border: 1px solid transparent; font-family: var(--font-sans); font-weight: 600; font-size: 14px; cursor: pointer; transition: all 150ms var(--ease); }
+  /* Primary (donate) — corrected to ink label for AA */
+  .btn-primary { background: var(--ccpd-orange-500); color: var(--ccpd-ink-900); }
+  .btn-primary.hover { background: var(--ccpd-orange-600); color: var(--ccpd-ink-900); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(249,128,8,0.35); }
+  .btn-primary.focus { background: var(--ccpd-orange-500); color: var(--ccpd-ink-900); outline: 3px solid var(--ccpd-ink-900); outline-offset: 2px; }
+  .btn-primary.active { background: var(--ccpd-orange-700); color: var(--ccpd-ink-900); transform: scale(0.98); }
+  .btn-primary.disabled { background: var(--ccpd-gray-200); color: var(--ccpd-gray-500); cursor: not-allowed; }
+  .btn-primary.loading { background: var(--ccpd-orange-500); color: var(--ccpd-ink-900); pointer-events: none; }
+  .btn-primary .spinner { width: 14px; height: 14px; border: 2px solid currentColor; border-right-color: transparent; border-radius: 999px; animation: spin 700ms linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Ghost */
+  .btn-ghost { background: transparent; color: var(--ccpd-ink-900); border-color: var(--ccpd-ink-900); }
+  .btn-ghost.hover { background: var(--ccpd-ink-900); color: #fff; }
+  .btn-ghost.focus { outline: 3px solid var(--ccpd-orange-500); outline-offset: 2px; }
+  .btn-ghost.active { background: var(--ccpd-ink-800); color: #fff; transform: scale(0.98); }
+  .btn-ghost.disabled { color: var(--ccpd-gray-300); border-color: var(--ccpd-gray-200); cursor: not-allowed; }
+
+  /* Ghost on dark */
+  .btn-ghost-dark { background: transparent; color: #fff; border-color: rgba(255,255,255,0.4); }
+  .btn-ghost-dark.hover { background: rgba(255,255,255,0.08); border-color: #fff; }
+  .btn-ghost-dark.focus { outline: 3px solid var(--ccpd-orange-400); outline-offset: 2px; }
+  .btn-ghost-dark.active { background: rgba(255,255,255,0.16); }
+  .btn-ghost-dark.disabled { color: rgba(255,255,255,0.3); border-color: rgba(255,255,255,0.1); cursor: not-allowed; }
+
+  .dark-cell { background: var(--ccpd-ink-900); padding: 16px; border-radius: 8px; }
+
+  /* ---------------- INPUTS ---------------- */
+  .input-base { width: 280px; padding: 13px 16px; border: 1px solid var(--ccpd-gray-200); border-radius: 6px; font-family: var(--font-sans); font-size: 15px; outline: none; background: #fff; color: var(--ccpd-ink-900); transition: all 150ms var(--ease); box-sizing: border-box; }
+  .input-base.focus { border-color: var(--ccpd-orange-500); box-shadow: 0 0 0 3px rgba(249,128,8,0.18); }
+  .input-base.filled { border-color: var(--ccpd-gray-300); }
+  .input-base.error { border-color: #C03B36; box-shadow: 0 0 0 3px rgba(192,59,54,0.14); }
+  .input-base.success { border-color: #2F7D5B; box-shadow: 0 0 0 3px rgba(47,125,91,0.14); }
+  .input-base.disabled { background: var(--ccpd-gray-50); color: var(--ccpd-gray-500); cursor: not-allowed; border-style: dashed; }
+
+  .input-stack { display: flex; flex-direction: column; gap: 4px; }
+  .helper { font-size: 12px; color: var(--ccpd-gray-500); }
+  .helper.error { color: #C03B36; }
+  .helper.success { color: #2F7D5B; }
+
+  /* ---------------- AMOUNT BUTTONS ---------------- */
+  .amt { padding: 12px 18px; border: 1px solid var(--ccpd-gray-200); border-radius: 6px; background: #fff; font-family: var(--font-display); font-weight: 700; font-size: 16px; color: var(--ccpd-ink-800); cursor: pointer; transition: all 150ms var(--ease); }
+  .amt.hover { border-color: var(--ccpd-orange-300); }
+  .amt.selected { border: 2px solid var(--ccpd-orange-500); background: var(--ccpd-orange-100); color: var(--ccpd-orange-700); padding: 11px 17px; }
+  .amt.focus { outline: 3px solid var(--ccpd-orange-500); outline-offset: 2px; }
+  .amt.disabled { background: var(--ccpd-gray-50); color: var(--ccpd-gray-300); cursor: not-allowed; }
+
+  /* ---------------- LINKS ---------------- */
+  .link-base { color: var(--link); text-decoration: none; font-weight: 500; transition: color 150ms var(--ease); }
+  .link-base.hover { color: var(--link-hover); text-decoration: underline; text-underline-offset: 3px; }
+  .link-base.focus { outline: 2px solid var(--ccpd-orange-500); outline-offset: 3px; border-radius: 2px; }
+  .link-base.visited { color: var(--ccpd-orange-800); }
+
+  .callout { background: #FFEFDC; border: 1px solid #FEDAAE; border-left: 3px solid var(--ccpd-orange-500); border-radius: 8px; padding: 14px 16px; font-size: 13px; line-height: 1.6; color: var(--ccpd-ink-800); margin-bottom: 16px; }
+  .callout strong { color: var(--ccpd-orange-700); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="head">
+  <p class="eyebrow">Components · States</p>
+  <h1>Every state, every component</h1>
+  <p class="lede">Rest is one of seven states. Designs that ship without all of them break under real use — keyboard users hit untested focus rings, error states get faked at build time, loading states pop ungracefully. This page locks them down.</p>
+</div>
+
+<section>
+  <h2>Primary button — Donate</h2>
+  <p class="sub">The most important button on every page. <strong>Note:</strong> the live site uses white-on-orange (fails AA). Spec below uses ink-on-orange — 8.12:1 contrast, clearly readable, brand‑legal.</p>
+  <div class="callout">
+    <strong>Migration note.</strong> Update <code>components/Nav.tsx</code> and <code>DonationWidget.tsx</code>: change donate button <code>color: "#fff"</code> → <code>color: "#000"</code>. Hover and active stay orange, label stays ink.
+  </div>
+
+  <div class="row"><span class="state-label">Rest</span><div class="state-cell"><button class="btn-base btn-primary">Donate</button></div></div>
+  <div class="row"><span class="state-label">Hover</span><div class="state-cell"><button class="btn-base btn-primary hover">Donate</button></div></div>
+  <div class="row"><span class="state-label">Focus</span><div class="state-cell"><button class="btn-base btn-primary focus">Donate</button> <span class="helper">Keyboard tab — 3px ink ring, 2px offset</span></div></div>
+  <div class="row"><span class="state-label">Active</span><div class="state-cell"><button class="btn-base btn-primary active">Donate</button></div></div>
+  <div class="row"><span class="state-label">Loading</span><div class="state-cell"><button class="btn-base btn-primary loading"><span class="spinner"></span>Processing</button></div></div>
+  <div class="row"><span class="state-label">Disabled</span><div class="state-cell"><button class="btn-base btn-primary disabled">Select an amount</button></div></div>
+</section>
+
+<section>
+  <h2>Ghost button — secondary actions</h2>
+  <p class="sub">Used for "Read the science", "Learn more", and any non‑donate CTA.</p>
+  <div class="row"><span class="state-label">Rest</span><div class="state-cell"><button class="btn-base btn-ghost">Read the science</button></div></div>
+  <div class="row"><span class="state-label">Hover</span><div class="state-cell"><button class="btn-base btn-ghost hover">Read the science</button></div></div>
+  <div class="row"><span class="state-label">Focus</span><div class="state-cell"><button class="btn-base btn-ghost focus">Read the science</button></div></div>
+  <div class="row"><span class="state-label">Active</span><div class="state-cell"><button class="btn-base btn-ghost active">Read the science</button></div></div>
+  <div class="row"><span class="state-label">Disabled</span><div class="state-cell"><button class="btn-base btn-ghost disabled">Read the science</button></div></div>
+</section>
+
+<section style="background:var(--ccpd-ink-900); border-color:var(--ccpd-ink-900);">
+  <h2 style="color:#fff">Ghost button on dark</h2>
+  <p class="sub" style="color:rgba(255,255,255,0.6)">Footer, hero, and concert page CTAs.</p>
+  <div class="row" style="border-top-color:rgba(255,255,255,0.08)"><span class="state-label" style="color:rgba(255,255,255,0.5)">Rest</span><div class="state-cell"><button class="btn-base btn-ghost-dark">Get tickets</button></div></div>
+  <div class="row" style="border-top-color:rgba(255,255,255,0.08)"><span class="state-label" style="color:rgba(255,255,255,0.5)">Hover</span><div class="state-cell"><button class="btn-base btn-ghost-dark hover">Get tickets</button></div></div>
+  <div class="row" style="border-top-color:rgba(255,255,255,0.08)"><span class="state-label" style="color:rgba(255,255,255,0.5)">Focus</span><div class="state-cell"><button class="btn-base btn-ghost-dark focus">Get tickets</button></div></div>
+  <div class="row" style="border-top-color:rgba(255,255,255,0.08)"><span class="state-label" style="color:rgba(255,255,255,0.5)">Active</span><div class="state-cell"><button class="btn-base btn-ghost-dark active">Get tickets</button></div></div>
+  <div class="row" style="border-top-color:rgba(255,255,255,0.08)"><span class="state-label" style="color:rgba(255,255,255,0.5)">Disabled</span><div class="state-cell"><button class="btn-base btn-ghost-dark disabled">Sold out</button></div></div>
+</section>
+
+<section>
+  <h2>Form input</h2>
+  <p class="sub">Used in the donation widget custom field, contact forms, and email signup.</p>
+  <div class="row"><span class="state-label">Rest</span><div class="state-cell"><input class="input-base" placeholder="Email address" type="email"></div></div>
+  <div class="row"><span class="state-label">Filled</span><div class="state-cell"><input class="input-base filled" value="wendy@chasingacurepd.org" type="email"></div></div>
+  <div class="row"><span class="state-label">Focus</span><div class="state-cell"><input class="input-base focus" value="wendy@chasingacurepd.org" type="email"></div></div>
+  <div class="row"><span class="state-label">Error</span><div class="state-cell"><div class="input-stack"><input class="input-base error" value="not-an-email"><span class="helper error">Please enter a valid email address</span></div></div></div>
+  <div class="row"><span class="state-label">Success</span><div class="state-cell"><div class="input-stack"><input class="input-base success" value="wendy@chasingacurepd.org"><span class="helper success">Thanks! Check your inbox.</span></div></div></div>
+  <div class="row"><span class="state-label">Disabled</span><div class="state-cell"><input class="input-base disabled" placeholder="Field unavailable" disabled></div></div>
+</section>
+
+<section>
+  <h2>Amount selector</h2>
+  <p class="sub">Donation widget preset chips. Selected state uses an inset 2px border so the box stays the same size.</p>
+  <div class="row"><span class="state-label">Rest</span><div class="state-cell"><button class="amt">$100</button></div></div>
+  <div class="row"><span class="state-label">Hover</span><div class="state-cell"><button class="amt hover">$100</button></div></div>
+  <div class="row"><span class="state-label">Selected</span><div class="state-cell"><button class="amt selected">$100</button></div></div>
+  <div class="row"><span class="state-label">Focus</span><div class="state-cell"><button class="amt focus">$100</button></div></div>
+  <div class="row"><span class="state-label">Disabled</span><div class="state-cell"><button class="amt disabled">$100</button></div></div>
+</section>
+
+<section>
+  <h2>Inline link</h2>
+  <p class="sub">In‑body text links. Underline only on hover/focus — keeps body copy clean.</p>
+  <div class="row"><span class="state-label">Rest</span><div class="state-cell"><a class="link-base">Read about our research →</a></div></div>
+  <div class="row"><span class="state-label">Hover</span><div class="state-cell"><a class="link-base hover">Read about our research →</a></div></div>
+  <div class="row"><span class="state-label">Focus</span><div class="state-cell"><a class="link-base focus">Read about our research →</a></div></div>
+  <div class="row"><span class="state-label">Visited</span><div class="state-cell"><a class="link-base visited">Read about our research →</a></div></div>
+</section>
+
+<section>
+  <h2>Focus principles</h2>
+  <ol style="margin:0;padding-left:20px;line-height:1.8;font-size:14px;color:var(--ccpd-ink-800);">
+    <li>Every interactive element must have a visible focus state. No exceptions.</li>
+    <li>Focus rings are <strong>3px solid</strong> with <strong>2px offset</strong>. Color picks the most readable of: ink-900, orange-500, or orange-400 on dark.</li>
+    <li>Never rely on browser default <code>outline: blue</code>. It clashes with the brand and is inconsistent across browsers.</li>
+    <li>Loading states must <em>preserve the button width</em> so the layout doesn't jump. Use a fixed‑width container or visibility: hidden swaps.</li>
+    <li>Disabled controls must communicate <em>why</em>: empty form, sold out, network error. Pair the disabled state with a helper line.</li>
+  </ol>
+</section>
+
+</div>
+</body>
+</html>

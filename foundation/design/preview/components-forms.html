@@ -1,0 +1,37 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css"><style>
+body{margin:0;padding:28px;background:var(--bg);font-family:var(--font-sans);display:grid;gap:20px;max-width:560px}
+.field{display:flex;flex-direction:column;gap:8px}
+label{font-family:var(--font-sans);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--fg-muted);font-weight:700}
+input,select,textarea{font-family:var(--font-sans);font-size:15px;padding:14px 16px;border:1px solid var(--border-strong);border-radius:6px;background:#fff;color:var(--ccpd-ink-900);outline:none;transition:border-color 150ms, box-shadow 150ms}
+input::placeholder{color:var(--ccpd-gray-300)}
+input:focus,select:focus,textarea:focus{border-color:var(--ccpd-orange-500);box-shadow:0 0 0 3px rgba(249,128,8,.18)}
+input:disabled{background:var(--ccpd-gray-50);color:var(--fg-muted)}
+.hint{font-size:11px;color:var(--fg-muted);margin-top:2px}
+.err input{border-color:#C14A2C}
+.err .hint{color:#C14A2C}
+
+.amt{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.amt button{font-family:var(--font-sans);font-weight:600;font-size:15px;padding:14px 0;border-radius:6px;background:#fff;border:1px solid var(--border-strong);color:var(--ccpd-ink-900);cursor:pointer;transition:all 120ms;font-variant-numeric:tabular-nums}
+.amt button:hover{border-color:var(--ccpd-ink-900)}
+.amt button.on{background:var(--ccpd-ink-900);color:#fff;border-color:var(--ccpd-ink-900)}
+.amt input{padding:12px;text-align:center;font-weight:600}
+
+.toggle{display:inline-flex;background:var(--ccpd-gray-100);padding:4px;border-radius:999px;gap:2px}
+.toggle button{font-family:var(--font-sans);font-weight:600;font-size:13px;padding:8px 18px;border:0;background:transparent;color:var(--fg-muted);cursor:pointer;border-radius:999px}
+.toggle button.on{background:#fff;color:var(--ccpd-ink-900);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+
+.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ccpd-ink-900);cursor:pointer}
+.check input{appearance:none;width:18px;height:18px;border:1.5px solid var(--border-strong);border-radius:4px;margin:1px 0 0;padding:0;flex:none;position:relative;cursor:pointer}
+.check input:checked{background:var(--ccpd-orange-500);border-color:var(--ccpd-orange-500)}
+.check input:checked::after{content:'';position:absolute;left:5px;top:1px;width:5px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+</style></head><body>
+<div class="field"><label>Email address</label><input type="email" placeholder="you@example.com" value="wendy@chasingacurePD.org"><div class="hint">We'll send a tax-deductible receipt.</div></div>
+<div class="field err"><label>Full name</label><input placeholder="First and last" value=""><div class="hint">Name is required.</div></div>
+<div class="field"><label>Frequency</label><div class="toggle"><button class="on">One-time</button><button>Monthly</button></div></div>
+<div class="field"><label>Donation amount</label>
+  <div class="amt">
+    <button>$25</button><button>$50</button><button class="on">$100</button><button>$250</button><input placeholder="Other">
+  </div>
+</div>
+<label class="check"><input type="checkbox" checked>Cover the processing fee so 100% of my gift reaches research.</label>
+</body></html>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Color usage</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; padding: 32px; background: var(--ccpd-pink-50); font-family: var(--font-sans); color: var(--ccpd-ink-900); }
+  .wrap { max-width: 1200px; margin: 0 auto; }
+
+  .head { margin-bottom: 32px; }
+  .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ccpd-gray-500); margin: 0 0 8px; }
+  h1 { font-family: var(--font-display); font-weight: 600; font-size: 28px; letter-spacing: -0.02em; margin: 0 0 12px; }
+  .lede { max-width: 64ch; font-size: 14px; line-height: 1.6; color: var(--ccpd-ink-700); margin: 0; }
+
+  /* Role row */
+  section { margin-bottom: 28px; padding: 24px; background: #fff; border: 1px solid var(--ccpd-gray-100); border-radius: 12px; }
+  section h2 { font-family: var(--font-display); font-weight: 600; font-size: 16px; letter-spacing: -0.01em; margin: 0 0 4px; }
+  section .sub { font-size: 13px; color: var(--ccpd-gray-500); margin: 0 0 16px; }
+
+  .role-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+  .swatch { border-radius: 8px; padding: 16px; min-height: 92px; display: flex; flex-direction: column; justify-content: space-between; position: relative; border: 1px solid transparent; }
+  .swatch .label { font-size: 13px; font-weight: 600; letter-spacing: -0.005em; }
+  .swatch .hex { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 11px; opacity: 0.75; margin-top: 2px; }
+  .swatch .use { font-size: 11.5px; line-height: 1.45; opacity: 0.8; margin-top: 0; }
+
+  /* Matrix */
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  thead th { text-align: left; font-family: var(--font-sans); font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ccpd-gray-500); padding: 10px 12px; border-bottom: 1px solid var(--ccpd-gray-200); }
+  tbody td { padding: 10px 12px; border-bottom: 1px solid var(--ccpd-gray-100); vertical-align: middle; }
+  tbody tr:last-child td { border-bottom: 0; }
+  .pair { display: inline-flex; align-items: center; gap: 0; border: 1px solid var(--ccpd-gray-200); border-radius: 6px; overflow: hidden; height: 32px; }
+  .pair .fg, .pair .bg { padding: 0 12px; height: 100%; display: flex; align-items: center; font-family: ui-monospace, monospace; font-size: 11px; }
+  .ratio { font-family: ui-monospace, monospace; font-weight: 600; font-size: 13px; }
+  .pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; }
+  .pill.ok { background: #E8F4ED; color: #1F6A45; }
+  .pill.large { background: #FFF4DC; color: #8A5A00; }
+  .pill.no { background: #FDE7E7; color: #B0312F; }
+  .note { font-size: 12px; color: var(--ccpd-gray-700); }
+
+  .callout { background: #FFEFDC; border: 1px solid #FEDAAE; border-left: 3px solid var(--ccpd-orange-500); border-radius: 8px; padding: 14px 16px; font-size: 13px; line-height: 1.6; color: var(--ccpd-ink-800); margin-bottom: 24px; }
+  .callout strong { color: var(--ccpd-orange-700); }
+
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--ccpd-gray-500); margin-bottom: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="head">
+  <p class="eyebrow">Foundations · Color usage</p>
+  <h1>When to use which color</h1>
+  <p class="lede">The palette has three brand anchors and one supporting cream. This page tells you which to reach for, and which combinations meet WCAG AA contrast (4.5:1 for body text, 3:1 for large text and UI).</p>
+</div>
+
+<div class="callout">
+  <strong>Heads up.</strong> White on <code>orange-500</code> is only <strong>2.59:1</strong> — it fails AA for any text. The Donate button works because the text is bold and ≥18px (large‑text exception kicks in at 3:1, still fails). For body copy and small UI on orange surfaces, <em>always</em> set foreground to <code>ink-900</code>, not white.
+</div>
+
+<section>
+  <h2>Roles &amp; intent</h2>
+  <p class="sub">Each token has a job. Don't pick a color because it looks nice — pick the role.</p>
+  <div class="role-grid">
+    <div class="swatch" style="background:#000;color:#fff">
+      <div><div class="label">Ink — voice</div><div class="hex">--ccpd-ink-900 · #000000</div></div>
+      <div class="use">All body type, headings, nav links, default surfaces‑inverse. The default text color, full stop.</div>
+    </div>
+    <div class="swatch" style="background:#F98008;color:#000">
+      <div><div class="label">Monarch Orange — action</div><div class="hex">--ccpd-orange-500 · #F98008</div></div>
+      <div class="use">Reserved for: primary CTAs, the wordmark sub, link accents, "science fuels hope" emphasis, donate flows.</div>
+    </div>
+    <div class="swatch" style="background:#E8C0C0;color:#000">
+      <div><div class="label">Blush Pink — warmth</div><div class="hex">--ccpd-pink-500 · #E8C0C0</div></div>
+      <div class="use">Brand surface — closer/CTA backgrounds, hero accent, photo placeholder. Never use for text.</div>
+    </div>
+    <div class="swatch" style="background:#FDF7F7;color:#000;border-color:var(--ccpd-gray-200)">
+      <div><div class="label">Pink-50 — page</div><div class="hex">--ccpd-pink-50 · #FDF7F7</div></div>
+      <div class="use">Default page background. Replaces white for warmth without competing with brand pink.</div>
+    </div>
+    <div class="swatch" style="background:#FBF8F2;color:#000;border-color:var(--ccpd-gray-200)">
+      <div><div class="label">Cream-50 — paper</div><div class="hex">--ccpd-cream-50 · #FBF8F2</div></div>
+      <div class="use">Inverse text color on dark surfaces (footer, hero, stats panel). Print/ledger feel.</div>
+    </div>
+    <div class="swatch" style="background:#fff;color:#000;border-color:var(--ccpd-gray-200)">
+      <div><div class="label">White — card</div><div class="hex">--ccpd-white · #FFFFFF</div></div>
+      <div class="use">Cards, donation widget, FAQ items. Used to lift content out of the pink page.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Contrast matrix</h2>
+  <p class="sub">Every combination we ship in production. Use AA‑compliant pairings for body text. Large‑only pairings (3:1–4.5:1) are fine for headlines ≥24px or 18px+ bold — never for paragraphs.</p>
+  <div class="legend">
+    <span><span class="pill ok">AA · ✓</span> ≥ 4.5:1 — safe for any text</span>
+    <span><span class="pill large">AA-large only</span> 3:1–4.5 — headlines & UI only</span>
+    <span><span class="pill no">Fails</span> &lt; 3:1 — do not ship</span>
+  </div>
+  <table>
+    <thead>
+      <tr><th>Pair</th><th>Ratio</th><th>Verdict</th><th>Use for</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="pair"><span class="fg" style="background:#fff;color:#000">ink-900</span><span class="bg" style="background:#FDF7F7;color:#000">pink-50</span></span></td>
+        <td class="ratio">19.82</td>
+        <td><span class="pill ok">AA · ✓</span></td>
+        <td class="note">Default page text</td>
+      </tr>
+      <tr>
+        <td><span class="pair"><span class="fg" style="background:#fff;color:#000">ink-900</span><span class="bg" style="background:#fff;color:#000">white</span></span></td>
+        <td class="ratio">21.00</td>
+        <td><span class="pill ok">AA · ✓</span></td>
+        <td class="note">Card body text</td>
+      </tr>
+      <tr>
+        <td><span class="pair"><span class="fg" style="background:#fff;color:#000">ink-900</span><span class="bg" style="background:#E8C0C0;color:#000">pink-500</span></span></td>
+        <td class="ratio">12.73</td>
+        <td><span class="pill ok">AA · ✓</span></td>
+        <td class="note">Pink closer / CTA section text</td>
+      </tr>
+      <tr>
+        <td><span class="pair"><span class="fg" style="background:#FBF8F2;color:#000">cream-50</span><span class="bg" style="background:#000;color:#fff">ink-900</span></span></td>
+        <td class="ratio">19.81</td>
+        <td><span class="pill ok">AA · ✓</span></td>
+        <td class="note">Footer, dark hero body copy</td>
+      </tr>
+      <tr>
+        <td><span class="pair"><span class="fg" style="background:#F98008;color:#000">orange-500</span><span class="bg" style="background:#000;color:#fff">ink-900</span></span></td>
+        <td class="ratio">8.12</td>
+        <td><span class="pill ok">AA · ✓</span></td>
+        <td class="note">Orange accent on dark — eyebrows, "fuels hope" highlights</td>
+      </tr>
+      <tr>
+        <td><span class="pair"><span class="fg" style="background:#FB9A38;color:#000">orange-400</span><span class="bg" style="background:#000;color:#fff">ink-900</span></span></td>
+        <td class="ratio">9.78</td>
+        <td><span class="pill ok">AA · ✓</span></td>
+        <td class="note">Orange accent on dark, slightly softer than 500</td>
+      </tr>
+      <tr>
+        <td><span class="pair"><span class="fg" style="background:#6B6F7D;color:#fff">gray-500</span><span class="bg" style="background:#fff;color:#000">white</span></span></td>
+        <td class="ratio">5.01</td>
+        <td><span class="pill ok">AA · ✓</span></td>
+        <td class="note">Captions, labels, fineprint</td>
+      </tr>
+      <tr>
+        <td><span class="pair"><span class="fg" style="background:#6B6F7D;color:#fff">gray-500</span><span class="bg" style="background:#FDF7F7;color:#000">pink-50</span></span></td>
+        <td class="ratio">4.73</td>
+        <td><span class="pill ok">AA · ✓</span></td>
+        <td class="note">Captions on pink page</td>
+      </tr>
+      <tr>
+        <td><span class="pair"><span class="fg" style="background:#fff;color:#000">white</span><span class="bg" style="background:#D66C00;color:#fff">orange-700</span></span></td>
+        <td class="ratio">3.50</td>
+        <td><span class="pill large">AA-large only</span></td>
+        <td class="note">Orange CTA button label (≥16px bold). Acceptable but on the edge.</td>
+      </tr>
+      <tr>
+        <td><span class="pair"><span class="fg" style="background:#fff;color:#000">white</span><span class="bg" style="background:#E87300;color:#fff">orange-600</span></span></td>
+        <td class="ratio">3.05</td>
+        <td><span class="pill large">AA-large only</span></td>
+        <td class="note">Donate button hover state</td>
+      </tr>
+      <tr>
+        <td><span class="pair"><span class="fg" style="background:#fff;color:#000">white</span><span class="bg" style="background:#F98008;color:#000">orange-500</span></span></td>
+        <td class="ratio">2.59</td>
+        <td><span class="pill no">Fails</span></td>
+        <td class="note"><strong>Donate button rest state.</strong> Fix: switch label to ink-900, OR darken bg to orange-700 at rest.</td>
+      </tr>
+      <tr>
+        <td><span class="pair"><span class="fg" style="background:#000;color:#fff">ink-900</span><span class="bg" style="background:#F98008;color:#000">orange-500</span></span></td>
+        <td class="ratio">8.12</td>
+        <td><span class="pill ok">AA · ✓</span></td>
+        <td class="note">Recommended donate button: ink label on orange surface</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Decision shortcuts</h2>
+  <p class="sub">When in doubt:</p>
+  <ol style="margin:0;padding-left:20px;line-height:1.8;font-size:14px;color:var(--ccpd-ink-800);">
+    <li>Body text: <strong>ink-900</strong>. Always. Never tinted.</li>
+    <li>Muted text (captions, fineprint): <strong>gray-500</strong> only on white or pink-50.</li>
+    <li>Page background: <strong>pink-50</strong>. Cards on it: <strong>white</strong>. Don't use white as a section background — it loses warmth.</li>
+    <li>Primary CTA: <strong>orange-500</strong> with <strong>ink-900</strong> label. (Repo currently uses white — fails AA.)</li>
+    <li>Section emphasis: alternate pink-50 → ink-900 → pink-500 → pink-50. Never two darks in a row.</li>
+    <li>Italic emphasis is the <strong>serif font</strong>, not just italic Poppins. Use sparingly — once per paragraph at most.</li>
+  </ol>
+</section>
+
+</div>
+</body>
+</html>

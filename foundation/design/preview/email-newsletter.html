@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Email · Quarterly newsletter</title>
+<style>
+  body { margin: 0; padding: 32px 16px; background: #FDF7F7; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1A1A1A; }
+  .frame { max-width: 600px; margin: 0 auto; background: #FFFFFF; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 2px rgba(20,33,61,0.06), 0 8px 24px rgba(20,33,61,0.06); }
+
+  .header { padding: 28px 32px; border-bottom: 1px solid #EDEDF0; display: flex; justify-content: space-between; align-items: center; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand img { width: 36px; height: 36px; border-radius: 999px; display: block; }
+  .brand-name { font-family: Georgia, "Times New Roman", serif; font-style: italic; font-size: 15px; color: #000; }
+  .issue { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #6B6F7D; }
+
+  /* Hero band — pink */
+  .hero { background: #E8C0C0; padding: 44px 32px 40px; }
+  .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #1A1A1A; margin: 0 0 14px; opacity: 0.7; }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 34px; line-height: 1.15; letter-spacing: -0.015em; color: #000; margin: 0 0 16px; max-width: 18ch; }
+  h1 em { color: #D66C00; }
+  .hero-sub { font-size: 15px; line-height: 1.6; color: #1A1A1A; margin: 0; max-width: 50ch; }
+
+  /* Section */
+  .section { padding: 32px 32px 8px; }
+  .section h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 22px; line-height: 1.25; letter-spacing: -0.01em; color: #000; margin: 0 0 12px; }
+  .section p { font-size: 15px; line-height: 1.7; color: #2B2B2B; margin: 0 0 14px; }
+  .section a { color: #D66C00; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+  .section-tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #D66C00; background: #FFEFDC; padding: 4px 10px; border-radius: 999px; margin-bottom: 14px; }
+
+  hr.rule { border: 0; border-top: 1px solid #EDEDF0; margin: 24px 32px; }
+
+  /* Stat block */
+  .stats { padding: 8px 32px 4px; }
+  .stat { padding: 22px 24px; background: #000; border-radius: 12px; color: #FBF8F2; }
+  .stat-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #FB9A38; margin: 0 0 12px; }
+  .stat-row { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .stat-n { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 44px; line-height: 1; letter-spacing: -0.02em; color: #FB9A38; }
+  .stat-l { font-size: 14px; line-height: 1.45; color: rgba(251,248,242,0.78); flex: 1; min-width: 200px; }
+
+  /* Image card */
+  .image-card { padding: 0 32px; }
+  .image-card .img { aspect-ratio: 16/9; background-image: url('../assets/photos/concert-group-2024.jpg'); background-size: cover; background-position: center; border-radius: 12px; }
+  .image-card .cap { font-family: Georgia, serif; font-style: italic; font-size: 13px; color: #6B6F7D; margin: 10px 0 0; }
+
+  /* Event card */
+  .event { margin: 8px 32px 0; padding: 24px 24px 22px; border: 1px solid #DCDDE3; border-radius: 12px; background: #fff; }
+  .event-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #6B6F7D; margin: 0 0 8px; }
+  .event h3 { font-family: Georgia, serif; font-weight: 400; font-size: 22px; letter-spacing: -0.01em; color: #000; margin: 0 0 6px; }
+  .event-meta { font-size: 13px; color: #6B6F7D; margin: 0 0 14px; }
+  .event-cta { display: inline-block; padding: 11px 20px; background: #F98008; color: #000 !important; font-weight: 700; font-size: 13px; text-decoration: none; border-radius: 999px; }
+
+  /* CTA closer */
+  .closer { margin-top: 32px; padding: 36px 32px 32px; background: #FDF7F7; text-align: center; }
+  .closer h2 { font-family: Georgia, serif; font-weight: 400; font-size: 24px; color: #000; margin: 0 0 10px; letter-spacing: -0.01em; }
+  .closer h2 em { color: #D66C00; }
+  .closer p { font-size: 14px; color: #2B2B2B; line-height: 1.6; margin: 0 auto 18px; max-width: 42ch; }
+  .closer .donate { display: inline-block; padding: 13px 24px; background: #F98008; color: #000 !important; font-weight: 700; font-size: 14px; text-decoration: none; border-radius: 999px; }
+
+  .footer { padding: 28px 32px 24px; background: #1A1A1A; color: rgba(255,255,255,0.55); font-size: 12px; line-height: 1.7; text-align: center; }
+  .footer a { color: rgba(255,255,255,0.85); text-decoration: none; }
+  .footer .small { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 14px; }
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+  <div class="header">
+    <div class="brand">
+      <img src="../assets/logo.png" alt="">
+      <span class="brand-name">Chasing a Cure</span>
+    </div>
+    <span class="issue">Issue 04 · Apr 2026</span>
+  </div>
+
+  <div class="hero">
+    <p class="eyebrow">The science update</p>
+    <h1>Closer than people <em>realize.</em></h1>
+    <p class="hero-sub">Three notes from the lab, one event invitation, and what your gifts funded this quarter. No asks below the line — just the science.</p>
+  </div>
+
+  <div class="section">
+    <span class="section-tag">Research</span>
+    <h2>The biomarker work is moving</h2>
+    <p>MJFF announced a Phase II trial expansion this month — the kind of structural progress that doesn't make headlines but makes everything else faster. Funds raised through Concert for a Cure went directly into the protocol.</p>
+    <p><a href="#">Read the announcement →</a></p>
+  </div>
+
+  <div class="image-card">
+    <div class="img" role="img" aria-label="Concert for a Cure 2024 — group photo at the lake house"></div>
+    <p class="cap">Concert for a Cure 2024 · Geist Reservoir, Indiana</p>
+  </div>
+
+  <hr class="rule">
+
+  <div class="stats">
+    <div class="stat">
+      <p class="stat-eyebrow">This quarter, together</p>
+      <div class="stat-row">
+        <span class="stat-n">$48,200</span>
+        <span class="stat-l">funded by 312 donors — every dollar to research, no salaries taken.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <span class="section-tag">From Wendy</span>
+    <h2>What I'm reading</h2>
+    <p>A new MJFF brief on alpha-synuclein detection — the kind of paper that quietly redraws what's possible. If you want it in plain English, I'll send the summary I made for our family. <a href="#">Reply with "send it" →</a></p>
+  </div>
+
+  <hr class="rule">
+
+  <div class="event">
+    <p class="event-eyebrow">Save the date</p>
+    <h3>Concert for a Cure 2026</h3>
+    <p class="event-meta">Saturday, July 18 · Geist Reservoir, Fishers IN</p>
+    <a href="#" class="event-cta">RSVP →</a>
+  </div>
+
+  <div class="closer">
+    <h2>Science fuels <em>hope.</em></h2>
+    <p>If this update was useful, the most direct thing you can do is give. 100% reaches MJFF.</p>
+    <a href="#" class="donate">Give to the science →</a>
+  </div>
+
+  <div class="footer">
+    <div>
+      <a href="#">chasingacurepd.org</a> · <a href="#">Manage preferences</a> · <a href="#">Unsubscribe</a>
+    </div>
+    <div class="small">
+      11650 Olio Road, Suite 1000-149, Fishers, IN 46037<br>
+      501(c)(3) · EIN 82-5107944 · © 2026 Chasing a Cure Parkinson's Foundation
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
