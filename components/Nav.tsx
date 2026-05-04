@@ -181,7 +181,6 @@ export default function Nav() {
             borderTop: "1px solid rgba(0,0,0,0.06)",
             padding: "12px 24px 24px",
           }}
-          className="show-mobile"
         >
           {[...links, { href: "/donate", label: "Donate" }].map((link) => (
             <Link
