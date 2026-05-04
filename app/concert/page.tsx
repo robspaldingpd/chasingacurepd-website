@@ -229,14 +229,17 @@ export default function ConcertPage() {
                 title="Ticket purchase powered by Zeffy"
                 style={{ border: 0, width: "100%", height: 520, display: "block" }}
                 src="https://www.zeffy.com/embed/ticketing/3rd-annual-concert-for-a-cure-parkinsons-research"
-                allowPaymentRequest
               />
             </div>
           </div>
           <Script
             src="https://www.zeffy.com/embed/v2/zeffy-embed.js"
             strategy="lazyOnload"
-            onError="document.querySelectorAll('[data-zeffy-embed-fallback]').forEach(function(el){el.style.display='block';})"
+            onError={() => {
+              document.querySelectorAll<HTMLElement>("[data-zeffy-embed-fallback]").forEach((el) => {
+                el.style.display = "block";
+              });
+            }}
           />
 
         </div>
