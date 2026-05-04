@@ -94,9 +94,10 @@ export default function DonatePage() {
               lineHeight: 1.1,
               color: "#FFFFFF",
               margin: "0 0 20px",
+              textWrap: "auto" as const,
             }}
           >
-            Your gift flows directly to the research.
+            Your gift flows directly<br />to the research.
           </h1>
           <p
             style={{
