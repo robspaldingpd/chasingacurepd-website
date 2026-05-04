@@ -43,14 +43,14 @@ export const metadata: Metadata = {
     siteName: "Chasing a Cure Parkinson's Foundation",
     type: "website",
     locale: "en_US",
-    images: [{ url: "/photos/wendy-portrait.png", width: 1200, height: 630, alt: "Chasing a Cure Parkinson's Foundation" }],
+    images: [{ url: "/photos/concert-group-2024.jpg", width: 1200, height: 630, alt: "Chasing a Cure Parkinson's Foundation — Concert for a Cure 2024" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Chasing a Cure Parkinson's Foundation",
     description:
       "Volunteer-run. No salaries. Funds raised benefit The Michael J. Fox Foundation for Parkinson's Research.",
-    images: ["/photos/wendy-portrait.png"],
+    images: ["/photos/concert-group-2024.jpg"],
   },
   icons: {
     icon: "/icon.png",
