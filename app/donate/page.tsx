@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Script from "next/script";
+import FoundationFAQ from "@/components/FoundationFAQ";
 
 export const metadata: Metadata = {
   title: "Donate | Chasing a Cure Parkinson's Foundation",
@@ -255,6 +256,19 @@ export default function DonatePage() {
              Wendy Chase, Co-Founder
             </footer>
           </blockquote>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section style={{ background: "#F6F1E6", padding: "80px 24px" }}>
+        <div style={{ maxWidth: 720, margin: "0 auto" }}>
+          <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#6B6F7D", marginBottom: 20, textAlign: "center" }}>
+            Frequently asked
+          </div>
+          <h2 style={{ fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif", fontWeight: 400, fontSize: "clamp(28px, 3.5vw, 42px)", lineHeight: 1.2, color: "#000000", margin: "0 auto 40px", textAlign: "center" }}>
+            Questions about giving.
+          </h2>
+          <FoundationFAQ />
         </div>
       </section>
 

@@ -79,16 +79,34 @@ export default function RootLayout({
               alternateName: "Chasing a Cure PD",
               url: "https://chasingacurepd.org",
               logo: "https://chasingacurepd.org/logo.png",
+              taxID: "82-5107944",
+              foundingDate: "2018-04",
               description:
                 "Volunteer-run foundation funding Parkinson's research through the Michael J. Fox Foundation and Team Fox. Based in Fishers, Indiana.",
+              founder: [
+                { "@type": "Person", name: "Wendy Chase", url: "https://chasingacurepd.org/about" },
+                { "@type": "Person", name: "Rob Spalding", url: "https://chasingacurepd.org/about" },
+              ],
+              memberOf: {
+                "@type": "Organization",
+                name: "Michael J. Fox Foundation for Parkinson's Research",
+                url: "https://www.michaeljfox.org",
+              },
               address: {
                 "@type": "PostalAddress",
+                streetAddress: "11650 Olio Road, Suite 1000-149",
                 addressLocality: "Fishers",
                 addressRegion: "IN",
+                postalCode: "46037",
                 addressCountry: "US",
               },
               email: "wendy@chasingacurepd.org",
-              sameAs: ["https://www.michaeljfox.org"],
+              sameAs: [
+                "https://www.michaeljfox.org",
+                "https://www.linkedin.com/company/chasingacure",
+                "https://www.facebook.com/people/Chasing-a-Cure-Parkinsons-Foundation/61558134247328/",
+                "https://www.instagram.com/chasingacure_pd",
+              ],
             }),
           }}
         />

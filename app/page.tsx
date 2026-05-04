@@ -209,9 +209,9 @@ export default function HomePage() {
               </h2>
               {/* Urgency block, verbatim from messaging guide §9G */}
               <p style={{ fontSize: 17, lineHeight: 1.8, color: "var(--ccpd-ink-700)", margin: "0 0 20px", maxWidth: 520 }}>
-                Ten million people around the world are living with Parkinson&apos;s disease right now.
-                One million in the United States. Ninety thousand more will be diagnosed this year 
-                one every six minutes. And today, there is still no cure. Not yet.
+                According to the Michael J. Fox Foundation, approximately 10 million people around
+                the world are living with Parkinson&apos;s disease right now — nearly 1 million in the
+                United States alone. And today, there is still no cure. Not yet.
               </p>
               <p style={{ fontSize: 17, lineHeight: 1.8, color: "var(--ccpd-ink-700)", margin: "0 0 36px", maxWidth: 520 }}>
                 The science is moving. Whether the breakthrough arrives in five years or fifteen
