@@ -4,11 +4,11 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "The Science | Chasing a Cure Parkinson's Foundation",
   description:
-    "Where your gift goes and why it matters now. Funding Parkinson's research through the Michael J. Fox Foundation — the world's leading private funder.",
+    "Where your gift goes and why it matters now. Funding Parkinson's research through the Michael J. Fox Foundation, the world's leading private funder.",
   openGraph: {
     title: "The Science | Chasing a Cure Parkinson's Foundation",
     description:
-      "Where your gift goes and why it matters now. Funding Parkinson's research through the Michael J. Fox Foundation — the world's leading private funder.",
+      "Where your gift goes and why it matters now. Funding Parkinson's research through the Michael J. Fox Foundation, the world's leading private funder.",
     url: "https://chasingacurepd.org/science",
   },
 };

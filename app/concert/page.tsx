@@ -425,7 +425,7 @@ export default function ConcertPage() {
               </div>
               <div style={{ fontWeight: 700, fontSize: 18, color: "#FFFFFF", marginBottom: 4 }}>Title Sponsor · $25,000</div>
               <div style={{ fontSize: 14, color: "rgba(255,255,255,0.5)", lineHeight: 1.6 }}>
-                Presented by <strong style={{ color: "#FFFFFF" }}>Indy Boat Co.</strong> — With Indy Boat Co. anchoring the event as Title Sponsor, the room has its lead. We are deeply grateful for their partnership and the standard it sets for this year.
+                Presented by <strong style={{ color: "#FFFFFF" }}>Indy Boat Co.</strong> With Indy Boat Co. anchoring the event as Title Sponsor, the room has its lead. We are deeply grateful for their partnership and the standard it sets for this year.
               </div>
             </div>
             <div style={{ background: "#FFFFFF", borderRadius: 8, padding: "8px 16px", flexShrink: 0 }}>
@@ -592,7 +592,7 @@ export default function ConcertPage() {
             eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
             location: {
               "@type": "Place",
-              name: "Private Lake Home — Geist Reservoir",
+              name: "Private Lake Home, Geist Reservoir",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Fishers",

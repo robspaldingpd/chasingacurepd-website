@@ -11,13 +11,13 @@ const DEFAULTS = { once: 100, monthly: 25 };
 
 const IMPACT: Record<string, string> = {
   "once-50":     "Joins thousands of supporters moving the science forward",
-  "once-100":    "A direct investment in the research — reaches MJFF with nothing taken off for salaries",
+  "once-100":    "A direct investment in the research. Reaches MJFF with nothing taken off for salaries.",
   "once-250":    "A serious investment in the science behind a breakthrough",
-  "once-500":    "A major gift — Wendy and Rob will know your name",
+  "once-500":    "A major gift. Wendy and Rob will know your name.",
   "monthly-10":  "Every month, a steady signal that this matters",
   "monthly-25":  "A recurring gift that gives researchers the predictability to plan",
-  "monthly-50":  "$600 a year — the kind of sustained funding that moves trials forward",
-  "monthly-100": "Major monthly support — a direct line from you to the lab",
+  "monthly-50":  "$600 a year, the kind of sustained funding that moves trials forward.",
+  "monthly-100": "Major monthly support, a direct line from you to the lab.",
 };
 
 const DONATION_URL = "https://www.teamfox.org/give/chasing-a-cure"; // update with actual Team Fox URL
