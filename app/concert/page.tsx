@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
 import ConcertFAQ from "@/components/ConcertFAQ";
 
 export const metadata: Metadata = {
@@ -223,16 +222,13 @@ export default function ConcertPage() {
 
           {/* Zeffy ticket embed */}
           <div style={{ marginBottom: 16, borderRadius: 12, overflow: "hidden", border: "1px solid #DCDDE3" }}>
-            <div data-zeffy-embed="" data-form-url="/embed/ticketing/3rd-annual-concert-for-a-cure-parkinsons-research" />
-            <div data-zeffy-embed-fallback="" style={{ display: "none" }}>
-              <iframe
-                title="Ticket purchase powered by Zeffy"
-                style={{ border: 0, width: "100%", height: 520, display: "block" }}
-                src="https://www.zeffy.com/embed/ticketing/3rd-annual-concert-for-a-cure-parkinsons-research"
-              />
-            </div>
+            <iframe
+              title="Ticket purchase powered by Zeffy"
+              style={{ border: 0, width: "100%", height: 560, display: "block" }}
+              src="https://www.zeffy.com/embed/ticketing/3rd-annual-concert-for-a-cure-parkinsons-research"
+              allow="payment"
+            />
           </div>
-          <Script src="https://www.zeffy.com/embed/v2/zeffy-embed.js" strategy="lazyOnload" />
 
         </div>
       </section>
