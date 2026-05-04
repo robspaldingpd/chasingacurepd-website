@@ -110,9 +110,9 @@ export default function DonatePage() {
               marginRight: "auto",
             }}
           >
-            No salaries. No paid staff. Donations fund Parkinson&apos;s research through The
-            Michael J. Fox Foundation and Team Fox, the world&apos;s leading private funder
-            of Parkinson&apos;s research.
+            No salaries. No paid staff. Donations fund Parkinson&apos;s research
+            through The Michael J. Fox Foundation and Team Fox —
+            the world&apos;s leading private funder.
           </p>
         </div>
       </section>
