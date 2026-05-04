@@ -149,10 +149,10 @@ export default function AboutPage() {
                 lineHeight: 1.5,
                 color: "#000000",
                 margin: 0,
+                textWrap: "auto" as const,
               }}
             >
-              &ldquo;Mom, what if we started raising money? What if we tried to find a cure
-              for Parkinson&apos;s?&rdquo;
+              &ldquo;Mom, what if we started raising money? What if we tried<br />to find a cure for Parkinson&apos;s?&rdquo;
             </p>
           </blockquote>
 
