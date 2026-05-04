@@ -346,13 +346,13 @@ export default function AboutPage() {
               gap: 24,
             }}
           >
-            <p style={{ margin: 0 }}>
+            <p style={{ margin: 0, textWrap: "auto" as const }}>
               Awareness is important. But awareness is not what families are begging for at
               3 a.m. in a hospital room. Awareness is not what I was holding in my hands that
               Christmas morning when I knew my mother was leaving me. A cure is what families
               deserve.
             </p>
-            <p style={{ margin: 0 }}>
+            <p style={{ margin: 0, textWrap: "auto" as const }}>
               The science is moving. That is the part I want you to hear. The science{" "}
               <em>is moving</em>, and it is close enough that funding it now, funding it today,
               funding it this year, actually changes when we get there. That&apos;s not a
