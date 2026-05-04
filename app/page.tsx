@@ -538,6 +538,7 @@ export default function HomePage() {
           </div>
           <blockquote style={{ margin: 0 }}>
             <p
+              className="wendy-quote"
               style={{
                 fontFamily: "var(--font-serif)",
                 fontStyle: "italic",
@@ -548,7 +549,7 @@ export default function HomePage() {
                 textWrap: "auto" as const,
               }}
             >
-              &ldquo;Awareness is not what families are begging for at 3 a.m. in a hospital room.<br />A cure is what families deserve. I don&apos;t want your pity. I want your partnership.&rdquo;
+              &ldquo;Awareness is not what families are begging for at 3 a.m. in a hospital room. A cure is what families deserve. I don&apos;t want your pity. I want your partnership.&rdquo;
             </p>
             <footer style={{ fontSize: 14, color: "var(--ccpd-gray-500)", fontStyle: "normal" }}>
               Wendy Chase · Co-Founder, Chasing a Cure Parkinson&apos;s Foundation
@@ -652,6 +653,7 @@ export default function HomePage() {
         }
         @media (max-width: 600px) {
           .stats-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+          .wendy-quote { font-size: 17px !important; }
         }
       `}</style>
     </>
