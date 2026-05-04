@@ -221,61 +221,6 @@ export default function DonatePage() {
         </div>
       </section>
 
-      {/* ── IMPACT AT A GLANCE ── */}
-      <section style={{ background: "#1A1A1A", padding: "80px 24px" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div
-            style={{
-              fontSize: 11,
-              fontWeight: 600,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              color: "rgba(255,255,255,0.35)",
-              textAlign: "center",
-              marginBottom: 48,
-            }}
-          >
-            What your gift does
-          </div>
-          <div
-            style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }}
-            className="impact-grid"
-          >
-            {[
-              { amount: "$50",  impact: "Joins thousands of supporters moving the science forward" },
-              { amount: "$100", impact: "A direct investment — reaches MJFF with nothing taken off for salaries" },
-              { amount: "$250", impact: "A serious investment in the science behind a breakthrough" },
-              { amount: "$500", impact: "A major gift — Wendy and Rob will know your name" },
-            ].map((item) => (
-              <div
-                key={item.amount}
-                style={{
-                  background: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(255,255,255,0.08)",
-                  borderRadius: 10,
-                  padding: "28px 24px",
-                  textAlign: "center",
-                }}
-              >
-                <div
-                  style={{
-                    fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
-                    fontWeight: 700,
-                    fontSize: 32,
-                    color: "#F98008",
-                    marginBottom: 12,
-                  }}
-                >
-                  {item.amount}
-                </div>
-                <div style={{ fontSize: 14, lineHeight: 1.6, color: "rgba(255,255,255,0.65)" }}>
-                  {item.impact}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── WENDY'S ASK ── */}
       <section style={{ background: "#F6F1E6", padding: "80px 24px" }}>
