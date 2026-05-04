@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description:
       "How a Christmas morning promise became a foundation. The story of Sue, Wendy, and a commitment to never stop until a cure is found.",
     url: "https://chasingacurepd.org/about",
+    images: [{ url: "/photos/wendy-speaking-at-lake.jpg", width: 1200, height: 630, alt: "Wendy Chase speaking at Concert for a Cure" }],
   },
 };
 
@@ -414,6 +415,7 @@ export default function AboutPage() {
                 <Image
                   src="/butterfly-badge.png"
                   alt=""
+                  aria-hidden="true"
                   width={44}
                   height={44}
                   style={{ borderRadius: "50%", marginBottom: 20 }}
@@ -571,6 +573,15 @@ export default function AboutPage() {
         </div>
       </section>
 
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chasingacurepd.org" },
+          { "@type": "ListItem", "position": 2, "name": "Our Story", "item": "https://chasingacurepd.org/about" },
+        ]
+      })}} />
 
       <style>{`
         .narrative-text p { text-wrap: auto; }

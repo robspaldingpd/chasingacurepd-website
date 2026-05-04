@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     description:
       "Where your gift goes and why it matters now. Funding Parkinson's research through the Michael J. Fox Foundation, the world's leading private funder.",
     url: "https://chasingacurepd.org/science",
+    images: [{ url: "/photos/wendy-rob-mjff-event-2.jpg", width: 1200, height: 630, alt: "Wendy and Rob Spalding at the Michael J. Fox Foundation" }],
   },
 };
 
@@ -319,6 +320,15 @@ export default function SciencePage() {
           </div>
         </div>
       </section>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chasingacurepd.org" },
+          { "@type": "ListItem", "position": 2, "name": "The Science", "item": "https://chasingacurepd.org/science" },
+        ]
+      })}} />
 
       <style>{`
         @media (max-width: 900px) {

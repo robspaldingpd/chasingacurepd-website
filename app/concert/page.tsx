@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import ConcertFAQ from "@/components/ConcertFAQ";
 
 export const metadata: Metadata = {
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
     description:
       "Live music, chef-curated food, and a $25K boat raffle. Saturday, July 18, 2026 · 2–6 PM · Fishers, Indiana. Funds benefit The Michael J. Fox Foundation.",
     url: "https://chasingacurepd.org/concert",
+    images: [{ url: "/photos/geist-sunset-dramatic.jpg", width: 1200, height: 630, alt: "Geist Reservoir at sunset — Concert for a Cure 2026" }],
   },
 };
 
@@ -251,7 +253,7 @@ export default function ConcertPage() {
             {/* Boat photo */}
             <div>
               <div style={{ borderRadius: 12, overflow: "hidden", position: "relative" }}>
-                <img src="/photos/raffle-boat.png" alt="2026 Starcraft raffle boat" style={{ width: "100%", display: "block", borderRadius: 12 }} />
+                <Image src="/photos/raffle-boat.png" alt="2026 Starcraft raffle boat" width={700} height={450} style={{ width: "100%", height: "auto", display: "block", borderRadius: 12 }} priority />
                 <div style={{ position: "absolute", bottom: 16, left: 16, background: "rgba(0,0,0,0.65)", backdropFilter: "blur(6px)", borderRadius: 8, padding: "8px 14px" }}>
                   <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 22, color: "#F98008", lineHeight: 1 }}>$25,000</div>
                   <div style={{ fontSize: 12, color: "rgba(255,255,255,0.6)", marginTop: 2 }}>Estimated retail value</div>
@@ -260,7 +262,7 @@ export default function ConcertPage() {
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 16 }}>
                 <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)" }}>Donated by</div>
                 <div style={{ background: "#FFFFFF", borderRadius: 8, padding: "8px 16px" }}>
-                  <img src="/ibc-logo-h.png" alt="Indy Boat Co." style={{ width: 200, height: 50, objectFit: "cover", objectPosition: "center", display: "block" }} />
+                  <Image src="/ibc-logo-h.png" alt="Indy Boat Co." width={200} height={50} style={{ objectFit: "cover", objectPosition: "center", display: "block" }} />
                 </div>
               </div>
             </div>

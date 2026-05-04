@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description:
       "Fund Parkinson's research through the Michael J. Fox Foundation. Volunteer-run, no salaries. Every gift goes to the science.",
     url: "https://chasingacurepd.org/donate",
+    images: [{ url: "/photos/wendy-speaking-at-lake.jpg", width: 1200, height: 630, alt: "Wendy Chase, Co-Founder of Chasing a Cure Parkinson's Foundation" }],
   },
 };
 
@@ -256,6 +257,15 @@ export default function DonatePage() {
           </blockquote>
         </div>
       </section>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chasingacurepd.org" },
+          { "@type": "ListItem", "position": 2, "name": "Donate", "item": "https://chasingacurepd.org/donate" },
+        ]
+      })}} />
 
       <style>{`
         @media (max-width: 900px) {

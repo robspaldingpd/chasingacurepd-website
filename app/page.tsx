@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     description:
       "Volunteer-run. No salaries. Funds raised benefit The Michael J. Fox Foundation for Parkinson's Research.",
     url: "https://chasingacurepd.org",
+    images: [{ url: "/photos/wendy-portrait.png", width: 1200, height: 630, alt: "Wendy Chase, Co-Founder of Chasing a Cure Parkinson's Foundation" }],
   },
 };
 

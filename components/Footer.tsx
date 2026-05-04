@@ -123,6 +123,7 @@ export default function Footer() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={s.label}
                   style={{ display: "flex", alignItems: "center", gap: 10, color: "rgba(255,255,255,0.6)", fontSize: 14, textDecoration: "none" }}
                 >
                   <span style={{ color: "rgba(255,255,255,0.4)" }}>{s.icon}</span>
