@@ -56,7 +56,7 @@ export default function AboutPage() {
               lineHeight: 1.7,
               color: "rgba(255,255,255,0.7)",
               margin: 0,
-              maxWidth: 640,
+              maxWidth: 760,
             }}
           >
             On Christmas morning 2017, Wendy Chase sat across the breakfast table from her mom,
