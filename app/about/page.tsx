@@ -59,11 +59,10 @@ export default function AboutPage() {
               maxWidth: 640,
             }}
           >
-            Chasing a Cure Parkinson&apos;s Foundation idea was born on Christmas morning 2017,
-            when co-founder Wendy Chase sat with her dying mother Sue and made her a promise —
-            to never stop until a cure is found. Incorporated in April 2018, the Fishers,
-            Indiana-based 501(c)(3) funds high-impact Parkinson&apos;s research through
-            The Michael J. Fox Foundation and its Team Fox program.
+            On Christmas morning 2017, Wendy Chase sat across the breakfast table from her mom,
+            Sue, wishing she could give her a gift Parkinson&apos;s could not take away. With
+            treatments no longer helping, Wendy promised to raise money for The Michael J. Fox
+            Foundation to help fund a cure, and Sue loved the gift.
           </p>
         </div>
       </section>
