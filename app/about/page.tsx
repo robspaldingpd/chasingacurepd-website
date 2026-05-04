@@ -59,10 +59,10 @@ export default function AboutPage() {
               maxWidth: 640,
             }}
           >
-            Chasing a Cure Parkinson&apos;s Foundation was born on Christmas morning 2017, when
-            co-founder Wendy Chase received her mother Sue&apos;s terminal Parkinson&apos;s
-            diagnosis and decided to redirect grief into action. Incorporated in April 2018, the
-            Fishers, Indiana-based 501(c)(3) funds high-impact Parkinson&apos;s research through
+            Chasing a Cure Parkinson&apos;s Foundation idea was born on Christmas morning 2017,
+            when co-founder Wendy Chase sat with her dying mother Sue and made her a promise —
+            to never stop until a cure is found. Incorporated in April 2018, the Fishers,
+            Indiana-based 501(c)(3) funds high-impact Parkinson&apos;s research through
             The Michael J. Fox Foundation and its Team Fox program.
           </p>
         </div>
