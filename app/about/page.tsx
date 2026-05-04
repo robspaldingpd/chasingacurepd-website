@@ -83,6 +83,7 @@ export default function AboutPage() {
         >
           {/* Text */}
           <div
+            className="narrative-text"
             style={{
               fontFamily: "var(--font-inter), sans-serif",
               fontSize: 18,
@@ -572,6 +573,7 @@ export default function AboutPage() {
 
 
       <style>{`
+        .narrative-text p { text-wrap: auto; }
         @media (max-width: 900px) {
           .narrative-grid { grid-template-columns: 1fr !important; }
           .narrative-grid > div:last-child { display: none; }
