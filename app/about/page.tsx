@@ -99,7 +99,7 @@ export default function AboutPage() {
           </p>
 
           <p style={{ margin: "0 0 24px" }}>
-            And on Christmas morning 2017, she was dying.
+            And on Christmas morning 2017, medicine had given all it could, so love gave her what Parkinson&apos;s could not take away: a promise.
           </p>
 
           <p style={{ margin: "0 0 24px" }}>
