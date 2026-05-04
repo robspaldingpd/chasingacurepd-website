@@ -232,15 +232,7 @@ export default function ConcertPage() {
               />
             </div>
           </div>
-          <Script
-            src="https://www.zeffy.com/embed/v2/zeffy-embed.js"
-            strategy="lazyOnload"
-            onError={() => {
-              document.querySelectorAll<HTMLElement>("[data-zeffy-embed-fallback]").forEach((el) => {
-                el.style.display = "block";
-              });
-            }}
-          />
+          <Script src="https://www.zeffy.com/embed/v2/zeffy-embed.js" strategy="lazyOnload" />
 
         </div>
       </section>
