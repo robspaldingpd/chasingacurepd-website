@@ -357,9 +357,6 @@ export default function AboutPage() {
               funding it this year, actually changes when we get there. That&apos;s not a
               marketing line. That&apos;s what my career has taught me.
             </p>
-            <p style={{ margin: 0 }}>
-              I don&apos;t want your pity. I want your partnership.
-            </p>
           </div>
         </div>
       </section>
