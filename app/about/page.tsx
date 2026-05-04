@@ -570,26 +570,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── CLOSING LINE ── */}
-      <section style={{ background: "#1A1A1A", padding: "80px 24px", textAlign: "center" }}>
-        <p
-          style={{
-            fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif",
-            fontStyle: "italic",
-            fontSize: "clamp(24px, 3.5vw, 42px)",
-            lineHeight: 1.3,
-            color: "#FFFFFF",
-            margin: "0 auto",
-            maxWidth: 680,
-            textWrap: "auto" as const,
-          }}
-        >
-          &ldquo;I don&apos;t want your pity. I want your partnership.&rdquo;
-        </p>
-        <div style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", marginTop: 20, letterSpacing: "0.06em" }}>
-          Wendy Chase, Co-Founder
-        </div>
-      </section>
 
       <style>{`
         @media (max-width: 900px) {
