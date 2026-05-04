@@ -15,6 +15,7 @@ export default function Footer() {
     <footer style={{ background: "#1A1A1A", color: "rgba(255,255,255,0.7)", padding: "64px 24px 0" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div
+          className="footer-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "2fr 1fr 1fr 1fr 1.5fr",
@@ -23,7 +24,7 @@ export default function Footer() {
           }}
         >
           {/* Brand */}
-          <div>
+          <div className="footer-brand">
             <Image
               src="/logo.png"
               alt="Chasing a Cure Parkinson's Foundation"
@@ -188,6 +189,15 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+          .footer-brand { grid-column: 1 / -1; }
+        }
+        @media (max-width: 480px) {
+          .footer-grid { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </footer>
   );
 }
