@@ -9,7 +9,7 @@ const FAQS = [
   },
   {
     q: "What percentage of my donation goes to research?",
-    a: "We keep operating costs to the absolute minimum required to function — event expenses, processing fees, and the basic tools we need to run the foundation. No one draws a salary. Every dollar beyond those bare operating costs funds Parkinson's research through The Michael J. Fox Foundation.",
+    a: "We keep operating costs to the absolute minimum required to function: event expenses, processing fees, and the basic tools we need to run the foundation. No one draws a salary. Every dollar beyond those bare operating costs funds Parkinson's research through The Michael J. Fox Foundation.",
   },
   {
     q: "Is my donation tax-deductible?",
@@ -17,7 +17,7 @@ const FAQS = [
   },
   {
     q: "Why do you partner with The Michael J. Fox Foundation?",
-    a: "MJFF is the world's largest private funder of Parkinson's research, having invested more than $2 billion into the field. We chose MJFF because of their scientific rigor, financial transparency, and singular focus on curing Parkinson's disease. Gifts raised through our Team Fox group flow directly to their research programs — the highest-priority, most vetted work in the field.",
+    a: "MJFF is the world's largest private funder of Parkinson's research, having invested more than $2 billion into the field. We chose MJFF because of their scientific rigor, financial transparency, and singular focus on curing Parkinson's disease. Gifts raised through our Team Fox group flow directly to their research programs: the highest-priority, most vetted work in the field.",
   },
   {
     q: "What is Team Fox?",
@@ -29,7 +29,7 @@ const FAQS = [
   },
   {
     q: "How close is a cure for Parkinson's?",
-    a: "Researchers have identified key targets — including alpha-synuclein protein aggregation and GBA1 gene therapy — and multiple clinical trials are currently underway. The Parkinson's Progression Markers Initiative (PPMI), funded in part by MJFF, has created the largest biomarker database in the disease's history. The science is moving faster than at any prior point. Sustained funding is what accelerates the timeline.",
+    a: "Researchers have identified key targets, including alpha-synuclein protein aggregation and GBA1 gene therapy, and multiple clinical trials are currently underway. The Parkinson's Progression Markers Initiative (PPMI), funded in part by MJFF, has created the largest biomarker database in the disease's history. The science is moving faster than at any prior point. Sustained funding is what accelerates the timeline.",
   },
   {
     q: "Can I set up a monthly donation?",
