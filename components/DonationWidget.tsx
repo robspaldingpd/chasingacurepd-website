@@ -20,7 +20,7 @@ const IMPACT: Record<string, string> = {
   "monthly-100": "Major monthly support, a direct line from you to the lab.",
 };
 
-const DONATION_URL = "https://www.teamfox.org/give/chasing-a-cure"; // update with actual Team Fox URL
+const ZEFFY_BASE = "https://www.zeffy.com/donation-form/donate-to-find-a-cure-4";
 
 export default function DonationWidget() {
   const [frequency, setFrequency] = useState<"once" | "monthly">("once");
@@ -38,12 +38,9 @@ export default function DonationWidget() {
   const impact = impactKey ? IMPACT[impactKey] : custom ? "Every dollar reaches the research." : null;
 
   function buildDonationUrl() {
-    const base = DONATION_URL;
-    const params = new URLSearchParams({
-      amount: String(amount),
-      frequency,
-    });
-    return `${base}?${params.toString()}`;
+    const params = new URLSearchParams({ amount: String(amount) });
+    if (frequency === "monthly") params.set("recurring", "true");
+    return `${ZEFFY_BASE}?${params.toString()}`;
   }
 
   return (
