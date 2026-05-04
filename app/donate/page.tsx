@@ -229,10 +229,10 @@ export default function DonatePage() {
             className="impact-grid"
           >
             {[
-              { amount: "$25", impact: "Joins thousands of supporters moving the science forward" },
-              { amount: "$50", impact: "Funds a day of research through Team Fox" },
+              { amount: "$50",  impact: "Joins thousands of supporters moving the science forward" },
+              { amount: "$100", impact: "A direct investment — reaches MJFF with nothing taken off for salaries" },
               { amount: "$250", impact: "A serious investment in the science behind a breakthrough" },
-              { amount: "$1,000", impact: "A major gift, direct investment in the science" },
+              { amount: "$500", impact: "A major gift — Wendy and Rob will know your name" },
             ].map((item) => (
               <div
                 key={item.amount}
