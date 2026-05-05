@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
-import ZeffyDonateButton from "@/components/ZeffyDonateButton";
 
 export const metadata: Metadata = {
   title: "Chasing a Cure Parkinson's Foundation",
@@ -593,24 +592,26 @@ export default function HomePage() {
                 />
               </div>
             </div>
-            <div style={{ background: "#1A1A1A", borderRadius: 20, padding: "52px 48px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 24 }}>
-              <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008" }}>
-                Make a difference today
+            <div>
+              <div data-zeffy-embed="" data-form-url="/embed/donation-form/donate-to-find-a-cure-copy" />
+              <div data-zeffy-embed-fallback="" style={{ display: "none" }}>
+                <div style={{ position: "relative", overflow: "hidden", height: 450, width: "100%" }}>
+                  <iframe
+                    title="Donation form powered by Zeffy"
+                    style={{ position: "absolute", border: 0, top: 0, left: 0, bottom: 0, right: 0, width: "100%", height: "100%" }}
+                    src="https://www.zeffy.com/embed/donation-form/donate-to-find-a-cure-copy"
+                    allow="payment"
+                  />
+                </div>
               </div>
-              <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(32px, 3vw, 48px)", lineHeight: 1.05, color: "#FFFFFF", letterSpacing: "-0.03em" }}>
-                Every dollar<br />funds the science.
-              </div>
-              <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.60)", margin: 0, maxWidth: 300 }}>
-                One-time or monthly. No salaries taken. Funds go directly to The Michael J. Fox Foundation for Parkinson&apos;s Research.
-              </p>
-              <ZeffyDonateButton
-                style={{ display: "inline-flex", alignItems: "center", padding: "16px 48px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 17, cursor: "pointer", width: "100%", justifyContent: "center", border: "none" }}
+              <Script
+                src="https://www.zeffy.com/embed/v2/zeffy-embed.js"
+                strategy="afterInteractive"
+                onError={() => {
+                  const els = document.querySelectorAll("[data-zeffy-embed-fallback]");
+                  els.forEach((el) => ((el as HTMLElement).style.display = "block"));
+                }}
               />
-              <div style={{ display: "flex", flexDirection: "column", gap: 8, width: "100%", borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 24 }}>
-                {["Tax-deductible · 501(c)(3)", "Secure payment via Zeffy", "EIN 82-5107944"].map(item => (
-                  <div key={item} style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", fontWeight: 500 }}>{item}</div>
-                ))}
-              </div>
             </div>
           </div>
         </div>
