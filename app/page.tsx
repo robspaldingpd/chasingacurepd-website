@@ -603,7 +603,7 @@ export default function HomePage() {
                 One-time or monthly. No salaries taken. Funds go directly to The Michael J. Fox Foundation for Parkinson&apos;s Research.
               </p>
               <a
-                href="https://www.zeffy.com/embed/donation-form/donate-to-find-a-cure-4?modal=true"
+                href="#"
                 {...{ "zeffy-form-link": "https://www.zeffy.com/embed/donation-form/donate-to-find-a-cure-4?modal=true" }}
                 style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "16px 48px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 17, textDecoration: "none", cursor: "pointer", width: "100%", justifyContent: "center" }}
               >
