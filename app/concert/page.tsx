@@ -332,7 +332,7 @@ export default function ConcertPage() {
             {/* Boat photo */}
             <div>
               <div style={{ borderRadius: 12, overflow: "hidden", position: "relative" }}>
-                <Image src="/photos/raffle-boat.png" alt="2026 Starcraft raffle boat" width={700} height={450} style={{ width: "100%", height: "auto", display: "block", borderRadius: 12 }} priority />
+                <Image src="/photos/raffle-boat-new.png" alt="2026 Stingray raffle boat" width={700} height={450} style={{ width: "100%", height: "auto", display: "block", borderRadius: 12 }} priority />
                 <div style={{ position: "absolute", bottom: 16, left: 16, background: "rgba(0,0,0,0.65)", backdropFilter: "blur(6px)", borderRadius: 8, padding: "8px 14px" }}>
                   <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 22, color: "#F98008", lineHeight: 1 }}>$25,000</div>
                   <div style={{ fontSize: 12, color: "rgba(255,255,255,0.6)", marginTop: 2 }}>Estimated retail value</div>
