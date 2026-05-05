@@ -38,9 +38,8 @@ export default function ConcertPage() {
 
         <div style={{ maxWidth: 1200, margin: "0 auto", width: "100%", position: "relative" }}>
           <div style={{ maxWidth: 680 }}>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, marginBottom: 20, padding: "6px 16px", background: "rgba(249,128,8,0.12)", border: "1px solid rgba(249,128,8,0.25)", borderRadius: 999 }}>
-              <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#F98008", display: "inline-block" }} />
-              <span style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#F98008" }}>
+            <div style={{ display: "inline-flex", alignItems: "center", marginBottom: 20, padding: "8px 20px", background: "#F98008", borderRadius: 999 }}>
+              <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#FFFFFF" }}>
                 Saturday, July 18, 2026 · 2–6 PM · Fishers, Indiana
               </span>
             </div>
@@ -68,7 +67,7 @@ export default function ConcertPage() {
               </a>
               <a
                 href="#sponsor"
-                style={{ display: "inline-flex", alignItems: "center", padding: "15px 28px", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.88)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: 16, textDecoration: "none" }}
+                style={{ display: "inline-flex", alignItems: "center", padding: "15px 28px", background: "#FFFFFF", color: "#111111", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none" }}
               >
                 Sponsorship
               </a>
