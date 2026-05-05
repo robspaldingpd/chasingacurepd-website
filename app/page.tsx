@@ -602,17 +602,15 @@ export default function HomePage() {
               <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.60)", margin: 0, maxWidth: 300 }}>
                 One-time or monthly. No salaries taken. Funds go directly to The Michael J. Fox Foundation for Parkinson&apos;s Research.
               </p>
-              <a
-                href="#"
-                onClick={(e) => e.preventDefault()}
+              <button
                 {...{ "zeffy-form-link": "https://www.zeffy.com/embed/donation-form/donate-to-find-a-cure-4?modal=true" }}
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "16px 48px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 17, textDecoration: "none", cursor: "pointer", width: "100%", justifyContent: "center" }}
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "16px 48px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 17, cursor: "pointer", width: "100%", justifyContent: "center", border: "none" }}
               >
                 Donate now
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M6 3l5 5-5 5" />
                 </svg>
-              </a>
+              </button>
               <div style={{ display: "flex", flexDirection: "column", gap: 8, width: "100%", borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 24 }}>
                 {["Tax-deductible · 501(c)(3)", "Secure payment via Zeffy", "EIN 82-5107944"].map(item => (
                   <div key={item} style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", fontWeight: 500 }}>{item}</div>
