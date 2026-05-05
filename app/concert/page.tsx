@@ -175,12 +175,12 @@ export default function ConcertPage() {
               and one shared purpose. Hosted at Wendy and Rob&apos;s lake home on
               Geist Reservoir in Fishers, Indiana.
             </p>
-            <p style={{ fontSize: 17, lineHeight: 1.75, color: "#2B2B2B", margin: "0 0 20px" }}>
+            <p style={{ fontSize: 17, lineHeight: 1.75, color: "#2B2B2B", margin: "0 0 20px", textWrap: "auto" as const }}>
               This is not a gala. It&apos;s not a corporate event. It&apos;s a gathering
               of people who believe the science is close, and who want to be part of
               getting it there.
             </p>
-            <p style={{ fontSize: 17, lineHeight: 1.75, color: "#2B2B2B", margin: 0 }}>
+            <p style={{ fontSize: 17, lineHeight: 1.75, color: "#2B2B2B", margin: 0, textWrap: "auto" as const }}>
               Every ticket. Every bid at the live auction. Every raffle ticket.
               Funds raised benefit The Michael J. Fox Foundation for Parkinson&apos;s Research.
             </p>
