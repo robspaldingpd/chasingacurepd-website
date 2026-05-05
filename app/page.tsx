@@ -612,7 +612,7 @@ export default function HomePage() {
           CONCERT CALLOUT
       ══════════════════════════ */}
       <section style={{ position: "relative", minHeight: 360, overflow: "hidden", backgroundImage: "url('/photos/geist-afternoon-boats.jpg')", backgroundSize: "cover", backgroundPosition: "center 40%" }}>
-        <div aria-hidden style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(8,8,8,0.82) 0%, rgba(8,8,8,0.65) 45%, rgba(8,8,8,0.20) 75%, rgba(8,8,8,0.0) 100%)", pointerEvents: "none" }} />
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(8,8,8,0.58) 0%, rgba(8,8,8,0.42) 45%, rgba(8,8,8,0.12) 75%, rgba(8,8,8,0.0) 100%)", pointerEvents: "none" }} />
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "72px 24px", position: "relative", display: "flex", alignItems: "center" }}>
           <div style={{ maxWidth: 500, display: "flex", flexDirection: "column", gap: 20 }}>
             <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008" }}>
