@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import DonationWidget from "@/components/DonationWidget";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Chasing a Cure Parkinson's Foundation",
@@ -592,7 +592,18 @@ export default function HomePage() {
                 />
               </div>
             </div>
-            <DonationWidget />
+            <div>
+              <div data-zeffy-embed="" data-form-url="/embed/donation-form/donate-to-find-a-cure-4" />
+              <div data-zeffy-embed-fallback="" style={{ display: "none" }}>
+                <iframe
+                  title="Donation form powered by Zeffy"
+                  style={{ border: 0, width: "100%", height: 560, display: "block" }}
+                  src="https://www.zeffy.com/embed/donation-form/donate-to-find-a-cure-4"
+                  allow="payment"
+                />
+              </div>
+              <Script src="https://www.zeffy.com/embed/v2/zeffy-embed.js" strategy="lazyOnload" />
+            </div>
           </div>
         </div>
       </section>
