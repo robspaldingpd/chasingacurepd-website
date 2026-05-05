@@ -87,7 +87,7 @@ export default function Nav() {
                 letterSpacing: "0.16em",
                 textTransform: "uppercase",
                 color: subColor,
-                marginTop: 3,
+                marginTop: 7,
                 transition: "color 300ms ease",
               }}
             >
