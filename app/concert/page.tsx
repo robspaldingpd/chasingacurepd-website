@@ -70,7 +70,13 @@ export default function ConcertPage() {
                 href="#raffle"
                 style={{ display: "inline-flex", alignItems: "center", padding: "15px 28px", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.88)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: 16, textDecoration: "none" }}
               >
-                Buy Raffle Tickets
+                Boat Raffle
+              </a>
+              <a
+                href="#fifty-fifty"
+                style={{ display: "inline-flex", alignItems: "center", padding: "15px 28px", background: "rgba(249,128,8,0.15)", color: "#F98008", border: "1px solid rgba(249,128,8,0.35)", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: 16, textDecoration: "none" }}
+              >
+                50/50 Raffle
               </a>
             </div>
           </div>
@@ -320,24 +326,24 @@ export default function ConcertPage() {
       </section>
 
       {/* ── 50/50 RAFFLE ── */}
-      <section style={{ background: "#0D0D0D", padding: "80px 24px" }}>
+      <section id="fifty-fifty" style={{ background: "#F6F1E6", padding: "80px 24px" }}>
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
 
-          <div style={{ marginBottom: 32, textAlign: "center" }}>
+          <div style={{ marginBottom: 40, textAlign: "center" }}>
             <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008", marginBottom: 12 }}>50/50 Raffle</div>
-            <h2 style={{ fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif", fontWeight: 400, fontSize: "clamp(28px, 3.5vw, 48px)", color: "#FFFFFF", margin: "0 0 16px", lineHeight: 1.15 }}>
+            <h2 style={{ fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif", fontWeight: 400, fontSize: "clamp(28px, 3.5vw, 48px)", color: "#000000", margin: "0 0 16px", lineHeight: 1.15 }}>
               Half goes to the winner.<br />Half funds the cure.
             </h2>
-            <p style={{ fontSize: 16, lineHeight: 1.7, color: "rgba(255,255,255,0.55)", margin: "0 auto", maxWidth: 520 }}>
+            <p style={{ fontSize: 16, lineHeight: 1.7, color: "#6B6F7D", margin: "0 auto", maxWidth: 520 }}>
               Buy tickets, split the pot. The more tickets sold, the bigger the prize. Winner drawn live on July 18.
             </p>
           </div>
 
           {/* Ticket tiers */}
-          <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 12, overflow: "hidden", marginBottom: 24 }}>
-            <div style={{ padding: "16px 24px", borderBottom: "1px solid rgba(255,255,255,0.06)", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
-              <div style={{ fontSize: 13, fontWeight: 600, color: "rgba(255,255,255,0.5)" }}>More tickets, better odds. Winner takes 50% of the total pot.</div>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "4px 10px", background: "rgba(249,128,8,0.15)", border: "1px solid rgba(249,128,8,0.3)", borderRadius: 999 }}>
+          <div style={{ background: "#FFFFFF", border: "1px solid #DCDDE3", borderRadius: 12, overflow: "hidden", marginBottom: 24, boxShadow: "0 1px 2px rgba(20,33,61,0.06), 0 8px 24px rgba(20,33,61,0.06)" }}>
+            <div style={{ padding: "16px 24px", borderBottom: "1px solid #EDEDF0", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12, background: "#FAFAFA" }}>
+              <div style={{ fontSize: 13, fontWeight: 600, color: "#6B6F7D" }}>More tickets, better odds. Winner takes 50% of the total pot.</div>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "4px 10px", background: "rgba(249,128,8,0.12)", border: "1px solid rgba(249,128,8,0.3)", borderRadius: 999 }}>
                 <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#F98008", display: "inline-block" }} />
                 <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#F98008" }}>50% to winner</span>
               </div>
@@ -349,10 +355,10 @@ export default function ConcertPage() {
               { tickets: "100 tickets", price: "$200" },
               { tickets: "400 tickets", price: "$500" },
             ].map((tier, i, arr) => (
-              <div key={tier.price} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "16px 24px", borderBottom: i < arr.length - 1 ? "1px solid rgba(255,255,255,0.06)" : "none" }}>
+              <div key={tier.price} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "16px 24px", borderBottom: i < arr.length - 1 ? "1px solid #EDEDF0" : "none" }}>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 12 }}>
-                  <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 22, color: "#FFFFFF" }}>{tier.price}</div>
-                  <div style={{ fontSize: 14, color: "rgba(255,255,255,0.4)" }}>{tier.tickets}</div>
+                  <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 22, color: "#000000" }}>{tier.price}</div>
+                  <div style={{ fontSize: 14, color: "#6B6F7D" }}>{tier.tickets}</div>
                 </div>
                 <a
                   href={`mailto:wendy@chasingacurepd.org?subject=Concert for a Cure 2026 - 50/50 Raffle - ${tier.tickets} (${tier.price})`}
@@ -364,7 +370,7 @@ export default function ConcertPage() {
             ))}
           </div>
 
-          <p style={{ fontSize: 13, color: "rgba(255,255,255,0.3)", margin: 0, lineHeight: 1.6, textAlign: "center" }}>
+          <p style={{ fontSize: 13, color: "#9B9FAE", margin: 0, lineHeight: 1.6, textAlign: "center" }}>
             Winner drawn live at the event on July 18, 2026. You do not need to be present to win. 50% of the total pot goes to the winner; the remaining 50% funds Parkinson&apos;s research through The Michael J. Fox Foundation.
           </p>
 
