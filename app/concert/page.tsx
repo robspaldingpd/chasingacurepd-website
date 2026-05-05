@@ -58,27 +58,100 @@ export default function ConcertPage() {
 
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
               <a
-                href="#tickets"
+                href="#participate"
                 style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "15px 36px", background: "#F98008", color: "#fff", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none", letterSpacing: "-0.01em" }}
               >
-                Get Tickets
+                Ways to Participate
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M6 3l5 5-5 5" />
                 </svg>
               </a>
               <a
-                href="#raffle"
+                href="#sponsor"
                 style={{ display: "inline-flex", alignItems: "center", padding: "15px 28px", background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.88)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: 16, textDecoration: "none" }}
               >
-                Boat Raffle
-              </a>
-              <a
-                href="#fifty-fifty"
-                style={{ display: "inline-flex", alignItems: "center", padding: "15px 28px", background: "rgba(249,128,8,0.15)", color: "#F98008", border: "1px solid rgba(249,128,8,0.35)", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 600, fontSize: 16, textDecoration: "none" }}
-              >
-                50/50 Raffle
+                Sponsorship
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── WAYS TO PARTICIPATE ── */}
+      <section id="participate" style={{ background: "#1A1A1A", padding: "80px 24px" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", textAlign: "center", marginBottom: 16 }}>
+            Three ways to be part of it
+          </div>
+          <h2 style={{ fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif", fontWeight: 400, fontSize: "clamp(26px, 3vw, 38px)", color: "#FFFFFF", textAlign: "center", margin: "0 auto 48px", maxWidth: 560, lineHeight: 1.2 }}>
+            Join us at the lake, win a boat, or split the pot.
+          </h2>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }} className="participate-grid">
+
+            {/* Card 1: Event Ticket */}
+            <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.10)", borderRadius: 14, padding: "36px 32px", display: "flex", flexDirection: "column" }}>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008", marginBottom: 16 }}>Event Ticket</div>
+              <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 36, color: "#FFFFFF", lineHeight: 1, marginBottom: 8 }}>$225</div>
+              <div style={{ fontSize: 13, color: "rgba(255,255,255,0.4)", marginBottom: 20 }}>per person</div>
+              <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.65)", margin: "0 0 28px", flex: 1 }}>
+                An afternoon at the lake. Live music, chef-curated food and cocktails, live auction, and the raffle draw. Limited to 100 guests.
+              </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 28 }}>
+                {["Live music", "Chef-curated food + cocktails", "Live auction", "Raffle winner announced"].map(item => (
+                  <div key={item} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: "rgba(255,255,255,0.55)" }}>
+                    <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#F98008", display: "inline-block", flexShrink: 0 }} />
+                    {item}
+                  </div>
+                ))}
+              </div>
+              <a href="#tickets" style={{ display: "block", padding: "13px 0", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
+                Get Tickets
+              </a>
+            </div>
+
+            {/* Card 2: Boat Raffle */}
+            <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.10)", borderRadius: 14, padding: "36px 32px", display: "flex", flexDirection: "column" }}>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008", marginBottom: 16 }}>Boat Raffle</div>
+              <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 36, color: "#FFFFFF", lineHeight: 1, marginBottom: 8 }}>$25,000</div>
+              <div style={{ fontSize: 13, color: "rgba(255,255,255,0.4)", marginBottom: 20 }}>estimated retail value</div>
+              <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.65)", margin: "0 0 28px", flex: 1 }}>
+                Win a Starcraft boat donated by Indy Boat Co. Winner drawn live at the event. You do not need to be present to win.
+              </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 28 }}>
+                {["$100 — 1 ticket", "$275 — 3 tickets", "$400 — 5 tickets"].map(item => (
+                  <div key={item} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: "rgba(255,255,255,0.55)" }}>
+                    <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#F98008", display: "inline-block", flexShrink: 0 }} />
+                    {item}
+                  </div>
+                ))}
+              </div>
+              <a href="#raffle" style={{ display: "block", padding: "13px 0", background: "transparent", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
+                Buy Raffle Tickets
+              </a>
+            </div>
+
+            {/* Card 3: 50/50 Raffle */}
+            <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.10)", borderRadius: 14, padding: "36px 32px", display: "flex", flexDirection: "column" }}>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008", marginBottom: 16 }}>50/50 Raffle</div>
+              <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 36, color: "#FFFFFF", lineHeight: 1, marginBottom: 8 }}>50%</div>
+              <div style={{ fontSize: 13, color: "rgba(255,255,255,0.4)", marginBottom: 20 }}>of the total pot to the winner</div>
+              <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.65)", margin: "0 0 28px", flex: 1 }}>
+                The more tickets sold, the bigger the prize. Winner takes half the pot; the other half funds Parkinson&apos;s research.
+              </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 28 }}>
+                {["$25 — 5 tickets", "$50 — 15 tickets", "$100 — 40 tickets", "$200 — 100 tickets", "$500 — 400 tickets"].map(item => (
+                  <div key={item} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: "rgba(255,255,255,0.55)" }}>
+                    <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#F98008", display: "inline-block", flexShrink: 0 }} />
+                    {item}
+                  </div>
+                ))}
+              </div>
+              <a href="#fifty-fifty" style={{ display: "block", padding: "13px 0", background: "transparent", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
+                Buy 50/50 Tickets
+              </a>
+            </div>
+
           </div>
         </div>
       </section>
@@ -678,6 +751,7 @@ export default function ConcertPage() {
           .tickets-grid { grid-template-columns: 1fr !important; }
           .features-grid { grid-template-columns: 1fr 1fr !important; }
           .sponsor-grid { grid-template-columns: 1fr !important; }
+          .participate-grid { grid-template-columns: 1fr !important; }
         }
         @media (max-width: 560px) {
           .features-grid { grid-template-columns: 1fr !important; }
