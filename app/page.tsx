@@ -612,22 +612,17 @@ export default function HomePage() {
           CONCERT CALLOUT
       ══════════════════════════ */}
       <section style={{ position: "relative", padding: "80px 24px", overflow: "hidden", backgroundImage: "url('/photos/geist-golden-hour-balloon.jpg')", backgroundSize: "cover", backgroundPosition: "center 60%" }}>
-        <div aria-hidden style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(8,8,8,0.82) 0%, rgba(8,8,8,0.65) 50%, rgba(8,8,8,0.35) 100%)" }} />
-        <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 40, flexWrap: "wrap", position: "relative" }}>
-          <div>
-            <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.90)", marginBottom: 12 }}>
-              Upcoming event
-            </div>
-            <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(26px, 3.5vw, 44px)", lineHeight: 1.05, color: "#FFF", margin: "0 0 12px", letterSpacing: "-0.02em" }}>
-              Concert for a Cure 2026
-            </h2>
-            <p style={{ fontSize: 17, lineHeight: 1.65, color: "#FFFFFF", margin: 0, maxWidth: 500 }}>
-              {/* From messaging guide §10E */}
-              An evening at the lake, live music, good company, and one shared purpose. Every
-              ticket, every paddle raised, every raffle ticket. Funds raised benefit The Michael J. Fox Foundation for Parkinson&apos;s Research. Come because it&apos;s a great night.
-              Stay because it matters.
-            </p>
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "rgba(8,8,8,0.70)" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 24, position: "relative" }}>
+          <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.70)", marginBottom: -8 }}>
+            Upcoming event
           </div>
+          <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(28px, 3.5vw, 46px)", lineHeight: 1.05, color: "#FFF", margin: 0, letterSpacing: "-0.02em" }}>
+            Concert for a Cure 2026
+          </h2>
+          <p style={{ fontSize: 17, lineHeight: 1.7, color: "rgba(255,255,255,0.85)", margin: 0 }}>
+            An evening at the lake, live music, good company, and one shared purpose. Every ticket, every paddle raised, every raffle ticket. Funds raised benefit The Michael J. Fox Foundation for Parkinson&apos;s Research.
+          </p>
           <Link
             href="/concert"
             style={{
