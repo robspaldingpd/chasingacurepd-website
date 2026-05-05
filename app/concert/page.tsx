@@ -52,7 +52,7 @@ export default function ConcertPage() {
               Afternoon at the lake. One shared purpose.
             </p>
 
-            <p style={{ fontSize: "clamp(15px, 1.6vw, 17px)", lineHeight: 1.6, color: "rgba(255,255,255,0.7)", margin: "0 0 32px", maxWidth: 520 }}>
+            <p style={{ fontSize: "clamp(15px, 1.6vw, 17px)", lineHeight: 1.6, color: "#FFFFFF", margin: "0 0 32px", maxWidth: 520 }}>
               Live music, great company, and every ticket funds Parkinson&apos;s research through The Michael J. Fox Foundation.
             </p>
 
