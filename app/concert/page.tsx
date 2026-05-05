@@ -389,6 +389,10 @@ export default function ConcertPage() {
             </div>
           </div>
 
+          <p style={{ fontSize: 12, color: "rgba(255,255,255,0.25)", margin: "32px 0 0", lineHeight: 1.6, textAlign: "center" }}>
+            Indiana Charity Gaming License Number 018323
+          </p>
+
         </div>
       </section>
 
@@ -439,6 +443,10 @@ export default function ConcertPage() {
 
           <p style={{ fontSize: 13, color: "#9B9FAE", margin: 0, lineHeight: 1.6, textAlign: "center" }}>
             Winner drawn live at the event on July 18, 2026. You do not need to be present to win. 50% of the total pot goes to the winner; the remaining 50% funds Parkinson&apos;s research through The Michael J. Fox Foundation.
+          </p>
+
+          <p style={{ fontSize: 12, color: "#B8BAC4", margin: "24px 0 0", lineHeight: 1.6, textAlign: "center" }}>
+            Indiana Charity Gaming License Number 018323
           </p>
 
         </div>
