@@ -34,7 +34,7 @@ export default function ConcertPage() {
           backgroundPosition: "center 40%",
         }}
       >
-        <div aria-hidden style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(8,8,8,0.72) 0%, rgba(8,8,8,0.60) 45%, rgba(8,8,8,0.35) 75%, rgba(8,8,8,0.15) 100%)", pointerEvents: "none" }} />
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(8,8,8,0.55) 0%, rgba(8,8,8,0.42) 45%, rgba(8,8,8,0.20) 75%, rgba(8,8,8,0.05) 100%)", pointerEvents: "none" }} />
 
         <div style={{ maxWidth: 1200, margin: "0 auto", width: "100%", position: "relative" }}>
           <div style={{ maxWidth: 680 }}>
