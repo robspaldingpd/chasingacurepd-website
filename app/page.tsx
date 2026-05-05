@@ -611,45 +611,45 @@ export default function HomePage() {
       {/* ══════════════════════════
           CONCERT CALLOUT
       ══════════════════════════ */}
-      <section style={{ display: "flex", minHeight: 360, overflow: "hidden" }}>
-        {/* Left: solid dark panel with text */}
-        <div style={{ flex: "0 0 50%", background: "#1A1A1A", padding: "72px 64px", display: "flex", flexDirection: "column", justifyContent: "center", gap: 20 }}>
-          <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008" }}>
-            Upcoming event
-          </div>
-          <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(26px, 2.8vw, 42px)", lineHeight: 1.05, color: "#FFFFFF", margin: 0, letterSpacing: "-0.02em" }}>
-            Concert for a Cure 2026
-          </h2>
-          <p style={{ fontSize: 16, lineHeight: 1.7, color: "rgba(255,255,255,0.75)", margin: 0, maxWidth: 420 }}>
-            An evening at the lake, live music, good company, and one shared purpose. Funds raised benefit The Michael J. Fox Foundation for Parkinson&apos;s Research.
-          </p>
-          <div>
-            <Link
-              href="/concert"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                padding: "14px 32px",
-                background: "#F98008",
-                color: "#FFFFFF",
-                borderRadius: 999,
-                fontFamily: "var(--font-sans)",
-                fontWeight: 700,
-                fontSize: 15,
-                textDecoration: "none",
-                whiteSpace: "nowrap",
-              }}
-            >
-              Learn more
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M6 3l5 5-5 5" />
-              </svg>
-            </Link>
+      <section style={{ position: "relative", minHeight: 360, overflow: "hidden", backgroundImage: "url('/photos/geist-afternoon-boats.jpg')", backgroundSize: "cover", backgroundPosition: "center 40%" }}>
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(8,8,8,0.82) 0%, rgba(8,8,8,0.65) 45%, rgba(8,8,8,0.20) 75%, rgba(8,8,8,0.0) 100%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "72px 24px", position: "relative", display: "flex", alignItems: "center" }}>
+          <div style={{ maxWidth: 500, display: "flex", flexDirection: "column", gap: 20 }}>
+            <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008" }}>
+              Upcoming event
+            </div>
+            <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(26px, 2.8vw, 42px)", lineHeight: 1.05, color: "#FFFFFF", margin: 0, letterSpacing: "-0.02em" }}>
+              Concert for a Cure 2026
+            </h2>
+            <p style={{ fontSize: 16, lineHeight: 1.7, color: "rgba(255,255,255,0.85)", margin: 0 }}>
+              An evening at the lake, live music, good company, and one shared purpose. Funds raised benefit The Michael J. Fox Foundation for Parkinson&apos;s Research.
+            </p>
+            <div>
+              <Link
+                href="/concert"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                  padding: "14px 32px",
+                  background: "#F98008",
+                  color: "#FFFFFF",
+                  borderRadius: 999,
+                  fontFamily: "var(--font-sans)",
+                  fontWeight: 700,
+                  fontSize: 15,
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Learn more
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M6 3l5 5-5 5" />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
-        {/* Right: photo */}
-        <div style={{ flex: "0 0 50%", backgroundImage: "url('/photos/geist-golden-hour-balloon.jpg')", backgroundSize: "cover", backgroundPosition: "center 30%" }} />
       </section>
 
       <style>{`
