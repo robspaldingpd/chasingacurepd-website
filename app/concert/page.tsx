@@ -109,11 +109,6 @@ export default function ConcertPage() {
               <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.65)", margin: "0 0 28px", flex: 1 }}>
                 Win a Starcraft boat donated by Indy Boat Co. Winner drawn live at the event. You do not need to be present to win.
               </p>
-              <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 28 }}>
-                {["$100 — 1 ticket", "$275 — 3 tickets", "$400 — 5 tickets"].map(item => (
-                  <div key={item} style={{ fontSize: 13, color: "rgba(255,255,255,0.55)" }}>{item}</div>
-                ))}
-              </div>
               <a href="#raffle" style={{ display: "block", padding: "13px 0", background: "transparent", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
                 Buy Raffle Tickets
               </a>
@@ -127,11 +122,6 @@ export default function ConcertPage() {
               <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.65)", margin: "0 0 28px", flex: 1 }}>
                 The more tickets sold, the bigger the prize. Winner takes half the pot; the other half funds Parkinson&apos;s research. You do not need to be present to win.
               </p>
-              <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 28 }}>
-                {["$25 — 5 tickets", "$50 — 15 tickets", "$100 — 40 tickets", "$200 — 100 tickets", "$500 — 400 tickets"].map(item => (
-                  <div key={item} style={{ fontSize: 13, color: "rgba(255,255,255,0.55)" }}>{item}</div>
-                ))}
-              </div>
               <a href="#fifty-fifty" style={{ display: "block", padding: "13px 0", background: "transparent", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
                 Buy 50/50 Tickets
               </a>
