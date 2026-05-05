@@ -138,7 +138,7 @@ export default function HomePage() {
               Focused on the cure.
             </div>
 
-            <p style={{ fontSize: "clamp(15px, 1.6vw, 17px)", lineHeight: 1.6, color: "rgba(255,255,255,0.7)", margin: "0 0 32px", maxWidth: 520 }}>
+            <p style={{ fontSize: "clamp(15px, 1.6vw, 17px)", lineHeight: 1.6, color: "#FFFFFF", margin: "0 0 32px", maxWidth: 520 }}>
               Volunteer-run. No salaries. Funds raised benefit The Michael J. Fox Foundation for Parkinson&apos;s Research.
             </p>
 
