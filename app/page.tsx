@@ -592,17 +592,31 @@ export default function HomePage() {
                 />
               </div>
             </div>
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 16 }}>
+            <div style={{ background: "#1A1A1A", borderRadius: 20, padding: "52px 48px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 24 }}>
+              <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008" }}>
+                Make a difference today
+              </div>
+              <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(32px, 3vw, 48px)", lineHeight: 1.05, color: "#FFFFFF", letterSpacing: "-0.03em" }}>
+                Every dollar<br />funds the science.
+              </div>
+              <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.60)", margin: 0, maxWidth: 300 }}>
+                One-time or monthly. No salaries taken. Funds go directly to The Michael J. Fox Foundation for Parkinson&apos;s Research.
+              </p>
               <a
                 zeffy-form-link="https://www.zeffy.com/embed/donation-form/donate-to-find-a-cure-4?modal=true"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "16px 40px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 17, textDecoration: "none", cursor: "pointer" }}
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "16px 48px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 17, textDecoration: "none", cursor: "pointer", width: "100%", justifyContent: "center" }}
               >
                 Donate now
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M6 3l5 5-5 5" />
                 </svg>
               </a>
-              <Script src="https://www.zeffy.com/embed/v2/zeffy-embed.js" strategy="lazyOnload" />
+              <div style={{ display: "flex", flexDirection: "column", gap: 8, width: "100%", borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 24 }}>
+                {["Tax-deductible · 501(c)(3)", "Secure payment via Zeffy", "EIN 82-5107944"].map(item => (
+                  <div key={item} style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", fontWeight: 500 }}>{item}</div>
+                ))}
+              </div>
+              <Script src="https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js" strategy="lazyOnload" />
             </div>
           </div>
         </div>
