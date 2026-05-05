@@ -603,7 +603,8 @@ export default function HomePage() {
                 One-time or monthly. No salaries taken. Funds go directly to The Michael J. Fox Foundation for Parkinson&apos;s Research.
               </p>
               <a
-                zeffy-form-link="https://www.zeffy.com/embed/donation-form/donate-to-find-a-cure-4?modal=true"
+                href="https://www.zeffy.com/embed/donation-form/donate-to-find-a-cure-4?modal=true"
+                {...{ "zeffy-form-link": "https://www.zeffy.com/embed/donation-form/donate-to-find-a-cure-4?modal=true" }}
                 style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "16px 48px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 17, textDecoration: "none", cursor: "pointer", width: "100%", justifyContent: "center" }}
               >
                 Donate now
@@ -616,7 +617,7 @@ export default function HomePage() {
                   <div key={item} style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", fontWeight: 500 }}>{item}</div>
                 ))}
               </div>
-              <Script src="https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js" strategy="lazyOnload" />
+              <Script src="https://zeffy-scripts.s3.ca-central-1.amazonaws.com/embed-form-script.min.js" strategy="afterInteractive" />
             </div>
           </div>
         </div>
