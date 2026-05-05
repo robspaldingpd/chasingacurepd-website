@@ -604,14 +604,7 @@ export default function HomePage() {
                   />
                 </div>
               </div>
-              <Script
-                src="https://www.zeffy.com/embed/v2/zeffy-embed.js"
-                strategy="afterInteractive"
-                onError={() => {
-                  const els = document.querySelectorAll("[data-zeffy-embed-fallback]");
-                  els.forEach((el) => ((el as HTMLElement).style.display = "block"));
-                }}
-              />
+              <Script src="https://www.zeffy.com/embed/v2/zeffy-embed.js" strategy="afterInteractive" />
             </div>
           </div>
         </div>
