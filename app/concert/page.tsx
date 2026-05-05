@@ -340,8 +340,8 @@ export default function ConcertPage() {
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 16 }}>
                 <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)" }}>Donated by</div>
-                <div style={{ background: "#FFFFFF", borderRadius: 8, padding: "8px 16px" }}>
-                  <Image src="/ibc-logo-h.png" alt="Indy Boat Co." width={200} height={32} style={{ objectFit: "cover", objectPosition: "center", display: "block" }} />
+                <div style={{ background: "#FFFFFF", borderRadius: 8, padding: "8px 16px", width: 200, height: 32, overflow: "hidden", position: "relative" }}>
+                  <Image src="/ibc-logo-h.png" alt="Indy Boat Co." fill style={{ objectFit: "cover", objectPosition: "center" }} />
                 </div>
               </div>
             </div>
