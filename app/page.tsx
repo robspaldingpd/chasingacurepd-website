@@ -611,52 +611,40 @@ export default function HomePage() {
       {/* ══════════════════════════
           CONCERT CALLOUT
       ══════════════════════════ */}
-      <section style={{ position: "relative", padding: "80px 24px", overflow: "hidden", backgroundImage: "url('/photos/geist-golden-hour-balloon.jpg')", backgroundSize: "cover", backgroundPosition: "center 60%" }}>
-        <div style={{ maxWidth: 600, margin: "0 auto", position: "relative" }}>
-          <div style={{
-            background: "rgba(255,255,255,0.82)",
-            backdropFilter: "blur(16px)",
-            WebkitBackdropFilter: "blur(16px)",
-            borderRadius: 20,
-            padding: "48px 52px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            textAlign: "center",
-            gap: 20,
-          }}>
-            <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008" }}>
-              Upcoming event
-            </div>
-            <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(26px, 3.5vw, 42px)", lineHeight: 1.05, color: "#000000", margin: 0, letterSpacing: "-0.02em" }}>
-              Concert for a Cure 2026
-            </h2>
-            <p style={{ fontSize: 16, lineHeight: 1.7, color: "rgba(0,0,0,0.70)", margin: 0 }}>
-              An evening at the lake, live music, good company, and one shared purpose. Every ticket, every paddle raised, every raffle ticket. Funds raised benefit The Michael J. Fox Foundation for Parkinson&apos;s Research.
-            </p>
-            <Link
-              href="/concert"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                padding: "14px 32px",
-                background: "#F98008",
-                color: "#FFFFFF",
-                borderRadius: 999,
-                fontFamily: "var(--font-sans)",
-                fontWeight: 700,
-                fontSize: 15,
-                textDecoration: "none",
-                whiteSpace: "nowrap",
-              }}
-            >
-              Learn more
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M6 3l5 5-5 5" />
-              </svg>
-            </Link>
+      <section style={{ position: "relative", padding: "80px 24px", overflow: "hidden", backgroundImage: "url('/photos/geist-golden-hour-balloon.jpg')", backgroundSize: "cover", backgroundPosition: "center 30%" }}>
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(8,8,8,0.80) 0%, rgba(8,8,8,0.50) 50%, rgba(8,8,8,0.0) 100%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 24, position: "relative" }}>
+          <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.80)", marginBottom: -8 }}>
+            Upcoming event
           </div>
+          <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(28px, 3.5vw, 46px)", lineHeight: 1.05, color: "#FFFFFF", margin: 0, letterSpacing: "-0.02em" }}>
+            Concert for a Cure 2026
+          </h2>
+          <p style={{ fontSize: 17, lineHeight: 1.7, color: "rgba(255,255,255,0.90)", margin: 0 }}>
+            An evening at the lake, live music, good company, and one shared purpose. Every ticket, every paddle raised, every raffle ticket. Funds raised benefit The Michael J. Fox Foundation for Parkinson&apos;s Research.
+          </p>
+          <Link
+            href="/concert"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
+              padding: "15px 32px",
+              background: "#FFFFFF",
+              color: "#F98008",
+              borderRadius: 999,
+              fontFamily: "var(--font-sans)",
+              fontWeight: 700,
+              fontSize: 15,
+              textDecoration: "none",
+              whiteSpace: "nowrap",
+            }}
+          >
+            Learn more
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M6 3l5 5-5 5" />
+            </svg>
+          </Link>
         </div>
       </section>
 
