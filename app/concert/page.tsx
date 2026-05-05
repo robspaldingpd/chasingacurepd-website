@@ -96,14 +96,6 @@ export default function ConcertPage() {
               <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.65)", margin: "0 0 28px", flex: 1 }}>
                 An afternoon at the lake. Live music, chef-curated food and cocktails, live auction, and the raffle draw. Limited to 100 guests.
               </p>
-              <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 28 }}>
-                {["Live music", "Chef-curated food + cocktails", "Live auction", "Raffle winner announced"].map(item => (
-                  <div key={item} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: "rgba(255,255,255,0.55)" }}>
-                    <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#F98008", display: "inline-block", flexShrink: 0 }} />
-                    {item}
-                  </div>
-                ))}
-              </div>
               <a href="#tickets" style={{ display: "block", padding: "13px 0", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
                 Get Tickets
               </a>
@@ -136,7 +128,7 @@ export default function ConcertPage() {
               <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 36, color: "#FFFFFF", lineHeight: 1, marginBottom: 8 }}>50%</div>
               <div style={{ fontSize: 13, color: "rgba(255,255,255,0.4)", marginBottom: 20 }}>of the total pot to the winner</div>
               <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.65)", margin: "0 0 28px", flex: 1 }}>
-                The more tickets sold, the bigger the prize. Winner takes half the pot; the other half funds Parkinson&apos;s research.
+                The more tickets sold, the bigger the prize. Winner takes half the pot; the other half funds Parkinson&apos;s research. You do not need to be present to win.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 28 }}>
                 {["$25 — 5 tickets", "$50 — 15 tickets", "$100 — 40 tickets", "$200 — 100 tickets", "$500 — 400 tickets"].map(item => (
