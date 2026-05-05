@@ -103,7 +103,7 @@ export default function HomePage() {
         }}
       >
         {/* Strong dark overlay, indoor photo needs uniform darkening for text legibility */}
-        <div aria-hidden style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(8,8,8,0.92) 0%, rgba(8,8,8,0.85) 45%, rgba(8,8,8,0.60) 75%, rgba(8,8,8,0.40) 100%)", pointerEvents: "none" }} />
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(8,8,8,0.72) 0%, rgba(8,8,8,0.60) 45%, rgba(8,8,8,0.35) 75%, rgba(8,8,8,0.15) 100%)", pointerEvents: "none" }} />
 
         <div style={{ maxWidth: 1200, margin: "0 auto", width: "100%", position: "relative" }}>
 
