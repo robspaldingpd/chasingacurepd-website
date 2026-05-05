@@ -592,16 +592,16 @@ export default function HomePage() {
                 />
               </div>
             </div>
-            <div>
-              <div data-zeffy-embed="" data-form-url="/embed/donation-form/donate-to-find-a-cure-4" />
-              <div data-zeffy-embed-fallback="" style={{ display: "none" }}>
-                <iframe
-                  title="Donation form powered by Zeffy"
-                  style={{ border: 0, width: "100%", height: 560, display: "block" }}
-                  src="https://www.zeffy.com/embed/donation-form/donate-to-find-a-cure-4"
-                  allow="payment"
-                />
-              </div>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 16 }}>
+              <a
+                zeffy-form-link="https://www.zeffy.com/embed/donation-form/donate-to-find-a-cure-4?modal=true"
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "16px 40px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 17, textDecoration: "none", cursor: "pointer" }}
+              >
+                Donate now
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M6 3l5 5-5 5" />
+                </svg>
+              </a>
               <Script src="https://www.zeffy.com/embed/v2/zeffy-embed.js" strategy="lazyOnload" />
             </div>
           </div>
