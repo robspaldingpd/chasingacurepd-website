@@ -612,15 +612,14 @@ export default function HomePage() {
           CONCERT CALLOUT
       ══════════════════════════ */}
       <section style={{ position: "relative", padding: "80px 24px", overflow: "hidden", backgroundImage: "url('/photos/geist-golden-hour-balloon.jpg')", backgroundSize: "cover", backgroundPosition: "center 60%" }}>
-        <div aria-hidden style={{ position: "absolute", inset: 0, background: "rgba(8,8,8,0.70)" }} />
         <div style={{ maxWidth: 700, margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 24, position: "relative" }}>
-          <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.70)", marginBottom: -8 }}>
+          <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(0,0,0,0.55)", marginBottom: -8 }}>
             Upcoming event
           </div>
-          <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(28px, 3.5vw, 46px)", lineHeight: 1.05, color: "#FFF", margin: 0, letterSpacing: "-0.02em" }}>
+          <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(28px, 3.5vw, 46px)", lineHeight: 1.05, color: "#000000", margin: 0, letterSpacing: "-0.02em" }}>
             Concert for a Cure 2026
           </h2>
-          <p style={{ fontSize: 17, lineHeight: 1.7, color: "rgba(255,255,255,0.85)", margin: 0 }}>
+          <p style={{ fontSize: 17, lineHeight: 1.7, color: "rgba(0,0,0,0.75)", margin: 0 }}>
             An evening at the lake, live music, good company, and one shared purpose. Every ticket, every paddle raised, every raffle ticket. Funds raised benefit The Michael J. Fox Foundation for Parkinson&apos;s Research.
           </p>
           <Link
@@ -630,8 +629,8 @@ export default function HomePage() {
               alignItems: "center",
               gap: 8,
               padding: "15px 32px",
-              background: "#FFFFFF",
-              color: "#F98008",
+              background: "#F98008",
+              color: "#FFFFFF",
               borderRadius: 999,
               fontFamily: "var(--font-sans)",
               fontWeight: 700,
