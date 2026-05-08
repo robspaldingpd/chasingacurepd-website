@@ -27,7 +27,7 @@ export default function Nav() {
     ? "1px solid rgba(0,0,0,0.07)"
     : "1px solid rgba(255,255,255,0.10)";
   const linkColor = scrolled ? "#1A1A1A" : "rgba(255,255,255,0.88)";
-  const subColor = scrolled ? "#E87300" : "#E8C0C0";
+  const subColor = scrolled ? "#E87300" : "#EDC2C1";
   const wordmarkColor = scrolled ? "#000000" : "#FFFFFF";
 
   return (
