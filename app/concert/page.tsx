@@ -407,7 +407,9 @@ export default function ConcertPage() {
                   <div style={{ fontSize: 14, color: "#6B6F7D" }}>{tier.tickets}</div>
                 </div>
                 <a
-                  href={`mailto:wendy@chasingacurepd.org?subject=Concert for a Cure 2026 - 50/50 Raffle - ${tier.tickets} (${tier.price})`}
+                  href="https://www.rafflebox.us/raffle/ccpf5050"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{ padding: "8px 20px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 13, textDecoration: "none" }}
                 >
                   Buy
