@@ -96,7 +96,7 @@ export default function RaffleTicketButton({ url, raffleName, style, children }:
               You&apos;ll be taken to <strong style={{ color: "#000000" }}>RaffleBox</strong>, our
               secure ticketing partner licensed through the{" "}
               <strong style={{ color: "#000000" }}>Indiana Gaming Commission</strong>, to complete
-              your purchase. All proceeds fund Parkinson&apos;s research.
+              your purchase. Proceeds fund Parkinson&apos;s research.
             </p>
 
             <a
