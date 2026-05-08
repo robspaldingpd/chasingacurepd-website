@@ -22,19 +22,19 @@ export default function ConcertPage() {
       {/* ── HERO ── */}
       <section
         style={{
-          minHeight: "100vh",
+          minHeight: "72vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: "100px 24px 80px",
+          padding: "80px 24px 64px",
           position: "relative",
           overflow: "hidden",
           backgroundImage: "url('/photos/geist-juicebox-cove.png')",
           backgroundSize: "cover",
-          backgroundPosition: "center 40%",
+          backgroundPosition: "center 50%",
         }}
       >
-        <div aria-hidden style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(8,8,8,0.55) 0%, rgba(8,8,8,0.42) 45%, rgba(8,8,8,0.20) 75%, rgba(8,8,8,0.05) 100%)", pointerEvents: "none" }} />
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(8,8,8,0.78) 0%, rgba(8,8,8,0.60) 45%, rgba(8,8,8,0.25) 75%, rgba(8,8,8,0.05) 100%)", pointerEvents: "none" }} />
 
         <div style={{ maxWidth: 1200, margin: "0 auto", width: "100%", position: "relative" }}>
           <div style={{ maxWidth: 680 }}>
