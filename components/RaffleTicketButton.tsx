@@ -94,8 +94,9 @@ export default function RaffleTicketButton({ url, raffleName, style, children }:
 
             <p style={{ fontSize: 15, lineHeight: 1.65, color: "#6B6F7D", margin: "0 0 28px" }}>
               You&apos;ll be taken to <strong style={{ color: "#000000" }}>RaffleBox</strong>, our
-              secure ticketing partner, to complete your purchase. All proceeds fund
-              Parkinson&apos;s research.
+              secure ticketing partner licensed through the{" "}
+              <strong style={{ color: "#000000" }}>Indiana Gaming Commission</strong>, to complete
+              your purchase. All proceeds fund Parkinson&apos;s research.
             </p>
 
             <a
