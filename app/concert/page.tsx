@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import ConcertFAQ from "@/components/ConcertFAQ";
+import RaffleTicketButton from "@/components/RaffleTicketButton";
 
 export const metadata: Metadata = {
   title: "Concert for a Cure 2026 | Chasing a Cure PD",
@@ -351,9 +352,13 @@ export default function ConcertPage() {
                       <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 20, color: "#FFFFFF" }}>{tier.price}</div>
                       <div style={{ fontSize: 13, color: "rgba(255,255,255,0.4)" }}>{tier.tickets}</div>
                     </div>
-                    <a href="https://www.rafflebox.us/raffle/ccpf" target="_blank" rel="noopener noreferrer" style={{ padding: "8px 18px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 13, textDecoration: "none" }}>
+                    <RaffleTicketButton
+                      url="https://www.rafflebox.us/raffle/ccpf"
+                      raffleName="Boat Raffle"
+                      style={{ padding: "8px 18px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 13 }}
+                    >
                       Buy
-                    </a>
+                    </RaffleTicketButton>
                   </div>
                 ))}
               </div>
@@ -406,14 +411,13 @@ export default function ConcertPage() {
                   <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 22, color: "#000000" }}>{tier.price}</div>
                   <div style={{ fontSize: 14, color: "#6B6F7D" }}>{tier.tickets}</div>
                 </div>
-                <a
-                  href="https://www.rafflebox.us/raffle/ccpf5050"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ padding: "8px 20px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 13, textDecoration: "none" }}
+                <RaffleTicketButton
+                  url="https://www.rafflebox.us/raffle/ccpf5050"
+                  raffleName="50/50 Raffle"
+                  style={{ padding: "8px 20px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 13 }}
                 >
                   Buy
-                </a>
+                </RaffleTicketButton>
               </div>
             ))}
           </div>
