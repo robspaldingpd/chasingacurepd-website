@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description:
       "Live music, chef-curated food, and a $25K boat raffle. Saturday, July 18, 2026 · 2–6 PM · Fishers, Indiana. Funds benefit The Michael J. Fox Foundation.",
     url: "https://chasingacurepd.org/concert",
-    images: [{ url: "/photos/geist-afternoon-boats.jpg", width: 943, height: 231, alt: "Boats on Geist Reservoir — Concert for a Cure 2026" }],
+    images: [{ url: "/photos/geist-juicebox-cove.png", width: 1200, height: 400, alt: "Boats on Geist Reservoir — Concert for a Cure 2026" }],
   },
 };
 
@@ -29,7 +29,7 @@ export default function ConcertPage() {
           padding: "100px 24px 80px",
           position: "relative",
           overflow: "hidden",
-          backgroundImage: "url('/photos/geist-afternoon-boats.jpg')",
+          backgroundImage: "url('/photos/geist-juicebox-cove.png')",
           backgroundSize: "cover",
           backgroundPosition: "center 40%",
         }}
