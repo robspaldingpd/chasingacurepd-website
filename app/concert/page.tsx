@@ -109,7 +109,7 @@ export default function ConcertPage() {
               <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.65)", margin: "0 0 28px", flex: 1 }}>
                 Win a Starcraft boat donated by Indy Boat Co. Winner drawn live at the event. You do not need to be present to win.
               </p>
-              <a href="https://www.rafflebox.us/raffle/ccpf" target="_blank" rel="noopener noreferrer" style={{ display: "block", padding: "13px 0", background: "transparent", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
+              <a href="#raffle" style={{ display: "block", padding: "13px 0", background: "transparent", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
                 Buy Raffle Tickets
               </a>
             </div>
@@ -351,7 +351,7 @@ export default function ConcertPage() {
                       <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 20, color: "#FFFFFF" }}>{tier.price}</div>
                       <div style={{ fontSize: 13, color: "rgba(255,255,255,0.4)" }}>{tier.tickets}</div>
                     </div>
-                    <a href="mailto:wendy@chasingacurepd.org?subject=Concert for a Cure 2026 - Raffle Tickets" style={{ padding: "8px 18px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 13, textDecoration: "none" }}>
+                    <a href="https://www.rafflebox.us/raffle/ccpf" target="_blank" rel="noopener noreferrer" style={{ padding: "8px 18px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 13, textDecoration: "none" }}>
                       Buy
                     </a>
                   </div>
