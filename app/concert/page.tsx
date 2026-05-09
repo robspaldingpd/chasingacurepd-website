@@ -86,7 +86,7 @@ export default function ConcertPage() {
             You don&apos;t need an invitation to help end Parkinson&apos;s disease.
           </h2>
           <p style={{ fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.55)", textAlign: "center", maxWidth: 560, margin: "0 auto 48px" }}>
-            Concert for a Cure is a private lakeside benefit with limited invited guest attendance. Public sponsorship, raffle, and giving opportunities are open now for individuals and businesses who want to help end Parkinson&apos;s disease by funding the science behind breakthroughs.
+            Concert for a Cure is an intimate lakeside benefit. While attendance is limited by capacity, everyone can be part of the mission by helping fund the science behind breakthroughs through sponsorship, raffle participation, and giving.
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }} className="participate-grid">
