@@ -66,9 +66,12 @@ export default function ConcertPage() {
               </a>
               <a
                 href="#fifty-fifty"
-                style={{ display: "inline-flex", alignItems: "center", padding: "15px 28px", background: "#FFFFFF", color: "#111111", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none" }}
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "15px 28px", background: "#FFFFFF", color: "#111111", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none", letterSpacing: "-0.01em" }}
               >
                 50/50 Raffle
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M6 3l5 5-5 5" />
+                </svg>
               </a>
             </div>
           </div>
