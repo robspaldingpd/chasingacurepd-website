@@ -24,11 +24,11 @@ export default function ConcertPage() {
       {/* ── HERO ── */}
       <section
         style={{
-          minHeight: "72vh",
+          minHeight: "80vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: "80px 24px 64px",
+          padding: "100px 24px 80px",
           position: "relative",
           overflow: "hidden",
           backgroundImage: "url('/photos/geist-juicebox-cove.png')",
@@ -36,52 +36,46 @@ export default function ConcertPage() {
           backgroundPosition: "center 50%",
         }}
       >
-        <div aria-hidden style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(8,8,8,0.78) 0%, rgba(8,8,8,0.60) 45%, rgba(8,8,8,0.25) 75%, rgba(8,8,8,0.05) 100%)", pointerEvents: "none" }} />
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at center, rgba(8,8,8,0.55) 0%, rgba(8,8,8,0.75) 100%)", pointerEvents: "none" }} />
 
-        <div style={{ maxWidth: 1200, margin: "0 auto", width: "100%", position: "relative" }}>
-          <div style={{ maxWidth: 680 }}>
-            <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 20, alignItems: "flex-start" }}>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 16px", background: "rgba(255,255,255,0.10)", border: "1px solid rgba(255,255,255,0.30)", borderRadius: 999 }}>
-                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#F98008", display: "inline-block", flexShrink: 0 }} />
-                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#FFFFFF" }}>
-                  By Invitation Only
-                </span>
-              </div>
-              <div style={{ display: "inline-flex", alignItems: "center", padding: "8px 20px", background: "#F98008", borderRadius: 999 }}>
-                <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#FFFFFF" }}>
-                  Saturday, July 18, 2026 · 2–6 PM · Juicebox Cove at Geist
-                </span>
-              </div>
-            </div>
+        <div style={{ maxWidth: 800, margin: "0 auto", width: "100%", position: "relative", textAlign: "center" }}>
 
-            <h1 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(40px, 6vw, 80px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "#FFFFFF", margin: "0 0 16px", textWrap: "auto" as const }}>
-              Concert for<br />a Cure.
-            </h1>
-            <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 400, fontSize: "clamp(22px, 2.8vw, 36px)", lineHeight: 1.2, color: "#F98008", margin: "0 0 28px", textWrap: "auto" as const }}>
-              Afternoon at the lake. One shared purpose.
-            </p>
+          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 400, fontSize: "clamp(18px, 2vw, 24px)", color: "rgba(255,255,255,0.65)", margin: "0 0 24px", letterSpacing: "0.01em" }}>
+            By Invitation Only
+          </p>
 
-            <p style={{ fontSize: "clamp(15px, 1.6vw, 17px)", lineHeight: 1.6, color: "#FFFFFF", margin: "0 0 32px", maxWidth: 520 }}>
-              An intimate gathering of 100 guests. Live music, great company, and every ticket funds Parkinson&apos;s research through The Michael J. Fox Foundation.
-            </p>
+          <h1 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(48px, 7vw, 96px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "#FFFFFF", margin: "0 0 20px" }}>
+            Concert for a Cure.
+          </h1>
 
-            <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-              <a
-                href="#participate"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "15px 36px", background: "#F98008", color: "#fff", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none", letterSpacing: "-0.01em" }}
-              >
-                Ways to Participate
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M6 3l5 5-5 5" />
-                </svg>
-              </a>
-              <a
-                href="#sponsor"
-                style={{ display: "inline-flex", alignItems: "center", padding: "15px 28px", background: "#FFFFFF", color: "#111111", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none" }}
-              >
-                Sponsorship
-              </a>
-            </div>
+          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 400, fontSize: "clamp(22px, 2.8vw, 36px)", lineHeight: 1.2, color: "#F98008", margin: "0 0 28px" }}>
+            Afternoon at the lake. One shared purpose.
+          </p>
+
+          <p style={{ fontSize: 13, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.45)", margin: "0 0 32px" }}>
+            Saturday, July 18, 2026 &nbsp;·&nbsp; 2–6 PM &nbsp;·&nbsp; Juicebox Cove at Geist
+          </p>
+
+          <p style={{ fontSize: "clamp(15px, 1.6vw, 17px)", lineHeight: 1.7, color: "rgba(255,255,255,0.80)", margin: "0 auto 40px", maxWidth: 500 }}>
+            An intimate gathering of 100 guests. Live music, great company, and every ticket funds Parkinson&apos;s research through The Michael J. Fox Foundation.
+          </p>
+
+          <div style={{ display: "flex", gap: 14, flexWrap: "wrap", justifyContent: "center" }}>
+            <a
+              href="#participate"
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "15px 36px", background: "#F98008", color: "#fff", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none", letterSpacing: "-0.01em" }}
+            >
+              Ways to Participate
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M6 3l5 5-5 5" />
+              </svg>
+            </a>
+            <a
+              href="#sponsor"
+              style={{ display: "inline-flex", alignItems: "center", padding: "15px 28px", background: "#FFFFFF", color: "#111111", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none" }}
+            >
+              Sponsorship
+            </a>
           </div>
         </div>
       </section>
