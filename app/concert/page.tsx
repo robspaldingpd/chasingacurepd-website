@@ -79,13 +79,13 @@ export default function ConcertPage() {
       <section style={{ background: "#1A1A1A", padding: "80px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", textAlign: "center", marginBottom: 16 }}>
-            Open to everyone
+            Join the movement
           </div>
           <h2 style={{ fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif", fontWeight: 400, fontSize: "clamp(26px, 3vw, 38px)", color: "#FFFFFF", textAlign: "center", margin: "0 auto 16px", maxWidth: 600, lineHeight: 1.2 }}>
-            You don&apos;t need an invitation to help end Parkinson&apos;s disease.
+            Everyone has a role in ending Parkinson&apos;s disease.
           </h2>
           <p style={{ fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.55)", textAlign: "center", maxWidth: 560, margin: "0 auto 48px" }}>
-            Concert for a Cure is an intimate lakeside benefit. While attendance is limited by capacity, everyone can be part of the mission by helping fund the science behind breakthroughs through sponsorship, raffle participation, and giving.
+            Concert for a Cure is a lakeside benefit for Parkinson&apos;s research, featuring a $25,000 Starcraft boat raffle. Every act of support moves the science forward.
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }} className="participate-grid">
