@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
 import RaffleTicketButton from "@/components/RaffleTicketButton";
 
@@ -394,44 +393,6 @@ export default function ConcertPage() {
         </div>
       </section>
 
-      {/* ── CLOSING CTA ── */}
-      <section style={{ background: "#1A1A1A", padding: "80px 24px", textAlign: "center" }}>
-        <div style={{ maxWidth: 560, margin: "0 auto" }}>
-          <h2
-            style={{
-              fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif",
-              fontWeight: 400,
-              fontSize: "clamp(28px, 3.5vw, 40px)",
-              lineHeight: 1.2,
-              color: "#FFFFFF",
-              margin: "0 0 16px",
-            }}
-          >
-            Can&apos;t make it? Still fund the science.
-          </h2>
-          <p style={{ fontSize: 17, lineHeight: 1.7, color: "rgba(255,255,255,0.65)", margin: "0 0 36px" }}>
-            No salaries. No paid staff. Funds raised benefit The Michael J. Fox Foundation for Parkinson&apos;s Research.
-          </p>
-          <Link
-            href="/donate"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              padding: "16px 40px",
-              background: "#F98008",
-              color: "#fff",
-              borderRadius: 999,
-              fontFamily: "var(--font-inter), sans-serif",
-              fontWeight: 700,
-              fontSize: 17,
-              textDecoration: "none",
-            }}
-          >
-            Donate Online
-          </Link>
-        </div>
-      </section>
 
       <style>{`
         @media (max-width: 900px) {
