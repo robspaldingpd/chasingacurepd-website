@@ -40,7 +40,7 @@ export default function ConcertPage() {
           <div style={{ maxWidth: 680 }}>
             <div style={{ display: "inline-flex", alignItems: "center", marginBottom: 20, padding: "8px 20px", background: "#F98008", borderRadius: 999 }}>
               <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#FFFFFF" }}>
-                Saturday, July 18, 2026 · 2–6 PM · Fishers, Indiana
+                Saturday, July 18, 2026 · 2–6 PM · Juicebox Cove at Geist
               </span>
             </div>
 
