@@ -40,10 +40,18 @@ export default function ConcertPage() {
 
         <div style={{ maxWidth: 1200, margin: "0 auto", width: "100%", position: "relative" }}>
           <div style={{ maxWidth: 680 }}>
-            <div style={{ display: "inline-flex", alignItems: "center", marginBottom: 20, padding: "8px 20px", background: "#F98008", borderRadius: 999 }}>
-              <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#FFFFFF" }}>
-                Saturday, July 18, 2026 · 2–6 PM · Fishers, Indiana
-              </span>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 20, alignItems: "flex-start" }}>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 16px", background: "rgba(255,255,255,0.10)", border: "1px solid rgba(255,255,255,0.30)", borderRadius: 999 }}>
+                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#F98008", display: "inline-block", flexShrink: 0 }} />
+                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#FFFFFF" }}>
+                  By Invitation Only
+                </span>
+              </div>
+              <div style={{ display: "inline-flex", alignItems: "center", padding: "8px 20px", background: "#F98008", borderRadius: 999 }}>
+                <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#FFFFFF" }}>
+                  Saturday, July 18, 2026 · 2–6 PM · Juicebox Cove at Geist
+                </span>
+              </div>
             </div>
 
             <h1 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(40px, 6vw, 80px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "#FFFFFF", margin: "0 0 16px", textWrap: "auto" as const }}>
@@ -54,7 +62,7 @@ export default function ConcertPage() {
             </p>
 
             <p style={{ fontSize: "clamp(15px, 1.6vw, 17px)", lineHeight: 1.6, color: "#FFFFFF", margin: "0 0 32px", maxWidth: 520 }}>
-              Live music, great company, and every ticket funds Parkinson&apos;s research through The Michael J. Fox Foundation.
+              An intimate gathering of 100 guests. Live music, great company, and every ticket funds Parkinson&apos;s research through The Michael J. Fox Foundation.
             </p>
 
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
@@ -163,7 +171,7 @@ export default function ConcertPage() {
                 marginBottom: 16,
               }}
             >
-              About the afternoon
+              By Invitation · 100 Guests
             </div>
             <h2
               style={{
@@ -179,12 +187,12 @@ export default function ConcertPage() {
               Come because it&apos;s a great time.<br />Stay because it matters.
             </h2>
             <p style={{ fontSize: 17, lineHeight: 1.75, color: "#2B2B2B", margin: "0 0 20px" }}>
-              Concert for a Cure is an afternoon at the lake, live music, good company,
-              and one shared purpose. Hosted at Wendy and Rob&apos;s lake home on
+              Concert for a Cure is an invitation-only afternoon at the lake — live music, good company,
+              and one shared purpose. Limited to 100 guests, hosted at Wendy and Rob&apos;s lake home on
               Geist Reservoir in Fishers, Indiana.
             </p>
             <p style={{ fontSize: 17, lineHeight: 1.75, color: "#2B2B2B", margin: "0 0 20px", textWrap: "auto" as const }}>
-              This is not a gala. It&apos;s not a corporate event. It&apos;s a gathering
+              This is not a gala. It&apos;s not a corporate event. It&apos;s a curated gathering
               of people who believe the science is close, and who want to be part of
               getting it there.
             </p>
