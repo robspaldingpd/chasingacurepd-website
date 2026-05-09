@@ -112,9 +112,9 @@ export default function ConcertPage() {
               </p>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
                 <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", whiteSpace: "nowrap" }}>Donated by</span>
-                <div style={{ background: "#FFFFFF", borderRadius: 6, padding: "5px 10px", display: "inline-flex", alignItems: "center" }}>
+                <a href="https://indyboatco.com" target="_blank" rel="noopener noreferrer" style={{ background: "#FFFFFF", borderRadius: 6, padding: "5px 10px", display: "inline-flex", alignItems: "center" }}>
                   <img src="/ibc-logo-h.png" alt="Indy Boat Co." style={{ width: 80, height: 20, objectFit: "cover", objectPosition: "center", display: "block" }} />
-                </div>
+                </a>
               </div>
               <a href="#raffle" style={{ display: "block", padding: "13px 0", background: "transparent", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
                 Buy Raffle Tickets
@@ -301,11 +301,19 @@ export default function ConcertPage() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
 
           {/* Header */}
-          <div style={{ marginBottom: 20 }}>
-            <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008", marginBottom: 10 }}>Boat Raffle</div>
-            <h2 style={{ fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif", fontWeight: 400, fontSize: "clamp(28px, 3.5vw, 48px)", color: "#FFFFFF", margin: 0, lineHeight: 1.15 }}>
-              Win a $25,000 boat.<br />Fund a breakthrough.
-            </h2>
+          <div style={{ marginBottom: 20, display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap" }}>
+            <div>
+              <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008", marginBottom: 10 }}>Boat Raffle</div>
+              <h2 style={{ fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif", fontWeight: 400, fontSize: "clamp(28px, 3.5vw, 48px)", color: "#FFFFFF", margin: 0, lineHeight: 1.15 }}>
+                Win a $25,000 boat.<br />Fund a breakthrough.
+              </h2>
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, paddingTop: 4 }}>
+              <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", whiteSpace: "nowrap" }}>Donated by</span>
+              <a href="https://indyboatco.com" target="_blank" rel="noopener noreferrer" style={{ background: "#FFFFFF", borderRadius: 6, padding: "5px 10px", display: "inline-flex", alignItems: "center" }}>
+                <img src="/ibc-logo-h.png" alt="Indy Boat Co." style={{ width: 100, height: 25, objectFit: "cover", objectPosition: "center", display: "block" }} />
+              </a>
+            </div>
           </div>
 
           {/* Boat image + details */}
@@ -546,9 +554,9 @@ export default function ConcertPage() {
                 Presented by <strong style={{ color: "#FFFFFF" }}>Indy Boat Co.</strong> With Indy Boat Co. anchoring the event as Title Sponsor, the room has its lead. We are deeply grateful for their partnership and the standard it sets for this year.
               </div>
             </div>
-            <div style={{ background: "#FFFFFF", borderRadius: 8, padding: "8px 16px", flexShrink: 0 }}>
+            <a href="https://indyboatco.com" target="_blank" rel="noopener noreferrer" style={{ background: "#FFFFFF", borderRadius: 8, padding: "8px 16px", flexShrink: 0, display: "inline-flex", alignItems: "center" }}>
               <img src="/ibc-logo-h.png" alt="Indy Boat Co." style={{ width: 160, height: 40, objectFit: "cover", objectPosition: "center", display: "block" }} />
-            </div>
+            </a>
           </div>
 
           {/* Open tiers */}
