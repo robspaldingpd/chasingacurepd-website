@@ -161,17 +161,11 @@ export default function ConcertPage() {
           className="two-col"
         >
           <div>
-            <div
-              style={{
-                fontSize: 11,
-                fontWeight: 600,
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-                color: "#6B6F7D",
-                marginBottom: 16,
-              }}
-            >
-              By Invitation · 100 Guests
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "7px 18px", background: "#1A1A1A", borderRadius: 999, marginBottom: 20 }}>
+              <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#F98008", display: "inline-block", flexShrink: 0 }} />
+              <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#FFFFFF" }}>
+                By Invitation Only
+              </span>
             </div>
             <h2
               style={{
