@@ -52,8 +52,7 @@ export default function ConcertPage() {
             </p>
 
             <p style={{ fontSize: "clamp(15px, 1.6vw, 17px)", lineHeight: 1.6, color: "#FFFFFF", margin: "0 0 32px", maxWidth: 520 }}>
-              A private lakeside benefit with limited invited guest attendance.
-              Public sponsorship, raffle, and giving opportunities are open now.
+              Anchor your boat up at Juicebox Cove and enjoy live music on the water. July 18, 2026.
             </p>
 
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
@@ -87,7 +86,7 @@ export default function ConcertPage() {
             You don&apos;t need an invitation to help end Parkinson&apos;s disease.
           </h2>
           <p style={{ fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.55)", textAlign: "center", maxWidth: 560, margin: "0 auto 48px" }}>
-            Concert for a Cure is a private lakeside benefit with limited invited guest attendance. Sponsorship, raffle, and giving opportunities are open now for individuals and businesses who want to fund the science behind breakthroughs.
+            Concert for a Cure is a private lakeside benefit with limited invited guest attendance. Public sponsorship, raffle, and giving opportunities are open now for individuals and businesses who want to help end Parkinson&apos;s disease by funding the science behind breakthroughs.
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }} className="participate-grid">
