@@ -36,17 +36,17 @@ export default function ConcertPage() {
           backgroundPosition: "center 50%",
         }}
       >
-        {/* Subtle edge vignette only — keeps photo bright */}
-        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.28) 100%)", pointerEvents: "none" }} />
-
         <div style={{ maxWidth: 680, margin: "0 auto", width: "100%", position: "relative" }}>
 
-          {/* Dark invitation card */}
+          {/* Frosted glass invitation card */}
           <div style={{
-            background: "#1A1A1A",
+            background: "rgba(8,8,8,0.52)",
+            backdropFilter: "blur(28px) saturate(1.2)",
+            WebkitBackdropFilter: "blur(28px) saturate(1.2)",
             borderRadius: 20,
-            padding: "56px 64px",
-            boxShadow: "0 24px 80px rgba(0,0,0,0.40), 0 4px 16px rgba(0,0,0,0.24)",
+            padding: "56px 56px",
+            border: "1px solid rgba(255,255,255,0.14)",
+            boxShadow: "0 24px 80px rgba(0,0,0,0.28)",
             textAlign: "center",
           }}>
 
