@@ -28,7 +28,7 @@ export default function ConcertPage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: "120px 24px 100px",
+          padding: "100px 24px 80px",
           position: "relative",
           overflow: "hidden",
           backgroundImage: "url('/photos/geist-juicebox-cove.png')",
@@ -36,59 +36,70 @@ export default function ConcertPage() {
           backgroundPosition: "center 50%",
         }}
       >
-        {/* Deep centered vignette */}
-        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at 50% 60%, rgba(8,8,8,0.62) 0%, rgba(8,8,8,0.90) 100%)", pointerEvents: "none" }} />
+        {/* Subtle edge vignette only — keeps photo bright */}
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.28) 100%)", pointerEvents: "none" }} />
 
-        <div style={{ maxWidth: 860, margin: "0 auto", width: "100%", position: "relative", textAlign: "center" }}>
+        <div style={{ maxWidth: 680, margin: "0 auto", width: "100%", position: "relative" }}>
 
-          {/* By Invitation Only — flanked by rules */}
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 20, marginBottom: 40 }}>
-            <div style={{ flex: 1, maxWidth: 72, height: 1, background: "rgba(255,255,255,0.35)" }} />
-            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(255,255,255,0.90)", whiteSpace: "nowrap", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>
-              By Invitation Only
-            </span>
-            <div style={{ flex: 1, maxWidth: 72, height: 1, background: "rgba(255,255,255,0.35)" }} />
-          </div>
+          {/* Dark invitation card */}
+          <div style={{
+            background: "#1A1A1A",
+            borderRadius: 20,
+            padding: "56px 64px",
+            boxShadow: "0 24px 80px rgba(0,0,0,0.40), 0 4px 16px rgba(0,0,0,0.24)",
+            textAlign: "center",
+          }}>
 
-          {/* Heading — single line */}
-          <h1 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(36px, 5.2vw, 76px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "#FFFFFF", margin: "0 0 24px", whiteSpace: "nowrap", textShadow: "0 2px 16px rgba(0,0,0,0.5)" }}>
-            Concert for a Cure.
-          </h1>
+            {/* By Invitation Only — flanked by rules */}
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, marginBottom: 36 }}>
+              <div style={{ flex: 1, maxWidth: 64, height: 1, background: "rgba(255,255,255,0.18)" }} />
+              <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(255,255,255,0.55)", whiteSpace: "nowrap" }}>
+                By Invitation Only
+              </span>
+              <div style={{ flex: 1, maxWidth: 64, height: 1, background: "rgba(255,255,255,0.18)" }} />
+            </div>
 
-          {/* Italic subtitle */}
-          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 400, fontSize: "clamp(20px, 2.5vw, 32px)", lineHeight: 1.2, color: "#F98008", margin: "0 0 36px", textShadow: "0 1px 10px rgba(0,0,0,0.5)" }}>
-            Afternoon at the lake. One shared purpose.
-          </p>
+            {/* Heading */}
+            <h1 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(36px, 5vw, 68px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "#FFFFFF", margin: "0 0 20px", whiteSpace: "nowrap" }}>
+              Concert for a Cure.
+            </h1>
 
-          {/* Thin rule */}
-          <div style={{ width: 48, height: 1, background: "rgba(255,255,255,0.28)", margin: "0 auto 28px" }} />
+            {/* Italic subtitle */}
+            <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 400, fontSize: "clamp(18px, 2.2vw, 28px)", lineHeight: 1.2, color: "#F98008", margin: "0 0 32px" }}>
+              Afternoon at the lake. One shared purpose.
+            </p>
 
-          {/* Date */}
-          <p style={{ fontSize: 13, fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: "#FFFFFF", margin: "0 0 36px", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>
-            Saturday, July 18, 2026 &nbsp;&middot;&nbsp; 2–6 PM &nbsp;&middot;&nbsp; Juicebox Cove at Geist
-          </p>
+            {/* Thin rule */}
+            <div style={{ width: 40, height: 1, background: "rgba(255,255,255,0.14)", margin: "0 auto 24px" }} />
 
-          {/* Body */}
-          <p style={{ fontSize: "clamp(15px, 1.6vw, 17px)", lineHeight: 1.75, color: "rgba(255,255,255,0.92)", margin: "0 auto 48px", maxWidth: 480, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>
-            An intimate gathering of 100 guests. Live music, great company, and every ticket funds Parkinson&apos;s research through The Michael J. Fox Foundation.
-          </p>
+            {/* Date */}
+            <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(255,255,255,0.60)", margin: "0 0 28px" }}>
+              Saturday, July 18, 2026 &nbsp;&middot;&nbsp; 2–6 PM &nbsp;&middot;&nbsp; Juicebox Cove at Geist
+            </p>
 
-          <div style={{ display: "flex", gap: 14, flexWrap: "wrap", justifyContent: "center" }}>
-            <a
-              href="#participate"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "15px 36px", background: "#F98008", color: "#fff", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none", letterSpacing: "-0.01em" }}
-            >
-              Ways to Participate
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M6 3l5 5-5 5" />
-              </svg>
-            </a>
-            <a
-              href="#sponsor"
-              style={{ display: "inline-flex", alignItems: "center", padding: "15px 28px", background: "rgba(255,255,255,0.12)", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.35)", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none" }}
-            >
-              Sponsorship
-            </a>
+            {/* Body */}
+            <p style={{ fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.72)", margin: "0 auto 40px", maxWidth: 440 }}>
+              An intimate gathering of 100 guests. Live music, great company, and every ticket funds Parkinson&apos;s research through The Michael J. Fox Foundation.
+            </p>
+
+            <div style={{ display: "flex", gap: 14, flexWrap: "wrap", justifyContent: "center" }}>
+              <a
+                href="#participate"
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "14px 32px", background: "#F98008", color: "#fff", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 15, textDecoration: "none", letterSpacing: "-0.01em" }}
+              >
+                Ways to Participate
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M6 3l5 5-5 5" />
+                </svg>
+              </a>
+              <a
+                href="#sponsor"
+                style={{ display: "inline-flex", alignItems: "center", padding: "14px 28px", background: "transparent", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.22)", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 15, textDecoration: "none" }}
+              >
+                Sponsorship
+              </a>
+            </div>
+
           </div>
         </div>
       </section>
