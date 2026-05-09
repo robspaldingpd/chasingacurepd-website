@@ -60,7 +60,7 @@ export default function ConcertPage() {
             </div>
 
             {/* Heading */}
-            <h1 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(36px, 5vw, 68px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "#FFFFFF", margin: "0 0 20px", whiteSpace: "nowrap" }}>
+            <h1 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(32px, 4.4vw, 58px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "#FFFFFF", margin: "0 0 20px" }}>
               Concert for a Cure.
             </h1>
 
