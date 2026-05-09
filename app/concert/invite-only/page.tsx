@@ -36,40 +36,40 @@ export default function ConcertPage() {
           backgroundPosition: "center 50%",
         }}
       >
-        {/* Deep centered vignette for exclusivity */}
-        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at 50% 60%, rgba(8,8,8,0.50) 0%, rgba(8,8,8,0.82) 100%)", pointerEvents: "none" }} />
+        {/* Deep centered vignette */}
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at 50% 60%, rgba(8,8,8,0.62) 0%, rgba(8,8,8,0.90) 100%)", pointerEvents: "none" }} />
 
         <div style={{ maxWidth: 860, margin: "0 auto", width: "100%", position: "relative", textAlign: "center" }}>
 
           {/* By Invitation Only — flanked by rules */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 20, marginBottom: 40 }}>
-            <div style={{ flex: 1, maxWidth: 72, height: 1, background: "rgba(255,255,255,0.22)" }} />
-            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(255,255,255,0.70)", whiteSpace: "nowrap" }}>
+            <div style={{ flex: 1, maxWidth: 72, height: 1, background: "rgba(255,255,255,0.35)" }} />
+            <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(255,255,255,0.90)", whiteSpace: "nowrap", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>
               By Invitation Only
             </span>
-            <div style={{ flex: 1, maxWidth: 72, height: 1, background: "rgba(255,255,255,0.22)" }} />
+            <div style={{ flex: 1, maxWidth: 72, height: 1, background: "rgba(255,255,255,0.35)" }} />
           </div>
 
           {/* Heading — single line */}
-          <h1 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(36px, 5.2vw, 76px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "#FFFFFF", margin: "0 0 24px", whiteSpace: "nowrap" }}>
+          <h1 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(36px, 5.2vw, 76px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "#FFFFFF", margin: "0 0 24px", whiteSpace: "nowrap", textShadow: "0 2px 16px rgba(0,0,0,0.5)" }}>
             Concert for a Cure.
           </h1>
 
           {/* Italic subtitle */}
-          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 400, fontSize: "clamp(20px, 2.5vw, 32px)", lineHeight: 1.2, color: "#F98008", margin: "0 0 36px" }}>
+          <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 400, fontSize: "clamp(20px, 2.5vw, 32px)", lineHeight: 1.2, color: "#F98008", margin: "0 0 36px", textShadow: "0 1px 10px rgba(0,0,0,0.5)" }}>
             Afternoon at the lake. One shared purpose.
           </p>
 
           {/* Thin rule */}
-          <div style={{ width: 48, height: 1, background: "rgba(255,255,255,0.18)", margin: "0 auto 28px" }} />
+          <div style={{ width: 48, height: 1, background: "rgba(255,255,255,0.28)", margin: "0 auto 28px" }} />
 
-          {/* Date — legible */}
-          <p style={{ fontSize: 13, fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(255,255,255,0.72)", margin: "0 0 36px" }}>
+          {/* Date */}
+          <p style={{ fontSize: 13, fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: "#FFFFFF", margin: "0 0 36px", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>
             Saturday, July 18, 2026 &nbsp;&middot;&nbsp; 2–6 PM &nbsp;&middot;&nbsp; Juicebox Cove at Geist
           </p>
 
           {/* Body */}
-          <p style={{ fontSize: "clamp(15px, 1.6vw, 17px)", lineHeight: 1.75, color: "rgba(255,255,255,0.72)", margin: "0 auto 48px", maxWidth: 480 }}>
+          <p style={{ fontSize: "clamp(15px, 1.6vw, 17px)", lineHeight: 1.75, color: "rgba(255,255,255,0.92)", margin: "0 auto 48px", maxWidth: 480, textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}>
             An intimate gathering of 100 guests. Live music, great company, and every ticket funds Parkinson&apos;s research through The Michael J. Fox Foundation.
           </p>
 
