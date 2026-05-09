@@ -52,7 +52,7 @@ export default function ConcertPage() {
             </p>
 
             <p style={{ fontSize: "clamp(15px, 1.6vw, 17px)", lineHeight: 1.6, color: "#FFFFFF", margin: "0 0 32px", maxWidth: 520 }}>
-              Anchor your boat up at Juicebox Cove and enjoy live music on the water. July 18, 2026.
+              Anchor in Juicebox Cove and be part of the music, the mission, and the movement to end Parkinson&apos;s disease.
             </p>
 
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
