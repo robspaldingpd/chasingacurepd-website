@@ -202,7 +202,7 @@ export default function AboutPage() {
                 textWrap: "auto" as const,
               }}
             >
-              &ldquo;My mom fought with everything she had. Her miracle<br />didn&apos;t come. Let&apos;s be somebody else&apos;s.&rdquo;
+              &ldquo;My mom fought with everything she had. Her miracle didn&apos;t come. Let&apos;s be somebody else&apos;s.&rdquo;
             </p>
             <footer style={{ fontSize: 14, color: "rgba(255,255,255,0.45)", fontStyle: "normal" }}>
              Wendy Chase
