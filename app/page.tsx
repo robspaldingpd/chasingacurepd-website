@@ -131,7 +131,7 @@ export default function HomePage() {
             <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(36px, 5.5vw, 68px)", lineHeight: 1.02, letterSpacing: "-0.03em", color: "#FFFFFF", margin: "0 0 6px" }}>
               Backed by science.
             </div>
-            <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(36px, 5.5vw, 68px)", lineHeight: 1.02, letterSpacing: "-0.03em", color: "#EDC2C1", margin: "0 0 20px" }}>
+            <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(36px, 5.5vw, 68px)", lineHeight: 1.02, letterSpacing: "-0.03em", color: "#F98008", margin: "0 0 20px" }}>
               Focused on the cure.
             </div>
 
