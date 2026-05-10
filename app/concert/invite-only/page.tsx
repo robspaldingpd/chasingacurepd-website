@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import ConcertFAQ from "@/components/ConcertFAQ";
 import RaffleTicketButton from "@/components/RaffleTicketButton";
 import InviteEnvelopeHero from "@/components/InviteEnvelopeHero";
@@ -339,7 +338,8 @@ export default function ConcertPage() {
 
             {/* Boat photo */}
             <div className="boat-photo">
-              <Image src="/photos/raffle-boat-new.png" alt="2026 Stingray raffle boat" width={1375} height={1144} style={{ width: "100%", height: "auto", display: "block", borderRadius: 12 }} priority />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/photos/raffle-boat-new.png" alt="2026 Starcraft Ski Champ raffle boat" />
             </div>
 
             {/* Right column */}
@@ -758,7 +758,7 @@ export default function ConcertPage() {
           .tickets-grid { grid-template-columns: 1fr !important; }
           .features-grid { grid-template-columns: 1fr 1fr !important; }
           .sponsor-grid { grid-template-columns: 1fr !important; }
-          .boat-photo img { height: 220px !important; object-fit: cover !important; object-position: center 35% !important; border-radius: 12px !important; }
+          /* boat-photo styles are in globals.css */
           .boat-donated-by { display: none !important; }
           .participate-grid { grid-template-columns: 1fr !important; }
         }
