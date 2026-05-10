@@ -166,7 +166,7 @@ export default function ConcertPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 40, alignItems: "center" }} className="two-col">
 
             {/* Boat photo */}
-            <div>
+            <div className="boat-photo">
               <Image src="/photos/raffle-boat-new.png" alt="2026 Starcraft Ski Champ raffle boat" width={1375} height={1144} style={{ width: "100%", height: "auto", display: "block", borderRadius: 12 }} priority />
             </div>
 
@@ -390,9 +390,10 @@ export default function ConcertPage() {
 
       <style>{`
         @media (max-width: 900px) {
-          .two-col { grid-template-columns: 1fr !important; gap: 48px !important; }
+          .two-col { grid-template-columns: 1fr !important; gap: 32px !important; }
           .sponsor-grid { grid-template-columns: 1fr !important; }
           .participate-grid { grid-template-columns: 1fr !important; }
+          .boat-photo { max-width: 320px; margin: 0 auto; }
         }
       `}</style>
     </>
