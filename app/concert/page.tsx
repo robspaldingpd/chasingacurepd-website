@@ -195,8 +195,7 @@ export default function ConcertPage() {
               <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 12, overflow: "hidden", marginBottom: 16 }}>
                 <div style={{ padding: "16px 20px", borderBottom: "1px solid rgba(255,255,255,0.06)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
                   <div style={{ fontSize: 13, fontWeight: 600, color: "rgba(255,255,255,0.5)" }}>More tickets, better odds.</div>
-                  <div style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "4px 10px", background: "rgba(237,194,193,0.15)", border: "1px solid rgba(237,194,193,0.3)", borderRadius: 999, flexShrink: 0 }}>
-                    <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#EDC2C1", display: "inline-block" }} />
+                  <div style={{ display: "inline-flex", alignItems: "center", padding: "4px 10px", background: "rgba(237,194,193,0.15)", border: "1px solid rgba(237,194,193,0.3)", borderRadius: 999, flexShrink: 0 }}>
                     <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#EDC2C1" }}>Max 1,000 tickets</span>
                   </div>
                 </div>
@@ -251,8 +250,7 @@ export default function ConcertPage() {
           <div style={{ background: "#FFFFFF", border: "1px solid #DCDDE3", borderRadius: 12, overflow: "hidden", marginBottom: 24, boxShadow: "0 1px 2px rgba(20,33,61,0.06), 0 8px 24px rgba(20,33,61,0.06)" }}>
             <div style={{ padding: "16px 24px", borderBottom: "1px solid #EDEDF0", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12, background: "#FAFAFA" }}>
               <div style={{ fontSize: 13, fontWeight: 600, color: "#6B6F7D" }}>More tickets, better odds. Winner takes 50% of the total pot.</div>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "4px 10px", background: "rgba(237,194,193,0.12)", border: "1px solid rgba(237,194,193,0.3)", borderRadius: 999 }}>
-                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#A97C7C", display: "inline-block" }} />
+              <div style={{ display: "inline-flex", alignItems: "center", padding: "4px 10px", background: "rgba(169,124,124,0.12)", border: "1px solid rgba(169,124,124,0.3)", borderRadius: 999 }}>
                 <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#A97C7C" }}>50% to winner</span>
               </div>
             </div>
@@ -310,8 +308,7 @@ export default function ConcertPage() {
           {/* Title Sponsor — secured */}
           <div style={{ background: "rgba(237,194,193,0.08)", border: "1px solid rgba(237,194,193,0.25)", borderRadius: 12, padding: "28px 32px", marginBottom: 24, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 20 }}>
             <div>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "3px 10px", background: "rgba(237,194,193,0.15)", border: "1px solid rgba(237,194,193,0.3)", borderRadius: 999, marginBottom: 12 }}>
-                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#EDC2C1", display: "inline-block" }} />
+              <div style={{ display: "inline-flex", alignItems: "center", padding: "3px 10px", background: "rgba(237,194,193,0.15)", border: "1px solid rgba(237,194,193,0.3)", borderRadius: 999, marginBottom: 12 }}>
                 <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#EDC2C1" }}>Secured</span>
               </div>
               <div style={{ fontWeight: 700, fontSize: 18, color: "#FFFFFF", marginBottom: 4 }}>Title Sponsor · $25,000</div>
