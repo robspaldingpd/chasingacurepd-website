@@ -529,7 +529,7 @@ export default function HomePage() {
       {/* ══════════════════════════
           WENDY'S CONVICTION
       ══════════════════════════ */}
-      <section style={{ background: "var(--ccpd-cream-100)", padding: "96px 24px" }}>
+      <section className="wendy-section" style={{ background: "var(--ccpd-cream-100)", padding: "96px 24px" }}>
         <div style={{ maxWidth: 920, margin: "0 auto", textAlign: "center" }}>
           <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--ccpd-gray-500)", marginBottom: 32 }}>
             From Wendy
@@ -547,7 +547,7 @@ export default function HomePage() {
                 textWrap: "auto" as const,
               }}
             >
-              &ldquo;Awareness is not what families are begging for at 3 a.m. in a hospital room.<br />A cure is what families deserve.&rdquo;
+              &ldquo;Awareness is not what families are begging for at 3 a.m. in a hospital room. A cure is what families deserve.&rdquo;
             </p>
             <footer style={{ fontSize: 14, color: "var(--ccpd-gray-500)", fontStyle: "normal" }}>
               Wendy Chase · Co-Founder, Chasing a Cure Parkinson&apos;s Foundation
@@ -657,7 +657,8 @@ export default function HomePage() {
         }
         @media (max-width: 600px) {
           .stats-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
-          .wendy-quote { font-size: 17px !important; }
+          .wendy-quote { font-size: 14px !important; line-height: 1.6 !important; }
+          .wendy-section { padding-left: 16px !important; padding-right: 16px !important; }
         }
       `}</style>
     </>
