@@ -104,7 +104,7 @@ export default function FoundationFAQ() {
               <span
                 style={{
                   fontSize: 22,
-                  color: "#F98008",
+                  color: "#EDC2C1",
                   fontWeight: 300,
                   minWidth: 20,
                   textAlign: "center",

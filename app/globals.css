@@ -60,7 +60,7 @@
   --fg:           var(--ccpd-ink-900);
   --fg-muted:     var(--ccpd-gray-500);
   --fg-inverse:   var(--ccpd-pink-50);
-  --fg-accent:    var(--ccpd-orange-500);
+  --fg-accent:    var(--ccpd-pink-500);
   --border:       var(--ccpd-gray-200);
   --border-strong:var(--ccpd-gray-300);
   --link:         var(--ccpd-orange-600);

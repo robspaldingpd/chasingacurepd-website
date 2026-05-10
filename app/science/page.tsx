@@ -140,7 +140,7 @@ export default function SciencePage() {
                   boxShadow: "0 1px 2px rgba(20,33,61,0.04)",
                 }}
               >
-                <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 24, color: "#F98008", lineHeight: 1, marginBottom: 6 }}>
+                <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 24, color: "#EDC2C1", lineHeight: 1, marginBottom: 6 }}>
                   {item.stat}
                 </div>
                 <div style={{ fontWeight: 600, fontSize: 14, color: "#000000", marginBottom: 8 }}>

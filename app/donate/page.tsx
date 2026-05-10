@@ -33,14 +33,14 @@ function Step({
           height: 40,
           minWidth: 40,
           borderRadius: "50%",
-          background: "#F98008",
+          background: "#EDC2C1",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
           fontWeight: 700,
           fontSize: 16,
-          color: "#FFFFFF",
+          color: "#1A0A0A",
         }}
       >
         {number}
@@ -181,7 +181,7 @@ export default function DonatePage() {
             <div
               style={{
                 background: "#FFEFDC",
-                border: "1px solid rgba(249,128,8,0.2)",
+                border: "1px solid rgba(237,194,193,0.2)",
                 borderRadius: 10,
                 padding: "24px 28px",
                 marginTop: 40,
@@ -193,7 +193,7 @@ export default function DonatePage() {
                   fontWeight: 700,
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
-                  color: "#F98008",
+                  color: "#EDC2C1",
                   marginBottom: 10,
                 }}
               >

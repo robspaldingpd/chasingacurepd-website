@@ -112,7 +112,7 @@ export default function Nav() {
                 textDecoration: "none",
                 transition: "color 120ms ease",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#F98008")}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#EDC2C1")}
               onMouseLeave={(e) => (e.currentTarget.style.color = linkColor)}
             >
               {link.label}
@@ -190,7 +190,7 @@ export default function Nav() {
               style={{
                 display: "block",
                 padding: "14px 0",
-                color: link.href === "/donate" ? "#F98008" : "#1A1A1A",
+                color: link.href === "/donate" ? "#EDC2C1" : "#1A1A1A",
                 fontFamily: "var(--font-sans)",
                 fontWeight: link.href === "/donate" ? 700 : 500,
                 fontSize: 16,

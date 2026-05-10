@@ -137,7 +137,7 @@ export default function AboutPage() {
 
           <blockquote
             style={{
-              borderLeft: "3px solid #F98008",
+              borderLeft: "3px solid #EDC2C1",
               paddingLeft: 28,
               margin: "36px 0",
             }}
@@ -271,7 +271,7 @@ export default function AboutPage() {
                 />
               </div>
               <div style={{ padding: "32px 32px 36px" }}>
-                <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008", marginBottom: 8 }}>Co-founder</div>
+                <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#EDC2C1", marginBottom: 8 }}>Co-founder</div>
                 <h3 style={{ fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif", fontWeight: 400, fontSize: "clamp(22px, 2.5vw, 28px)", color: "#000000", margin: "0 0 16px" }}>Wendy Chase</h3>
                 <p style={{ fontSize: 16, lineHeight: 1.75, color: "#2B2B2B", margin: 0 }}>
                   Wendy is the driving force of the foundation. Her mother Sue died from Parkinson&apos;s in December 2017. Wendy founded Chasing a Cure Foundation the following April in her honor. A leader in the pharmaceutical and biotech industries with decades of experience, Wendy built Chasing a Cure Foundation to channel her professional expertise and personal heartbreak into something lasting.
@@ -297,7 +297,7 @@ export default function AboutPage() {
                 />
               </div>
               <div style={{ padding: "32px 32px 36px" }}>
-                <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008", marginBottom: 8 }}>Co-founder</div>
+                <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#EDC2C1", marginBottom: 8 }}>Co-founder</div>
                 <h3 style={{ fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif", fontWeight: 400, fontSize: "clamp(22px, 2.5vw, 28px)", color: "#000000", margin: "0 0 16px" }}>Rob Spalding</h3>
                 <p style={{ fontSize: 16, lineHeight: 1.75, color: "#2B2B2B", margin: 0 }}>
                   Rob brings a career spanning pharma, biotech, and health technology to the mission. His aunt lives with Parkinson&apos;s disease, making this work personal as well as professional. He and Wendy each bring more than two decades of life sciences leadership to a foundation built entirely on volunteer effort.
@@ -437,7 +437,7 @@ export default function AboutPage() {
                     fontWeight: 600,
                     letterSpacing: "0.08em",
                     textTransform: "uppercase",
-                    color: "#F98008",
+                    color: "#EDC2C1",
                     marginBottom: 16,
                   }}
                 >

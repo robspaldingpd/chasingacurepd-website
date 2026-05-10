@@ -26,7 +26,7 @@ function Stat({ number, label, accent }: { number: string; label: string; accent
           fontFamily: "var(--font-display)",
           fontWeight: 700,
           fontSize: "clamp(36px, 4.5vw, 56px)",
-          color: accent ? "#F98008" : "#FFFFFF",
+          color: accent ? "#EDC2C1" : "#FFFFFF",
           lineHeight: 1,
           marginBottom: 10,
           fontVariantNumeric: "tabular-nums",
@@ -69,7 +69,7 @@ function FlowStep({ n, title, body }: { n: string; title: string; body: React.Re
           fontFamily: "var(--font-display)",
           fontWeight: 700,
           fontSize: 15,
-          color: "#F98008",
+          color: "#EDC2C1",
         }}
       >
         {n}
@@ -116,11 +116,11 @@ export default function HomePage() {
                 alignItems: "center",
                 marginBottom: 20,
                 padding: "8px 20px",
-                background: "#F98008",
+                background: "#EDC2C1",
                 borderRadius: 999,
               }}
             >
-              <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#FFFFFF" }}>
+              <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1A0A0A" }}>
                 Volunteer-run · Research-first
               </span>
             </div>
@@ -131,7 +131,7 @@ export default function HomePage() {
             <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(36px, 5.5vw, 68px)", lineHeight: 1.02, letterSpacing: "-0.03em", color: "#FFFFFF", margin: "0 0 6px" }}>
               Backed by science.
             </div>
-            <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(36px, 5.5vw, 68px)", lineHeight: 1.02, letterSpacing: "-0.03em", color: "#F98008", margin: "0 0 20px" }}>
+            <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(36px, 5.5vw, 68px)", lineHeight: 1.02, letterSpacing: "-0.03em", color: "#EDC2C1", margin: "0 0 20px" }}>
               Focused on the cure.
             </div>
 
@@ -220,11 +220,11 @@ export default function HomePage() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 6,
-                  color: "#F98008",
+                  color: "#EDC2C1",
                   fontWeight: 700,
                   fontSize: 15,
                   textDecoration: "none",
-                  borderBottom: "2px solid #F98008",
+                  borderBottom: "2px solid #EDC2C1",
                   paddingBottom: 2,
                 }}
               >
@@ -323,7 +323,7 @@ export default function HomePage() {
               promise we make to every family still waiting.
             </p>
 
-            <blockquote style={{ borderLeft: "3px solid #F98008", paddingLeft: 24, margin: "32px 0" }}>
+            <blockquote style={{ borderLeft: "3px solid #EDC2C1", paddingLeft: 24, margin: "32px 0" }}>
               <p
                 style={{
                   fontFamily: "var(--font-serif)",
@@ -348,11 +348,11 @@ export default function HomePage() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 6,
-                color: "#F98008",
+                color: "#EDC2C1",
                 fontWeight: 700,
                 fontSize: 15,
                 textDecoration: "none",
-                borderBottom: "2px solid #F98008",
+                borderBottom: "2px solid #EDC2C1",
                 paddingBottom: 2,
               }}
             >
@@ -384,7 +384,7 @@ export default function HomePage() {
                 fontFamily: "var(--font-serif)",
                 fontSize: 220,
                 lineHeight: 1,
-                color: "rgba(249,128,8,0.12)",
+                color: "rgba(237,194,193,0.12)",
                 position: "absolute",
                 top: -24,
                 left: 32,
@@ -395,7 +395,7 @@ export default function HomePage() {
             </div>
 
             <div style={{ position: "relative" }}>
-              <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008", marginBottom: 28 }}>
+              <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#EDC2C1", marginBottom: 28 }}>
                 Our mission
               </div>
               <p
@@ -449,7 +449,7 @@ export default function HomePage() {
             className="partner-card"
           >
             <div>
-              <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008", marginBottom: 20 }}>
+              <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#EDC2C1", marginBottom: 20 }}>
                 Research partner
               </div>
               <h2
@@ -480,7 +480,7 @@ export default function HomePage() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 6,
-                  color: "#F98008",
+                  color: "#EDC2C1",
                   fontWeight: 600,
                   fontSize: 14,
                   textDecoration: "none",
@@ -604,7 +604,7 @@ export default function HomePage() {
         <div aria-hidden style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(8,8,8,0.58) 0%, rgba(8,8,8,0.42) 45%, rgba(8,8,8,0.12) 75%, rgba(8,8,8,0.0) 100%)", pointerEvents: "none" }} />
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "72px 24px", position: "relative", display: "flex", alignItems: "center" }}>
           <div style={{ maxWidth: 500, display: "flex", flexDirection: "column", gap: 20 }}>
-            <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008" }}>
+            <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#EDC2C1" }}>
               Upcoming event
             </div>
             <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(26px, 2.8vw, 42px)", lineHeight: 1.05, color: "#FFFFFF", margin: 0, letterSpacing: "-0.02em" }}>
@@ -621,8 +621,8 @@ export default function HomePage() {
                   alignItems: "center",
                   gap: 8,
                   padding: "14px 32px",
-                  background: "#F98008",
-                  color: "#FFFFFF",
+                  background: "#EDC2C1",
+                  color: "#1A0A0A",
                   borderRadius: 999,
                   fontFamily: "var(--font-sans)",
                   fontWeight: 700,
