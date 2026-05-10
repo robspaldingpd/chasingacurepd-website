@@ -239,7 +239,7 @@ export default function ConcertPage() {
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
 
           <div style={{ marginBottom: 40, textAlign: "center" }}>
-            <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#EDC2C1", marginBottom: 12 }}>50/50 Raffle</div>
+            <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#A97C7C", marginBottom: 12 }}>50/50 Raffle</div>
             <h2 style={{ fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif", fontWeight: 400, fontSize: "clamp(28px, 3.5vw, 48px)", color: "#000000", margin: "0 0 16px", lineHeight: 1.15 }}>
               Half goes to the winner.<br />Half funds the cure.
             </h2>
@@ -252,8 +252,8 @@ export default function ConcertPage() {
             <div style={{ padding: "16px 24px", borderBottom: "1px solid #EDEDF0", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12, background: "#FAFAFA" }}>
               <div style={{ fontSize: 13, fontWeight: 600, color: "#6B6F7D" }}>More tickets, better odds. Winner takes 50% of the total pot.</div>
               <div style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "4px 10px", background: "rgba(237,194,193,0.12)", border: "1px solid rgba(237,194,193,0.3)", borderRadius: 999 }}>
-                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#EDC2C1", display: "inline-block" }} />
-                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#EDC2C1" }}>50% to winner</span>
+                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#A97C7C", display: "inline-block" }} />
+                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#A97C7C" }}>50% to winner</span>
               </div>
             </div>
             {[

@@ -60,7 +60,7 @@ export default function RaffleTicketButton({ url, raffleName, style, children }:
                 margin: "0 auto 20px",
               }}
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EDC2C1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A97C7C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                 <path d="M7 11V7a5 5 0 0 1 10 0v4" />
               </svg>
@@ -72,7 +72,7 @@ export default function RaffleTicketButton({ url, raffleName, style, children }:
                 fontWeight: 700,
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
-                color: "#EDC2C1",
+                color: "#A97C7C",
                 marginBottom: 8,
               }}
             >

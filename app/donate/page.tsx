@@ -193,7 +193,7 @@ export default function DonatePage() {
                   fontWeight: 700,
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
-                  color: "#EDC2C1",
+                  color: "#A97C7C",
                   marginBottom: 10,
                 }}
               >

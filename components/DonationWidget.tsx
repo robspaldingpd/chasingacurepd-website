@@ -105,14 +105,14 @@ export default function DonationWidget() {
             }}
             style={{
               padding: "12px 8px",
-              border: selected === amt && !custom ? "2px solid #EDC2C1" : "1px solid #DCDDE3",
+              border: selected === amt && !custom ? "2px solid #A97C7C" : "1px solid #DCDDE3",
               borderRadius: 6,
               cursor: "pointer",
               fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
               fontWeight: 700,
               fontSize: 16,
               background: selected === amt && !custom ? "#FFEFDC" : "#FFFFFF",
-              color: selected === amt && !custom ? "#EDC2C1" : "#1A1A1A",
+              color: selected === amt && !custom ? "#A97C7C" : "#1A1A1A",
               transition: "all 150ms ease",
             }}
           >
@@ -148,7 +148,7 @@ export default function DonationWidget() {
             fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
             fontWeight: 700,
             fontSize: 16,
-            color: custom ? "#EDC2C1" : "#B8BAC4",
+            color: custom ? "#A97C7C" : "#B8BAC4",
           }}
         >
           $
@@ -164,7 +164,7 @@ export default function DonationWidget() {
           style={{
             width: "100%",
             padding: "13px 16px 13px 28px",
-            border: custom ? "2px solid #EDC2C1" : "1px solid #DCDDE3",
+            border: custom ? "2px solid #A97C7C" : "1px solid #DCDDE3",
             borderRadius: 6,
             fontFamily: "var(--font-inter), sans-serif",
             fontSize: 16,

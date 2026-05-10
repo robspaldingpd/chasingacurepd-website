@@ -69,7 +69,7 @@ function FlowStep({ n, title, body }: { n: string; title: string; body: React.Re
           fontFamily: "var(--font-display)",
           fontWeight: 700,
           fontSize: 15,
-          color: "#EDC2C1",
+          color: "#A97C7C",
         }}
       >
         {n}
@@ -220,11 +220,11 @@ export default function HomePage() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 6,
-                  color: "#EDC2C1",
+                  color: "#A97C7C",
                   fontWeight: 700,
                   fontSize: 15,
                   textDecoration: "none",
-                  borderBottom: "2px solid #EDC2C1",
+                  borderBottom: "2px solid #A97C7C",
                   paddingBottom: 2,
                 }}
               >
@@ -323,7 +323,7 @@ export default function HomePage() {
               promise we make to every family still waiting.
             </p>
 
-            <blockquote style={{ borderLeft: "3px solid #EDC2C1", paddingLeft: 24, margin: "32px 0" }}>
+            <blockquote style={{ borderLeft: "3px solid #A97C7C", paddingLeft: 24, margin: "32px 0" }}>
               <p
                 style={{
                   fontFamily: "var(--font-serif)",
@@ -348,11 +348,11 @@ export default function HomePage() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 6,
-                color: "#EDC2C1",
+                color: "#A97C7C",
                 fontWeight: 700,
                 fontSize: 15,
                 textDecoration: "none",
-                borderBottom: "2px solid #EDC2C1",
+                borderBottom: "2px solid #A97C7C",
                 paddingBottom: 2,
               }}
             >
@@ -600,43 +600,50 @@ export default function HomePage() {
       {/* ══════════════════════════
           CONCERT CALLOUT
       ══════════════════════════ */}
-      <section style={{ position: "relative", minHeight: 360, overflow: "hidden", backgroundImage: "url('/photos/geist-afternoon-boats.jpg')", backgroundSize: "cover", backgroundPosition: "center 40%" }}>
-        <div aria-hidden style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(8,8,8,0.58) 0%, rgba(8,8,8,0.42) 45%, rgba(8,8,8,0.12) 75%, rgba(8,8,8,0.0) 100%)", pointerEvents: "none" }} />
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "72px 24px", position: "relative", display: "flex", alignItems: "center" }}>
-          <div style={{ maxWidth: 500, display: "flex", flexDirection: "column", gap: 20 }}>
-            <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#EDC2C1" }}>
-              Upcoming event
+      <section style={{ position: "relative", minHeight: "72vh", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden", backgroundImage: "url('/photos/geist-juicebox-cove.png')", backgroundSize: "cover", backgroundPosition: "center 50%" }}>
+        <div aria-hidden style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(8,8,8,0.78) 0%, rgba(8,8,8,0.60) 45%, rgba(8,8,8,0.25) 75%, rgba(8,8,8,0.05) 100%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "80px 24px", position: "relative", width: "100%" }}>
+          <div style={{ maxWidth: 680, display: "flex", flexDirection: "column", gap: 0 }}>
+
+            <div style={{ display: "inline-flex", alignItems: "center", marginBottom: 20, padding: "8px 20px", background: "#EDC2C1", borderRadius: 999, alignSelf: "flex-start" }}>
+              <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1A0A0A" }}>
+                Saturday, July 18, 2026 · 2–6 PM · Juicebox Cove at Geist
+              </span>
             </div>
-            <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(26px, 2.8vw, 42px)", lineHeight: 1.05, color: "#FFFFFF", margin: 0, letterSpacing: "-0.02em" }}>
-              Concert for a Cure 2026
+
+            <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(40px, 6vw, 80px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "#FFFFFF", margin: "0 0 16px" }}>
+              Concert for<br />a Cure.
             </h2>
-            <p style={{ fontSize: 16, lineHeight: 1.7, color: "rgba(255,255,255,0.85)", margin: 0 }}>
-              An evening at the lake, live music, good company, and one shared purpose. Funds raised benefit The Michael J. Fox Foundation for Parkinson&apos;s Research.
+
+            <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 400, fontSize: "clamp(22px, 2.8vw, 36px)", lineHeight: 1.2, color: "#EDC2C1", margin: "0 0 28px" }}>
+              Afternoon at the lake. One shared purpose.
             </p>
-            <div>
+
+            <p style={{ fontSize: "clamp(15px, 1.6vw, 17px)", lineHeight: 1.6, color: "#FFFFFF", margin: "0 0 32px", maxWidth: 520 }}>
+              Anchor in Juicebox Cove and be part of the music, the mission, and the movement to end Parkinson&apos;s disease.
+            </p>
+
+            <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
               <Link
-                href="/concert"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 8,
-                  padding: "14px 32px",
-                  background: "#EDC2C1",
-                  color: "#1A0A0A",
-                  borderRadius: 999,
-                  fontFamily: "var(--font-sans)",
-                  fontWeight: 700,
-                  fontSize: 15,
-                  textDecoration: "none",
-                  whiteSpace: "nowrap",
-                }}
+                href="/concert#raffle"
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "15px 36px", background: "#EDC2C1", color: "#1A0A0A", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none", letterSpacing: "-0.01em" }}
               >
-                Learn more
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                Boat Raffle
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M6 3l5 5-5 5" />
+                </svg>
+              </Link>
+              <Link
+                href="/concert#fifty-fifty"
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "15px 28px", background: "#FFFFFF", color: "#111111", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none", letterSpacing: "-0.01em" }}
+              >
+                50/50 Raffle
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M6 3l5 5-5 5" />
                 </svg>
               </Link>
             </div>
+
           </div>
         </div>
       </section>
