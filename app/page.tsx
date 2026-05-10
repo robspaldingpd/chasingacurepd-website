@@ -547,7 +547,7 @@ export default function HomePage() {
                 textWrap: "auto" as const,
               }}
             >
-              &ldquo;Awareness is not what families are begging for at 3 a.m. in a hospital room. A cure is what families deserve. I don&apos;t want your pity. I want your partnership.&rdquo;
+              &ldquo;Awareness is not what families are begging for at 3 a.m. in a hospital room. A cure is what families deserve.&rdquo;
             </p>
             <footer style={{ fontSize: 14, color: "var(--ccpd-gray-500)", fontStyle: "normal" }}>
               Wendy Chase · Co-Founder, Chasing a Cure Parkinson&apos;s Foundation
