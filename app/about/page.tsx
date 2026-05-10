@@ -234,7 +234,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── FOUNDERS ── */}
-      <section style={{ background: "#F6F1E6", padding: "80px 24px" }}>
+      <section className="founders-section" style={{ background: "#F6F1E6", padding: "80px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div
             style={{
@@ -589,10 +589,11 @@ export default function AboutPage() {
           .narrative-grid { grid-template-columns: 1fr !important; }
           .narrative-grid > div:last-child { display: none; }
         }
-        @media (max-width: 768px) {
-          .founders-grid { grid-template-columns: 1fr !important; }
-          .people-grid { grid-template-columns: 1fr !important; }
-          .facts-grid { grid-template-columns: 1fr !important; }
+        @media (max-width: 900px) {
+          .founders-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+          .people-grid   { grid-template-columns: 1fr !important; }
+          .facts-grid    { grid-template-columns: 1fr !important; }
+          .founders-section { padding: 48px 20px !important; }
         }
       `}</style>
     </>
