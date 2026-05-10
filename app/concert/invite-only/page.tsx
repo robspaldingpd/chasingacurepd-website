@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ConcertFAQ from "@/components/ConcertFAQ";
 import RaffleTicketButton from "@/components/RaffleTicketButton";
+import InviteEnvelopeHero from "@/components/InviteEnvelopeHero";
 
 export const metadata: Metadata = {
   title: "Concert for a Cure 2026 | Chasing a Cure PD",
@@ -24,20 +25,17 @@ export default function ConcertPage() {
       {/* ── HERO ── */}
       <section
         style={{
-          minHeight: "88vh",
+          minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           padding: "100px 24px 80px",
           position: "relative",
           overflow: "hidden",
-          backgroundImage: "url('/photos/geist-juicebox-cove.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center 50%",
+          background: "#0C0C0E",
         }}
       >
-        <div style={{ maxWidth: 680, margin: "0 auto", width: "100%", position: "relative" }}>
-
+        <InviteEnvelopeHero>
           {/* Frosted glass invitation card */}
           <div style={{
             background: "rgba(8,8,8,0.52)",
@@ -65,7 +63,7 @@ export default function ConcertPage() {
             </h1>
 
             {/* Italic subtitle */}
-            <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 400, fontSize: "clamp(18px, 2.2vw, 28px)", lineHeight: 1.2, color: "#F98008", margin: "0 0 32px" }}>
+            <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 400, fontSize: "clamp(18px, 2.2vw, 28px)", lineHeight: 1.2, color: "#EDC2C1", margin: "0 0 32px" }}>
               Afternoon at the lake. One shared purpose.
             </p>
 
@@ -74,7 +72,7 @@ export default function ConcertPage() {
 
             {/* Date */}
             <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.16em", textTransform: "uppercase", color: "rgba(255,255,255,0.60)", margin: "0 0 28px" }}>
-              Saturday, July 18, 2026 &nbsp;&middot;&nbsp; 2–6 PM &nbsp;&middot;&nbsp; Juicebox Cove at Geist
+              Saturday, July 18, 2026 &nbsp;&middot;&nbsp; 2–6 PM
             </p>
 
             {/* Body */}
@@ -85,7 +83,7 @@ export default function ConcertPage() {
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap", justifyContent: "center" }}>
               <a
                 href="#participate"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "14px 32px", background: "#F98008", color: "#fff", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 15, textDecoration: "none", letterSpacing: "-0.01em" }}
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "14px 32px", background: "#EDC2C1", color: "#1A0A0A", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 15, textDecoration: "none", letterSpacing: "-0.01em" }}
               >
                 Ways to Participate
                 <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -101,7 +99,7 @@ export default function ConcertPage() {
             </div>
 
           </div>
-        </div>
+        </InviteEnvelopeHero>
       </section>
 
       {/* ── WAYS TO PARTICIPATE ── */}
@@ -118,7 +116,7 @@ export default function ConcertPage() {
 
             {/* Card 1: Event Ticket */}
             <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.10)", borderRadius: 14, padding: "36px 32px", display: "flex", flexDirection: "column" }}>
-              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008", marginBottom: 16 }}>Event Ticket</div>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#EDC2C1", marginBottom: 16 }}>Event Ticket</div>
               <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 36, color: "#FFFFFF", lineHeight: 1, marginBottom: 8 }}>$225</div>
               <div style={{ fontSize: 13, color: "rgba(255,255,255,0.4)", marginBottom: 20 }}>per person</div>
               <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.65)", margin: "0 0 28px", flex: 1 }}>
@@ -131,7 +129,7 @@ export default function ConcertPage() {
 
             {/* Card 2: Boat Raffle */}
             <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.10)", borderRadius: 14, padding: "36px 32px", display: "flex", flexDirection: "column" }}>
-              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008", marginBottom: 16 }}>Boat Raffle</div>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#EDC2C1", marginBottom: 16 }}>Boat Raffle</div>
               <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 36, color: "#FFFFFF", lineHeight: 1, marginBottom: 8 }}>$25,000</div>
               <div style={{ fontSize: 13, color: "rgba(255,255,255,0.4)", marginBottom: 20 }}>estimated retail value</div>
               <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.65)", margin: "0 0 24px", flex: 1 }}>
@@ -150,7 +148,7 @@ export default function ConcertPage() {
 
             {/* Card 3: 50/50 Raffle */}
             <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.10)", borderRadius: 14, padding: "36px 32px", display: "flex", flexDirection: "column" }}>
-              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008", marginBottom: 16 }}>50/50 Raffle</div>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#EDC2C1", marginBottom: 16 }}>50/50 Raffle</div>
               <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 36, color: "#FFFFFF", lineHeight: 1, marginBottom: 8 }}>50%</div>
               <div style={{ fontSize: 13, color: "rgba(255,255,255,0.4)", marginBottom: 20 }}>of the total pot to the winner</div>
               <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.65)", margin: "0 0 28px", flex: 1 }}>
@@ -179,8 +177,7 @@ export default function ConcertPage() {
           className="two-col"
         >
           <div>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "7px 18px", background: "#1A1A1A", borderRadius: 999, marginBottom: 20 }}>
-              <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#F98008", display: "inline-block", flexShrink: 0 }} />
+            <div style={{ display: "inline-flex", alignItems: "center", padding: "7px 18px", background: "#1A1A1A", borderRadius: 999, marginBottom: 20 }}>
               <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#FFFFFF" }}>
                 By Invitation Only
               </span>
@@ -324,7 +321,7 @@ export default function ConcertPage() {
           {/* Header */}
           <div style={{ marginBottom: 20, display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap" }}>
             <div>
-              <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008", marginBottom: 10 }}>Boat Raffle</div>
+              <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#EDC2C1", marginBottom: 10 }}>Boat Raffle</div>
               <h2 style={{ fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif", fontWeight: 400, fontSize: "clamp(28px, 3.5vw, 48px)", color: "#FFFFFF", margin: 0, lineHeight: 1.15 }}>
                 Win a $25,000 boat.<br />Fund a breakthrough.
               </h2>
@@ -345,7 +342,7 @@ export default function ConcertPage() {
               <div style={{ borderRadius: 12, overflow: "hidden", position: "relative" }}>
                 <Image src="/photos/raffle-boat-new.png" alt="2026 Stingray raffle boat" width={700} height={450} style={{ width: "100%", height: "auto", display: "block", borderRadius: 12 }} priority />
                 <div style={{ position: "absolute", bottom: 16, left: 16, background: "rgba(0,0,0,0.65)", backdropFilter: "blur(6px)", borderRadius: 8, padding: "8px 14px" }}>
-                  <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 22, color: "#F98008", lineHeight: 1 }}>$25,000</div>
+                  <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 22, color: "#EDC2C1", lineHeight: 1 }}>$25,000</div>
                   <div style={{ fontSize: 12, color: "rgba(255,255,255,0.6)", marginTop: 2 }}>Estimated retail value</div>
                 </div>
               </div>
@@ -373,8 +370,8 @@ export default function ConcertPage() {
                 <div style={{ padding: "16px 20px", borderBottom: "1px solid rgba(255,255,255,0.06)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
                   <div style={{ fontSize: 13, fontWeight: 600, color: "rgba(255,255,255,0.5)" }}>More tickets, better odds.</div>
                   <div style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "4px 10px", background: "rgba(249,128,8,0.15)", border: "1px solid rgba(249,128,8,0.3)", borderRadius: 999, flexShrink: 0 }}>
-                    <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#F98008", display: "inline-block" }} />
-                    <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#F98008" }}>Max 1,000 tickets</span>
+                    <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#EDC2C1", display: "inline-block" }} />
+                    <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#EDC2C1" }}>Max 1,000 tickets</span>
                   </div>
                 </div>
                 {[
@@ -416,7 +413,7 @@ export default function ConcertPage() {
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
 
           <div style={{ marginBottom: 40, textAlign: "center" }}>
-            <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F98008", marginBottom: 12 }}>50/50 Raffle</div>
+            <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#EDC2C1", marginBottom: 12 }}>50/50 Raffle</div>
             <h2 style={{ fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif", fontWeight: 400, fontSize: "clamp(28px, 3.5vw, 48px)", color: "#000000", margin: "0 0 16px", lineHeight: 1.15 }}>
               Half goes to the winner.<br />Half funds the cure.
             </h2>
@@ -429,9 +426,8 @@ export default function ConcertPage() {
           <div style={{ background: "#FFFFFF", border: "1px solid #DCDDE3", borderRadius: 12, overflow: "hidden", marginBottom: 24, boxShadow: "0 1px 2px rgba(20,33,61,0.06), 0 8px 24px rgba(20,33,61,0.06)" }}>
             <div style={{ padding: "16px 24px", borderBottom: "1px solid #EDEDF0", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12, background: "#FAFAFA" }}>
               <div style={{ fontSize: 13, fontWeight: 600, color: "#6B6F7D" }}>More tickets, better odds. Winner takes 50% of the total pot.</div>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "4px 10px", background: "rgba(249,128,8,0.12)", border: "1px solid rgba(249,128,8,0.3)", borderRadius: 999 }}>
-                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#F98008", display: "inline-block" }} />
-                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#F98008" }}>50% to winner</span>
+              <div style={{ display: "inline-flex", alignItems: "center", padding: "4px 10px", background: "rgba(249,128,8,0.12)", border: "1px solid rgba(249,128,8,0.3)", borderRadius: 999 }}>
+                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#000000" }}>50% to winner</span>
               </div>
             </div>
             {[
@@ -566,9 +562,8 @@ export default function ConcertPage() {
           {/* Title Sponsor — secured */}
           <div style={{ background: "rgba(249,128,8,0.08)", border: "1px solid rgba(249,128,8,0.25)", borderRadius: 12, padding: "28px 32px", marginBottom: 24, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 20 }}>
             <div>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "3px 10px", background: "rgba(249,128,8,0.15)", border: "1px solid rgba(249,128,8,0.3)", borderRadius: 999, marginBottom: 12 }}>
-                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#F98008", display: "inline-block" }} />
-                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#F98008" }}>Secured</span>
+              <div style={{ display: "inline-flex", alignItems: "center", padding: "3px 10px", background: "rgba(249,128,8,0.15)", border: "1px solid rgba(249,128,8,0.3)", borderRadius: 999, marginBottom: 12 }}>
+                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#EDC2C1" }}>Secured</span>
               </div>
               <div style={{ fontWeight: 700, fontSize: 18, color: "#FFFFFF", marginBottom: 4 }}>Title Sponsor · $25,000</div>
               <div style={{ fontSize: 14, color: "rgba(255,255,255,0.5)", lineHeight: 1.6 }}>
@@ -629,7 +624,7 @@ export default function ConcertPage() {
                 <div style={{ marginBottom: 16 }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 4 }}>
                     <div style={{ fontWeight: 700, fontSize: 16, color: "#FFFFFF" }}>{s.tier}</div>
-                    <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 18, color: "#F98008" }}>{s.amount}</div>
+                    <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 18, color: "#EDC2C1" }}>{s.amount}</div>
                   </div>
                   <div style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", marginBottom: 10 }}>{s.availability}</div>
                   <div style={{ fontSize: 14, color: "rgba(255,255,255,0.55)", lineHeight: 1.6 }}>{s.description}</div>
@@ -711,7 +706,7 @@ export default function ConcertPage() {
               gap: 8,
               padding: "16px 40px",
               background: "#F98008",
-              color: "#fff",
+              color: "#FFFFFF",
               borderRadius: 999,
               fontFamily: "var(--font-inter), sans-serif",
               fontWeight: 700,
