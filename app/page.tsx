@@ -615,7 +615,7 @@ export default function HomePage() {
               Concert for<br />a Cure.
             </h2>
 
-            <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 400, fontSize: "clamp(22px, 2.8vw, 36px)", lineHeight: 1.2, color: "#EDC2C1", margin: "0 0 28px" }}>
+            <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 400, fontSize: "clamp(22px, 2.8vw, 36px)", lineHeight: 1.2, color: "#F98008", margin: "0 0 28px" }}>
               Afternoon at the lake. One shared purpose.
             </p>
 

@@ -46,7 +46,7 @@ export default function ConcertPage() {
             <h1 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(40px, 6vw, 80px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "#FFFFFF", margin: "0 0 16px", textWrap: "auto" as const }}>
               Concert for<br />a Cure.
             </h1>
-            <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 400, fontSize: "clamp(22px, 2.8vw, 36px)", lineHeight: 1.2, color: "#EDC2C1", margin: "0 0 28px", textWrap: "auto" as const }}>
+            <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 400, fontSize: "clamp(22px, 2.8vw, 36px)", lineHeight: 1.2, color: "#F98008", margin: "0 0 28px", textWrap: "auto" as const }}>
               Afternoon at the lake. One shared purpose.
             </p>
 
