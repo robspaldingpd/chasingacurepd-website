@@ -165,10 +165,7 @@ export default function ConcertPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 40, alignItems: "center" }} className="two-col">
 
             {/* Boat photo */}
-            <div className="boat-photo">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/photos/raffle-boat-new.png" alt="2026 Starcraft Ski Champ raffle boat" />
-            </div>
+            <div className="boat-photo" role="img" aria-label="2026 Starcraft Ski Champ raffle boat" />
 
             {/* Right column */}
             <div>
