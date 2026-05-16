@@ -283,7 +283,7 @@ export default function ConcertPage() {
             Winner drawn live at the event on July 18, 2026. You do not need to be present to win. 50% of the total pot goes to the winner; the remaining 50% funds Parkinson&apos;s research through The Michael J. Fox Foundation.
           </p>
 
-          <div style={{ marginTop: 24, textAlign: "center" }}>
+          <div style={{ marginTop: 24 }}>
             <RaffleTermsModal label="50/50 Raffle" theme="light" />
           </div>
 
