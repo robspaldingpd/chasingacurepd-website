@@ -239,6 +239,7 @@ export default function RaffleTermsModal({ label = "Boat Raffle", theme = "dark"
               maxHeight: "80vh",
               overflowY: "auto",
               position: "relative",
+              textAlign: "left",
             }}
           >
             <button
