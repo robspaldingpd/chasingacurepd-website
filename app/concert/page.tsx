@@ -165,11 +165,11 @@ export default function ConcertPage() {
                   <div className="value-amount" style={{ fontSize: 40, fontWeight: 800, color: "#E8C0C0", lineHeight: 1 }}>$25,000</div>
                   <div style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", marginTop: 6 }}>Estimated retail value</div>
                 </div>
-                <div style={{ width: 1, alignSelf: "stretch", background: "rgba(255,255,255,0.2)" }} />
-                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                <div className="value-divider" style={{ width: 1, alignSelf: "stretch", background: "rgba(255,255,255,0.2)" }} />
+                <div className="ibc-logo-box" style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                   <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)" }}>Donated by</div>
                   <div style={{ background: "#fff", borderRadius: 10, border: "1px solid rgba(0,0,0,0.1)", padding: "10px 24px" }}>
-                    <span style={{ fontSize: 20, fontWeight: 800, color: "#3B82C4", letterSpacing: "0.04em", textTransform: "uppercase", fontFamily: "var(--font-poppins), Poppins, sans-serif", whiteSpace: "nowrap" }}>Indy Boat Co.</span>
+                    <span style={{ fontSize: 20, fontWeight: 800, color: "#3B82C4", letterSpacing: "0.04em", textTransform: "uppercase", fontFamily: "var(--font-poppins), Poppins, sans-serif" }}>Indy Boat Co.</span>
                   </div>
                 </div>
               </div>
@@ -407,8 +407,10 @@ export default function ConcertPage() {
           .participate-grid { grid-template-columns: 1fr !important; }
           .boat-donated-by { display: none !important; }
           .raffle-section { padding-top: 48px !important; }
-          .boat-value-bar { padding: 14px 16px !important; gap: 16px !important; }
+          .boat-value-bar { padding: 14px 16px !important; gap: 12px !important; flex-direction: column !important; align-items: flex-start !important; }
           .boat-value-bar .value-amount { font-size: 28px !important; }
+          .boat-value-bar .value-divider { display: none !important; }
+          .boat-value-bar .ibc-logo-box { width: 100% !important; box-sizing: border-box !important; }
         }
       `}</style>
     </>
