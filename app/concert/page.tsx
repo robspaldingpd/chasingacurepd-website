@@ -142,30 +142,37 @@ export default function ConcertPage() {
       </section>
 
       {/* ── BOAT RAFFLE ── */}
-      <section id="raffle" style={{ background: "#111111", padding: "48px 24px" }}>
+      <section id="raffle" style={{ background: "#111111", padding: "96px 24px 48px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
 
           {/* Header */}
-          <div style={{ marginBottom: 20, display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap" }}>
-            <div>
-              <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#EDC2C1", marginBottom: 10 }}>Boat Raffle</div>
-              <h2 style={{ fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif", fontWeight: 400, fontSize: "clamp(28px, 3.5vw, 48px)", color: "#FFFFFF", margin: 0, lineHeight: 1.15 }}>
-                Win a $25,000 boat.<br />Fund a breakthrough.
-              </h2>
-            </div>
-            <div className="boat-donated-by" style={{ display: "flex", alignItems: "center", gap: 10, paddingTop: 4 }}>
-              <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", whiteSpace: "nowrap" }}>Donated by</span>
-              <a href="https://indyboatco.com" target="_blank" rel="noopener noreferrer" style={{ background: "#FFFFFF", borderRadius: 6, padding: "5px 10px", display: "inline-flex", alignItems: "center" }}>
-                <img src="/ibc-logo-h.png" alt="Indy Boat Co." style={{ width: 100, height: 25, objectFit: "cover", objectPosition: "center", display: "block" }} />
-              </a>
-            </div>
+          <div style={{ marginBottom: 40 }}>
+            <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#EDC2C1", marginBottom: 10 }}>Boat Raffle</div>
+            <h2 style={{ fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif", fontWeight: 400, fontSize: "clamp(28px, 3.5vw, 48px)", color: "#FFFFFF", margin: 0, lineHeight: 1.15 }}>
+              Win a $25,000 boat.<br />Fund a breakthrough.
+            </h2>
           </div>
 
           {/* Boat image + details */}
           <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 40, alignItems: "center" }} className="two-col">
 
-            {/* Boat photo */}
-            <div className="boat-photo" role="img" aria-label="2026 Starcraft Ski Champ raffle boat" />
+            {/* Boat photo + value bar */}
+            <div>
+              <div className="boat-photo" role="img" aria-label="2026 Starcraft Ski Champ raffle boat" />
+              <div style={{ display: "flex", alignItems: "center", background: "rgba(0,0,0,0.7)", borderRadius: "0 0 12px 12px", padding: "20px 28px", gap: 28 }}>
+                <div style={{ flexShrink: 0 }}>
+                  <div style={{ fontSize: 40, fontWeight: 800, color: "#E8C0C0", lineHeight: 1 }}>$25,000</div>
+                  <div style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", marginTop: 6 }}>Estimated retail value</div>
+                </div>
+                <div style={{ width: 1, alignSelf: "stretch", background: "rgba(255,255,255,0.2)" }} />
+                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                  <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)" }}>Donated by</div>
+                  <div style={{ background: "#fff", borderRadius: 10, border: "1px solid rgba(0,0,0,0.1)", padding: "10px 24px" }}>
+                    <span style={{ fontSize: 20, fontWeight: 800, color: "#3B82C4", letterSpacing: "0.04em", textTransform: "uppercase", fontFamily: "var(--font-poppins), Poppins, sans-serif" }}>Indy Boat Co.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* Right column */}
             <div>
@@ -254,7 +261,7 @@ export default function ConcertPage() {
             ].map((tier, i, arr) => (
               <div key={tier.price} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "16px 24px", borderBottom: i < arr.length - 1 ? "1px solid #EDEDF0" : "none" }}>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 12 }}>
-                  <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 22, color: "#000000" }}>{tier.price}</div>
+                  <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 20, color: "#000000" }}>{tier.price}</div>
                   <div style={{ fontSize: 14, color: "#6B6F7D" }}>{tier.tickets}</div>
                 </div>
                 <RaffleTicketButton

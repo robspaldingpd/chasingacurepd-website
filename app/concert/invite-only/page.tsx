@@ -224,7 +224,7 @@ export default function ConcertPage() {
               style={{
                 fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
                 fontWeight: 700,
-                fontSize: 22,
+                fontSize: 20,
                 color: "#FFFFFF",
                 marginBottom: 8,
               }}
@@ -336,8 +336,23 @@ export default function ConcertPage() {
           {/* Boat image + details */}
           <div style={{ display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 40, alignItems: "center" }} className="two-col">
 
-            {/* Boat photo */}
-            <div className="boat-photo" role="img" aria-label="2026 Starcraft Ski Champ raffle boat" />
+            {/* Boat photo + value bar */}
+            <div>
+              <div className="boat-photo" role="img" aria-label="2026 Starcraft Ski Champ raffle boat" />
+              <div style={{ display: "flex", alignItems: "center", background: "rgba(0,0,0,0.7)", borderRadius: "0 0 12px 12px", padding: "20px 28px", gap: 28 }}>
+                <div style={{ flexShrink: 0 }}>
+                  <div style={{ fontSize: 40, fontWeight: 800, color: "#E8C0C0", lineHeight: 1 }}>$25,000</div>
+                  <div style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", marginTop: 6 }}>Estimated retail value</div>
+                </div>
+                <div style={{ width: 1, alignSelf: "stretch", background: "rgba(255,255,255,0.2)" }} />
+                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                  <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)" }}>Donated by</div>
+                  <div style={{ background: "#fff", borderRadius: 10, border: "1px solid rgba(0,0,0,0.1)", padding: "10px 24px" }}>
+                    <span style={{ fontSize: 20, fontWeight: 800, color: "#3B82C4", letterSpacing: "0.04em", textTransform: "uppercase", fontFamily: "var(--font-poppins), Poppins, sans-serif" }}>Indy Boat Co.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* Right column */}
             <div>
@@ -430,7 +445,7 @@ export default function ConcertPage() {
             ].map((tier, i, arr) => (
               <div key={tier.price} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "16px 24px", borderBottom: i < arr.length - 1 ? "1px solid #EDEDF0" : "none" }}>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 12 }}>
-                  <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 22, color: "#000000" }}>{tier.price}</div>
+                  <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 20, color: "#000000" }}>{tier.price}</div>
                   <div style={{ fontSize: 14, color: "#6B6F7D" }}>{tier.tickets}</div>
                 </div>
                 <RaffleTicketButton
