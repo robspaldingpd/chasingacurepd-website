@@ -189,9 +189,10 @@ GOVERNING LAW AND FINAL AUTHORITY
 
 The raffle and these Official Rules are governed by Indiana law and applicable federal law. Any dispute will be handled in the appropriate Indiana venue unless otherwise required by law. To the extent permitted by law, participants waive any right to bring claims as a class or representative action. Chasing a Cure Parkinson's Foundation may interpret these Official Rules, verify eligibility, resolve disputes, and make final decisions regarding raffle administration, subject to applicable law, Rafflebox requirements, Indiana Gaming Commission requirements, and any authority with jurisdiction.`;
 
-export default function RaffleTermsModal({ label = "Boat Raffle" }: { label?: string }) {
+export default function RaffleTermsModal({ label = "Boat Raffle", theme = "dark" }: { label?: string; theme?: "dark" | "light" }) {
   const [open, setOpen] = useState(false);
   const rules = label === "50/50 Raffle" ? FIFTY_FIFTY_RULES : BOAT_RAFFLE_RULES;
+  const buttonColor = theme === "light" ? "rgba(0,0,0,0.45)" : "rgba(255,255,255,0.5)";
 
   return (
     <>
@@ -202,7 +203,7 @@ export default function RaffleTermsModal({ label = "Boat Raffle" }: { label?: st
           border: "none",
           cursor: "pointer",
           fontSize: 13,
-          color: "rgba(255,255,255,0.4)",
+          color: buttonColor,
           padding: 0,
           textDecoration: "underline",
           textUnderlineOffset: 3,

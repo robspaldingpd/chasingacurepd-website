@@ -466,7 +466,7 @@ export default function ConcertPage() {
           </p>
 
           <div style={{ marginTop: 12, textAlign: "center" }}>
-            <RaffleTermsModal label="50/50 Raffle" />
+            <RaffleTermsModal label="50/50 Raffle" theme="light" />
           </div>
 
         </div>
