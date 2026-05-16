@@ -143,7 +143,7 @@ export default function ConcertPage() {
       </section>
 
       {/* ── BOAT RAFFLE ── */}
-      <section id="raffle" style={{ background: "#111111", padding: "96px 24px 48px" }}>
+      <section id="raffle" className="raffle-section" style={{ background: "#111111", padding: "96px 24px 48px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
 
           {/* Header */}
@@ -160,9 +160,9 @@ export default function ConcertPage() {
             {/* Boat photo + value bar */}
             <div>
               <div className="boat-photo" role="img" aria-label="2026 Starcraft Ski Champ raffle boat" />
-              <div style={{ display: "flex", alignItems: "center", background: "rgba(0,0,0,0.7)", borderRadius: "0 0 12px 12px", padding: "20px 28px", gap: 28 }}>
+              <div className="boat-value-bar" style={{ display: "flex", alignItems: "center", background: "rgba(0,0,0,0.7)", borderRadius: "0 0 12px 12px", padding: "20px 28px", gap: 28 }}>
                 <div style={{ flexShrink: 0 }}>
-                  <div style={{ fontSize: 40, fontWeight: 800, color: "#E8C0C0", lineHeight: 1 }}>$25,000</div>
+                  <div className="value-amount" style={{ fontSize: 40, fontWeight: 800, color: "#E8C0C0", lineHeight: 1 }}>$25,000</div>
                   <div style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", marginTop: 6 }}>Estimated retail value</div>
                 </div>
                 <div style={{ width: 1, alignSelf: "stretch", background: "rgba(255,255,255,0.2)" }} />
@@ -405,8 +405,10 @@ export default function ConcertPage() {
           .two-col { grid-template-columns: 1fr !important; gap: 24px !important; }
           .sponsor-grid { grid-template-columns: 1fr !important; }
           .participate-grid { grid-template-columns: 1fr !important; }
-          /* boat-photo styles are in globals.css */
           .boat-donated-by { display: none !important; }
+          .raffle-section { padding-top: 48px !important; }
+          .boat-value-bar { padding: 14px 16px !important; gap: 16px !important; }
+          .boat-value-bar .value-amount { font-size: 28px !important; }
         }
       `}</style>
     </>

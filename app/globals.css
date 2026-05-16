@@ -148,7 +148,8 @@ h1, h2, h3, h4, p { text-wrap: balance; }
 }
 @media (max-width: 900px) {
   .boat-photo {
-    aspect-ratio: unset;
-    height: 220px;
+    aspect-ratio: 764 / 380;
+    height: auto;
+    background-size: contain;
   }
 }
