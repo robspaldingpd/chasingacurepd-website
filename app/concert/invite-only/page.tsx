@@ -3,6 +3,7 @@ import Link from "next/link";
 import ConcertFAQ from "@/components/ConcertFAQ";
 import RaffleTicketButton from "@/components/RaffleTicketButton";
 import InviteEnvelopeHero from "@/components/InviteEnvelopeHero";
+import RaffleTermsModal from "@/components/RaffleTermsModal";
 
 export const metadata: Metadata = {
   title: "Concert for a Cure 2026 | Chasing a Cure PD",
@@ -398,6 +399,9 @@ export default function ConcertPage() {
               <p style={{ fontSize: 13, color: "rgba(255,255,255,0.35)", margin: 0, lineHeight: 1.6, whiteSpace: "nowrap" }}>
                 Every ticket funds Parkinson&apos;s research through The Michael J. Fox Foundation.
               </p>
+              <div style={{ marginTop: 12 }}>
+                <RaffleTermsModal label="Boat Raffle" />
+              </div>
             </div>
           </div>
 
@@ -460,6 +464,10 @@ export default function ConcertPage() {
           <p style={{ fontSize: 12, color: "#B8BAC4", margin: "24px 0 0", lineHeight: 1.6, textAlign: "center" }}>
             Indiana Charity Gaming License Number 018323
           </p>
+
+          <div style={{ marginTop: 12, textAlign: "center" }}>
+            <RaffleTermsModal label="50/50 Raffle" />
+          </div>
 
         </div>
       </section>
