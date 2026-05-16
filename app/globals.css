@@ -139,10 +139,12 @@ h1, h2, h3, h4, p { text-wrap: balance; }
 /* ── Boat photo (concert pages) ── */
 .boat-photo {
   background-image: url('/photos/raffle-boat-new.webp');
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #0a0f1a;
   border-radius: 12px 12px 0 0;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 764 / 380;
 }
 @media (max-width: 900px) {
   .boat-photo {
