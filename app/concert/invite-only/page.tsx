@@ -325,12 +325,6 @@ export default function ConcertPage() {
                 Win a $25,000 boat.<br />Fund a breakthrough.
               </h2>
             </div>
-            <div className="boat-donated-by" style={{ display: "flex", alignItems: "center", gap: 10, paddingTop: 4 }}>
-              <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", whiteSpace: "nowrap" }}>Donated by</span>
-              <a href="https://indyboatco.com" target="_blank" rel="noopener noreferrer" style={{ background: "#FFFFFF", borderRadius: 6, padding: "5px 10px", display: "inline-flex", alignItems: "center" }}>
-                <img src="/ibc-logo-h.png" alt="Indy Boat Co." style={{ width: 100, height: 25, objectFit: "cover", objectPosition: "center", display: "block" }} />
-              </a>
-            </div>
           </div>
 
           {/* Boat image + details */}
