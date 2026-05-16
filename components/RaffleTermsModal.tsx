@@ -1,9 +1,7 @@
 "use client";
 import { useState } from "react";
 
-const BOAT_RAFFLE_RULES = `2026 BOAT RAFFLE OFFICIAL RULES
-
-SPONSOR
+const BOAT_RAFFLE_RULES = `SPONSOR
 
 The boat raffle is sponsored by Chasing a Cure Parkinson's Foundation, an Indiana nonprofit organization and federally recognized 501(c)(3) public charity, EIN 82-5107944. Net proceeds support its charitable mission of funding the science behind breakthroughs for Parkinson's disease through Team Fox and The Michael J. Fox Foundation. Chasing a Cure Parkinson's Foundation is 100 percent volunteer run and pays no salaries. Net proceeds help fund Parkinson's research after allowable raffle and event expenses.
 
