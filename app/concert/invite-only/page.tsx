@@ -395,7 +395,7 @@ export default function ConcertPage() {
                 ))}
               </div>
 
-              <p style={{ fontSize: 13, color: "rgba(255,255,255,0.35)", margin: 0, lineHeight: 1.6 }}>
+              <p style={{ fontSize: 13, color: "rgba(255,255,255,0.35)", margin: 0, lineHeight: 1.6, whiteSpace: "nowrap" }}>
                 Every ticket funds Parkinson&apos;s research through The Michael J. Fox Foundation.
               </p>
             </div>
