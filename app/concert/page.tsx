@@ -169,7 +169,7 @@ export default function ConcertPage() {
                 <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                   <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)" }}>Donated by</div>
                   <div style={{ background: "#fff", borderRadius: 10, border: "1px solid rgba(0,0,0,0.1)", padding: "10px 24px" }}>
-                    <span style={{ fontSize: 20, fontWeight: 800, color: "#3B82C4", letterSpacing: "0.04em", textTransform: "uppercase", fontFamily: "var(--font-poppins), Poppins, sans-serif" }}>Indy Boat Co.</span>
+                    <span style={{ fontSize: 20, fontWeight: 800, color: "#3B82C4", letterSpacing: "0.04em", textTransform: "uppercase", fontFamily: "var(--font-poppins), Poppins, sans-serif", whiteSpace: "nowrap" }}>Indy Boat Co.</span>
                   </div>
                 </div>
               </div>
