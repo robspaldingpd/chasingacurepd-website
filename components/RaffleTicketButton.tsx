@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@vercel/analytics/react";
 
 interface Props {
   url: string;
@@ -14,7 +15,7 @@ export default function RaffleTicketButton({ url, raffleName, style, children }:
 
   return (
     <>
-      <button onClick={() => setOpen(true)} style={{ cursor: "pointer", border: "none", ...style }}>
+      <button onClick={() => { setOpen(true); track("raffle_ticket_clicked", { raffle: raffleName }); }} style={{ cursor: "pointer", border: "none", ...style }}>
         {children}
       </button>
 
@@ -103,7 +104,7 @@ export default function RaffleTicketButton({ url, raffleName, style, children }:
               href={url}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
+              onClick={() => { setOpen(false); track("raffle_ticket_purchase_started", { raffle: raffleName }); }}
               style={{
                 display: "flex",
                 alignItems: "center",
