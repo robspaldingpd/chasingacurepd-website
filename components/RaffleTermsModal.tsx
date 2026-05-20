@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { track } from "@vercel/analytics/react";
 
 const BOAT_RAFFLE_RULES = `SPONSOR
 
@@ -197,7 +198,7 @@ export default function RaffleTermsModal({ label = "Boat Raffle", theme = "dark"
   return (
     <>
       <button
-        onClick={() => setOpen(true)}
+        onClick={() => { setOpen(true); track("official_rules_opened", { raffle: label }); }}
         style={{
           background: "none",
           border: "none",
