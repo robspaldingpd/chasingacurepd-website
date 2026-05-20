@@ -4,6 +4,7 @@ import ConcertFAQ from "@/components/ConcertFAQ";
 import RaffleTicketButton from "@/components/RaffleTicketButton";
 import InviteEnvelopeHero from "@/components/InviteEnvelopeHero";
 import RaffleTermsModal from "@/components/RaffleTermsModal";
+import TrackedAnchor from "@/components/TrackedAnchor";
 
 export const metadata: Metadata = {
   title: "Concert for a Cure 2026 | Chasing a Cure PD",
@@ -122,9 +123,9 @@ export default function ConcertPage() {
               <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.65)", margin: "0 0 28px", flex: 1 }}>
                 An afternoon at the lake. Live music, chef-curated food and cocktails, live auction, and the raffle draw. Limited to 100 guests.
               </p>
-              <a href="#tickets" style={{ display: "block", padding: "13px 0", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
+              <TrackedAnchor href="#tickets" eventName="get_tickets_clicked" style={{ display: "block", padding: "13px 0", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
                 Get Tickets
-              </a>
+              </TrackedAnchor>
             </div>
 
             {/* Card 2: Boat Raffle */}
@@ -141,9 +142,9 @@ export default function ConcertPage() {
                   <img src="/ibc-logo-h.png" alt="Indy Boat Co." style={{ width: 80, height: 20, objectFit: "cover", objectPosition: "center", display: "block" }} />
                 </a>
               </div>
-              <a href="#raffle" style={{ display: "block", padding: "13px 0", background: "transparent", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
+              <TrackedAnchor href="#raffle" eventName="buy_tickets_clicked" eventProps={{ raffle: "Boat Raffle" }} style={{ display: "block", padding: "13px 0", background: "transparent", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
                 Buy Raffle Tickets
-              </a>
+              </TrackedAnchor>
             </div>
 
             {/* Card 3: 50/50 Raffle */}
@@ -154,9 +155,9 @@ export default function ConcertPage() {
               <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.65)", margin: "0 0 28px", flex: 1 }}>
                 The more tickets sold, the bigger the prize. Winner takes half the pot; the other half funds Parkinson&apos;s research. You do not need to be present to win.
               </p>
-              <a href="#fifty-fifty" style={{ display: "block", padding: "13px 0", background: "transparent", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
+              <TrackedAnchor href="#fifty-fifty" eventName="buy_tickets_clicked" eventProps={{ raffle: "50/50 Raffle" }} style={{ display: "block", padding: "13px 0", background: "transparent", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
                 Buy 50/50 Tickets
-              </a>
+              </TrackedAnchor>
             </div>
 
           </div>
