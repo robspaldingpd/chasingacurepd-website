@@ -1,5 +1,5 @@
 "use client";
-import { track } from "@vercel/analytics/react";
+import { trackEvent } from "@/lib/gtag";
 import type { CSSProperties, ReactNode } from "react";
 
 interface Props {
@@ -14,7 +14,7 @@ export default function TrackedAnchor({ href, eventName, eventProps, style, chil
   return (
     <a
       href={href}
-      onClick={() => track(eventName, eventProps)}
+      onClick={() => trackEvent(eventName, eventProps)}
       style={style}
     >
       {children}
