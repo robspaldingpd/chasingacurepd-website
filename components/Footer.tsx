@@ -56,6 +56,7 @@ export default function Footer() {
                 { href: "/science", label: "The Science" },
                 { href: "/concert", label: "Concert for a Cure" },
                 { href: "/donate", label: "Ways to Give" },
+                { href: "/contact", label: "Contact" },
               ].map((link) => (
                 <Link
                   key={link.href}

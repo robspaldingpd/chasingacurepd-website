@@ -8,6 +8,7 @@ const links = [
   { href: "/about", label: "About" },
   { href: "/science", label: "The Science" },
   { href: "/concert", label: "Concert for a Cure" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Nav() {
