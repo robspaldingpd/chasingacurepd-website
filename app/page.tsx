@@ -2,7 +2,9 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import ZeffyEmbed from "@/components/ZeffyEmbed";
+import dynamic from "next/dynamic";
+
+const ZeffyEmbed = dynamic(() => import("@/components/ZeffyEmbed"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "Chasing a Cure Parkinson's Foundation",
@@ -97,11 +99,16 @@ export default function HomePage() {
           padding: "100px 24px 80px",
           position: "relative",
           overflow: "hidden",
-          backgroundImage: "url('/photos/concert-group-2024.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center 40%",
         }}
       >
+        <Image
+          src="/photos/concert-group-2024.jpg"
+          alt=""
+          fill
+          style={{ objectFit: "cover", objectPosition: "center 40%" }}
+          priority
+          quality={75}
+        />
         {/* Strong dark overlay, indoor photo needs uniform darkening for text legibility */}
         <div aria-hidden style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(8,8,8,0.72) 0%, rgba(8,8,8,0.60) 45%, rgba(8,8,8,0.35) 75%, rgba(8,8,8,0.15) 100%)", pointerEvents: "none" }} />
 
@@ -600,7 +607,14 @@ export default function HomePage() {
       {/* ══════════════════════════
           CONCERT CALLOUT
       ══════════════════════════ */}
-      <section style={{ position: "relative", minHeight: "72vh", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden", backgroundImage: "url('/photos/geist-juicebox-cove.png')", backgroundSize: "cover", backgroundPosition: "center 50%" }}>
+      <section style={{ position: "relative", minHeight: "72vh", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden" }}>
+        <Image
+          src="/photos/geist-juicebox-cove.png"
+          alt=""
+          fill
+          style={{ objectFit: "cover", objectPosition: "center 50%" }}
+          quality={75}
+        />
         <div aria-hidden style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, rgba(8,8,8,0.78) 0%, rgba(8,8,8,0.60) 45%, rgba(8,8,8,0.25) 75%, rgba(8,8,8,0.05) 100%)", pointerEvents: "none" }} />
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "80px 24px", position: "relative", width: "100%" }}>
           <div style={{ maxWidth: 680, display: "flex", flexDirection: "column", gap: 0 }}>
