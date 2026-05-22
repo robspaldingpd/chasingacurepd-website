@@ -2,9 +2,6 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import dynamic from "next/dynamic";
-
-const ZeffyEmbed = dynamic(() => import("@/components/ZeffyEmbed"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "Chasing a Cure Parkinson's Foundation",
@@ -564,11 +561,11 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════════════════
-          DONATION WIDGET
+          DONATE CTA
       ══════════════════════════ */}
       <section id="donate" style={{ background: "var(--ccpd-pink-50)", padding: "96px 24px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "start" }} className="donate-grid">
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }} className="donate-grid">
             <div>
               <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--ccpd-gray-500)", marginBottom: 16 }}>
                 Fuel the science
@@ -579,8 +576,6 @@ export default function HomePage() {
               <p style={{ fontSize: 17, lineHeight: 1.8, color: "var(--ccpd-ink-700)", margin: "0 0 40px", maxWidth: 480 }}>
                 No salaries. No paid staff. Just the science.
               </p>
-
-              {/* Three-step flow, messaging guide §9F */}
               <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
                 <FlowStep
                   n="1"
@@ -599,7 +594,44 @@ export default function HomePage() {
                 />
               </div>
             </div>
-            <ZeffyEmbed />
+
+            {/* Donate CTA card */}
+            <div style={{ background: "#1A1A1A", borderRadius: 20, padding: "52px 48px", display: "flex", flexDirection: "column", gap: 32 }}>
+              <div>
+                <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#EDC2C1", marginBottom: 16 }}>
+                  Make a gift
+                </div>
+                <h3 style={{ fontFamily: "var(--font-serif)", fontWeight: 400, fontSize: "clamp(24px, 2.5vw, 34px)", lineHeight: 1.2, color: "#FFFFFF", margin: "0 0 16px" }}>
+                  Every dollar funds the science.
+                </h3>
+                <p style={{ fontSize: 15, lineHeight: 1.75, color: "rgba(255,255,255,0.6)", margin: 0 }}>
+                  One-time or monthly. All donations go directly to Parkinson&apos;s research through The Michael J. Fox Foundation and Team Fox.
+                </p>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                {[
+                  "100% volunteer-run. No salaries.",
+                  "501(c)(3) public charity · EIN 82-5107944",
+                  "Funds benefit The Michael J. Fox Foundation",
+                ].map((line) => (
+                  <div key={line} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "rgba(255,255,255,0.55)" }}>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#EDC2C1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M3 8l4 4 6-7" />
+                    </svg>
+                    {line}
+                  </div>
+                ))}
+              </div>
+              <Link
+                href="/donate"
+                style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "16px 32px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none" }}
+              >
+                Donate Now
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M6 3l5 5-5 5" />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
