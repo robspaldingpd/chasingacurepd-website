@@ -59,7 +59,7 @@ export default function ContactPage() {
               marginRight: "auto",
             }}
           >
-            Questions about the foundation, events, raffles, or sponsorship — reach out any time.
+            Questions about the foundation, events, raffles, or sponsorship? Reach out any time.
           </p>
         </div>
       </section>
@@ -76,7 +76,7 @@ export default function ContactPage() {
           }}
           className="contact-grid"
         >
-          {/* Left — contact info */}
+          {/* Left: contact info */}
           <div>
             <div
               style={{
@@ -160,7 +160,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Right — about + donate CTA */}
+          {/* Right: about + donate CTA */}
           <div>
             <div
               style={{
@@ -194,7 +194,7 @@ export default function ContactPage() {
             </p>
             <p style={{ fontSize: 15, lineHeight: 1.75, color: "#2B2B2B", margin: "0 0 36px" }}>
               No one on our team draws a salary. We keep operating costs to the minimum required
-              to function. Funds raised go directly to Parkinson&apos;s research — the world&apos;s
+              to function. Funds raised go directly to Parkinson&apos;s research, the world&apos;s
               most urgent unsolved neurological problem.
             </p>
 
