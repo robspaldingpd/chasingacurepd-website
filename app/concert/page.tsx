@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import RaffleTicketButton from "@/components/RaffleTicketButton";
 import RaffleTermsModal from "@/components/RaffleTermsModal";
 
@@ -328,47 +329,53 @@ export default function ConcertPage() {
           </div>
 
           {/* Open tiers */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginBottom: 40 }} className="sponsor-grid">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginBottom: 24 }} className="sponsor-grid">
             {[
               {
                 tier: "Lead Sponsor",
                 amount: "$10,000",
-                availability: "3 available",
-                description: "For companies that want premium visibility and a meaningful role in the mission.",
+                availability: "2 spots only",
+                tagline: "Anchor the story.",
                 perks: [
-                  "Logo on major event signage",
-                  "Logo on website and printed program",
-                  "Recognition from stage",
-                  "Featured sponsor thank you on social media",
-                  "Six event tickets",
-                  "Option to align with one event moment",
+                  "2-minute remarks from stage",
+                  "Signature moment alignment",
+                  "4 event guest invitations",
+                  "Private welcome with Wendy, Rob & MJFF partner",
+                  "Chef Jay moment for your guests",
+                  "Indy Boat Co. grand opening invitations",
+                  "Dedicated sponsor email",
+                  "Full-campaign social spotlight",
+                  "Large banner visibility",
+                  "Featured website recognition",
+                  "Printed program recognition",
                 ],
               },
               {
                 tier: "Partner Sponsor",
                 amount: "$5,000",
-                availability: "6 available",
-                description: "For local companies that want strong visibility and guest access.",
+                availability: "Limited spots",
+                tagline: "Champion the cure.",
                 perks: [
-                  "Logo on event signage",
-                  "Logo on website and printed program",
-                  "Group recognition from stage",
-                  "Social media group thank you",
-                  "Four event tickets",
-                  "Option to support one guest experience",
+                  "2 event guest invitations",
+                  "1 warm networking introduction",
+                  "Video feature and 5 dedicated social posts",
+                  "Logo and paragraph in foundation email",
+                  "Featured partner tier on website",
+                  "Large banner visibility",
+                  "Printed program recognition",
                 ],
               },
               {
                 tier: "Community Sponsor",
                 amount: "$2,500",
-                availability: "10 available",
-                description: "For small businesses, families, and professionals who want to stand with the mission.",
+                availability: "Limited spots",
+                tagline: "Stand with the mission.",
                 perks: [
-                  "Name or logo on website",
-                  "Name or logo in printed program",
-                  "Name listed on event signage",
-                  "Two event tickets",
-                  "Group sponsor thank you",
+                  "2 dedicated social posts",
+                  "Logo in group sponsor email",
+                  "Shared sponsor section on website",
+                  "Medium banner visibility",
+                  "Printed program recognition",
                 ],
               },
             ].map((s) => (
@@ -379,7 +386,7 @@ export default function ConcertPage() {
                     <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 18, color: "#EDC2C1" }}>{s.amount}</div>
                   </div>
                   <div style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", marginBottom: 10 }}>{s.availability}</div>
-                  <div style={{ fontSize: 14, color: "rgba(255,255,255,0.55)", lineHeight: 1.6 }}>{s.description}</div>
+                  <div style={{ fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif", fontStyle: "italic", fontSize: 15, color: "#F98008", lineHeight: 1.4 }}>{s.tagline}</div>
                 </div>
                 <ul style={{ margin: "0 0 24px", padding: "0 0 0 16px", display: "flex", flexDirection: "column", gap: 6, flex: 1 }}>
                   {s.perks.map((perk) => (
@@ -394,6 +401,14 @@ export default function ConcertPage() {
                 </a>
               </div>
             ))}
+          </div>
+
+          {/* For all 2026 Sponsors */}
+          <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.10)", borderRadius: 12, padding: "32px 40px", textAlign: "center" }}>
+            <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", marginBottom: 14 }}>For all 2026 Sponsors</div>
+            <p style={{ fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif", fontStyle: "italic", fontSize: "clamp(16px, 1.8vw, 20px)", color: "rgba(255,255,255,0.75)", margin: "0 auto", lineHeight: 1.6, maxWidth: 560 }}>
+              An invitation to our Spring 2027 VIP Donor Reception, an annual gathering to thank the companies and families helping move a cure closer.
+            </p>
           </div>
 
         </div>
