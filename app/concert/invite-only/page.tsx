@@ -106,7 +106,7 @@ export default function ConcertPage() {
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gap: 80,
-            alignItems: "center",
+            alignItems: "start",
           }}
           className="two-col"
         >
@@ -118,7 +118,7 @@ export default function ConcertPage() {
             </div>
             <h2
               style={{
-                fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif",
+                fontFamily: "var(--font-instrument), ‘Instrument Serif’, Georgia, serif",
                 fontWeight: 400,
                 fontSize: "clamp(28px, 3.5vw, 42px)",
                 lineHeight: 1.15,
@@ -130,64 +130,13 @@ export default function ConcertPage() {
               Come because it&apos;s a great time.<br />Stay because it matters.
             </h2>
             <p style={{ fontSize: 17, lineHeight: 1.75, color: "#2B2B2B", margin: "0 0 20px" }}>
-              Concert for a Cure is an invitation-only afternoon at the lake — live music, good company,
-              and one shared purpose. Limited to 100 guests, hosted at Wendy and Rob&apos;s lake home on
-              Geist Reservoir in Fishers, Indiana.
+              Concert for a Cure is an invitation-only afternoon at the lake, hosted at Wendy and Rob&apos;s lake home on Geist Reservoir in Fishers, Indiana.
             </p>
-            <p style={{ fontSize: 17, lineHeight: 1.75, color: "#2B2B2B", margin: "0 0 28px", textWrap: "auto" as const }}>
+            <p style={{ fontSize: 17, lineHeight: 1.75, color: "#2B2B2B", margin: "0 0 20px", textWrap: "auto" as const }}>
               This is not a gala. It&apos;s not a corporate event. It&apos;s a curated gathering
               of people who believe the science is close, and who want to be part of
               getting it there.
             </p>
-
-            {/* The Experience */}
-            <div style={{ borderTop: "1px solid rgba(0,0,0,0.08)", paddingTop: 28, marginBottom: 28 }}>
-              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#A97C7C", marginBottom: 20 }}>
-                The Experience
-              </div>
-              {[
-                {
-                  category: "Music and Hosting",
-                  items: [
-                    "Ryan Ahlwardt of FOX59 Indy Now as emcee",
-                    "Ryan Ahlwardt & The Indy Nights Band",
-                  ],
-                },
-                {
-                  category: "Food and Beverage",
-                  items: [
-                    "Savory and sweet bites by Chef Jay Holmes, former Executive Chef of St. Elmo Steak House",
-                    "Premium hosted bar",
-                    "Veuve Clicquot toast in Sue’s honor",
-                  ],
-                },
-                {
-                  category: "Mission and Giving",
-                  items: [
-                    "Mission moment with Kristen Kovaletz of The Michael J. Fox Foundation",
-                    "Curated silent auction with premium packages",
-                    "$25,000 boat raffle featuring the 2026 Starcraft Ski Champ from Indy Boat Co.",
-                    "Online 50/50 raffle",
-                  ],
-                },
-              ].map((group) => (
-                <div key={group.category} style={{ marginBottom: 18 }}>
-                  <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#1A1A1A", marginBottom: 8 }}>
-                    {group.category}
-                  </div>
-                  <ul style={{ margin: 0, padding: "0 0 0 16px", display: "flex", flexDirection: "column", gap: 4 }}>
-                    {group.items.map((item) => (
-                      <li key={item} style={{ fontSize: 15, lineHeight: 1.65, color: "#2B2B2B" }}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-              <div style={{ marginTop: 20, padding: "12px 16px", background: "rgba(169,124,124,0.08)", borderLeft: "3px solid #A97C7C", borderRadius: "0 6px 6px 0" }}>
-                <span style={{ fontSize: 13, fontWeight: 600, color: "#1A1A1A" }}>Attire: </span>
-                <span style={{ fontSize: 13, color: "#2B2B2B" }}>Summer Casual Cocktail. White and soft neutrals encouraged.</span>
-              </div>
-            </div>
-
             <p style={{ fontSize: 17, lineHeight: 1.75, color: "#2B2B2B", margin: 0, textWrap: "auto" as const }}>
               Every ticket. Every bid at the live auction. Every raffle ticket.
               Funds raised benefit The Michael J. Fox Foundation for Parkinson&apos;s Research.
@@ -198,21 +147,14 @@ export default function ConcertPage() {
             style={{
               background: "#1A1A1A",
               borderRadius: 16,
-              padding: 48,
+              padding: 40,
               display: "flex",
               flexDirection: "column",
-              gap: 20,
+              gap: 0,
             }}
           >
-            <div
-              style={{
-                fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
-                fontWeight: 700,
-                fontSize: 20,
-                color: "#FFFFFF",
-                marginBottom: 8,
-              }}
-            >
+            {/* Event Details */}
+            <div style={{ fontFamily: "var(--font-poppins), ‘Poppins’, sans-serif", fontWeight: 700, fontSize: 18, color: "#FFFFFF", marginBottom: 20 }}>
               Event Details
             </div>
             {[
@@ -229,26 +171,70 @@ export default function ConcertPage() {
                   justifyContent: "space-between",
                   alignItems: "flex-start",
                   gap: 16,
-                  paddingBottom: 16,
+                  paddingBottom: 14,
+                  marginBottom: 14,
                   borderBottom: "1px solid rgba(255,255,255,0.06)",
                 }}
               >
-                <div
-                  style={{
-                    fontSize: 12,
-                    fontWeight: 600,
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    color: "rgba(255,255,255,0.35)",
-                  }}
-                >
+                <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", whiteSpace: "nowrap" }}>
                   {item.label}
                 </div>
-                <div style={{ fontSize: 15, fontWeight: 500, color: "#FFFFFF", textAlign: "right" }}>
+                <div style={{ fontSize: 14, fontWeight: 500, color: "#FFFFFF", textAlign: "right" }}>
                   {item.value}
                 </div>
               </div>
             ))}
+
+            {/* Divider */}
+            <div style={{ height: 1, background: "rgba(255,255,255,0.10)", margin: "8px 0 24px" }} />
+
+            {/* The Experience */}
+            <div style={{ fontFamily: "var(--font-poppins), ‘Poppins’, sans-serif", fontWeight: 700, fontSize: 18, color: "#FFFFFF", marginBottom: 20 }}>
+              The Experience
+            </div>
+            {[
+              {
+                category: "Music and Hosting",
+                items: [
+                  "Ryan Ahlwardt of FOX59 Indy Now as emcee",
+                  "Ryan Ahlwardt & The Indy Nights Band",
+                ],
+              },
+              {
+                category: "Food and Beverage",
+                items: [
+                  "Savory and sweet bites by Chef Jay Holmes, former Executive Chef of St. Elmo Steak House",
+                  "Premium hosted bar",
+                  "Veuve Clicquot toast in Sue’s honor",
+                ],
+              },
+              {
+                category: "Mission and Giving",
+                items: [
+                  "Mission moment with Kristen Kovaletz of The Michael J. Fox Foundation",
+                  "Curated silent auction with premium packages",
+                  "$25,000 boat raffle featuring the 2026 Starcraft Ski Champ from Indy Boat Co.",
+                  "Online 50/50 raffle",
+                ],
+              },
+            ].map((group) => (
+              <div key={group.category} style={{ marginBottom: 18 }}>
+                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.10em", textTransform: "uppercase", color: "#EDC2C1", marginBottom: 8 }}>
+                  {group.category}
+                </div>
+                <ul style={{ margin: 0, padding: "0 0 0 14px", display: "flex", flexDirection: "column", gap: 4 }}>
+                  {group.items.map((item) => (
+                    <li key={item} style={{ fontSize: 13, lineHeight: 1.6, color: "rgba(255,255,255,0.65)" }}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+
+            {/* Attire */}
+            <div style={{ marginTop: 8, padding: "12px 14px", background: "rgba(237,194,193,0.08)", border: "1px solid rgba(237,194,193,0.18)", borderRadius: 8 }}>
+              <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#EDC2C1" }}>Attire </span>
+              <span style={{ fontSize: 13, color: "rgba(255,255,255,0.6)" }}>Summer Casual Cocktail. White and soft neutrals encouraged.</span>
+            </div>
           </div>
         </div>
       </section>
