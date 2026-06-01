@@ -137,10 +137,44 @@ export default function ConcertPage() {
               of people who believe the science is close, and who want to be part of
               getting it there.
             </p>
-            <p style={{ fontSize: 17, lineHeight: 1.75, color: "#2B2B2B", margin: 0, textWrap: "auto" as const }}>
+            <p style={{ fontSize: 17, lineHeight: 1.75, color: "#2B2B2B", margin: "0 0 32px", textWrap: "auto" as const }}>
               Every ticket. Every bid at the live auction. Every raffle ticket.
               Funds raised benefit The Michael J. Fox Foundation for Parkinson&apos;s Research.
             </p>
+
+            {/* Event Details */}
+            <div style={{ borderTop: "1px solid rgba(0,0,0,0.08)", paddingTop: 28 }}>
+              <div style={{ fontFamily: "var(--font-poppins), ‘Poppins’, sans-serif", fontWeight: 700, fontSize: 16, color: "#000000", marginBottom: 16 }}>
+                Event Details
+              </div>
+              {[
+                { label: "Date", value: "Saturday, July 18, 2026" },
+                { label: "Time", value: "2:00 PM – 6:00 PM" },
+                { label: "Location", value: "Geist Reservoir · Fishers, Indiana" },
+                { label: "Capacity", value: "Limited to 100 guests" },
+                { label: "Rain policy", value: "Rain or shine, large tent on-site" },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "flex-start",
+                    gap: 16,
+                    paddingBottom: 12,
+                    marginBottom: 12,
+                    borderBottom: "1px solid rgba(0,0,0,0.06)",
+                  }}
+                >
+                  <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "#9B9FAE", whiteSpace: "nowrap" }}>
+                    {item.label}
+                  </div>
+                  <div style={{ fontSize: 14, fontWeight: 500, color: "#1A1A1A", textAlign: "right" }}>
+                    {item.value}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div
@@ -153,40 +187,6 @@ export default function ConcertPage() {
               gap: 0,
             }}
           >
-            {/* Event Details */}
-            <div style={{ fontFamily: "var(--font-poppins), ‘Poppins’, sans-serif", fontWeight: 700, fontSize: 18, color: "#FFFFFF", marginBottom: 20 }}>
-              Event Details
-            </div>
-            {[
-              { label: "Date", value: "Saturday, July 18, 2026" },
-              { label: "Time", value: "2:00 PM – 6:00 PM" },
-              { label: "Location", value: "Geist Reservoir · Fishers, Indiana" },
-              { label: "Capacity", value: "Limited to 100 guests" },
-              { label: "Rain policy", value: "Rain or shine, large tent on-site" },
-            ].map((item) => (
-              <div
-                key={item.label}
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "flex-start",
-                  gap: 16,
-                  paddingBottom: 14,
-                  marginBottom: 14,
-                  borderBottom: "1px solid rgba(255,255,255,0.06)",
-                }}
-              >
-                <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", whiteSpace: "nowrap" }}>
-                  {item.label}
-                </div>
-                <div style={{ fontSize: 14, fontWeight: 500, color: "#FFFFFF", textAlign: "right" }}>
-                  {item.value}
-                </div>
-              </div>
-            ))}
-
-            {/* Divider */}
-            <div style={{ height: 1, background: "rgba(255,255,255,0.10)", margin: "8px 0 24px" }} />
 
             {/* The Experience */}
             <div style={{ fontFamily: "var(--font-poppins), ‘Poppins’, sans-serif", fontWeight: 700, fontSize: 18, color: "#FFFFFF", marginBottom: 20 }}>
