@@ -134,11 +134,60 @@ export default function ConcertPage() {
               and one shared purpose. Limited to 100 guests, hosted at Wendy and Rob&apos;s lake home on
               Geist Reservoir in Fishers, Indiana.
             </p>
-            <p style={{ fontSize: 17, lineHeight: 1.75, color: "#2B2B2B", margin: "0 0 20px", textWrap: "auto" as const }}>
+            <p style={{ fontSize: 17, lineHeight: 1.75, color: "#2B2B2B", margin: "0 0 28px", textWrap: "auto" as const }}>
               This is not a gala. It&apos;s not a corporate event. It&apos;s a curated gathering
               of people who believe the science is close, and who want to be part of
               getting it there.
             </p>
+
+            {/* The Experience */}
+            <div style={{ borderTop: "1px solid rgba(0,0,0,0.08)", paddingTop: 28, marginBottom: 28 }}>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#A97C7C", marginBottom: 20 }}>
+                The Experience
+              </div>
+              {[
+                {
+                  category: "Music and Hosting",
+                  items: [
+                    "Ryan Ahlwardt of FOX59 Indy Now as emcee",
+                    "Ryan Ahlwardt & The Indy Nights Band",
+                  ],
+                },
+                {
+                  category: "Food and Beverage",
+                  items: [
+                    "Savory and sweet bites by Chef Jay Holmes, former Executive Chef of St. Elmo Steak House",
+                    "Premium hosted bar",
+                    "Veuve Clicquot toast in Sue’s honor",
+                  ],
+                },
+                {
+                  category: "Mission and Giving",
+                  items: [
+                    "Mission moment with Kristen Kovaletz of The Michael J. Fox Foundation",
+                    "Curated silent auction with premium packages",
+                    "$25,000 boat raffle featuring the 2026 Starcraft Ski Champ from Indy Boat Co.",
+                    "Online 50/50 raffle",
+                  ],
+                },
+              ].map((group) => (
+                <div key={group.category} style={{ marginBottom: 18 }}>
+                  <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#1A1A1A", marginBottom: 8 }}>
+                    {group.category}
+                  </div>
+                  <ul style={{ margin: 0, padding: "0 0 0 16px", display: "flex", flexDirection: "column", gap: 4 }}>
+                    {group.items.map((item) => (
+                      <li key={item} style={{ fontSize: 15, lineHeight: 1.65, color: "#2B2B2B" }}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+              <div style={{ marginTop: 20, padding: "12px 16px", background: "rgba(169,124,124,0.08)", borderLeft: "3px solid #A97C7C", borderRadius: "0 6px 6px 0" }}>
+                <span style={{ fontSize: 13, fontWeight: 600, color: "#1A1A1A" }}>Attire: </span>
+                <span style={{ fontSize: 13, color: "#2B2B2B" }}>Summer Casual Cocktail. White and soft neutrals encouraged.</span>
+              </div>
+            </div>
+
             <p style={{ fontSize: 17, lineHeight: 1.75, color: "#2B2B2B", margin: 0, textWrap: "auto" as const }}>
               Every ticket. Every bid at the live auction. Every raffle ticket.
               Funds raised benefit The Michael J. Fox Foundation for Parkinson&apos;s Research.
