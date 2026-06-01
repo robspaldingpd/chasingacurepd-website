@@ -81,21 +81,15 @@ export default function ConcertPage() {
               An intimate gathering of 100 guests. Live music, great company, and every ticket funds Parkinson&apos;s research through The Michael J. Fox Foundation.
             </p>
 
-            <div style={{ display: "flex", gap: 14, flexWrap: "wrap", justifyContent: "center" }}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
               <a
-                href="#participate"
+                href="#about"
                 style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "14px 32px", background: "#EDC2C1", color: "#1A0A0A", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 15, textDecoration: "none", letterSpacing: "-0.01em" }}
               >
-                Ways to Participate
+                Read Below
                 <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M6 3l5 5-5 5" />
+                  <path d="M3 6l5 5 5-5" />
                 </svg>
-              </a>
-              <a
-                href="#sponsor"
-                style={{ display: "inline-flex", alignItems: "center", padding: "14px 28px", background: "transparent", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.22)", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 15, textDecoration: "none" }}
-              >
-                Sponsorship
               </a>
             </div>
 
@@ -104,7 +98,7 @@ export default function ConcertPage() {
       </section>
 
       {/* ── ABOUT THE EVENING ── */}
-      <section style={{ background: "#FDF7F7", padding: "80px 24px" }}>
+      <section id="about" style={{ background: "#FDF7F7", padding: "80px 24px" }}>
         <div
           style={{
             maxWidth: 1100,
