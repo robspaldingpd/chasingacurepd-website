@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import RaffleToast from "@/components/RaffleToast";
 
 export const metadata: Metadata = {
   title: "Chasing a Cure Parkinson's Foundation",
@@ -707,6 +708,8 @@ export default function HomePage() {
           .wendy-section { padding-left: 16px !important; padding-right: 16px !important; }
         }
       `}</style>
+
+      <RaffleToast />
     </>
   );
 }
