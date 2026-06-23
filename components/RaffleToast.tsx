@@ -171,8 +171,9 @@ export default function RaffleToast() {
         <Link
           href="/concert#raffle"
           onClick={() => {
+            // Track the click but do NOT persist a dismissal — navigating to the
+            // raffle unmounts the toast anyway, and it should return on later visits.
             trackEvent("raffle_toast_clicked", { raffle: "Boat Raffle" });
-            dismiss();
           }}
           style={{
             display: "flex",
