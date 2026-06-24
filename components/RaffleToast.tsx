@@ -205,6 +205,17 @@ export default function RaffleToast() {
             margin: "16px 0 0",
           }}
         >
+          Must be in the state of Indiana to purchase
+        </p>
+        <p
+          style={{
+            fontSize: 12,
+            lineHeight: 1.5,
+            color: "#9A939C",
+            textAlign: "center",
+            margin: "4px 0 0",
+          }}
+        >
           Indiana Charity Gaming License Number 018323
         </p>
       </div>
