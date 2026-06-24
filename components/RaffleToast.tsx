@@ -205,7 +205,7 @@ export default function RaffleToast() {
             margin: "16px 0 0",
           }}
         >
-          Must be in the state of Indiana to purchase
+          Must physically be in the state of Indiana to purchase
         </p>
         <p
           style={{
