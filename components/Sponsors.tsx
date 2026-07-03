@@ -1,4 +1,4 @@
-import { Fragment, type ReactNode } from "react";
+import { Fragment, type ReactNode, type CSSProperties } from "react";
 
 /* ──────────────────────────────────────────────
    SPONSOR RECOGNITION — shared across concert pages
@@ -14,7 +14,7 @@ type SponsorTier = "Title" | "Lead" | "Partner" | "Community" | "InKind";
 interface Sponsor {
   name: string;
   tier: SponsorTier;
-  url: string;
+  url?: string; // omit (or "#") to render the logo without a link
   logo?: string;
   aspect?: number;
 }
@@ -22,8 +22,7 @@ interface Sponsor {
 const SPONSORS: Sponsor[] = [
   { name: "Indy Boat Co.", tier: "Title", url: "https://indyboatco.com", logo: "/sponsors/indy-boat-co.png", aspect: 5.76 },
 
-  // TODO: Chase Properties URL not yet provided — update url when available.
-  { name: "Chase Properties", tier: "Lead", url: "#", logo: "/sponsors/chase-properties-trim.png", aspect: 1.03 },
+  { name: "Chase Properties", tier: "Lead", logo: "/sponsors/chase-properties-trim.png", aspect: 1.03 }, // no website link
 
   { name: "Carrington Homes", tier: "Partner", url: "https://www.carringtonhomes.com/", logo: "/sponsors/carrington-homes-trim.png", aspect: 1.25 },
   { name: "Reis Nichols Jewelers", tier: "Partner", url: "https://www.reisnichols.com/", logo: "/sponsors/reis-nichols-trim.png", aspect: 4.63 },
@@ -61,36 +60,37 @@ function SponsorCard({ s, area, height, width, bare }: { s: Sponsor; area: numbe
   // Equal-area: each logo renders at ~the same visual area regardless of shape.
   // height = sqrt(area / aspect); width follows naturally from the trimmed logo.
   const logoH = s.logo && s.aspect ? Math.round(Math.sqrt(area / s.aspect)) : undefined;
+  const hasLink = !!s.url && s.url !== "#";
+  const style: CSSProperties = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height,
+    width: width ?? undefined,
+    minWidth: bare ? undefined : width ?? 200,
+    padding: bare ? "0 26px" : "16px 24px",
+    background: bare ? "transparent" : "#FFFFFF",
+    border: bare ? "none" : "1px solid #EDE4E4",
+    borderRadius: bare ? 0 : 12,
+    textDecoration: "none",
+    boxSizing: "border-box",
+  };
+  const inner = s.logo ? (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img src={s.logo} alt={s.name} style={{ height: logoH, width: "auto", maxWidth: "100%", objectFit: "contain", display: "block" }} />
+  ) : (
+    <span style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 600, fontSize: bare ? 14 : 15, color: bare ? "#3B3640" : "#2B2B2B", textAlign: "center", lineHeight: 1.3, whiteSpace: bare ? "nowrap" : "normal" }}>
+      {s.name}
+    </span>
+  );
+
+  // No URL → static logo (no anchor, no hover-lift class).
+  if (!hasLink) {
+    return <div title={s.name} style={style}>{inner}</div>;
+  }
   return (
-    <a
-      href={s.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      title={s.name}
-      className={bare ? "sponsor-logo-bare" : "sponsor-card"}
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height,
-        width: width ?? undefined,
-        minWidth: bare ? undefined : width ?? 200,
-        padding: bare ? "0 26px" : "16px 24px",
-        background: bare ? "transparent" : "#FFFFFF",
-        border: bare ? "none" : "1px solid #EDE4E4",
-        borderRadius: bare ? 0 : 12,
-        textDecoration: "none",
-        boxSizing: "border-box",
-      }}
-    >
-      {s.logo ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={s.logo} alt={s.name} style={{ height: logoH, width: "auto", maxWidth: "100%", objectFit: "contain", display: "block" }} />
-      ) : (
-        <span style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 600, fontSize: bare ? 14 : 15, color: bare ? "#3B3640" : "#2B2B2B", textAlign: "center", lineHeight: 1.3, whiteSpace: bare ? "nowrap" : "normal" }}>
-          {s.name}
-        </span>
-      )}
+    <a href={s.url} target="_blank" rel="noopener noreferrer" title={s.name} className={bare ? "sponsor-logo-bare" : "sponsor-card"} style={style}>
+      {inner}
     </a>
   );
 }
