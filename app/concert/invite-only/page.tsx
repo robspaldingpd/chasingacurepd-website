@@ -5,6 +5,7 @@ import RaffleTicketButton from "@/components/RaffleTicketButton";
 import InviteEnvelopeHero from "@/components/InviteEnvelopeHero";
 import RaffleTermsModal from "@/components/RaffleTermsModal";
 import TrackedAnchor from "@/components/TrackedAnchor";
+import { SponsorRibbon, SponsorRecognition } from "@/components/Sponsors";
 
 export const metadata: Metadata = {
   title: "Concert for a Cure 2026 | Chasing a Cure PD",
@@ -238,6 +239,9 @@ export default function ConcertPage() {
           </div>
         </div>
       </section>
+
+      {/* ── SPONSOR STRIP (after the By Invitation Only section) ── */}
+      <SponsorRibbon cutIntoHero={false} />
 
       {/* ── WAYS TO PARTICIPATE ── */}
       <section id="participate" style={{ background: "#1A1A1A", padding: "80px 24px" }}>
@@ -684,6 +688,9 @@ export default function ConcertPage() {
 
         </div>
       </section>
+
+      {/* ── SPONSOR RECOGNITION ── */}
+      <SponsorRecognition />
 
       {/* ── FAQ ── */}
       <section style={{ background: "#F6F1E6", padding: "80px 24px" }}>
