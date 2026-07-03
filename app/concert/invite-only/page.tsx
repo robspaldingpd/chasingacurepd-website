@@ -131,7 +131,7 @@ export default function ConcertPage() {
               Come because it&apos;s a great time.<br />Stay because it matters.
             </h2>
             <p style={{ fontSize: 17, lineHeight: 1.75, color: "#2B2B2B", margin: "0 0 20px" }}>
-              Concert for a Cure is an invitation-only afternoon at the lake, hosted at Wendy and Rob&apos;s lake home on Geist Reservoir in Fishers, Indiana.
+              Concert for a Cure is an invitation-only afternoon at the lake,<br /> hosted at Wendy and Rob&apos;s lake home on Geist Reservoir<br /> in Fishers, Indiana.
             </p>
             <p style={{ fontSize: 17, lineHeight: 1.75, color: "#2B2B2B", margin: "0 0 20px", textWrap: "auto" as const }}>
               This is not a gala. It&apos;s not a corporate event. It&apos;s a curated gathering
@@ -190,46 +190,43 @@ export default function ConcertPage() {
           >
 
             {/* The Experience */}
-            <div style={{ fontFamily: "var(--font-poppins), ‘Poppins’, sans-serif", fontWeight: 700, fontSize: 18, color: "#FFFFFF", marginBottom: 20 }}>
+            <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 18, color: "#FFFFFF", marginBottom: 20 }}>
               The Experience
             </div>
-            {[
-              {
-                category: "Music and Hosting",
-                items: [
-                  "Ryan Ahlwardt of FOX59 Indy Now as emcee",
-                  "Ryan Ahlwardt & The Indy Nights Band",
-                ],
-              },
-              {
-                category: "Food and Beverage",
-                items: [
-                  "Savory and sweet bites by Chef Jay Holmes, former Executive Chef of St. Elmo Steak House",
-                  "Premium hosted bar",
-                  "Veuve Clicquot toast in Sue’s honor",
-                ],
-              },
-              {
-                category: "Mission and Giving",
-                items: [
-                  "Mission moment with Kristen Kovaletz of The Michael J. Fox Foundation",
-                  "Curated silent auction with premium packages",
-                  "$25,000 boat raffle featuring the 2026 Starcraft Ski Champ from Indy Boat Co.",
-                  "Online 50/50 raffle",
-                ],
-              },
-            ].map((group) => (
-              <div key={group.category} style={{ marginBottom: 18 }}>
-                <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.10em", textTransform: "uppercase", color: "#EDC2C1", marginBottom: 8 }}>
-                  {group.category}
+
+            {/* Featured performers */}
+            <div className="performers-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 26 }}>
+              {[
+                { name: "Ryan Ahlwardt", role: "FOX59 Indy Now · MC & live performance", photo: "/people/ryan-ahlwardt.jpg", pos: "center 18%" },
+                { name: "Chef Jay Holmes", role: "Former Exec. Chef, St. Elmo Steak House", photo: "/people/chef-jay.jpg", pos: "center 20%" },
+              ].map((p) => (
+                <div key={p.name}>
+                  <div style={{ width: "100%", aspectRatio: "1 / 1", borderRadius: 12, overflow: "hidden", marginBottom: 12, background: "#0F0F0F" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={p.photo} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: p.pos, display: "block" }} />
+                  </div>
+                  <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 15, color: "#FFFFFF", lineHeight: 1.25 }}>{p.name}</div>
+                  <div style={{ fontSize: 12.5, color: "rgba(255,255,255,0.55)", lineHeight: 1.5, marginTop: 3 }}>{p.role}</div>
                 </div>
-                <ul style={{ margin: 0, padding: "0 0 0 14px", display: "flex", flexDirection: "column", gap: 4 }}>
-                  {group.items.map((item) => (
-                    <li key={item} style={{ fontSize: 13, lineHeight: 1.6, color: "rgba(255,255,255,0.65)" }}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* What the afternoon includes */}
+            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.10em", textTransform: "uppercase", color: "#EDC2C1", marginBottom: 12 }}>
+              The afternoon includes
+            </div>
+            <ul style={{ margin: "0 0 20px", padding: "0 0 0 18px", display: "flex", flexDirection: "column", gap: 9 }}>
+              {[
+                "Chef Jay Holmes, former Executive Chef at St. Elmo Steak House, curating the food experience",
+                "Ryan Ahlwardt of FOX59 Indy Now as MC",
+                "Live music by Ryan Ahlwardt & The Indy Nights Band",
+                "Premium hosted bar",
+                "Curated auction packages",
+                "Purposeful connection with business owners, families, homeowners, and local leaders",
+              ].map((item) => (
+                <li key={item} style={{ fontSize: 13.5, lineHeight: 1.6, color: "rgba(255,255,255,0.68)" }}>{item}</li>
+              ))}
+            </ul>
 
             {/* Attire */}
             <div style={{ marginTop: 8, padding: "12px 14px", background: "rgba(237,194,193,0.08)", border: "1px solid rgba(237,194,193,0.18)", borderRadius: 8 }}>
@@ -819,6 +816,9 @@ export default function ConcertPage() {
         }
         @media (max-width: 560px) {
           .features-grid { grid-template-columns: 1fr !important; }
+        }
+        @media (max-width: 400px) {
+          .performers-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </>
