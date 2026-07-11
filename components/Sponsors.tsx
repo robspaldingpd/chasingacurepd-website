@@ -41,6 +41,11 @@ const SPONSORS: Sponsor[] = [
   { name: "Poolwerx", tier: "InKind", url: "https://www.poolwerx.com/locations/indiana/poolwerx-noblesville/", logo: "/sponsors/poolwerx.png", aspect: 2.05 },
   { name: "Red Tulip for Parkinson's Awareness", tier: "InKind", url: "https://www.redtulipforparkinsons.org/", logo: "/sponsors/red-tulip.png", aspect: 1.05 },
   { name: "Reforming Indy", tier: "InKind", url: "https://reformingindy.com/", logo: "/sponsors/reforming-indy.png", aspect: 0.98 },
+  { name: "Salt", tier: "InKind", url: "https://www.saltdining.com/", logo: "/sponsors/salt.png", aspect: 0.79 },
+  { name: "Tiburon Coastal Cuisine", tier: "InKind", url: "https://tiburoncoastal.com/", logo: "/sponsors/tiburon.png", aspect: 2.20 },
+  { name: "Joe's Butcher Shop", tier: "InKind", url: "https://joesbutchershop.com/", logo: "/sponsors/joes-butcher.png", aspect: 1.14 },
+  // Wolfie's supplied a white logo; recolored to navy so it reads on the light cards.
+  { name: "Wolfie's Grill", tier: "InKind", url: "https://www.wolfiesgrill.com/", logo: "/sponsors/wolfies.png", aspect: 1.33 },
 ];
 
 const byTier = (t: SponsorTier) => SPONSORS.filter((s) => s.tier === t);
@@ -242,14 +247,22 @@ export function SponsorRecognition() {
           </div>
         )}
 
-        {/* In-Kind — static grid (bottom section only) */}
+        {/* In-Kind — scrolling (bottom section only) */}
         {byTier("InKind").length > 0 && (
           <div>
             <TierLabel>In-Kind Sponsors</TierLabel>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 16, maxWidth: 900, margin: "0 auto" }}>
-              {byTier("InKind").map((s) => (
-                <SponsorCard key={s.name} s={s} area={3000} height={96} />
-              ))}
+            <div className="sponsor-marquee">
+              <div className="sponsor-marquee-track">
+                {byTier("InKind").map((s) => (
+                  <SponsorCard key={s.name} s={s} area={2600} height={92} width={200} />
+                ))}
+                {/* duplicate for a seamless loop; hidden when motion is reduced */}
+                {byTier("InKind").map((s) => (
+                  <span key={`dup-${s.name}`} className="sponsor-marquee-dup" aria-hidden style={{ display: "contents" }}>
+                    <SponsorCard s={s} area={2600} height={92} width={200} />
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         )}
