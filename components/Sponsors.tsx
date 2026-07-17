@@ -42,7 +42,6 @@ const SPONSORS: Sponsor[] = [
   { name: "Poolwerx", tier: "InKind", url: "https://www.poolwerx.com/locations/indiana/poolwerx-noblesville/", logo: "/sponsors/poolwerx.png", aspect: 2.05 },
   { name: "Red Tulip for Parkinson's Awareness", tier: "InKind", url: "https://www.redtulipforparkinsons.org/", logo: "/sponsors/red-tulip.png", aspect: 1.05 },
   { name: "Reforming Indy", tier: "InKind", url: "https://reformingindy.com/", logo: "/sponsors/reforming-indy.png", aspect: 0.98 },
-  { name: "Salt", tier: "InKind", url: "https://www.saltdining.com/", logo: "/sponsors/salt.png", aspect: 0.79 },
   { name: "Tiburon Coastal Cuisine", tier: "InKind", url: "https://tiburoncoastal.com/", logo: "/sponsors/tiburon.png", aspect: 2.20 },
   { name: "Joe's Butcher Shop", tier: "InKind", url: "https://joesbutchershop.com/", logo: "/sponsors/joes-butcher.png", aspect: 1.14 },
   // Wolfie's supplied a white logo; recolored to navy so it reads on the light cards.
