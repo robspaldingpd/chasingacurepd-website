@@ -35,7 +35,7 @@ const SPONSORS: Sponsor[] = [
   { name: "The Manning Companies", tier: "Community", url: "https://www.themanningcompanies.com/", logo: "/sponsors/manning.png", aspect: 2.61 },
   { name: "Anthony and Associates", tier: "Community", url: "https://www.aabrea.com/", logo: "/sponsors/anthony-associates.png", aspect: 6.05 },
   { name: "Ferguson", tier: "Community", url: "https://www.ferguson.com/", logo: "/sponsors/ferguson.png", aspect: 7.75 },
-  { name: "Elysian Medspa", tier: "Community", url: "https://elysianmedirejuv.com/", logo: "/sponsors/elysian.png", aspect: 1.53 },
+  { name: "Elysian Medspa", tier: "Community", url: "https://elysianmedirejuv.com/", logo: "/sponsors/elysian.png", aspect: 3.81 },
 
   // In-Kind — shown only in the bottom recognition section (not the under-hero ribbon).
   { name: "Penn & Beech Candle Co.", tier: "InKind", url: "https://www.pennandbeech.com/pages/indianapolis-fishers", logo: "/sponsors/penn-beech.png", aspect: 2.93 },
