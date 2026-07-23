@@ -40,7 +40,7 @@ const Footer = () => (
     </div>
     <div className="ccpd-container ccpd-footer-bottom">
       <span>© 2026 Chasing a Cure Parkinson's Foundation</span>
-      <span>100% volunteer-run · 100% to research</span>
+      <span>100% volunteer-run · every dollar directly to research</span>
     </div>
   </footer>
 );

@@ -9,14 +9,14 @@ const PartnerBlock = () => (
         </h2>
         <p style={{color:'#E4E9F2', maxWidth: 640}}>
           The world's leading Parkinson's research funder — more than
-          $185&nbsp;million raised since 2006. We're 100% volunteer-run, which
-          means zero overhead, zero administrative cut. Your gift reaches the
-          science.
+          $185&nbsp;million raised since 2006. We're 100% volunteer-run and keep
+          operations as lean as a foundation legally can, so your gift goes
+          directly to the science.
         </p>
         <div className="ccpd-partner-row">
           <img src="../../assets/mjff-placeholder.svg" alt="Partner logo placeholder" />
           <a className="ccpd-link-coral" href="#">
-            Read the 100% promise →
+            Read our giving promise →
           </a>
         </div>
       </div>

@@ -7,7 +7,7 @@ A hi-fi recreation of the core marketing-site surfaces for chasingacurepd.org. U
 - `index.html` — an interactive click-thru of the site. Click the top-nav links to flip between pages:
   - **Home** — hero, three-anchor promise, urgency stats, Sue's story, research partner, donate CTA, footer
   - **About** — founding story, founder bios (Wendy + Rob), MJFF partnership block
-  - **Ways to Give** — donation amount picker, 100%-to-research promise, monthly giving
+  - **Ways to Give** — donation amount picker, giving promise, monthly giving
   - **Concert for a Cure** — event hero, date / location, ticket tiers, raffle callout, FAQ
 - `Nav.jsx`, `Hero.jsx`, `StatBand.jsx`, `StorySection.jsx`, `PartnerBlock.jsx`, `WaysToGive.jsx`, `ConcertPage.jsx`, `AboutPage.jsx`, `Footer.jsx` — the components
 

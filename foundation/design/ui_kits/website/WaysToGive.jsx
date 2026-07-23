@@ -1,4 +1,4 @@
-// WaysToGive.jsx — donation amount picker + monthly toggle + 100% promise
+// WaysToGive.jsx — donation amount picker + monthly toggle + giving promise
 const WaysToGive = () => {
   const [amount, setAmount] = React.useState(100);
   const [recurring, setRecurring] = React.useState(false);
@@ -7,7 +7,7 @@ const WaysToGive = () => {
   const impactFrames = {
     25: 'Joins thousands of supporters moving the science forward',
     50: 'Funds a day of research through Team Fox',
-    100: 'Entry-level — a meaningful gift, 100% to MJFF',
+    100: 'Entry-level — a meaningful gift to MJFF research',
     250: 'A serious investment in the science behind a breakthrough',
     500: 'Part of a community of donors driving Parkinson\u2019s research',
     1000: 'Major gift — consider a personal ask from Wendy or Rob',
@@ -17,11 +17,11 @@ const WaysToGive = () => {
     <section className="ccpd-ways">
       <div className="ccpd-container">
         <div className="ccpd-eyebrow">Ways to Give</div>
-        <h1 className="ccpd-display">Every penny, straight to research.</h1>
+        <h1 className="ccpd-display">Every dollar, straight to the research.</h1>
         <p className="ccpd-lead">
-          We are 100% volunteer-run. There are no salaries, no overhead, no
-          administrative fees taken from your donation. When you give, every
-          penny goes directly to Parkinson's disease research through The
+          We are 100% volunteer-run — no one takes a salary. We keep operations
+          as lean as a foundation legally can, so your gift goes directly to
+          Parkinson's disease research through The
           Michael&nbsp;J.&nbsp;Fox Foundation and Team Fox.
         </p>
 
@@ -68,11 +68,11 @@ const WaysToGive = () => {
         <div className="ccpd-promise-grid">
           <div className="ccpd-promise-card">
             <div className="ccpd-promise-n tnum">100%</div>
-            <div className="ccpd-promise-t">of your donation to research</div>
+            <div className="ccpd-promise-t">volunteer-run — no one takes a salary</div>
           </div>
           <div className="ccpd-promise-card">
-            <div className="ccpd-promise-n tnum">0</div>
-            <div className="ccpd-promise-t">overhead, salaries, or fees</div>
+            <div className="ccpd-promise-n tnum">$0</div>
+            <div className="ccpd-promise-t">paid in salaries, ever</div>
           </div>
           <div className="ccpd-promise-card">
             <div className="ccpd-promise-n tnum">$185M+</div>

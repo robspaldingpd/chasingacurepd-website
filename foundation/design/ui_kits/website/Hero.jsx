@@ -15,7 +15,7 @@ const Hero = ({setPage}) => (
       </h1>
       <p className="ccpd-hero-sub">
         We fund the research that will end Parkinson's disease —
-        100% of every dollar, directly to science.
+        every dollar, directly to the science.
       </p>
       <div className="ccpd-hero-cta">
         <a className="ccpd-btn ccpd-btn-primary" href="#" onClick={e => {e.preventDefault(); setPage('ways');}}>
