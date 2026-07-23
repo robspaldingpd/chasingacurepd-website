@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import RaffleTicketButton from "@/components/RaffleTicketButton";
 import RaffleTermsModal from "@/components/RaffleTermsModal";
 import { SponsorRibbon, SponsorRecognition } from "@/components/Sponsors";
 
@@ -40,7 +39,7 @@ export default function ConcertPage() {
           <div style={{ maxWidth: 680 }}>
             <div style={{ display: "inline-flex", alignItems: "center", marginBottom: 20, padding: "8px 20px", background: "#EDC2C1", borderRadius: 999 }}>
               <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1A0A0A" }}>
-                Saturday, July 18, 2026 · 2–6 PM · Juicebox Cove at Geist
+                Concert for a Cure 2026 · Thank you
               </span>
             </div>
 
@@ -52,27 +51,24 @@ export default function ConcertPage() {
             </p>
 
             <p style={{ fontSize: "clamp(15px, 1.6vw, 17px)", lineHeight: 1.6, color: "#FFFFFF", margin: "0 0 32px", maxWidth: 520 }}>
-              Anchor in Juicebox Cove and be part of the music, the mission, and the movement to end Parkinson&apos;s disease.
+              Thank you to everyone who came out, gave, and stood with us. Together we raised <strong style={{ color: "#EDC2C1", fontWeight: 700 }}>$105,000</strong>{" "}for Parkinson&apos;s research through The Michael J.&nbsp;Fox Foundation.
             </p>
 
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
               <a
-                href="#raffle"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "15px 36px", background: "#EDC2C1", color: "#1A0A0A", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none", letterSpacing: "-0.01em" }}
+                href="/donate"
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "15px 36px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none", letterSpacing: "-0.01em" }}
               >
-                Boat Raffle
+                Donate
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M6 3l5 5-5 5" />
                 </svg>
               </a>
               <a
-                href="#fifty-fifty"
+                href="#our-sponsors"
                 style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "15px 28px", background: "#FFFFFF", color: "#111111", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none", letterSpacing: "-0.01em" }}
               >
-                50/50 Raffle
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M6 3l5 5-5 5" />
-                </svg>
+                Meet our sponsors
               </a>
             </div>
           </div>
@@ -91,8 +87,8 @@ export default function ConcertPage() {
           <h2 style={{ fontFamily: "var(--font-instrument), 'Instrument Serif', Georgia, serif", fontWeight: 400, fontSize: "clamp(26px, 3vw, 38px)", color: "#FFFFFF", textAlign: "center", margin: "0 auto 16px", maxWidth: 600, lineHeight: 1.2 }}>
             Everyone has a role in ending Parkinson&apos;s disease.
           </h2>
-          <p style={{ fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.55)", textAlign: "center", maxWidth: 560, margin: "0 auto 48px" }}>
-            Concert for a Cure is a lakeside benefit for Parkinson&apos;s research, featuring a $25,000 Starcraft boat raffle. Every act of support moves the science forward.
+          <p style={{ fontSize: 16, lineHeight: 1.75, color: "rgba(255,255,255,0.55)", textAlign: "center", maxWidth: 600, margin: "0 auto 48px" }}>
+            Concert for a Cure is our lakeside benefit for Parkinson&apos;s research. The 2026 event — featuring a $25,000 Starcraft boat raffle, a 50/50 raffle, and incredible sponsors — raised <strong style={{ color: "#FFFFFF" }}>$105,000</strong> to move the science forward. The raffles are now closed, but the mission continues year-round.
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }} className="participate-grid">
@@ -103,7 +99,7 @@ export default function ConcertPage() {
               <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 36, color: "#FFFFFF", lineHeight: 1, marginBottom: 8 }}>$25,000</div>
               <div style={{ fontSize: 13, color: "rgba(255,255,255,0.4)", marginBottom: 20 }}>estimated retail value</div>
               <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.65)", margin: "0 0 24px", flex: 1 }}>
-                Win a Starcraft Ski Champ with classic lines inspired by 1950s automotive style, including its signature rear fins. Winner drawn live at the event. You do not need to be present to win.
+                A Starcraft Ski Champ with classic lines inspired by 1950s automotive style, including its signature rear fins. The winner was drawn live at the event on July 18, 2026.
               </p>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
                 <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", whiteSpace: "nowrap" }}>Donated by</span>
@@ -111,8 +107,8 @@ export default function ConcertPage() {
                   <img src="/ibc-logo-h.png" alt="Indy Boat Co." style={{ width: 80, height: 20, objectFit: "cover", objectPosition: "center", display: "block" }} />
                 </a>
               </div>
-              <a href="#raffle" style={{ display: "block", padding: "13px 0", background: "transparent", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
-                Buy Raffle Tickets
+              <a href="/donate" style={{ display: "block", padding: "13px 0", background: "#F98008", color: "#FFFFFF", border: "1px solid #F98008", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
+                Donate to the cause
               </a>
             </div>
 
@@ -122,10 +118,10 @@ export default function ConcertPage() {
               <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 36, color: "#FFFFFF", lineHeight: 1, marginBottom: 8 }}>50%</div>
               <div style={{ fontSize: 13, color: "rgba(255,255,255,0.4)", marginBottom: 20 }}>of the total pot to the winner</div>
               <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.65)", margin: "0 0 28px", flex: 1 }}>
-                The more tickets sold, the bigger the prize. Winner takes half the pot; the other half funds Parkinson&apos;s research. You do not need to be present to win.
+                The winner took half the pot; the other half funds Parkinson&apos;s research. Drawn live at the event on July 18, 2026.
               </p>
-              <a href="#fifty-fifty" style={{ display: "block", padding: "13px 0", background: "transparent", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
-                Buy 50/50 Tickets
+              <a href="/donate" style={{ display: "block", padding: "13px 0", background: "#F98008", color: "#FFFFFF", border: "1px solid #F98008", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
+                Donate to the cause
               </a>
             </div>
 
@@ -135,10 +131,10 @@ export default function ConcertPage() {
               <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 36, color: "#FFFFFF", lineHeight: 1, marginBottom: 8 }}>3 tiers</div>
               <div style={{ fontSize: 13, color: "rgba(255,255,255,0.4)", marginBottom: 20 }}>$2,500 · $5,000 · $10,000</div>
               <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.65)", margin: "0 0 28px", flex: 1 }}>
-                Lead the mission, partner with the experience, or stand with the community. Event tickets, logo placement, and stage recognition included.
+                From our Title Sponsor to our In-Kind partners, an incredible group of businesses helped make the 2026 event possible. We&apos;re grateful for every one of them.
               </p>
-              <a href="#sponsor" style={{ display: "block", padding: "13px 0", background: "transparent", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
-                View Packages
+              <a href="#our-sponsors" style={{ display: "block", padding: "13px 0", background: "transparent", color: "#FFFFFF", border: "1px solid rgba(255,255,255,0.25)", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textAlign: "center", textDecoration: "none" }}>
+                Meet our sponsors
               </a>
             </div>
 
@@ -195,36 +191,21 @@ export default function ConcertPage() {
                 ))}
               </div>
 
-              <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 12, overflow: "hidden", marginBottom: 16 }}>
-                <div style={{ padding: "16px 20px", borderBottom: "1px solid rgba(255,255,255,0.06)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
-                  <div style={{ fontSize: 13, fontWeight: 600, color: "rgba(255,255,255,0.5)" }}>More tickets, better odds.</div>
-                  <div style={{ display: "inline-flex", alignItems: "center", padding: "4px 10px", background: "rgba(237,194,193,0.15)", border: "1px solid rgba(237,194,193,0.3)", borderRadius: 999, flexShrink: 0 }}>
-                    <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#EDC2C1" }}>Max 1,000 tickets</span>
-                  </div>
+              <div style={{ background: "rgba(237,194,193,0.08)", border: "1px solid rgba(237,194,193,0.25)", borderRadius: 12, padding: "26px 28px", marginBottom: 16 }}>
+                <div style={{ display: "inline-flex", alignItems: "center", padding: "5px 12px", background: "rgba(237,194,193,0.15)", border: "1px solid rgba(237,194,193,0.3)", borderRadius: 999, marginBottom: 14 }}>
+                  <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#EDC2C1" }}>Raffle closed</span>
                 </div>
-                {[
-                  { price: "$100", tickets: "1 ticket" },
-                  { price: "$275", tickets: "3 tickets" },
-                  { price: "$400", tickets: "5 tickets" },
-                ].map((tier, i) => (
-                  <div key={tier.price} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "14px 20px", borderBottom: i < 2 ? "1px solid rgba(255,255,255,0.06)" : "none" }}>
-                    <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
-                      <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 20, color: "#FFFFFF" }}>{tier.price}</div>
-                      <div style={{ fontSize: 13, color: "rgba(255,255,255,0.4)" }}>{tier.tickets}</div>
-                    </div>
-                    <RaffleTicketButton
-                      url="https://www.rafflebox.us/raffle/ccpf"
-                      raffleName="Boat Raffle"
-                      style={{ padding: "8px 18px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 13 }}
-                    >
-                      Buy
-                    </RaffleTicketButton>
-                  </div>
-                ))}
+                <p style={{ fontSize: 15, lineHeight: 1.7, color: "rgba(255,255,255,0.7)", margin: "0 0 20px" }}>
+                  The boat raffle has closed and the winner was drawn on July 18, 2026 — thank you to everyone who entered. Together, Concert for a Cure raised <strong style={{ color: "#FFFFFF" }}>$105,000</strong>{" "}for Parkinson&apos;s research.
+                </p>
+                <a href="/donate" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "13px 28px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textDecoration: "none" }}>
+                  Donate to the cause
+                  <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 3l5 5-5 5" /></svg>
+                </a>
               </div>
 
               <p style={{ fontSize: 13, color: "rgba(255,255,255,0.35)", margin: 0, lineHeight: 1.6 }}>
-                Ticket proceeds support Parkinson&apos;s research through The Michael J. Fox Foundation.
+                Proceeds support Parkinson&apos;s research through The Michael J. Fox Foundation.
               </p>
               <div style={{ marginTop: 12 }}>
                 <RaffleTermsModal label="Boat Raffle" />
@@ -249,42 +230,25 @@ export default function ConcertPage() {
               Half goes to the winner.<br />Half funds the cure.
             </h2>
             <p style={{ fontSize: 16, lineHeight: 1.7, color: "#6B6F7D", margin: "0 auto", maxWidth: 520 }}>
-              Buy tickets, split the pot. The more tickets sold, the bigger the prize. Winner drawn live on July 18.
+              Half the pot went to the winner; the other half funds the cure. The winner was drawn live on July 18, 2026.
             </p>
           </div>
 
-          <div style={{ background: "#FFFFFF", border: "1px solid #DCDDE3", borderRadius: 12, overflow: "hidden", marginBottom: 24, boxShadow: "0 1px 2px rgba(20,33,61,0.06), 0 8px 24px rgba(20,33,61,0.06)" }}>
-            <div style={{ padding: "16px 24px", borderBottom: "1px solid #EDEDF0", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12, background: "#FAFAFA" }}>
-              <div style={{ fontSize: 13, fontWeight: 600, color: "#6B6F7D" }}>More tickets, better odds. Winner takes 50% of the total pot.</div>
-              <div style={{ display: "inline-flex", alignItems: "center", padding: "4px 10px", background: "rgba(169,124,124,0.12)", border: "1px solid rgba(169,124,124,0.3)", borderRadius: 999 }}>
-                <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#A97C7C" }}>50% to winner</span>
-              </div>
+          <div style={{ background: "#FFFFFF", border: "1px solid #DCDDE3", borderRadius: 12, padding: "32px 32px", marginBottom: 24, textAlign: "center", boxShadow: "0 1px 2px rgba(20,33,61,0.06), 0 8px 24px rgba(20,33,61,0.06)" }}>
+            <div style={{ display: "inline-flex", alignItems: "center", padding: "5px 12px", background: "rgba(169,124,124,0.12)", border: "1px solid rgba(169,124,124,0.3)", borderRadius: 999, marginBottom: 16 }}>
+              <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#A97C7C" }}>Raffle closed</span>
             </div>
-            {[
-              { tickets: "5 tickets",   price: "$25" },
-              { tickets: "15 tickets",  price: "$50" },
-              { tickets: "40 tickets",  price: "$100" },
-              { tickets: "100 tickets", price: "$200" },
-              { tickets: "400 tickets", price: "$500" },
-            ].map((tier, i, arr) => (
-              <div key={tier.price} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "16px 24px", borderBottom: i < arr.length - 1 ? "1px solid #EDEDF0" : "none" }}>
-                <div style={{ display: "flex", alignItems: "baseline", gap: 12 }}>
-                  <div style={{ fontFamily: "var(--font-poppins), 'Poppins', sans-serif", fontWeight: 700, fontSize: 20, color: "#000000" }}>{tier.price}</div>
-                  <div style={{ fontSize: 14, color: "#6B6F7D" }}>{tier.tickets}</div>
-                </div>
-                <RaffleTicketButton
-                  url="https://www.rafflebox.us/raffle/ccpf5050"
-                  raffleName="50/50 Raffle"
-                  style={{ padding: "8px 20px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 13 }}
-                >
-                  Buy
-                </RaffleTicketButton>
-              </div>
-            ))}
+            <p style={{ fontSize: 16, lineHeight: 1.7, color: "#2B2B2B", margin: "0 auto 22px", maxWidth: 480 }}>
+              The 50/50 raffle has closed and the winner was drawn on July 18, 2026 — thank you to everyone who played. Together, Concert for a Cure raised <strong>$105,000</strong>{" "}for Parkinson&apos;s research.
+            </p>
+            <a href="/donate" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "14px 30px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-inter), sans-serif", fontWeight: 700, fontSize: 15, textDecoration: "none" }}>
+              Donate to the cause
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M6 3l5 5-5 5" /></svg>
+            </a>
           </div>
 
           <p style={{ fontSize: 13, color: "#9B9FAE", margin: 0, lineHeight: 1.6, textAlign: "center" }}>
-            Winner drawn live at the event on July 18, 2026. You do not need to be present to win. 50% of the total pot goes to the winner; the remaining 50% funds Parkinson&apos;s research through The Michael J. Fox Foundation.
+            50% of the total pot went to the winner; the remaining 50% funds Parkinson&apos;s research through The Michael J. Fox Foundation.
           </p>
 
           <div style={{ marginTop: 24, textAlign: "center" }}>

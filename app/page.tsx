@@ -653,37 +653,37 @@ export default function HomePage() {
 
             <div style={{ display: "inline-flex", alignItems: "center", marginBottom: 20, padding: "8px 20px", background: "#EDC2C1", borderRadius: 999, alignSelf: "flex-start" }}>
               <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1A0A0A" }}>
-                Saturday, July 18, 2026 · 2–6 PM · Juicebox Cove at Geist
+                Concert for a Cure 2026 · Thank you
               </span>
             </div>
 
-            <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(40px, 6vw, 80px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "#FFFFFF", margin: "0 0 16px" }}>
-              Concert<br />for a Cure.
+            <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(38px, 5.4vw, 68px)", lineHeight: 1.02, letterSpacing: "-0.03em", color: "#FFFFFF", margin: "0 0 16px" }}>
+              $105,000 raised<br />for the cure.
             </h2>
 
             <p style={{ fontFamily: "var(--font-serif)", fontStyle: "italic", fontWeight: 400, fontSize: "clamp(22px, 2.8vw, 36px)", lineHeight: 1.2, color: "#F98008", margin: "0 0 28px" }}>
-              Afternoon at the lake. One shared purpose.
+              An afternoon at the lake. One shared purpose.
             </p>
 
             <p style={{ fontSize: "clamp(15px, 1.6vw, 17px)", lineHeight: 1.6, color: "#FFFFFF", margin: "0 0 32px", maxWidth: 520 }}>
-              Anchor in Juicebox Cove and be part of the music, the mission, and the movement to end Parkinson&apos;s disease.
+              Our 2026 Concert for a Cure has wrapped. Thank you to everyone who came out, gave, and stood with us — together we raised $105,000 for Parkinson&apos;s research through The Michael J.&nbsp;Fox Foundation.
             </p>
 
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
               <Link
-                href="/concert#raffle"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "15px 36px", background: "#EDC2C1", color: "#1A0A0A", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none", letterSpacing: "-0.01em" }}
+                href="/donate"
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "15px 36px", background: "#F98008", color: "#FFFFFF", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none", letterSpacing: "-0.01em" }}
               >
-                Boat Raffle
+                Donate
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M6 3l5 5-5 5" />
                 </svg>
               </Link>
               <Link
-                href="/concert#fifty-fifty"
+                href="/concert"
                 style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "15px 28px", background: "#FFFFFF", color: "#111111", borderRadius: 999, fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: 16, textDecoration: "none", letterSpacing: "-0.01em" }}
               >
-                50/50 Raffle
+                See the recap
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M6 3l5 5-5 5" />
                 </svg>
