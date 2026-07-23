@@ -193,7 +193,7 @@ Copy-paste ready. All titles are 50â€“60 characters; meta descriptions are 150â€
 
 **Ways to Give**
 - Title: `Donate to Parkinson's Research | Chasing a Cure PD`
-- Meta: `Fund Parkinson's research breakthroughs. 100% of every donation goes directly to research through Team Fox and the Michael J. Fox Foundation.`
+- Meta: `Fund Parkinson's research breakthroughs. Every donation goes directly to research through Team Fox and the Michael J. Fox Foundation.`
 
 **Concert for a Cure (after URL and slug changes)**
 - Title: `Concert for a Cure 2026 | Parkinson's Fundraiser in Fishers, IN`

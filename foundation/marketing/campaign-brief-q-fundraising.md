@@ -50,11 +50,11 @@
 
 ## 4. Key Messages
 
-**Core message:** *Science fuels hope. Join us at Concert for a Cure this summer to fund the science behind the next Parkinson's breakthrough — 100% of every dollar, donated directly to The Michael J. Fox Foundation.*
+**Core message:** *Science fuels hope. Join us at Concert for a Cure this summer to fund the science behind the next Parkinson's breakthrough — every dollar donated directly to The Michael J. Fox Foundation.*
 
 **Supporting messages:**
 1. **The promise.** Wendy's promise to her mother Sue became this foundation. Concert for a Cure is about keeping that promise for other families.
-2. **100% to research.** We are 100% volunteer run. Every dollar goes directly to Parkinson's research through Team Fox / MJFF.
+2. **Directly to research.** We are 100% volunteer-run. Every dollar goes directly to Parkinson's research through Team Fox / MJFF.
 3. **The math of urgency.** 10 million people worldwide. 1 million in the U.S. 90,000 new diagnoses each year. Cures today: zero.
 4. **A community effort.** Indy Boat Co, our core sponsor, is donating a $25,000 boat for our raffle and channeling their June grand opening into this mission. This is what "community moves science" looks like.
 

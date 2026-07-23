@@ -68,11 +68,11 @@ My mother Sue was diagnosed with Parkinson's disease. On Christmas morning 2017,
 
 I think about the families who are sitting exactly where I once sat — watching someone they love navigate this disease, knowing there is still no cure. That is why I keep going, and why this summer matters more than any we've had before.
 
-This summer, we are raising $150,000 for Parkinson's research through The Michael J. Fox Foundation and Team Fox — the world's leading Parkinson's research funder. One hundred percent of what we raise goes directly to that research. No overhead. No salaries. Rob and I volunteer every hour we put into this.
+This summer, we are raising $150,000 for Parkinson's research through The Michael J. Fox Foundation and Team Fox — the world's leading Parkinson's research funder. We're 100% volunteer-run — no one takes a salary — and we keep operating costs to the bare minimum a foundation legally can, so as much of what we raise as possible goes to that research. Rob and I volunteer every hour we put into this.
 
 The anchor event is Concert for a Cure on July 18, but I am reaching out to our closest supporters now — before the public launch — because the quiet gifts are often what makes the goal possible.
 
-I am asking you to consider a gift of $[ASK AMOUNT]. At that level, your entire gift reaches the science. It does not pay for my time, my stamps, or my website. It funds the researchers who are trying to solve this.
+I am asking you to consider a gift of $[ASK AMOUNT]. Because we're volunteer-run and run as lean as a foundation legally can — no salaries — your gift goes to the researchers who are trying to solve this. It funds the science.
 
 I know you understand what it is to watch a family member live with this disease. This is one way to do something about it — and to do it with confidence that every dollar goes exactly where you intend.
 
@@ -101,7 +101,7 @@ You know how research gets funded. You know the difference between a well-capita
 
 Chasing a Cure Parkinson's Foundation funds Parkinson's disease research through The Michael J. Fox Foundation and Team Fox. MJFF is the world's largest private funder of Parkinson's drug development — rigorous, transparent, and outcomes-focused in a way that most of us in the industry respect. They are the right partner. We exist to put more money behind their work.
 
-This summer, we're running a campaign to raise $150,000 for that research. One hundred percent reaches the science — we're 100% volunteer-run, which means zero overhead, zero administrative cut. That's not a rounding choice; it's the whole model.
+This summer, we're running a campaign to raise $150,000 for that research. We're 100% volunteer-run — no salaries — and we keep operating costs to the bare minimum a foundation legally can, so as much of every gift as possible reaches the science. That's not a rounding choice; it's the whole model.
 
 I'm reaching out to a small group of people in our professional network — people who understand how research funding works and why it matters — before we go public on May 18. I'd rather have this conversation with you directly than ask you to respond to a mass email.
 
@@ -119,7 +119,7 @@ Wendy
 wendy@chasingacurePD.org
 [phone number]
 
-*Chasing a Cure Parkinson's Foundation, EIN 82-5107944. 501(c)(3). 100% of donations to Parkinson's research via MJFF/Team Fox.*
+*Chasing a Cure Parkinson's Foundation, EIN 82-5107944. 501(c)(3). Donations go directly to Parkinson's research via MJFF/Team Fox.*
 
 ---
 
@@ -137,13 +137,13 @@ One million people in the United States are living with Parkinson's disease righ
 
 Rob and I founded Chasing a Cure Parkinson's Foundation in 2018 after my mother Sue was diagnosed with Parkinson's. She passed away that December. The foundation is the promise I made to her — and to every other family sitting where we sat.
 
-This summer, we're raising $150,000 for Parkinson's research through The Michael J. Fox Foundation, the world's leading private funder of Parkinson's research. Every dollar we raise goes directly to that research. We are 100% volunteer-run — there is no staff, no overhead, no administrative fee between your gift and the science it funds.
+This summer, we're raising $150,000 for Parkinson's research through The Michael J. Fox Foundation, the world's leading private funder of Parkinson's research. We are 100% volunteer-run — no staff, no salaries — and we keep operating costs to the minimum, so your gift goes directly to the science it funds.
 
 The centerpiece of our campaign is Concert for a Cure on July 18 at our lake home here in Fishers — an evening of live music and good company in service of this mission. But the gifts that make a campaign like this work often come before the public noise starts.
 
 I'm writing to you now — before our May 18 public launch — because I'd rather have this conversation with you personally.
 
-I'm asking you to consider a gift of $[ASK AMOUNT]. That full amount reaches The Michael J. Fox Foundation. It does not fund my website, my printer, or my time. Just the science.
+I'm asking you to consider a gift of $[ASK AMOUNT]. Because we run lean and take no salaries, your gift goes to The Michael J. Fox Foundation and the science — not to overhead.
 
 I'd love to tell you more. Could we find 15 minutes this week?
 
@@ -154,7 +154,7 @@ Co-founder, Chasing a Cure Parkinson's Foundation
 wendy@chasingacurePD.org
 [phone number]
 
-*501(c)(3) nonprofit, EIN 82-5107944. 100% of donations to Parkinson's research via The Michael J. Fox Foundation / Team Fox.*
+*501(c)(3) nonprofit, EIN 82-5107944. Donations go directly to Parkinson's research via The Michael J. Fox Foundation / Team Fox.*
 
 ---
 
@@ -186,7 +186,7 @@ Brief check-in (1–2 minutes, genuinely). Ask about their family, their work, w
 
 ### The bridge (1 minute)
 
-> "The reason I'm calling before our public launch is that I'm reaching out personally to the people who matter most to this foundation first. We're trying to raise $150,000 this summer for Parkinson's research through The Michael J. Fox Foundation — all of it going directly to science. Rob and I are running this entirely on volunteer time, so there's no overhead between the gift and the research."
+> "The reason I'm calling before our public launch is that I'm reaching out personally to the people who matter most to this foundation first. We're trying to raise $150,000 this summer for Parkinson's research through The Michael J. Fox Foundation — going directly to the science. Rob and I run this entirely on volunteer time — no salaries — and keep costs as lean as legally possible."
 
 ---
 
@@ -209,7 +209,7 @@ Lock down the details: Will they give online? Do they prefer to write a check? D
 ### If they ask questions:
 
 **"Where exactly does the money go?"**
-> "Every dollar goes to The Michael J. Fox Foundation through our Team Fox fundraising page. MJFF is the world's largest private funder of Parkinson's research — they're 4-star rated on Charity Navigator. We don't touch the funds for overhead. We're entirely volunteer-run."
+> "Your gift goes to The Michael J. Fox Foundation through our Team Fox fundraising page. MJFF is the world's largest private funder of Parkinson's research — 4-star rated on Charity Navigator. We're entirely volunteer-run and take no salaries, and we keep our operating costs to the minimum."
 
 **"Can I think about it?"**
 > "Of course. I'll send you our donation page and a quick summary. When would be a good time to reconnect — maybe [specific date, one week out]?"
@@ -254,9 +254,9 @@ If no answer on Touch 2, leave this voicemail and send the follow-up email (belo
 
 I left you a voicemail earlier today. I wanted to make sure this didn't get buried.
 
-We're raising $150,000 for Parkinson's research this summer — 100% to The Michael J. Fox Foundation, 100% volunteer-run, zero overhead. The campaign closes at Concert for a Cure on July 18 at our lake home in Fishers.
+We're raising $150,000 for Parkinson's research this summer — going directly to The Michael J. Fox Foundation, 100% volunteer-run, no salaries. The campaign closes at Concert for a Cure on July 18 at our lake home in Fishers.
 
-I'm asking you to consider a gift of $[ASK AMOUNT]. Everything I said in my earlier note stands — your full gift goes directly to the science, and we'd love to have you at the event as our personal guests.
+I'm asking you to consider a gift of $[ASK AMOUNT]. Everything I said in my earlier note stands — your gift goes directly to the science, and we'd love to have you at the event as our personal guests.
 
 Here's the donation link if you'd like to give online: [TEAM FOX / ZEFFY LINK]
 
@@ -306,7 +306,7 @@ Send a brief email — not a template — with a link to a current MJFF research
 | Objection | Response |
 |---|---|
 | "I already give to MJFF directly." | "That's wonderful — your support for their research is exactly the right instinct. A gift to us flows through Team Fox directly to MJFF, so it compounds what you're already doing. And you'd be supporting the local community that's built around this mission." |
-| "I'm not sure I can give at that level." | "Any amount you're comfortable with is meaningful — 100% of it goes to research. Would a gift of $[lower amount] feel right?" |
+| "I'm not sure I can give at that level." | "Any amount you're comfortable with is meaningful — it goes directly to the research. Would a gift of $[lower amount] feel right?" |
 | "I want to wait and give at the event." | "We'd love that — please come as our personal guests. The fund-a-need at the event is a real moment and your presence makes a difference. Let me put you on the list." |
 | "I need to check with my spouse / partner." | "Of course. I'll send you the link and a summary you can share with them. Can I follow up in a few days?" |
 | "What happens if you don't hit your goal?" | "Every dollar we raise gets transferred to MJFF regardless of whether we hit $150K. There's no minimum — the science benefits from every gift." |
@@ -344,7 +344,7 @@ Key facts:
   90,000 new diagnoses/year — one every six minutes
   Zero cures today
   $185M+ raised by MJFF/Team Fox since 2006
-  100% of our donations to research — zero overhead
+  Donations go directly to research — no salaries, lean operations
 
 The ask: Say the number. Stop. Wait.
 
